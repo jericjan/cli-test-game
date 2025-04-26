@@ -1,9 +1,24 @@
 #include <iostream>
 #include <list>
+#include <chrono>
+#include <thread>
+#include <cstdlib> 
 
 using namespace std;
 
 bool quitGame = false;
+
+void sleepMS(int ms) {
+    this_thread::sleep_for(chrono::milliseconds(ms));
+}
+
+void printAnimate(string msg, int delay = 10) {
+    cout << msg ;
+    // for (auto &ch : msg) { 
+    //     cout << ch;
+    //     sleepMS(delay);
+    // } 
+}
 
 class UserInterface {
     public:
@@ -21,79 +36,135 @@ class Stats {
 
 class Entity {
     public:
-        int health;
+        int maxHealth;
+        int currHealth;
         Stats stats;    
         string name;
         Entity(int _health, string _name, int atk, int def) {
-            health = _health;
+            currHealth = _health;
+            maxHealth = _health;
             name = _name;
             stats = Stats(atk, def);
+        }
+
+        void attack(Entity& target, int extraDmg = 0) {
+            int calcDmg = max(1, (stats.atk + extraDmg) - target.stats.def);
+            target.currHealth = max(0, target.currHealth - calcDmg);
+            cout << target.name << " took " << calcDmg << " DMG!" << endl;
         }
 
 };
 
 class IItem {
-    protected:        
-        string type;
-        string desc;
-        int count; // A count of -1 means the item can be used infinitely
     public:
         string name;
+        string type;
+        string desc;
+        int count; // A count of -1 means the item can be used infinitely        
         IItem(string n, string t, string d, int c): name(n), type(t), desc(d), count(c) {}
+        virtual ~IItem() = default;
 };
+
+class Player;
 
 class Inventory {
     public:
         list<IItem*> items;
 
-        void addItem(IItem* item) {
-            string msg = item->name + " added to inventory!";
-            string border = string(msg.length(), '=');
-            cout << endl << border << endl 
-            << msg <<
-            endl << border << endl;
-            items.push_back(item);
-        }
+        void addItem(IItem* item);
 
-        void listItems() {
+        void listItems();
 
-        }
+        void useItem(int idx, Player& player, Entity& enemy);
 
-        void useItem(int idx) {
-
-        }
-
-        void dropItem(int idx) {
-
-        }
+        void dropItem(int idx);
 };
 
 class Player: public Entity {
     public:
         Inventory inventory;
         int money;
-        Player(): Entity(0, "", 0, 0), money(0) {}
-        Player(int _health, string _name, int _atk, int _def, int _money): 
-        Entity(_health, _name, _atk, _def), money(_money) {
-            inventory = Inventory();
-        }        
+        Player();
+        Player(int _health, string _name, int _atk, int _def, int _money);        
 };
 
 class IEnemyItem: public IItem {
     public:
         IEnemyItem(string n, string t, string d, int c): IItem(n, t, d, c) {}
-        virtual void use(Player player, Entity enemy) = 0;
+        virtual void use(Player& player, Entity& enemy) = 0;
 };
-
-
-
-
 
 class IPlayerItem: public IItem {
     public:
         IPlayerItem(string n, string t, string d, int c): IItem(n, t, d, c) {}
-        virtual void use(Player player) = 0;
+        virtual void use(Player& player) = 0;
 };
+
+
+        void Inventory::addItem(IItem* item) {
+            string msg = item->name + " added to inventory!";
+            string border = "\n" + string(msg.length(), '=') + "\n";
+            printAnimate(border, 1);
+            printAnimate(msg);
+            printAnimate(border, 1);
+            items.push_back(item);
+        }
+
+        string padTo(string str, const size_t num, const char paddingChar = ' ')
+        {
+            if(num > str.size()) {
+                div_t divided = div(num - str.size(), 2);
+                size_t leftSpace = divided.quot;
+                size_t rightSpace = divided.quot + divided.rem;
+                str.insert(str.begin(), leftSpace, paddingChar);
+                str.insert(str.end(), rightSpace, paddingChar);
+            }
+            return str;
+        }
+
+        void Inventory::listItems() {
+            int idx = 1;
+
+            cout << padTo("[Name]", 20) << "|" << padTo("[Type]", 20) << "|" << padTo("[Description]", 50) << "|" << padTo("[Count]", 20) << endl;
+            for (IItem* item: items) {
+                string count = (item->count == -1) ? "Infinite" : to_string(item->count) + "x";
+                string numberedName = string("[") + to_string(idx) + "] " + item->name;
+                cout << padTo(numberedName, 20) << "|" << padTo(item->type, 20) << "|" << padTo(item->desc, 50) << "|" << padTo(count, 20) << endl;
+                idx++;
+            }
+            cout << "Type the # of the item to use, 0 to exit > ";
+        }
+
+        void Inventory::useItem(int idx, Player& player, Entity& enemy) {
+            int scrollerIdx = 1;
+            for (IItem* item: items) { // TODO: Use vectors lmao
+                if (scrollerIdx == idx) {
+                    if (IPlayerItem* playerItem = dynamic_cast<IPlayerItem*>(item)) {
+                        playerItem->use(player);
+                   } else if (IEnemyItem* enemyItem = dynamic_cast<IEnemyItem*>(item)) {
+                        enemyItem->use(player, enemy);
+                   }
+                    break;
+                }
+                scrollerIdx++;
+            }
+            
+        }
+
+        void Inventory::dropItem(int idx) {
+
+        }
+
+
+
+Player::Player(): Entity(0, "", 0, 0), money(0) {}
+Player::Player(int _health, string _name, int _atk, int _def, int _money): 
+Entity(_health, _name, _atk, _def), money(_money) {
+    inventory = Inventory();
+}
+
+
+
 
 class IPotion: public IPlayerItem {
     public:
@@ -105,8 +176,8 @@ class HealthPotion: public IPotion {
         HealthPotion(int c, Player p): 
         IPotion("Health Potion", "Heals the user 5HP", c) {}
 
-        void use(Player player) override {
-            player.health += 5;
+        void use(Player& player) override {
+            player.currHealth = min(player.maxHealth, player.currHealth + 5);
         }
 };
 
@@ -114,8 +185,8 @@ class IWeapon: public IEnemyItem {
     public:
         int dmg;
         IWeapon(string name, string desc, int count, int dmg): IEnemyItem(name, "Weapon", desc, count), dmg(dmg) {}
-        void use(Player player, Entity enemy) override {
-            enemy.health = max(1, (player.stats.atk + dmg) - enemy.stats.def);
+        void use(Player& player, Entity& enemy) override {
+            player.attack(enemy, dmg);
         }        
 };
 
@@ -144,6 +215,74 @@ class StartMenu: public UserInterface {
         UserInterface* render() override;
 };
 
+string yellowText(string msg) {
+    return  "\033[33m" + msg + "\033[0m\n";
+}
+
+class Battle: public UIWithPlayer {
+    public:
+    Entity enemy;
+    bool didIntro;
+    Battle(Player player, Entity enemy): UIWithPlayer(player), enemy(enemy), didIntro(false) {}
+
+    UserInterface* render() override {
+        if (!didIntro) {
+            cout << "\n\n===BATTLE START!!===\n\n";
+            didIntro = true;
+        }
+        cout << enemy.name << ": " << enemy.currHealth << "/" << enemy.maxHealth << endl <<
+        player.name << ": " << player.currHealth << "/" << player.maxHealth << "\n\n" <<
+        "[1] Punch\n[2] Bag\n[3] Run\n";
+        string userInput;
+        cin >> userInput;
+        cout << endl;
+        if (userInput == "1") {
+            player.attack(enemy);
+            enemy.attack(player);
+        } else if (userInput == "2") {
+            player.inventory.listItems();
+            int bagInput;
+            cin >> bagInput;
+            if (bagInput == 0) {}
+            else {
+                player.inventory.useItem(bagInput, player, enemy);
+                enemy.attack(player);
+            }
+        } else if (userInput == "3") {
+            cout << "You can't run from this battle!" << endl;
+        } else {
+            cout << "That's not one of the options!" << endl;            
+            return this;
+        }
+        
+        if (player.currHealth == 0) {
+            cout << player.name << " lost the battle!" << endl;
+        } else if (enemy.currHealth == 0) {
+            cout << enemy.name << " lost the battle!" << endl;
+        }
+        return this;
+    }
+
+};
+
+class JovialCutscene: public UIWithPlayer {
+    public:
+        JovialCutscene(Player player): UIWithPlayer(player) {}
+        UserInterface* render() override {
+            printAnimate(string("Villager 1: Hey, did you know? Jovial lost the final race today...\n") + 
+            "Villager 2: What?? That can't be! She's the best horse there is. I put all my money on her and she LOST???\n" +
+            "Villager 1: Okay, calm your horses (hehe). It's gonna be fine.\n" + 
+            "Villager 2: NO IT WON'T!! When I see that horse again, I'll... I'll...\n" + 
+            yellowText("Jovial: You'll what?") + 
+            "*Jovial approaches Villager 2 very menacingly*\n\n" + 
+            player.name + ": STOP!! If anybody's fighting, it'll be you and me, Jovial.\n" +
+            "Jovial: Alright then, kid, let's fight!\n");
+
+            Entity jovial = Entity(1000, "Jovial Merryment", 100, 50);
+            return new Battle(player, jovial);
+        }
+};
+
 class FirstChoice: public UIWithPlayer {
     public:
         list<string> stayResps = {
@@ -153,44 +292,45 @@ class FirstChoice: public UIWithPlayer {
             "Alright, I'm giving you the silent treatment.",
             "..."
         };
-        FirstChoice(Player player): UIWithPlayer(player) {
-        
+        FirstChoice(Player player): UIWithPlayer(player) {}
 
-        }
         UserInterface* render() override {
             cout << "[1] Stay" << endl << "[2] Leave" << endl;
-            int userInput;
+            string userInput;
             cin >> userInput;
             cout << endl;
-            if (userInput == 1) {
-                cout << stayResps.front() << endl;
+            if (userInput == "1") {
+                printAnimate(stayResps.front() + "\n");
                 if (stayResps.size() > 1) {                    
                     stayResps.pop_front();
                 }
                 return this;
+            } else  if (userInput == "2"){
+                return new JovialCutscene(player);
             } else {
-                return new StartMenu();
+                cout << "That's not one of the options!" << endl;
+                return this;
             }
         }
 };
 
 class IntroDialogue: public UIWithPlayer {
     public:
-        UserInterface* render() override {
-            cout << "Woah! Didn't see you there. Who might you be?\n> ";
+        UserInterface* render() override {            
+            printAnimate("Woah! Didn't see you there. Who might you be?\n> ");
             string userInput;
             getline(cin >> ws, userInput);
-            player = Player(100, userInput, 200, 50, 0);
-            cout << "Hello there " << player.name << "!\n" << 
+            player = Player(1000, userInput, 200, 50, 0);
+            printAnimate("Hello there " + player.name + "!\n" + 
             "You are about to embark on a heroic journey of... something. I don't know. Go out there man. Go nuts.\n"
-            << "Me? You don't need to know who I am. Ooh, I'll give you this cool stick I found!" << endl;
+            + "Me? You don't need to know who I am. Ooh, I'll give you this cool stick I found!\n");
 
             CoolStick* stick = new CoolStick();
             player.inventory.addItem(stick);
 
-            cout << "This will give you some extra damage in your battles. I should probably explain how that works." << endl <<
-            "In a battle, you can either: punch, use an item from your inventory, or run. I'm sure you're familiar with this formula." << endl <<
-            "Alright, that's all from me. Get outta here." << endl;
+            printAnimate(string("This will give you some extra damage in your battles. I should probably explain how that works.\n") + 
+            "In a battle, you can either: punch, use an item from your inventory, or run. I'm sure you're familiar with this formula.\n" +
+            "Alright, that's all from me. Get outta here.\n");
             return new FirstChoice(player);
 
         }
@@ -199,14 +339,17 @@ class IntroDialogue: public UIWithPlayer {
 
 UserInterface* StartMenu::render() {
         cout << "Welcome to The Game!" << endl << "[1] Start" << endl << "[2] Quit" << endl;
-        int userInput;
+        string userInput;
         
         cin >> userInput;
-        if (userInput == 1) {
+        if (userInput == "1") {
             return new IntroDialogue();
-        } else {
+        } else if (userInput == "2") {
             cout << "See you next time!" << endl;
             quitGame = true;
+            return this;
+        } else  {
+            cout << "That's not one of the options!" << endl;
             return this;
         }
         
