@@ -2,7 +2,7 @@
 #include <list>
 #include <chrono>
 #include <thread>
-#include <cstdlib> 
+
 
 using namespace std;
 
@@ -62,7 +62,7 @@ class IItem {
         string desc;
         int count; // A count of -1 means the item can be used infinitely        
         IItem(string n, string t, string d, int c): name(n), type(t), desc(d), count(c) {}
-        virtual ~IItem() = default;
+        virtual ~IItem() = default;  // required for polymorphic base class for dynamic_cast
 };
 
 class Player;
@@ -173,7 +173,7 @@ class IPotion: public IPlayerItem {
 
 class HealthPotion: public IPotion {
     public:
-        HealthPotion(int c, Player p): 
+        HealthPotion(int c): 
         IPotion("Health Potion", "Heals the user 5HP", c) {}
 
         void use(Player& player) override {
@@ -192,7 +192,7 @@ class IWeapon: public IEnemyItem {
 
 class CoolStick: public IWeapon {
     public:
-    CoolStick(): IWeapon("Cool Stick", "A cool stick some stranger gave you", -1, 10) {}
+    CoolStick(): IWeapon("Cool Stick", "A cool stick some stranger gave you", -1, 60) {}
 };
 
 class UIWithPlayer: public UserInterface {
@@ -216,8 +216,74 @@ class StartMenu: public UserInterface {
 };
 
 string yellowText(string msg) {
-    return  "\033[33m" + msg + "\033[0m\n";
+    return  "\033[33m" + msg + "\033[0m";
 }
+
+class GameOver: public UserInterface {
+    public:
+        UserInterface* render() override {
+            printAnimate(string("Game Over! You lost the game. No respawns here. You're gone. Sorry.\n") + 
+            "Press Enter to try again.\n");
+            cin.ignore(numeric_limits<streamsize>::max(), '\n');
+            cin.get();
+            return new StartMenu();
+        }
+};
+
+class MainMenu: public UIWithPlayer {
+    public:
+        MainMenu(Player player): UIWithPlayer(player) {}
+        UserInterface* render() override {
+            cout << "[Main Menu]" << endl;
+            cout << "HP: " << player.currHealth << "/" << player.maxHealth << " ATK: " << player.stats.atk << " DEF: " << player.stats.def << endl;
+            cout << "Money: " << player.money << endl;            
+            cout << "[1] Inventory" << endl;
+            cout << "[2] Quit" << endl;
+            string userInput;
+            cin >> userInput;
+            if (userInput == "1") {
+                player.inventory.listItems();
+                int bagInput;
+                cin >> bagInput;
+                if (bagInput == 0) {}
+                else {
+                //     if (IPlayerItem* playerItem = dynamic_cast<IPlayerItem*>(item)) {
+                //         playerItem->use(player);
+                //    }
+                }
+                return this;
+            } else if (userInput == "2") {
+                return new StartMenu();
+            } else {
+                cout << "That's not one of the options!" << endl;
+                return this;
+            }
+        }
+};
+
+class JovialAftermath: public UIWithPlayer {
+    public:
+        string battleStatus;
+        JovialAftermath(Player player, string bs): UIWithPlayer(player), battleStatus(bs) {}
+        UserInterface* render() override {
+            if (battleStatus == "win") {
+                printAnimate(yellowText("Jovial: I- I lost? I can't believe it...\n") + 
+                player.name + ": Yeah, tough luck man. Now get outta here.\n" + 
+                yellowText("Jovial: Okay, geez.\n") + 
+                "Villager 2: You saved us! Take these health potions as a form of gratitude from us.\n");
+                HealthPotion* hp = new HealthPotion(20);
+                player.inventory.addItem(hp);
+                return new MainMenu(player);
+
+            } else if (battleStatus == "lose") {
+                printAnimate("Jovial: Finally. This will make up for the race I lost!\n");
+                return new GameOver();
+            } else {
+                cout << "Error: Invalid battle status." << endl;
+            }
+            return this;
+        }
+};
 
 class Battle: public UIWithPlayer {
     public:
@@ -257,8 +323,10 @@ class Battle: public UIWithPlayer {
         
         if (player.currHealth == 0) {
             cout << player.name << " lost the battle!" << endl;
+            return new JovialAftermath(player, "lose");
         } else if (enemy.currHealth == 0) {
             cout << enemy.name << " lost the battle!" << endl;
+            return new JovialAftermath(player, "win");
         }
         return this;
     }
@@ -273,7 +341,7 @@ class JovialCutscene: public UIWithPlayer {
             "Villager 2: What?? That can't be! She's the best horse there is. I put all my money on her and she LOST???\n" +
             "Villager 1: Okay, calm your horses (hehe). It's gonna be fine.\n" + 
             "Villager 2: NO IT WON'T!! When I see that horse again, I'll... I'll...\n" + 
-            yellowText("Jovial: You'll what?") + 
+            yellowText("Jovial: You'll what?\n") + 
             "*Jovial approaches Villager 2 very menacingly*\n\n" + 
             player.name + ": STOP!! If anybody's fighting, it'll be you and me, Jovial.\n" +
             "Jovial: Alright then, kid, let's fight!\n");
@@ -320,7 +388,7 @@ class IntroDialogue: public UIWithPlayer {
             printAnimate("Woah! Didn't see you there. Who might you be?\n> ");
             string userInput;
             getline(cin >> ws, userInput);
-            player = Player(1000, userInput, 200, 50, 0);
+            player = Player(1000, userInput, 50, 50, 0);
             printAnimate("Hello there " + player.name + "!\n" + 
             "You are about to embark on a heroic journey of... something. I don't know. Go out there man. Go nuts.\n"
             + "Me? You don't need to know who I am. Ooh, I'll give you this cool stick I found!\n");
