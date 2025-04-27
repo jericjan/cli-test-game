@@ -152,7 +152,18 @@ class IPlayerItem: public IItem {
 
         // idx is 1-indexed
         bool Inventory::useItem(int idx, Player& player, Entity* enemy) {
-            IItem* item = items.at(idx - 1);
+            IItem* item;
+            try
+            {
+                item = items.at(idx - 1);    
+            }
+            catch(...)
+            {
+                cout << "Invalid item number!" << endl;
+                return false;
+            }
+            
+            
             bool useResult;
             if (IPlayerItem* playerItem = dynamic_cast<IPlayerItem*>(item)) {
                 useResult = playerItem->use(player);
@@ -252,8 +263,18 @@ class StartMenu: public UserInterface {
         UserInterface* render() override;
 };
 
-string yellowText(string msg) {
-    return  "\033[33m" + msg + "\033[0m";
+enum Color {
+    RED = 31,
+    GREEN = 32,
+    YELLOW = 33,
+    BLUE = 34,
+    MAGENTA = 35,
+    CYAN = 36,
+    WHITE = 37
+};
+
+string colorizeText(string msg, Color color) {
+    return string("\033[") + to_string(color) + "m" + msg + "\033[0m";    
 }
 
 class GameOver: public UserInterface {
@@ -282,7 +303,7 @@ class GambleMenu: public UIWithPlayer {
             cin >> userInput;
             if (userInput == "y") {
                 if (player.money < 100) {
-                    cout << "You don't have enough money!" << endl;
+                    cout << colorizeText("You don't have enough money!", RED) << endl;
                     return this;
                 } else {
                     player.addMoney(-100);
@@ -291,10 +312,10 @@ class GambleMenu: public UIWithPlayer {
                     uniform_real_distribution<double> dist(0.0, 1.0);        
                     bool win = dist(mt) < 0.25;                    
                     if (!win) {
-                        cout << "You got nothing! Better luck next time." << endl;
+                        cout << colorizeText("You got nothing! Better luck next time.", RED) << endl;
                         return this;
                     } else {
-                        cout << "You got the Legendary Sword Yamato! It's a legendary sword that does 500 damage!\n";
+                        cout << colorizeText("You got the Legendary Sword Yamato! It's a legendary sword that does 500 damage!\n", GREEN) << endl;
                         Yamato* yamato = new Yamato();
                         player.inventory.addItem(yamato);
                         return new MainMenu(player);
@@ -377,9 +398,9 @@ class JovialAftermath: public UIWithPlayer {
         JovialAftermath(Player player, string bs): UIWithPlayer(player), battleStatus(bs) {}
         UserInterface* render() override {
             if (battleStatus == "win") {
-                printAnimate(yellowText("Jovial: I- I lost? I can't believe it...\n") + 
+                printAnimate(colorizeText("Jovial: I- I lost? I can't believe it...\n", YELLOW) + 
                 player.name + ": Yeah, tough luck man. Now get outta here.\n" + 
-                yellowText("Jovial: Okay, geez.\n") + 
+                colorizeText("Jovial: Okay, geez.\n", YELLOW) + 
                 "Villager 2: You saved us! Take these health potions and cash as a form of gratitude from us.\n");
                 HealthPotion* hp = new HealthPotion(20);
                 player.inventory.addItem(hp);
@@ -459,7 +480,7 @@ class JovialCutscene: public UIWithPlayer {
             "Villager 2: What?? That can't be! She's the best horse there is. I put all my money on her and she LOST???\n" +
             "Villager 1: Okay, calm your horses (hehe). It's gonna be fine.\n" + 
             "Villager 2: NO IT WON'T!! When I see that horse again, I'll... I'll...\n" + 
-            yellowText("Jovial: You'll what?\n") + 
+            colorizeText("Jovial: You'll what?\n", YELLOW) + 
             "*Jovial approaches Villager 2 very menacingly*\n\n" + 
             player.name + ": STOP!! If anybody's fighting, it'll be you and me, Jovial.\n" +
             "Jovial: Alright then, kid, let's fight!\n");
