@@ -4,8 +4,6 @@
 #include "inventory.h"
 using namespace std;
 
-class Inventory;
-
 class Stats
 {
 public:
