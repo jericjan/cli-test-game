@@ -1,5 +1,0 @@
-CompileFlags:
-  Add:
-    - -isystemC:/Users/Admin/scoop/apps/mingw/13.2.0-rt_v11-rev1/
-    - --include-directory=C:/Users/Admin/scoop/apps/mingw/13.2.0-rt_v11-rev1/x86_64-w64-mingw32/
-    - --include-directory=C:/Users/Admin/scoop/apps/mingw/13.2.0-rt_v11-rev1/x86_64-w64-mingw32/include
