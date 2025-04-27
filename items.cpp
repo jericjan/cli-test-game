@@ -4,7 +4,6 @@
 #include "items.h"
 using namespace std;
 
-
 IItem::IItem(string n, string t, string d, int c) : name(n), type(t), desc(d), count(c) {}
 IItem::~IItem() = default; // required for polymorphic base class for dynamic_cast
 
@@ -26,8 +25,6 @@ bool HealthPotion::use(Player &player)
     player.currHealth = min(player.maxHealth, player.currHealth + healAmount);
     return true;
 }
-
-
 
 IWeapon::IWeapon(string name, string desc, int count, int dmg) : IEnemyItem(name, "Weapon", desc, count), dmg(dmg) {}
 bool IWeapon::use(Player &player, Entity &enemy)

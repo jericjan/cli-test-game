@@ -28,7 +28,6 @@ public:
     virtual bool use(Player &player) = 0;
 };
 
-
 class IPotion : public IPlayerItem
 {
 public:
@@ -40,7 +39,6 @@ class HealthPotion : public IPotion
 public:
     static const int healAmount = 100; // declared static to constructor can use it
     HealthPotion(int c);
-
     bool use(Player &player) override;
 };
 
@@ -64,4 +62,3 @@ class Yamato : public IWeapon
 public:
     Yamato();
 };
-

@@ -3,7 +3,6 @@
 #include "extras.h"
 #include "items.h"
 
-
 void Inventory::addItem(IItem *item)
 {
     string msg = item->name + " added to inventory!";

@@ -4,6 +4,7 @@
 #include <random>
 #include <list>
 #include <functional>
+
 class UserInterface
 {
 public:
@@ -68,7 +69,7 @@ public:
         {
             if (player.money < 100)
             {
-                cout << colorizeText("You don't have enough money!", Color::RED) << endl;
+                cout << colorizeText("You don't have enough money!", RED) << endl;
                 return this;
             }
             else
@@ -80,12 +81,12 @@ public:
                 bool win = dist(mt) < 0.25;
                 if (!win)
                 {
-                    cout << colorizeText("You got nothing! Better luck next time.", Color::RED) << endl;
+                    cout << colorizeText("You got nothing! Better luck next time.", RED) << endl;
                     return this;
                 }
                 else
                 {
-                    cout << colorizeText("You got the Legendary Sword Yamato! It's a legendary sword that does 500 damage!\n", Color::GREEN) << endl;
+                    cout << colorizeText("You got the Legendary Sword Yamato! It's a legendary sword that does 500 damage!\n", GREEN) << endl;
                     Yamato *yamato = new Yamato();
                     player.inventory.addItem(yamato);
                     return new MainMenu(player);
@@ -191,9 +192,9 @@ public:
     {
         if (battleStatus == "win")
         {
-            printAnimate(colorizeText("Jovial: I- I lost? I can't believe it...\n", Color::YELLOW) +
+            printAnimate(colorizeText("Jovial: I- I lost? I can't believe it...\n", YELLOW) +
                          player.name + ": Yeah, tough luck man. Now get outta here.\n" +
-                         colorizeText("Jovial: Okay, geez.\n", Color::YELLOW) +
+                         colorizeText("Jovial: Okay, geez.\n", YELLOW) +
                          "Villager 2: You saved us! Take these health potions and cash as a form of gratitude from us.\n");
             HealthPotion *hp = new HealthPotion(20);
             player.inventory.addItem(hp);
@@ -300,7 +301,7 @@ public:
                      "Villager 2: What?? That can't be! She's the best horse there is. I put all my money on her and she LOST???\n" +
                      "Villager 1: Okay, calm your horses (hehe). It's gonna be fine.\n" +
                      "Villager 2: NO IT WON'T!! When I see that horse again, I'll... I'll...\n" +
-                     colorizeText("Jovial: You'll what?\n", Color::YELLOW) +
+                     colorizeText("Jovial: You'll what?\n", YELLOW) +
                      "*Jovial approaches Villager 2 very menacingly*\n\n" +
                      player.name + ": STOP!! If anybody's fighting, it'll be you and me, Jovial.\n" +
                      "Jovial: Alright then, kid, let's fight!\n");

@@ -9,8 +9,8 @@ Player::Player(int _health, string _name, int _atk, int _def, int _money) : Enti
     inventory = Inventory();
 }
 
-    Stats::Stats() : atk(0), def(0) {}
-    Stats::Stats(int x, int y) : atk(x), def(y) {}
+Stats::Stats() : atk(0), def(0) {}
+Stats::Stats(int x, int y) : atk(x), def(y) {}
 
 Entity::Entity(int _health, string _name, int atk, int def)
 {
