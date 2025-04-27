@@ -7,8 +7,6 @@
 
 using namespace std;
 
-bool quitGame = false;
-
 class UIHandler
 {
 public:

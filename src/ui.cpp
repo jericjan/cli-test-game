@@ -187,6 +187,7 @@ UserInterface *Battle::render()
             int bagInput = inputNum();
             if (bagInput == 0)
             {
+                break;
             }
             else
             {
@@ -196,9 +197,10 @@ UserInterface *Battle::render()
                 }
                 else
                 {
+                    enemy.attack(player);
                     break;
                 };
-                enemy.attack(player);
+                
             }
         }
     }
