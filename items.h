@@ -12,6 +12,7 @@ public:
     int count; // A count of -1 means the item can be used infinitely
     IItem(string n, string t, string d, int c);
     virtual ~IItem();
+
 };
 
 class IEnemyItem : public IItem

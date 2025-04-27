@@ -9,6 +9,23 @@ Player::Player(int _health, string _name, int _atk, int _def, int _money) : Enti
     inventory = Inventory();
 }
 
+void Player::addMoney(int amount)
+{
+    if (amount < 0)
+    {
+        cout << colorizeText("You lost " + to_string(-amount) + " money!", RED) << endl;
+    }
+    else if (amount == 0)
+    {
+        cout << "You didn't gain or lose any money." << endl;
+    }
+    else if (amount > 0)
+    {
+        cout << colorizeText("You gained " + to_string(amount) + " money!", YELLOW) << endl;
+    }
+    money += amount;
+}
+
 Stats::Stats() : atk(0), def(0) {}
 Stats::Stats(int x, int y) : atk(x), def(y) {}
 
@@ -27,19 +44,4 @@ void Entity::attack(Entity &target, int extraDmg)
     cout << target.name << " took " << calcDmg << " DMG!" << endl;
 }
 
-void Player::addMoney(int amount)
-{
-    if (amount < 0)
-    {
-        cout << colorizeText("You lost " + to_string(-amount) + " money!", RED) << endl;
-    }
-    else if (amount == 0)
-    {
-        cout << "You didn't gain or lose any money." << endl;
-    }
-    else if (amount > 0)
-    {
-        cout << colorizeText("You gained " + to_string(amount) + " money!", YELLOW) << endl;
-    }
-    money += amount;
-}
+
