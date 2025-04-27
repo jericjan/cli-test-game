@@ -57,5 +57,8 @@
         "thread": "cpp",
         "typeinfo": "cpp",
         "variant": "cpp"
-    }
+    },
+    "clangd.arguments": [
+        "--query-driver=C:\\Users\\Admin\\scoop\\apps\\mingw\\current\\bin\\g++.exe --compile-commands-dir=${workspaceFolder}/build"
+    ]
 }

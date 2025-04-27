@@ -1,3 +1,5 @@
+#pragma once
+
 #include <iostream>
 #include "inventory.h"
 using namespace std;
