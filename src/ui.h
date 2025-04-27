@@ -10,6 +10,7 @@ class UserInterface
 public:
     bool quitGame = false;
     virtual UserInterface *render() = 0;
+    virtual ~UserInterface();
 };
 
 class UIWithPlayer : public UserInterface

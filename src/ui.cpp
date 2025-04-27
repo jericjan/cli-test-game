@@ -8,6 +8,8 @@
 
 using namespace std;
 
+UserInterface::~UserInterface() = default;
+
 UIWithPlayer::UIWithPlayer() {}
 UIWithPlayer::UIWithPlayer(Player player) : player(player) {}
 

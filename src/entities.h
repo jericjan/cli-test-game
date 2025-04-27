@@ -21,7 +21,7 @@ public:
     Stats stats;
     string name;
     Entity(int _health, string _name, int atk, int def);
-
+    virtual ~Entity();
     void attack(Entity &target, int extraDmg = 0);
 };
 

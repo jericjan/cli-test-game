@@ -3,6 +3,7 @@
 #include "extras.h"
 using namespace std;
 
+Entity::~Entity() = default;
 Player::Player() : Entity(0, "", 0, 0), money(0) {}
 Player::Player(int _health, string _name, int _atk, int _def, int _money) : Entity(_health, _name, _atk, _def), money(_money)
 {
