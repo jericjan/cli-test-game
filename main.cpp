@@ -28,7 +28,7 @@ int inputNum() {
 }
 
 void printAnimate(string msg, int delay = 10) {
-    cout << msg ;
+    cout << msg;
     // for (auto &ch : msg) { 
     //     cout << ch;
     //     sleepMS(delay);
@@ -223,15 +223,16 @@ class IPotion: public IPlayerItem {
 
 class HealthPotion: public IPotion {    
     public:
+        static const int healAmount = 100;  // declared static to constructor can use it
         HealthPotion(int c): 
-        IPotion("Health Potion", "Heals the user 5HP", c) {}
+        IPotion("Health Potion", "Heals the user " + to_string(healAmount) + "HP", c) {}
 
         bool use(Player& player) override {
             if (player.currHealth == player.maxHealth) {
                 cout << "You're already at full health!" << endl;
                 return false;
             }
-            player.currHealth = min(player.maxHealth, player.currHealth + 5);            
+            player.currHealth = min(player.maxHealth, player.currHealth + healAmount);            
             return true;
         }
 };
@@ -248,7 +249,8 @@ class IWeapon: public IEnemyItem {
 
 class CoolStick: public IWeapon {
     public:
-    CoolStick(): IWeapon("Cool Stick", "A cool stick some stranger gave you", -1, 60) {}
+    static const int dmg = 60;
+    CoolStick(): IWeapon("Cool Stick", "A cool stick some stranger gave you. " + to_string(dmg) + "DMG", -1, dmg) {}
 };
 
 class Yamato: public IWeapon {
@@ -451,12 +453,18 @@ UserInterface* Battle::render() {
         enemy.attack(player);
     } else if (userInput == 2) {
         player.inventory.listItems();
-        int bagInput = inputNum();
-        if (bagInput == 0) {}
-        else {
-            player.inventory.useItem(bagInput, player, &enemy);
-            enemy.attack(player);
-        }
+        while (true) {            
+            int bagInput = inputNum();
+            if (bagInput == 0) {}
+            else {
+                if (!player.inventory.useItem(bagInput, player, &enemy)) {
+                    continue;
+                } else {
+                    break;
+                };
+                enemy.attack(player);
+            }
+        }        
     } else if (userInput == 3) {
         cout << "You can't run from this battle!" << endl;
     } else if (userInput == 4) { // for testing purposes
