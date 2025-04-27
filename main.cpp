@@ -4,7 +4,7 @@
 #include <chrono>
 #include <thread>
 #include <random>
-#include <functional> 
+#include <functional>  
 
 using namespace std;
 
@@ -12,6 +12,20 @@ bool quitGame = false;
 
 void sleepMS(int ms) {
     this_thread::sleep_for(chrono::milliseconds(ms));
+}
+
+enum Color {
+    RED = 31,
+    GREEN = 32,
+    YELLOW = 33,
+    BLUE = 34,
+    MAGENTA = 35,
+    CYAN = 36,
+    WHITE = 37
+};
+
+string colorizeText(string msg, Color color) {
+    return string("\033[") + to_string(color) + "m" + msg + "\033[0m";    
 }
 
 int inputNum() {
@@ -28,11 +42,11 @@ int inputNum() {
 }
 
 void printAnimate(string msg, int delay = 10) {
-    cout << msg;
-    // for (auto &ch : msg) { 
-    //     cout << ch;
-    //     sleepMS(delay);
-    // } 
+    // cout << msg;
+    for (auto &ch : msg) { 
+        cout << ch;
+        sleepMS(delay);
+    } 
 }
 
 class UserInterface {
@@ -106,11 +120,11 @@ class Player: public Entity {
 
         void addMoney(int amount) {
             if (amount < 0) {
-                cout << "You lost " << -amount << " money!" << endl;
+                cout << colorizeText("You lost " + to_string(-amount) + " money!", RED) << endl;
             } else if (amount == 0) {
                 cout << "You didn't gain or lose any money." << endl;
             } else if (amount > 0) {
-                cout << "You gained " << amount << " money!" << endl;
+                cout << colorizeText("You gained " + to_string(amount) + " money!", YELLOW) << endl;
             }            
             money += amount;
         }
@@ -278,19 +292,7 @@ class StartMenu: public UserInterface {
         UserInterface* render() override;
 };
 
-enum Color {
-    RED = 31,
-    GREEN = 32,
-    YELLOW = 33,
-    BLUE = 34,
-    MAGENTA = 35,
-    CYAN = 36,
-    WHITE = 37
-};
 
-string colorizeText(string msg, Color color) {
-    return string("\033[") + to_string(color) + "m" + msg + "\033[0m";    
-}
 
 class GameOver: public UserInterface {
     public:
