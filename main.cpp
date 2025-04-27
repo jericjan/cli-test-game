@@ -14,6 +14,19 @@ void sleepMS(int ms) {
     this_thread::sleep_for(chrono::milliseconds(ms));
 }
 
+int inputNum() {
+
+    int result;
+    
+    while (!(cin >> result)) {
+        cin.clear();
+        cin.ignore(numeric_limits<streamsize>::max(),'\n');
+        cout << "That's not a number!" << std::endl;
+    }
+
+    return result;
+}
+
 void printAnimate(string msg, int delay = 10) {
     cout << msg ;
     // for (auto &ch : msg) { 
@@ -354,13 +367,12 @@ UserInterface* MainMenu::render() {
     cout << "[3] Gamble" << endl;
     cout << "[4] Hospital" << endl;
     cout << "[5] Quit" << endl;
-    string userInput;
-    cin >> userInput;
-    if (userInput == "1") {
+    int userInput = inputNum();
+    if (userInput == 1) {
         player.inventory.listItems();
         int bagInput;
         while (true) {
-            cin >> bagInput;
+            bagInput = inputNum();
             if (bagInput == 0) {
                 break;
             } else {
@@ -370,19 +382,19 @@ UserInterface* MainMenu::render() {
             }
         }                
         return this;
-    }  else if (userInput == "2") {
+    }  else if (userInput == 2) {
         Entity enemy = Entity(500, "Random Guy", 50, 50);
         auto after = [=](Player player) -> UserInterface* {
             return new MainMenu(player);
         };        
         return new Battle(player, enemy, 50, after, after);
-    }  else if (userInput == "3") {
+    }  else if (userInput == 3) {
         return new GambleMenu(player);
-    }  else if (userInput == "4") {
+    }  else if (userInput == 4) {
         printAnimate("You were healed to full health!\n");
         player.currHealth = player.maxHealth;
         return this;
-    }  else if (userInput == "5") {
+    }  else if (userInput == 5) {
         return new StartMenu();
     } else {
         cout << "That's not one of the options!" << endl;
@@ -432,24 +444,22 @@ UserInterface* Battle::render() {
     cout << enemy.name << ": " << enemy.currHealth << "/" << enemy.maxHealth << endl <<
     player.name << ": " << player.currHealth << "/" << player.maxHealth << "\n\n" <<
     "[1] Punch\n[2] Bag\n[3] Run\n";
-    string userInput;
-    cin >> userInput;
+    int userInput = inputNum();
     cout << endl;
-    if (userInput == "1") {
+    if (userInput == 1) {
         player.attack(enemy);
         enemy.attack(player);
-    } else if (userInput == "2") {
+    } else if (userInput == 2) {
         player.inventory.listItems();
-        int bagInput;
-        cin >> bagInput;
+        int bagInput = inputNum();
         if (bagInput == 0) {}
         else {
             player.inventory.useItem(bagInput, player, &enemy);
             enemy.attack(player);
         }
-    } else if (userInput == "3") {
+    } else if (userInput == 3) {
         cout << "You can't run from this battle!" << endl;
-    } else if (userInput == "4") { // for testing purposes
+    } else if (userInput == 4) { // for testing purposes
         enemy.currHealth = 0;
         cout << "You punched the enemy so hard, they died instantly!" << endl;
     } else {
@@ -512,16 +522,15 @@ class FirstChoice: public UIWithPlayer {
 
         UserInterface* render() override {
             cout << "[1] Stay" << endl << "[2] Leave" << endl;
-            string userInput;
-            cin >> userInput;
+            int userInput = inputNum();
             cout << endl;
-            if (userInput == "1") {
+            if (userInput == 1) {
                 printAnimate(stayResps.front() + "\n");
                 if (stayResps.size() > 1) {                    
                     stayResps.pop_front();
                 }
                 return this;
-            } else  if (userInput == "2"){
+            } else  if (userInput == 2){
                 return new JovialCutscene(player);
             } else {
                 cout << "That's not one of the options!" << endl;
@@ -555,12 +564,10 @@ class IntroDialogue: public UIWithPlayer {
 
 UserInterface* StartMenu::render() {
         cout << "Welcome to The Game!" << endl << "[1] Start" << endl << "[2] Quit" << endl;
-        string userInput;
-        
-        cin >> userInput;
-        if (userInput == "1") {
+        int userInput = inputNum();
+        if (userInput == 1) {
             return new IntroDialogue();
-        } else if (userInput == "2") {
+        } else if (userInput == 2) {
             cout << "See you next time!" << endl;
             quitGame = true;
             return this;
