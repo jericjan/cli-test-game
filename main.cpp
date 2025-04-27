@@ -4,7 +4,7 @@
 #include <chrono>
 #include <thread>
 #include <random>
-
+#include <functional> 
 
 using namespace std;
 
@@ -92,7 +92,13 @@ class Player: public Entity {
         Player(int _health, string _name, int _atk, int _def, int _money);        
 
         void addMoney(int amount) {
-            cout << "You received " << amount << " money!" << endl;
+            if (amount < 0) {
+                cout << "You lost " << -amount << " money!" << endl;
+            } else if (amount == 0) {
+                cout << "You didn't gain or lose any money." << endl;
+            } else if (amount > 0) {
+                cout << "You gained " << amount << " money!" << endl;
+            }            
             money += amount;
         }
 };
@@ -308,7 +314,11 @@ class Battle: public UIWithPlayer {
     Entity enemy;
     bool didIntro;
     int rewardMoney;
-    Battle(Player player, Entity enemy, int reward);
+    function<UserInterface*(Player)> onWin;
+    function<UserInterface*(Player)> onLose;    
+    Battle(Player player, Entity enemy, int reward,
+        function<UserInterface*(Player)> winCallback,
+        function<UserInterface*(Player)> loseCallback);
     UserInterface* render() override;
 };
 
@@ -341,7 +351,10 @@ UserInterface* MainMenu::render() {
         return this;
     }  else if (userInput == "2") {
         Entity enemy = Entity(500, "Random Guy", 50, 50);
-        return new Battle(player, enemy, 50);
+        auto after = [=](Player player) -> UserInterface* {
+            return new MainMenu(player);
+        };        
+        return new Battle(player, enemy, 50, after, after);
     }  else if (userInput == "3") {
         return new GambleMenu(player);
     }  else if (userInput == "4") {
@@ -384,8 +397,11 @@ class JovialAftermath: public UIWithPlayer {
 };
 
 
-Battle::Battle(Player player, Entity enemy, int reward): 
-UIWithPlayer(player), enemy(enemy), didIntro(false), rewardMoney(reward) {}
+Battle::Battle(Player player, Entity enemy, int reward,
+    function<UserInterface*(Player)> winCallback,
+    function<UserInterface*(Player)> loseCallback): 
+UIWithPlayer(player), enemy(enemy), didIntro(false), rewardMoney(reward),
+onWin(winCallback), onLose(loseCallback) {}
 
 UserInterface* Battle::render() {
     if (!didIntro) {
@@ -422,13 +438,13 @@ UserInterface* Battle::render() {
     
     if (player.currHealth == 0) {
         cout << player.name << " lost the battle!" << endl;
-        return new JovialAftermath(player, "lose");
+        return onLose(player);
     } else if (enemy.currHealth == 0) {
-        cout << enemy.name << " lost the battle!" << endl;
-        return new JovialAftermath(player, "win");
+        cout << enemy.name << " lost the battle!" << endl;                
         if (rewardMoney > 0) {
             player.addMoney(rewardMoney);
         }
+        return onWin(player);
     }
     return this;
 }
@@ -449,7 +465,16 @@ class JovialCutscene: public UIWithPlayer {
             "Jovial: Alright then, kid, let's fight!\n");
 
             Entity jovial = Entity(1000, "Jovial Merryment", 100, 50);
-            return new Battle(player, jovial, 0);
+
+            auto onWin = [=](Player player) -> UserInterface* {
+                return new JovialAftermath(player, "win");
+            };
+
+            auto onLose = [=](Player player) -> UserInterface* {
+                return new JovialAftermath(player, "lose");
+            };
+
+            return new Battle(player, jovial, 0, onWin, onLose);
         }
 };
 
