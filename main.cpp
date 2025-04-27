@@ -1,4 +1,5 @@
 #include <iostream>
+#include <vector>
 #include <list>
 #include <chrono>
 #include <thread>
@@ -69,7 +70,7 @@ class Player;
 
 class Inventory {
     public:
-        list<IItem*> items;
+        vector<IItem*> items;
 
         void addItem(IItem* item);
 
@@ -135,21 +136,20 @@ class IPlayerItem: public IItem {
             cout << "Type the # of the item to use, 0 to exit > ";
         }
 
-        void Inventory::useItem(int idx, Player& player, Entity& enemy) {
-            int scrollerIdx = 1;
-            for (IItem* item: items) { // TODO: Use vectors lmao
-                if (scrollerIdx == idx) {
-                    if (IPlayerItem* playerItem = dynamic_cast<IPlayerItem*>(item)) {
-                        playerItem->use(player);
-                   } else if (IEnemyItem* enemyItem = dynamic_cast<IEnemyItem*>(item)) {
-                        enemyItem->use(player, enemy);
-                   }
-                    break;
-                }
-                scrollerIdx++;
+        void Inventory::useItem(int idx, Player& player, Entity& enemy) {            
+            IItem* item = items.at(idx - 1);
+            if (IPlayerItem* playerItem = dynamic_cast<IPlayerItem*>(item)) {
+                playerItem->use(player);
+            } else if (IEnemyItem* enemyItem = dynamic_cast<IEnemyItem*>(item)) {
+                enemyItem->use(player, enemy);
             }
-            
-        }
+            if (item->count != -1) {
+                item->count--;
+                if (item->count == 0) {
+                    items.erase(items.begin() + idx - 1);
+                }
+            }     
+        }   
 
         void Inventory::dropItem(int idx) {
 
@@ -171,7 +171,7 @@ class IPotion: public IPlayerItem {
         IPotion(string n, string d, int c): IPlayerItem(n, "Potion", d, c) {}
 };
 
-class HealthPotion: public IPotion {
+class HealthPotion: public IPotion {    
     public:
         HealthPotion(int c): 
         IPotion("Health Potion", "Heals the user 5HP", c) {}
@@ -244,13 +244,20 @@ class MainMenu: public UIWithPlayer {
             if (userInput == "1") {
                 player.inventory.listItems();
                 int bagInput;
-                cin >> bagInput;
-                if (bagInput == 0) {}
-                else {
-                //     if (IPlayerItem* playerItem = dynamic_cast<IPlayerItem*>(item)) {
-                //         playerItem->use(player);
-                //    }
-                }
+                while (true) {
+                    cin >> bagInput;
+                    if (bagInput == 0) {
+                        break;
+                    } else {
+                        IItem* item = player.inventory.items.at(bagInput - 1);
+                        if (IPlayerItem* playerItem = dynamic_cast<IPlayerItem*>(item)) {
+                            playerItem->use(player);
+                            break;
+                        } else {
+                            printAnimate("You can't use that item here!\n");
+                        }
+                    }
+                }                
                 return this;
             } else if (userInput == "2") {
                 return new StartMenu();
@@ -316,6 +323,9 @@ class Battle: public UIWithPlayer {
             }
         } else if (userInput == "3") {
             cout << "You can't run from this battle!" << endl;
+        } else if (userInput == "4") { // for testing purposes
+            enemy.currHealth = 0;
+            cout << "You punched the enemy so hard, they died instantly!" << endl;
         } else {
             cout << "That's not one of the options!" << endl;            
             return this;
