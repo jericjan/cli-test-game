@@ -1,0 +1,84 @@
+\doxysection{inventory.\+cpp}
+\hypertarget{inventory_8cpp_source}{}\label{inventory_8cpp_source}\index{src/inventory.cpp@{src/inventory.cpp}}
+\mbox{\hyperlink{inventory_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{inventory_8cpp_source_l00001}00001\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{\Hypertarget{inventory_8cpp_source_l00002}00002\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{inventory_8h}{inventory.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{inventory_8cpp_source_l00003}00003\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{extras_8h}{extras.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{inventory_8cpp_source_l00004}00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{items_8h}{items.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{inventory_8cpp_source_l00005}00005\ }
+\DoxyCodeLine{\Hypertarget{inventory_8cpp_source_l00006}\mbox{\hyperlink{class_inventory_aedf68e754ecde17b6c47fee1c93da959}{00006}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_inventory_aedf68e754ecde17b6c47fee1c93da959}{Inventory::addItem}}(\mbox{\hyperlink{class_i_item}{IItem}}\ *item)}
+\DoxyCodeLine{\Hypertarget{inventory_8cpp_source_l00007}00007\ \{}
+\DoxyCodeLine{\Hypertarget{inventory_8cpp_source_l00008}00008\ \ \ \ \ \textcolor{keywordtype}{string}\ msg\ =\ item-\/>\mbox{\hyperlink{class_i_item_a7fdf57eb313baaea887b648bc13f247a}{name}}\ +\ \textcolor{stringliteral}{"{}\ added\ to\ inventory!"{}};}
+\DoxyCodeLine{\Hypertarget{inventory_8cpp_source_l00009}00009\ \ \ \ \ \textcolor{keywordtype}{string}\ border\ =\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}}\ +\ string(msg.length(),\ \textcolor{charliteral}{'='})\ +\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{inventory_8cpp_source_l00010}00010\ \ \ \ \ \mbox{\hyperlink{extras_8cpp_aff1ce18cf1cd562e54189df70cee6299}{printAnimate}}(border,\ 1);}
+\DoxyCodeLine{\Hypertarget{inventory_8cpp_source_l00011}00011\ \ \ \ \ \mbox{\hyperlink{extras_8cpp_aff1ce18cf1cd562e54189df70cee6299}{printAnimate}}(msg);}
+\DoxyCodeLine{\Hypertarget{inventory_8cpp_source_l00012}00012\ \ \ \ \ \mbox{\hyperlink{extras_8cpp_aff1ce18cf1cd562e54189df70cee6299}{printAnimate}}(border,\ 1);}
+\DoxyCodeLine{\Hypertarget{inventory_8cpp_source_l00013}00013\ \ \ \ \ \mbox{\hyperlink{class_inventory_adfeb1d487d3180b4741506b9452e8c5c}{items}}.push\_back(item);}
+\DoxyCodeLine{\Hypertarget{inventory_8cpp_source_l00014}00014\ \}}
+\DoxyCodeLine{\Hypertarget{inventory_8cpp_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{inventory_8cpp_source_l00016}\mbox{\hyperlink{class_inventory_a724c6b48c4772ac6c821461a3fd3c650}{00016}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_inventory_a724c6b48c4772ac6c821461a3fd3c650}{Inventory::listItems}}()}
+\DoxyCodeLine{\Hypertarget{inventory_8cpp_source_l00017}00017\ \{}
+\DoxyCodeLine{\Hypertarget{inventory_8cpp_source_l00018}00018\ \ \ \ \ \textcolor{keywordtype}{int}\ idx\ =\ 1;}
+\DoxyCodeLine{\Hypertarget{inventory_8cpp_source_l00019}00019\ }
+\DoxyCodeLine{\Hypertarget{inventory_8cpp_source_l00020}00020\ \ \ \ \ cout\ <<\ \mbox{\hyperlink{extras_8cpp_a9f429ae2206e7d4a9b8b4071b64080b5}{padTo}}(\textcolor{stringliteral}{"{}[Name]"{}},\ 20)\ <<\ \textcolor{stringliteral}{"{}|"{}}\ <<\ \mbox{\hyperlink{extras_8cpp_a9f429ae2206e7d4a9b8b4071b64080b5}{padTo}}(\textcolor{stringliteral}{"{}[Type]"{}},\ 20)\ <<\ \textcolor{stringliteral}{"{}|"{}}\ <<\ \mbox{\hyperlink{extras_8cpp_a9f429ae2206e7d4a9b8b4071b64080b5}{padTo}}(\textcolor{stringliteral}{"{}[Description]"{}},\ 50)\ <<\ \textcolor{stringliteral}{"{}|"{}}\ <<\ \mbox{\hyperlink{extras_8cpp_a9f429ae2206e7d4a9b8b4071b64080b5}{padTo}}(\textcolor{stringliteral}{"{}[Count]"{}},\ 20)\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{inventory_8cpp_source_l00021}00021\ \ \ \ \ \textcolor{keywordflow}{for}\ (\mbox{\hyperlink{class_i_item}{IItem}}\ *item\ :\ \mbox{\hyperlink{class_inventory_adfeb1d487d3180b4741506b9452e8c5c}{items}})}
+\DoxyCodeLine{\Hypertarget{inventory_8cpp_source_l00022}00022\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{inventory_8cpp_source_l00023}00023\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ count\ =\ (item-\/>count\ ==\ -\/1)\ ?\ \textcolor{stringliteral}{"{}Infinite"{}}\ :\ to\_string(item-\/>count)\ +\ \textcolor{stringliteral}{"{}x"{}};}
+\DoxyCodeLine{\Hypertarget{inventory_8cpp_source_l00024}00024\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ numberedName\ =\ string(\textcolor{stringliteral}{"{}["{}})\ +\ to\_string(idx)\ +\ \textcolor{stringliteral}{"{}]\ "{}}\ +\ item-\/>name;}
+\DoxyCodeLine{\Hypertarget{inventory_8cpp_source_l00025}00025\ \ \ \ \ \ \ \ \ cout\ <<\ \mbox{\hyperlink{extras_8cpp_a9f429ae2206e7d4a9b8b4071b64080b5}{padTo}}(numberedName,\ 20)\ <<\ \textcolor{stringliteral}{"{}|"{}}\ <<\ \mbox{\hyperlink{extras_8cpp_a9f429ae2206e7d4a9b8b4071b64080b5}{padTo}}(item-\/>type,\ 20)\ <<\ \textcolor{stringliteral}{"{}|"{}}\ <<\ \mbox{\hyperlink{extras_8cpp_a9f429ae2206e7d4a9b8b4071b64080b5}{padTo}}(item-\/>desc,\ 50)\ <<\ \textcolor{stringliteral}{"{}|"{}}\ <<\ \mbox{\hyperlink{extras_8cpp_a9f429ae2206e7d4a9b8b4071b64080b5}{padTo}}(count,\ 20)\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{inventory_8cpp_source_l00026}00026\ \ \ \ \ \ \ \ \ idx++;}
+\DoxyCodeLine{\Hypertarget{inventory_8cpp_source_l00027}00027\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{inventory_8cpp_source_l00028}00028\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Type\ the\ \#\ of\ the\ item\ to\ use,\ 0\ to\ exit\ >\ "{}};}
+\DoxyCodeLine{\Hypertarget{inventory_8cpp_source_l00029}00029\ \}}
+\DoxyCodeLine{\Hypertarget{inventory_8cpp_source_l00030}00030\ }
+\DoxyCodeLine{\Hypertarget{inventory_8cpp_source_l00031}00031\ \textcolor{comment}{//\ idx\ is\ 1-\/indexed}}
+\DoxyCodeLine{\Hypertarget{inventory_8cpp_source_l00032}\mbox{\hyperlink{class_inventory_a51e9f40ed13d62a47358418925bb8347}{00032}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_inventory_a51e9f40ed13d62a47358418925bb8347}{Inventory::useItem}}(\textcolor{keywordtype}{int}\ idx,\ \mbox{\hyperlink{class_player}{Player}}\ \&player,\ \mbox{\hyperlink{class_entity}{Entity}}\ *enemy)}
+\DoxyCodeLine{\Hypertarget{inventory_8cpp_source_l00033}00033\ \{}
+\DoxyCodeLine{\Hypertarget{inventory_8cpp_source_l00034}00034\ \ \ \ \ \mbox{\hyperlink{class_i_item}{IItem}}\ *item;}
+\DoxyCodeLine{\Hypertarget{inventory_8cpp_source_l00035}00035\ \ \ \ \ \textcolor{keywordflow}{try}}
+\DoxyCodeLine{\Hypertarget{inventory_8cpp_source_l00036}00036\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{inventory_8cpp_source_l00037}00037\ \ \ \ \ \ \ \ \ item\ =\ \mbox{\hyperlink{class_inventory_adfeb1d487d3180b4741506b9452e8c5c}{items}}.at(idx\ -\/\ 1);}
+\DoxyCodeLine{\Hypertarget{inventory_8cpp_source_l00038}00038\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{inventory_8cpp_source_l00039}00039\ \ \ \ \ \textcolor{keywordflow}{catch}\ (...)}
+\DoxyCodeLine{\Hypertarget{inventory_8cpp_source_l00040}00040\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{inventory_8cpp_source_l00041}00041\ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Invalid\ item\ number!"{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{inventory_8cpp_source_l00042}00042\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{inventory_8cpp_source_l00043}00043\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{inventory_8cpp_source_l00044}00044\ }
+\DoxyCodeLine{\Hypertarget{inventory_8cpp_source_l00045}00045\ \ \ \ \ \textcolor{keywordtype}{bool}\ useResult;}
+\DoxyCodeLine{\Hypertarget{inventory_8cpp_source_l00046}00046\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_i_player_item}{IPlayerItem}}\ *playerItem\ =\ \textcolor{keyword}{dynamic\_cast<}\mbox{\hyperlink{class_i_player_item}{IPlayerItem}}\ *\textcolor{keyword}{>}(item))}
+\DoxyCodeLine{\Hypertarget{inventory_8cpp_source_l00047}00047\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{inventory_8cpp_source_l00048}00048\ \ \ \ \ \ \ \ \ useResult\ =\ playerItem-\/>use(player);}
+\DoxyCodeLine{\Hypertarget{inventory_8cpp_source_l00049}00049\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{inventory_8cpp_source_l00050}00050\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_i_enemy_item}{IEnemyItem}}\ *enemyItem\ =\ \textcolor{keyword}{dynamic\_cast<}\mbox{\hyperlink{class_i_enemy_item}{IEnemyItem}}\ *\textcolor{keyword}{>}(item))}
+\DoxyCodeLine{\Hypertarget{inventory_8cpp_source_l00051}00051\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{inventory_8cpp_source_l00052}00052\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (enemy\ ==\ \textcolor{keyword}{nullptr})}
+\DoxyCodeLine{\Hypertarget{inventory_8cpp_source_l00053}00053\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{inventory_8cpp_source_l00054}00054\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}You\ can't\ use\ that\ item\ here!"{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{inventory_8cpp_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{inventory_8cpp_source_l00056}00056\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{inventory_8cpp_source_l00057}00057\ \ \ \ \ \ \ \ \ useResult\ =\ enemyItem-\/>use(player,\ *enemy);}
+\DoxyCodeLine{\Hypertarget{inventory_8cpp_source_l00058}00058\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{inventory_8cpp_source_l00059}00059\ }
+\DoxyCodeLine{\Hypertarget{inventory_8cpp_source_l00060}00060\ \ \ \ \ \textcolor{keywordflow}{if}\ (!useResult)}
+\DoxyCodeLine{\Hypertarget{inventory_8cpp_source_l00061}00061\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{inventory_8cpp_source_l00062}00062\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{inventory_8cpp_source_l00063}00063\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{inventory_8cpp_source_l00064}00064\ }
+\DoxyCodeLine{\Hypertarget{inventory_8cpp_source_l00065}00065\ \ \ \ \ \textcolor{keywordflow}{if}\ (item-\/>\mbox{\hyperlink{class_i_item_a0b30dc1f8eee51c2b78ac71d6c7b93b7}{count}}\ !=\ -\/1)}
+\DoxyCodeLine{\Hypertarget{inventory_8cpp_source_l00066}00066\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{inventory_8cpp_source_l00067}00067\ \ \ \ \ \ \ \ \ item-\/>\mbox{\hyperlink{class_i_item_a0b30dc1f8eee51c2b78ac71d6c7b93b7}{count}}-\/-\/;}
+\DoxyCodeLine{\Hypertarget{inventory_8cpp_source_l00068}00068\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (item-\/>\mbox{\hyperlink{class_i_item_a0b30dc1f8eee51c2b78ac71d6c7b93b7}{count}}\ ==\ 0)}
+\DoxyCodeLine{\Hypertarget{inventory_8cpp_source_l00069}00069\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{inventory_8cpp_source_l00070}00070\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_inventory_adfeb1d487d3180b4741506b9452e8c5c}{items}}.erase(\mbox{\hyperlink{class_inventory_adfeb1d487d3180b4741506b9452e8c5c}{items}}.begin()\ +\ idx\ -\/\ 1);}
+\DoxyCodeLine{\Hypertarget{inventory_8cpp_source_l00071}00071\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{inventory_8cpp_source_l00072}00072\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{inventory_8cpp_source_l00073}00073\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{inventory_8cpp_source_l00074}00074\ \}}
+\DoxyCodeLine{\Hypertarget{inventory_8cpp_source_l00075}00075\ }
+\DoxyCodeLine{\Hypertarget{inventory_8cpp_source_l00076}\mbox{\hyperlink{class_inventory_a2343fa8402b342a8617d6b619ec08673}{00076}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_inventory_a2343fa8402b342a8617d6b619ec08673}{Inventory::dropItem}}(\textcolor{keywordtype}{int}\ idx)}
+\DoxyCodeLine{\Hypertarget{inventory_8cpp_source_l00077}00077\ \{}
+\DoxyCodeLine{\Hypertarget{inventory_8cpp_source_l00078}00078\ \}}
+
+\end{DoxyCode}

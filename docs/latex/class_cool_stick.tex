@@ -1,0 +1,134 @@
+\doxysection{Cool\+Stick Class Reference}
+\hypertarget{class_cool_stick}{}\label{class_cool_stick}\index{CoolStick@{CoolStick}}
+
+
+The Cool Stick is the first weapon the player gets.  
+
+
+
+
+{\ttfamily \#include $<$items.\+h$>$}
+
+
+
+Inheritance diagram for Cool\+Stick\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_cool_stick__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Cool\+Stick\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_cool_stick__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_cool_stick_acfbae3a51f5ba2cddce652078b501f9d}{Cool\+Stick}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_weapon}{Weapon}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_weapon_a8d9631f8c67df4646e9b06516eff0cd0}{Weapon}} (string \mbox{\hyperlink{class_i_item_a7fdf57eb313baaea887b648bc13f247a}{name}}, string \mbox{\hyperlink{class_i_item_a9acebb5d530d823314bb1a8f29ff974a}{desc}}, int \mbox{\hyperlink{class_i_item_a0b30dc1f8eee51c2b78ac71d6c7b93b7}{count}}, int \mbox{\hyperlink{class_weapon_af7f5d5ecbb3ac0e95350a6750be1fb28}{dmg}})
+\item 
+bool \mbox{\hyperlink{class_weapon_a425b48c0e2c2422e244b7cb7227a0345}{use}} (\mbox{\hyperlink{class_player}{Player}} \&player, \mbox{\hyperlink{class_entity}{Entity}} \&enemy) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_i_enemy_item}{IEnemy\+Item}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_i_enemy_item_ab04428e73487bd8279945087a6b307fa}{IEnemy\+Item}} (string n, string t, string d, int c)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_i_item}{IItem}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_i_item_ab1bb86846077713c5847ec035115f09c}{IItem}} (string n, string t, string d, int c)
+\item 
+virtual \mbox{\hyperlink{class_i_item_a09483bee7e3f4f382e8eeac54493620e}{\texorpdfstring{$\sim$}{\string~}\+IItem}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const int \mbox{\hyperlink{class_cool_stick_affea97bbcc2e54c23d4e0e127d6de158}{dmg}} = 60
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Public Attributes inherited from \mbox{\hyperlink{class_weapon}{Weapon}}}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_weapon_af7f5d5ecbb3ac0e95350a6750be1fb28}{dmg}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes inherited from \mbox{\hyperlink{class_i_item}{IItem}}}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{class_i_item_a7fdf57eb313baaea887b648bc13f247a}{name}}
+\item 
+string \mbox{\hyperlink{class_i_item_a3b3b58b237d89653e493c95fe22074ff}{type}}
+\item 
+string \mbox{\hyperlink{class_i_item_a9acebb5d530d823314bb1a8f29ff974a}{desc}}
+\item 
+int \mbox{\hyperlink{class_i_item_a0b30dc1f8eee51c2b78ac71d6c7b93b7}{count}}
+\begin{DoxyCompactList}\small\item\em A count of -\/1 means the item can be used infinitely. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The Cool Stick is the first weapon the player gets. 
+
+Definition at line \mbox{\hyperlink{items_8h_source_l00063}{63}} of file \mbox{\hyperlink{items_8h_source}{items.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_cool_stick_acfbae3a51f5ba2cddce652078b501f9d}\index{CoolStick@{CoolStick}!CoolStick@{CoolStick}}
+\index{CoolStick@{CoolStick}!CoolStick@{CoolStick}}
+\doxysubsubsection{\texorpdfstring{CoolStick()}{CoolStick()}}
+{\footnotesize\ttfamily \label{class_cool_stick_acfbae3a51f5ba2cddce652078b501f9d} 
+Cool\+Stick\+::\+Cool\+Stick (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{items_8cpp_source_l00036}{36}} of file \mbox{\hyperlink{items_8cpp_source}{items.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00036\ :\ \mbox{\hyperlink{class_weapon_a8d9631f8c67df4646e9b06516eff0cd0}{Weapon}}(\textcolor{stringliteral}{"{}Cool\ Stick"{}},\ \textcolor{stringliteral}{"{}A\ cool\ stick\ some\ stranger\ gave\ you.\ "{}}\ +\ to\_string(\mbox{\hyperlink{class_cool_stick_affea97bbcc2e54c23d4e0e127d6de158}{dmg}})\ +\ \textcolor{stringliteral}{"{}DMG"{}},\ -\/1,\ \mbox{\hyperlink{class_cool_stick_affea97bbcc2e54c23d4e0e127d6de158}{dmg}})\ \{\}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{items_8h_source_l00066}{dmg}}, and \mbox{\hyperlink{items_8cpp_source_l00029}{Weapon\+::\+Weapon()}}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_cool_stick_acfbae3a51f5ba2cddce652078b501f9d_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_cool_stick_affea97bbcc2e54c23d4e0e127d6de158}\index{CoolStick@{CoolStick}!dmg@{dmg}}
+\index{dmg@{dmg}!CoolStick@{CoolStick}}
+\doxysubsubsection{\texorpdfstring{dmg}{dmg}}
+{\footnotesize\ttfamily \label{class_cool_stick_affea97bbcc2e54c23d4e0e127d6de158} 
+const int Cool\+Stick\+::dmg = 60\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{items_8h_source_l00066}{66}} of file \mbox{\hyperlink{items_8h_source}{items.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{items_8cpp_source_l00036}{Cool\+Stick()}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{items_8h}{items.\+h}}\item 
+src/\mbox{\hyperlink{items_8cpp}{items.\+cpp}}\end{DoxyCompactItemize}

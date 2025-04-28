@@ -1,0 +1,11 @@
+<map id="inputNum" name="inputNum">
+<area shape="rect" id="Node000001" title="Gets an integer from the user. Loops until a valid integer is entered." alt="" coords="186,81,263,108"/>
+<area shape="rect" id="Node000002" href="$class_battle.html#adf42eb4c2a1cead28eb8eee71b139418" title=" " alt="" coords="22,5,121,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="188,75,136,46,111,35,113,30,139,42,191,71"/>
+<area shape="rect" id="Node000003" href="$class_first_choice.html#a219f10196fb47d36af7fad003dc54a0c" title=" " alt="" coords="5,56,138,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="170,88,138,83,139,78,170,83"/>
+<area shape="rect" id="Node000004" href="$class_main_menu.html#adeafd7b49d1f995dd25a7e952700d76c" title=" " alt="" coords="9,107,134,133"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="171,106,135,112,134,107,170,101"/>
+<area shape="rect" id="Node000005" href="$class_start_menu.html#a306c6344f45d665ff008f6c0d3849e84" title=" " alt="" coords="9,157,134,184"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="191,119,139,148,113,159,111,154,136,143,188,114"/>
+</map>

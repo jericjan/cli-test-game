@@ -1,0 +1,31 @@
+\doxysection{inventory.\+h}
+\hypertarget{inventory_8h_source}{}\label{inventory_8h_source}\index{src/inventory.h@{src/inventory.h}}
+\mbox{\hyperlink{inventory_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{inventory_8h_source_l00001}00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{\Hypertarget{inventory_8h_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{inventory_8h_source_l00003}00003\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{\Hypertarget{inventory_8h_source_l00004}00004\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{\Hypertarget{inventory_8h_source_l00005}00005\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{\Hypertarget{inventory_8h_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{inventory_8h_source_l00007}00007\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_entity}{Entity}};}
+\DoxyCodeLine{\Hypertarget{inventory_8h_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{inventory_8h_source_l00009}00009\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_i_item}{IItem}};}
+\DoxyCodeLine{\Hypertarget{inventory_8h_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{inventory_8h_source_l00011}00011\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_player}{Player}};}
+\DoxyCodeLine{\Hypertarget{inventory_8h_source_l00012}00012\ }
+\DoxyCodeLine{\Hypertarget{inventory_8h_source_l00014}\mbox{\hyperlink{class_inventory}{00014}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_inventory}{Inventory}}}
+\DoxyCodeLine{\Hypertarget{inventory_8h_source_l00015}00015\ \{}
+\DoxyCodeLine{\Hypertarget{inventory_8h_source_l00016}00016\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{inventory_8h_source_l00017}\mbox{\hyperlink{class_inventory_adfeb1d487d3180b4741506b9452e8c5c}{00017}}\ \ \ \ \ vector<IItem\ *>\ \mbox{\hyperlink{class_inventory_adfeb1d487d3180b4741506b9452e8c5c}{items}};}
+\DoxyCodeLine{\Hypertarget{inventory_8h_source_l00018}00018\ }
+\DoxyCodeLine{\Hypertarget{inventory_8h_source_l00019}00019\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_inventory_aedf68e754ecde17b6c47fee1c93da959}{addItem}}(\mbox{\hyperlink{class_i_item}{IItem}}\ *item);}
+\DoxyCodeLine{\Hypertarget{inventory_8h_source_l00020}00020\ }
+\DoxyCodeLine{\Hypertarget{inventory_8h_source_l00023}00023\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_inventory_a724c6b48c4772ac6c821461a3fd3c650}{listItems}}();}
+\DoxyCodeLine{\Hypertarget{inventory_8h_source_l00024}00024\ }
+\DoxyCodeLine{\Hypertarget{inventory_8h_source_l00030}00030\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_inventory_a51e9f40ed13d62a47358418925bb8347}{useItem}}(\textcolor{keywordtype}{int}\ idx,\ \mbox{\hyperlink{class_player}{Player}}\ \&player,\ \mbox{\hyperlink{class_entity}{Entity}}\ *enemy);}
+\DoxyCodeLine{\Hypertarget{inventory_8h_source_l00031}00031\ }
+\DoxyCodeLine{\Hypertarget{inventory_8h_source_l00034}00034\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_inventory_a2343fa8402b342a8617d6b619ec08673}{dropItem}}(\textcolor{keywordtype}{int}\ idx);}
+\DoxyCodeLine{\Hypertarget{inventory_8h_source_l00035}00035\ \};}
+
+\end{DoxyCode}

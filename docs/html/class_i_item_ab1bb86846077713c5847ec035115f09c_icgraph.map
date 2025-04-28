@@ -1,0 +1,17 @@
+<map id="IItem::IItem" name="IItem::IItem">
+<area shape="rect" id="Node000001" title=" " alt="" coords="623,81,713,108"/>
+<area shape="rect" id="Node000002" href="$class_i_enemy_item.html#ab04428e73487bd8279945087a6b307fa" title=" " alt="" coords="404,56,575,83"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="607,89,575,84,576,79,608,84"/>
+<area shape="rect" id="Node000006" href="$class_i_player_item.html#afc3002fdaacb41cd6862b2301cd279e3" title=" " alt="" coords="408,107,571,133"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="608,106,572,111,572,106,607,101"/>
+<area shape="rect" id="Node000003" href="$class_weapon.html#a8d9631f8c67df4646e9b06516eff0cd0" title=" " alt="" coords="233,56,356,83"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="389,72,356,72,356,67,389,67"/>
+<area shape="rect" id="Node000004" href="$class_cool_stick.html#acfbae3a51f5ba2cddce652078b501f9d" title=" " alt="" coords="23,5,167,32"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="223,54,150,35,151,30,225,49"/>
+<area shape="rect" id="Node000005" href="$class_yamato.html#af87539b26b8f9de81c54cb80ba556f9c" title=" " alt="" coords="36,56,154,83"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="217,72,154,72,154,67,217,67"/>
+<area shape="rect" id="Node000007" href="$class_i_potion.html#aa93950ffed81f33407bdce018c60de58" title=" " alt="" coords="239,107,350,133"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="393,123,350,123,350,117,393,117"/>
+<area shape="rect" id="Node000008" href="$class_health_potion.html#a6ff8807a7aae10c5ce186c793b7f359c" title=" " alt="" coords="5,107,185,133"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="223,123,185,123,185,117,223,117"/>
+</map>

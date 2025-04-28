@@ -1,0 +1,204 @@
+\doxysection{Main\+Menu Class Reference}
+\hypertarget{class_main_menu}{}\label{class_main_menu}\index{MainMenu@{MainMenu}}
+
+
+The main menu after all the cutscenes and stuff.  
+
+
+
+
+{\ttfamily \#include $<$ui.\+h$>$}
+
+
+
+Inheritance diagram for Main\+Menu\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=241pt]{class_main_menu__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Main\+Menu\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_main_menu__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_main_menu_a40f98ff78c92e3f79b781b7ed18507a7}{Main\+Menu}} (\mbox{\hyperlink{class_player}{Player}} \mbox{\hyperlink{class_u_i_with_player_a480502a8db864e1ec92eb19f87a35083}{player}})
+\item 
+\mbox{\hyperlink{class_user_interface}{User\+Interface}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_main_menu_adeafd7b49d1f995dd25a7e952700d76c}{render}} () override
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_u_i_with_player}{UIWith\+Player}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_u_i_with_player_a297e083951aeaf9e72d9746fab8eccd8}{UIWith\+Player}} ()
+\item 
+\mbox{\hyperlink{class_u_i_with_player_a8d2dca800c79f3d60af802cc4c302286}{UIWith\+Player}} (\mbox{\hyperlink{class_player}{Player}} \mbox{\hyperlink{class_u_i_with_player_a480502a8db864e1ec92eb19f87a35083}{player}})
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_user_interface}{User\+Interface}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{class_user_interface_ae588b2ff1711a016dd4c6fc5002c0841}{\texorpdfstring{$\sim$}{\string~}\+User\+Interface}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Public Attributes inherited from \mbox{\hyperlink{class_u_i_with_player}{UIWith\+Player}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_player}{Player}} \mbox{\hyperlink{class_u_i_with_player_a480502a8db864e1ec92eb19f87a35083}{player}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes inherited from \mbox{\hyperlink{class_user_interface}{User\+Interface}}}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_user_interface_aa95ee5089a1de7ad211fb3a1bb786e11}{quit\+Game}} = false
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The main menu after all the cutscenes and stuff. 
+
+Definition at line \mbox{\hyperlink{ui_8h_source_l00041}{41}} of file \mbox{\hyperlink{ui_8h_source}{ui.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_main_menu_a40f98ff78c92e3f79b781b7ed18507a7}\index{MainMenu@{MainMenu}!MainMenu@{MainMenu}}
+\index{MainMenu@{MainMenu}!MainMenu@{MainMenu}}
+\doxysubsubsection{\texorpdfstring{MainMenu()}{MainMenu()}}
+{\footnotesize\ttfamily \label{class_main_menu_a40f98ff78c92e3f79b781b7ed18507a7} 
+Main\+Menu\+::\+Main\+Menu (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_player}{Player}}}]{player}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{ui_8cpp_source_l00070}{70}} of file \mbox{\hyperlink{ui_8cpp_source}{ui.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00070\ :\ \mbox{\hyperlink{class_u_i_with_player_a297e083951aeaf9e72d9746fab8eccd8}{UIWithPlayer}}(\mbox{\hyperlink{class_u_i_with_player_a480502a8db864e1ec92eb19f87a35083}{player}})\ \{\}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{ui_8h_source_l00021}{UIWith\+Player\+::player}}, and \mbox{\hyperlink{ui_8cpp_source_l00013}{UIWith\+Player\+::\+UIWith\+Player()}}.
+
+
+
+Referenced by \mbox{\hyperlink{ui_8cpp_source_l00072}{render()}}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_main_menu_a40f98ff78c92e3f79b781b7ed18507a7_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=322pt]{class_main_menu_a40f98ff78c92e3f79b781b7ed18507a7_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_main_menu_adeafd7b49d1f995dd25a7e952700d76c}\index{MainMenu@{MainMenu}!render@{render}}
+\index{render@{render}!MainMenu@{MainMenu}}
+\doxysubsubsection{\texorpdfstring{render()}{render()}}
+{\footnotesize\ttfamily \label{class_main_menu_adeafd7b49d1f995dd25a7e952700d76c} 
+\mbox{\hyperlink{class_user_interface}{User\+Interface}} \texorpdfstring{$\ast$}{*} Main\+Menu\+::render (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_user_interface_a6c4e70754407cdc9ed66986dcea60ece}{User\+Interface}}.
+
+
+
+Definition at line \mbox{\hyperlink{ui_8cpp_source_l00072}{72}} of file \mbox{\hyperlink{ui_8cpp_source}{ui.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00073\ \{}
+\DoxyCodeLine{00074\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}[Main\ Menu]"{}}\ <<\ endl;}
+\DoxyCodeLine{00075\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}HP:\ "{}}\ <<\ \mbox{\hyperlink{class_u_i_with_player_a480502a8db864e1ec92eb19f87a35083}{player}}.currHealth\ <<\ \textcolor{stringliteral}{"{}/"{}}\ <<\ \mbox{\hyperlink{class_u_i_with_player_a480502a8db864e1ec92eb19f87a35083}{player}}.maxHealth\ <<\ \textcolor{stringliteral}{"{}\ ATK:\ "{}}\ <<\ \mbox{\hyperlink{class_u_i_with_player_a480502a8db864e1ec92eb19f87a35083}{player}}.stats.atk\ <<\ \textcolor{stringliteral}{"{}\ DEF:\ "{}}\ <<\ \mbox{\hyperlink{class_u_i_with_player_a480502a8db864e1ec92eb19f87a35083}{player}}.stats.def\ <<\ endl;}
+\DoxyCodeLine{00076\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Money:\ "{}}\ <<\ \mbox{\hyperlink{class_u_i_with_player_a480502a8db864e1ec92eb19f87a35083}{player}}.money\ <<\ endl;}
+\DoxyCodeLine{00077\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}[1]\ Inventory"{}}\ <<\ endl;}
+\DoxyCodeLine{00078\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}[2]\ Grind"{}}\ <<\ endl;}
+\DoxyCodeLine{00079\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}[3]\ Gamble"{}}\ <<\ endl;}
+\DoxyCodeLine{00080\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}[4]\ Hospital"{}}\ <<\ endl;}
+\DoxyCodeLine{00081\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}[5]\ Quit"{}}\ <<\ endl;}
+\DoxyCodeLine{00082\ \ \ \ \ \textcolor{keywordtype}{int}\ userInput\ =\ \mbox{\hyperlink{extras_8cpp_a3816c0b1714f3be0c6c8a394a4faee7d}{inputNum}}();}
+\DoxyCodeLine{00083\ \ \ \ \ \textcolor{keywordflow}{if}\ (userInput\ ==\ 1)}
+\DoxyCodeLine{00084\ \ \ \ \ \{}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_u_i_with_player_a480502a8db864e1ec92eb19f87a35083}{player}}.inventory.listItems();}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ bagInput;}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (\textcolor{keyword}{true})}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \ \ \ \ bagInput\ =\ \mbox{\hyperlink{extras_8cpp_a3816c0b1714f3be0c6c8a394a4faee7d}{inputNum}}();}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (bagInput\ ==\ 0)}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_u_i_with_player_a480502a8db864e1ec92eb19f87a35083}{player}}.inventory.useItem(bagInput,\ \mbox{\hyperlink{class_u_i_with_player_a480502a8db864e1ec92eb19f87a35083}{player}},\ \textcolor{keyword}{nullptr}))}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{this};}
+\DoxyCodeLine{00103\ \ \ \ \ \}}
+\DoxyCodeLine{00104\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (userInput\ ==\ 2)}
+\DoxyCodeLine{00105\ \ \ \ \ \{}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ Entity\ enemy\ =\ Entity(500,\ \textcolor{stringliteral}{"{}Random\ Guy"{}},\ 50,\ 50);}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ after\ =\ [=](Player\ \mbox{\hyperlink{class_u_i_with_player_a480502a8db864e1ec92eb19f87a35083}{player}})\ -\/>\ UserInterface\ *}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_main_menu_a40f98ff78c92e3f79b781b7ed18507a7}{MainMenu}}(\mbox{\hyperlink{class_u_i_with_player_a480502a8db864e1ec92eb19f87a35083}{player}});}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ Battle(\mbox{\hyperlink{class_u_i_with_player_a480502a8db864e1ec92eb19f87a35083}{player}},\ enemy,\ 50,\ after,\ after);}
+\DoxyCodeLine{00112\ \ \ \ \ \}}
+\DoxyCodeLine{00113\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (userInput\ ==\ 3)}
+\DoxyCodeLine{00114\ \ \ \ \ \{}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ GambleMenu(\mbox{\hyperlink{class_u_i_with_player_a480502a8db864e1ec92eb19f87a35083}{player}});}
+\DoxyCodeLine{00116\ \ \ \ \ \}}
+\DoxyCodeLine{00117\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (userInput\ ==\ 4)}
+\DoxyCodeLine{00118\ \ \ \ \ \{}
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{extras_8cpp_aff1ce18cf1cd562e54189df70cee6299}{printAnimate}}(\textcolor{stringliteral}{"{}You\ were\ healed\ to\ full\ health!\(\backslash\)n"{}});}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_u_i_with_player_a480502a8db864e1ec92eb19f87a35083}{player}}.currHealth\ =\ \mbox{\hyperlink{class_u_i_with_player_a480502a8db864e1ec92eb19f87a35083}{player}}.maxHealth;}
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{this};}
+\DoxyCodeLine{00122\ \ \ \ \ \}}
+\DoxyCodeLine{00123\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (userInput\ ==\ 5)}
+\DoxyCodeLine{00124\ \ \ \ \ \{}
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ StartMenu();}
+\DoxyCodeLine{00126\ \ \ \ \ \}}
+\DoxyCodeLine{00127\ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00128\ \ \ \ \ \{}
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}That's\ not\ one\ of\ the\ options!"{}}\ <<\ endl;}
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{this};}
+\DoxyCodeLine{00131\ \ \ \ \ \}}
+\DoxyCodeLine{00132\ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{extras_8cpp_source_l00026}{input\+Num()}}, \mbox{\hyperlink{ui_8cpp_source_l00070}{Main\+Menu()}}, \mbox{\hyperlink{ui_8h_source_l00021}{UIWith\+Player\+::player}}, and \mbox{\hyperlink{extras_8cpp_source_l00041}{print\+Animate()}}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_main_menu_adeafd7b49d1f995dd25a7e952700d76c_cgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{ui_8h}{ui.\+h}}\item 
+src/\mbox{\hyperlink{ui_8cpp}{ui.\+cpp}}\end{DoxyCompactItemize}

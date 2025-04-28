@@ -1,0 +1,112 @@
+\doxysection{Start\+Menu Class Reference}
+\hypertarget{class_start_menu}{}\label{class_start_menu}\index{StartMenu@{StartMenu}}
+
+
+The first menu the user sees when they start the game.  
+
+
+
+
+{\ttfamily \#include $<$ui.\+h$>$}
+
+
+
+Inheritance diagram for Start\+Menu\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=241pt]{class_start_menu__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Start\+Menu\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=241pt]{class_start_menu__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_user_interface}{User\+Interface}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_start_menu_a306c6344f45d665ff008f6c0d3849e84}{render}} () override
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_user_interface}{User\+Interface}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{class_user_interface_ae588b2ff1711a016dd4c6fc5002c0841}{\texorpdfstring{$\sim$}{\string~}\+User\+Interface}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Public Attributes inherited from \mbox{\hyperlink{class_user_interface}{User\+Interface}}}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_user_interface_aa95ee5089a1de7ad211fb3a1bb786e11}{quit\+Game}} = false
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The first menu the user sees when they start the game. 
+
+Definition at line \mbox{\hyperlink{ui_8h_source_l00027}{27}} of file \mbox{\hyperlink{ui_8h_source}{ui.\+h}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_start_menu_a306c6344f45d665ff008f6c0d3849e84}\index{StartMenu@{StartMenu}!render@{render}}
+\index{render@{render}!StartMenu@{StartMenu}}
+\doxysubsubsection{\texorpdfstring{render()}{render()}}
+{\footnotesize\ttfamily \label{class_start_menu_a306c6344f45d665ff008f6c0d3849e84} 
+\mbox{\hyperlink{class_user_interface}{User\+Interface}} \texorpdfstring{$\ast$}{*} Start\+Menu\+::render (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_user_interface_a6c4e70754407cdc9ed66986dcea60ece}{User\+Interface}}.
+
+
+
+Definition at line \mbox{\hyperlink{ui_8cpp_source_l00312}{312}} of file \mbox{\hyperlink{ui_8cpp_source}{ui.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00313\ \{}
+\DoxyCodeLine{00314\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Welcome\ to\ The\ Game!"{}}\ <<\ endl}
+\DoxyCodeLine{00315\ \ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}[1]\ Start"{}}\ <<\ endl}
+\DoxyCodeLine{00316\ \ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}[2]\ Quit"{}}\ <<\ endl;}
+\DoxyCodeLine{00317\ \ \ \ \ \textcolor{keywordtype}{int}\ userInput\ =\ \mbox{\hyperlink{extras_8cpp_a3816c0b1714f3be0c6c8a394a4faee7d}{inputNum}}();}
+\DoxyCodeLine{00318\ \ \ \ \ \textcolor{keywordflow}{if}\ (userInput\ ==\ 1)}
+\DoxyCodeLine{00319\ \ \ \ \ \{}
+\DoxyCodeLine{00320\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ IntroDialogue();}
+\DoxyCodeLine{00321\ \ \ \ \ \}}
+\DoxyCodeLine{00322\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (userInput\ ==\ 2)}
+\DoxyCodeLine{00323\ \ \ \ \ \{}
+\DoxyCodeLine{00324\ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}See\ you\ next\ time!"{}}\ <<\ endl;}
+\DoxyCodeLine{00325\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ quitGame\ =\ true;}}
+\DoxyCodeLine{00326\ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{class_user_interface_aa95ee5089a1de7ad211fb3a1bb786e11}{quitGame}}\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00327\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{this};}
+\DoxyCodeLine{00328\ \ \ \ \ \}}
+\DoxyCodeLine{00329\ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00330\ \ \ \ \ \{}
+\DoxyCodeLine{00331\ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}That's\ not\ one\ of\ the\ options!"{}}\ <<\ endl;}
+\DoxyCodeLine{00332\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{this};}
+\DoxyCodeLine{00333\ \ \ \ \ \}}
+\DoxyCodeLine{00334\ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{extras_8cpp_source_l00026}{input\+Num()}}, and \mbox{\hyperlink{ui_8h_source_l00012}{User\+Interface\+::quit\+Game}}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=268pt]{class_start_menu_a306c6344f45d665ff008f6c0d3849e84_cgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{ui_8h}{ui.\+h}}\item 
+src/\mbox{\hyperlink{ui_8cpp}{ui.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,242 @@
+\doxysection{Inventory Class Reference}
+\hypertarget{class_inventory}{}\label{class_inventory}\index{Inventory@{Inventory}}
+
+
+\doxylink{class_inventory}{Inventory} class that holds all items for the player.  
+
+
+
+
+{\ttfamily \#include $<$inventory.\+h$>$}
+
+
+
+Collaboration diagram for Inventory\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=217pt]{class_inventory__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_inventory_aedf68e754ecde17b6c47fee1c93da959}{add\+Item}} (\mbox{\hyperlink{class_i_item}{IItem}} \texorpdfstring{$\ast$}{*}item)
+\item 
+void \mbox{\hyperlink{class_inventory_a724c6b48c4772ac6c821461a3fd3c650}{list\+Items}} ()
+\begin{DoxyCompactList}\small\item\em Lists all items in the inventory. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_inventory_a51e9f40ed13d62a47358418925bb8347}{use\+Item}} (int idx, \mbox{\hyperlink{class_player}{Player}} \&player, \mbox{\hyperlink{class_entity}{Entity}} \texorpdfstring{$\ast$}{*}enemy)
+\begin{DoxyCompactList}\small\item\em Use an item. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_inventory_a2343fa8402b342a8617d6b619ec08673}{drop\+Item}} (int idx)
+\begin{DoxyCompactList}\small\item\em drop an item. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+vector$<$ \mbox{\hyperlink{class_i_item}{IItem}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{class_inventory_adfeb1d487d3180b4741506b9452e8c5c}{items}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\doxylink{class_inventory}{Inventory} class that holds all items for the player. 
+
+Definition at line \mbox{\hyperlink{inventory_8h_source_l00014}{14}} of file \mbox{\hyperlink{inventory_8h_source}{inventory.\+h}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_inventory_aedf68e754ecde17b6c47fee1c93da959}\index{Inventory@{Inventory}!addItem@{addItem}}
+\index{addItem@{addItem}!Inventory@{Inventory}}
+\doxysubsubsection{\texorpdfstring{addItem()}{addItem()}}
+{\footnotesize\ttfamily \label{class_inventory_aedf68e754ecde17b6c47fee1c93da959} 
+void Inventory\+::add\+Item (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_i_item}{IItem}} \texorpdfstring{$\ast$}{*}}]{item}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{inventory_8cpp_source_l00006}{6}} of file \mbox{\hyperlink{inventory_8cpp_source}{inventory.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00007\ \{}
+\DoxyCodeLine{00008\ \ \ \ \ \textcolor{keywordtype}{string}\ msg\ =\ item-\/>\mbox{\hyperlink{class_i_item_a7fdf57eb313baaea887b648bc13f247a}{name}}\ +\ \textcolor{stringliteral}{"{}\ added\ to\ inventory!"{}};}
+\DoxyCodeLine{00009\ \ \ \ \ \textcolor{keywordtype}{string}\ border\ =\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}}\ +\ string(msg.length(),\ \textcolor{charliteral}{'='})\ +\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{00010\ \ \ \ \ \mbox{\hyperlink{extras_8cpp_aff1ce18cf1cd562e54189df70cee6299}{printAnimate}}(border,\ 1);}
+\DoxyCodeLine{00011\ \ \ \ \ \mbox{\hyperlink{extras_8cpp_aff1ce18cf1cd562e54189df70cee6299}{printAnimate}}(msg);}
+\DoxyCodeLine{00012\ \ \ \ \ \mbox{\hyperlink{extras_8cpp_aff1ce18cf1cd562e54189df70cee6299}{printAnimate}}(border,\ 1);}
+\DoxyCodeLine{00013\ \ \ \ \ \mbox{\hyperlink{class_inventory_adfeb1d487d3180b4741506b9452e8c5c}{items}}.push\_back(item);}
+\DoxyCodeLine{00014\ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{inventory_8h_source_l00017}{items}}, \mbox{\hyperlink{items_8h_source_l00010}{IItem\+::name}}, and \mbox{\hyperlink{extras_8cpp_source_l00041}{print\+Animate()}}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_inventory_aedf68e754ecde17b6c47fee1c93da959_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_inventory_a2343fa8402b342a8617d6b619ec08673}\index{Inventory@{Inventory}!dropItem@{dropItem}}
+\index{dropItem@{dropItem}!Inventory@{Inventory}}
+\doxysubsubsection{\texorpdfstring{dropItem()}{dropItem()}}
+{\footnotesize\ttfamily \label{class_inventory_a2343fa8402b342a8617d6b619ec08673} 
+void Inventory\+::drop\+Item (\begin{DoxyParamCaption}\item[{int}]{idx}{}\end{DoxyParamCaption})}
+
+
+
+drop an item. 
+
+not implemented yet. 
+\begin{DoxyParams}{Parameters}
+{\em idx} & 1-\/indexed item number \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{inventory_8cpp_source_l00076}{76}} of file \mbox{\hyperlink{inventory_8cpp_source}{inventory.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00077\ \{}
+\DoxyCodeLine{00078\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_inventory_a724c6b48c4772ac6c821461a3fd3c650}\index{Inventory@{Inventory}!listItems@{listItems}}
+\index{listItems@{listItems}!Inventory@{Inventory}}
+\doxysubsubsection{\texorpdfstring{listItems()}{listItems()}}
+{\footnotesize\ttfamily \label{class_inventory_a724c6b48c4772ac6c821461a3fd3c650} 
+void Inventory\+::list\+Items (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Lists all items in the inventory. 
+
+Should probably include the user input functionality too. 
+
+Definition at line \mbox{\hyperlink{inventory_8cpp_source_l00016}{16}} of file \mbox{\hyperlink{inventory_8cpp_source}{inventory.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00017\ \{}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{int}\ idx\ =\ 1;}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \ \ \ \ cout\ <<\ \mbox{\hyperlink{extras_8cpp_a9f429ae2206e7d4a9b8b4071b64080b5}{padTo}}(\textcolor{stringliteral}{"{}[Name]"{}},\ 20)\ <<\ \textcolor{stringliteral}{"{}|"{}}\ <<\ \mbox{\hyperlink{extras_8cpp_a9f429ae2206e7d4a9b8b4071b64080b5}{padTo}}(\textcolor{stringliteral}{"{}[Type]"{}},\ 20)\ <<\ \textcolor{stringliteral}{"{}|"{}}\ <<\ \mbox{\hyperlink{extras_8cpp_a9f429ae2206e7d4a9b8b4071b64080b5}{padTo}}(\textcolor{stringliteral}{"{}[Description]"{}},\ 50)\ <<\ \textcolor{stringliteral}{"{}|"{}}\ <<\ \mbox{\hyperlink{extras_8cpp_a9f429ae2206e7d4a9b8b4071b64080b5}{padTo}}(\textcolor{stringliteral}{"{}[Count]"{}},\ 20)\ <<\ endl;}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordflow}{for}\ (IItem\ *item\ :\ \mbox{\hyperlink{class_inventory_adfeb1d487d3180b4741506b9452e8c5c}{items}})}
+\DoxyCodeLine{00022\ \ \ \ \ \{}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ count\ =\ (item-\/>count\ ==\ -\/1)\ ?\ \textcolor{stringliteral}{"{}Infinite"{}}\ :\ to\_string(item-\/>count)\ +\ \textcolor{stringliteral}{"{}x"{}};}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ numberedName\ =\ string(\textcolor{stringliteral}{"{}["{}})\ +\ to\_string(idx)\ +\ \textcolor{stringliteral}{"{}]\ "{}}\ +\ item-\/>name;}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ cout\ <<\ \mbox{\hyperlink{extras_8cpp_a9f429ae2206e7d4a9b8b4071b64080b5}{padTo}}(numberedName,\ 20)\ <<\ \textcolor{stringliteral}{"{}|"{}}\ <<\ \mbox{\hyperlink{extras_8cpp_a9f429ae2206e7d4a9b8b4071b64080b5}{padTo}}(item-\/>type,\ 20)\ <<\ \textcolor{stringliteral}{"{}|"{}}\ <<\ \mbox{\hyperlink{extras_8cpp_a9f429ae2206e7d4a9b8b4071b64080b5}{padTo}}(item-\/>desc,\ 50)\ <<\ \textcolor{stringliteral}{"{}|"{}}\ <<\ \mbox{\hyperlink{extras_8cpp_a9f429ae2206e7d4a9b8b4071b64080b5}{padTo}}(count,\ 20)\ <<\ endl;}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ idx++;}
+\DoxyCodeLine{00027\ \ \ \ \ \}}
+\DoxyCodeLine{00028\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Type\ the\ \#\ of\ the\ item\ to\ use,\ 0\ to\ exit\ >\ "{}};}
+\DoxyCodeLine{00029\ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{inventory_8h_source_l00017}{items}}, and \mbox{\hyperlink{extras_8cpp_source_l00003}{pad\+To()}}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=258pt]{class_inventory_a724c6b48c4772ac6c821461a3fd3c650_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_inventory_a51e9f40ed13d62a47358418925bb8347}\index{Inventory@{Inventory}!useItem@{useItem}}
+\index{useItem@{useItem}!Inventory@{Inventory}}
+\doxysubsubsection{\texorpdfstring{useItem()}{useItem()}}
+{\footnotesize\ttfamily \label{class_inventory_a51e9f40ed13d62a47358418925bb8347} 
+bool Inventory\+::use\+Item (\begin{DoxyParamCaption}\item[{int}]{idx}{, }\item[{\mbox{\hyperlink{class_player}{Player}} \&}]{player}{, }\item[{\mbox{\hyperlink{class_entity}{Entity}} \texorpdfstring{$\ast$}{*}}]{enemy}{}\end{DoxyParamCaption})}
+
+
+
+Use an item. 
+
+Returns true if the item was used successfully, false if it was not 
+\begin{DoxyParams}{Parameters}
+{\em idx} & 1-\/indexed item number \\
+\hline
+{\em player} & The player using the item \\
+\hline
+{\em enemy} & The enemy the item is being used on. If the item is not an enemy item, this can be nullptr. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{inventory_8cpp_source_l00032}{32}} of file \mbox{\hyperlink{inventory_8cpp_source}{inventory.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00033\ \{}
+\DoxyCodeLine{00034\ \ \ \ \ IItem\ *item;}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordflow}{try}}
+\DoxyCodeLine{00036\ \ \ \ \ \{}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ item\ =\ \mbox{\hyperlink{class_inventory_adfeb1d487d3180b4741506b9452e8c5c}{items}}.at(idx\ -\/\ 1);}
+\DoxyCodeLine{00038\ \ \ \ \ \}}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordflow}{catch}\ (...)}
+\DoxyCodeLine{00040\ \ \ \ \ \{}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Invalid\ item\ number!"{}}\ <<\ endl;}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00043\ \ \ \ \ \}}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keywordtype}{bool}\ useResult;}
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordflow}{if}\ (IPlayerItem\ *playerItem\ =\ \textcolor{keyword}{dynamic\_cast<}IPlayerItem\ *\textcolor{keyword}{>}(item))}
+\DoxyCodeLine{00047\ \ \ \ \ \{}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ useResult\ =\ playerItem-\/>use(player);}
+\DoxyCodeLine{00049\ \ \ \ \ \}}
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (IEnemyItem\ *enemyItem\ =\ \textcolor{keyword}{dynamic\_cast<}IEnemyItem\ *\textcolor{keyword}{>}(item))}
+\DoxyCodeLine{00051\ \ \ \ \ \{}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (enemy\ ==\ \textcolor{keyword}{nullptr})}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}You\ can't\ use\ that\ item\ here!"{}}\ <<\ endl;}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ useResult\ =\ enemyItem-\/>use(player,\ *enemy);}
+\DoxyCodeLine{00058\ \ \ \ \ \}}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keywordflow}{if}\ (!useResult)}
+\DoxyCodeLine{00061\ \ \ \ \ \{}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00063\ \ \ \ \ \}}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keywordflow}{if}\ (item-\/>\mbox{\hyperlink{class_i_item_a0b30dc1f8eee51c2b78ac71d6c7b93b7}{count}}\ !=\ -\/1)}
+\DoxyCodeLine{00066\ \ \ \ \ \{}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ item-\/>\mbox{\hyperlink{class_i_item_a0b30dc1f8eee51c2b78ac71d6c7b93b7}{count}}-\/-\/;}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (item-\/>\mbox{\hyperlink{class_i_item_a0b30dc1f8eee51c2b78ac71d6c7b93b7}{count}}\ ==\ 0)}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_inventory_adfeb1d487d3180b4741506b9452e8c5c}{items}}.erase(\mbox{\hyperlink{class_inventory_adfeb1d487d3180b4741506b9452e8c5c}{items}}.begin()\ +\ idx\ -\/\ 1);}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00072\ \ \ \ \ \}}
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00074\ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{items_8h_source_l00013}{IItem\+::count}}, and \mbox{\hyperlink{inventory_8h_source_l00017}{items}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_inventory_adfeb1d487d3180b4741506b9452e8c5c}\index{Inventory@{Inventory}!items@{items}}
+\index{items@{items}!Inventory@{Inventory}}
+\doxysubsubsection{\texorpdfstring{items}{items}}
+{\footnotesize\ttfamily \label{class_inventory_adfeb1d487d3180b4741506b9452e8c5c} 
+vector$<$\mbox{\hyperlink{class_i_item}{IItem}} \texorpdfstring{$\ast$}{*}$>$ Inventory\+::items}
+
+
+
+Definition at line \mbox{\hyperlink{inventory_8h_source_l00017}{17}} of file \mbox{\hyperlink{inventory_8h_source}{inventory.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{inventory_8cpp_source_l00006}{add\+Item()}}, \mbox{\hyperlink{inventory_8cpp_source_l00016}{list\+Items()}}, and \mbox{\hyperlink{inventory_8cpp_source_l00032}{use\+Item()}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{inventory_8h}{inventory.\+h}}\item 
+src/\mbox{\hyperlink{inventory_8cpp}{inventory.\+cpp}}\end{DoxyCompactItemize}

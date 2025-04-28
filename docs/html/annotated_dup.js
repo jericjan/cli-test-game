@@ -1,0 +1,27 @@
+var annotated_dup =
+[
+    [ "Battle", "class_battle.html", "class_battle" ],
+    [ "CoolStick", "class_cool_stick.html", "class_cool_stick" ],
+    [ "Entity", "class_entity.html", "class_entity" ],
+    [ "FirstChoice", "class_first_choice.html", "class_first_choice" ],
+    [ "GambleMenu", "class_gamble_menu.html", "class_gamble_menu" ],
+    [ "GameOver", "class_game_over.html", "class_game_over" ],
+    [ "HealthPotion", "class_health_potion.html", "class_health_potion" ],
+    [ "IEnemyItem", "class_i_enemy_item.html", "class_i_enemy_item" ],
+    [ "IItem", "class_i_item.html", "class_i_item" ],
+    [ "IntroDialogue", "class_intro_dialogue.html", "class_intro_dialogue" ],
+    [ "Inventory", "class_inventory.html", "class_inventory" ],
+    [ "IPlayerItem", "class_i_player_item.html", "class_i_player_item" ],
+    [ "IPotion", "class_i_potion.html", "class_i_potion" ],
+    [ "JovialAftermath", "class_jovial_aftermath.html", "class_jovial_aftermath" ],
+    [ "JovialCutscene", "class_jovial_cutscene.html", "class_jovial_cutscene" ],
+    [ "MainMenu", "class_main_menu.html", "class_main_menu" ],
+    [ "Player", "class_player.html", "class_player" ],
+    [ "StartMenu", "class_start_menu.html", "class_start_menu" ],
+    [ "Stats", "class_stats.html", "class_stats" ],
+    [ "UIHandler", "class_u_i_handler.html", "class_u_i_handler" ],
+    [ "UIWithPlayer", "class_u_i_with_player.html", "class_u_i_with_player" ],
+    [ "UserInterface", "class_user_interface.html", "class_user_interface" ],
+    [ "Weapon", "class_weapon.html", "class_weapon" ],
+    [ "Yamato", "class_yamato.html", "class_yamato" ]
+];

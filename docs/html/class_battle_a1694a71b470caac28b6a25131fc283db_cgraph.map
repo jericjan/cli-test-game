@@ -1,0 +1,5 @@
+<map id="Battle::Battle" name="Battle::Battle">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,103,32"/>
+<area shape="rect" id="Node000002" href="$class_u_i_with_player.html#a297e083951aeaf9e72d9746fab8eccd8" title=" " alt="" coords="151,5,336,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="103,16,135,16,135,21,103,21"/>
+</map>

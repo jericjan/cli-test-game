@@ -1,0 +1,131 @@
+\doxysection{UIHandler Class Reference}
+\hypertarget{class_u_i_handler}{}\label{class_u_i_handler}\index{UIHandler@{UIHandler}}
+
+
+Handles UI in the game.  
+
+
+
+
+Collaboration diagram for UIHandler\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=241pt]{class_u_i_handler__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_u_i_handler_a31eeb9302f21d473bdd886a31484a325}{UIHandler}} (\mbox{\hyperlink{class_user_interface}{User\+Interface}} \texorpdfstring{$\ast$}{*}x)
+\item 
+void \mbox{\hyperlink{class_u_i_handler_a365012908440880bc1e1f6501e28c17f}{start}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_user_interface}{User\+Interface}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_u_i_handler_ac13916dbd48e6c760d892cd8d76c335f}{curr\+UI}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Handles UI in the game. 
+
+Basically runs the UI in a loop, and the UIs can return other UIs to switch to. Ends when the current UI is a \doxylink{class_game_over}{Game\+Over} screen or when \doxylink{class_user_interface_aa95ee5089a1de7ad211fb3a1bb786e11}{User\+Interface\+::quit\+Game} is set to true. 
+
+Definition at line \mbox{\hyperlink{main_8cpp_source_l00013}{13}} of file \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_u_i_handler_a31eeb9302f21d473bdd886a31484a325}\index{UIHandler@{UIHandler}!UIHandler@{UIHandler}}
+\index{UIHandler@{UIHandler}!UIHandler@{UIHandler}}
+\doxysubsubsection{\texorpdfstring{UIHandler()}{UIHandler()}}
+{\footnotesize\ttfamily \label{class_u_i_handler_a31eeb9302f21d473bdd886a31484a325} 
+UIHandler\+::\+UIHandler (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_user_interface}{User\+Interface}} \texorpdfstring{$\ast$}{*}}]{x}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{main_8cpp_source_l00018}{18}} of file \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00018\ :\ \mbox{\hyperlink{class_u_i_handler_ac13916dbd48e6c760d892cd8d76c335f}{currUI}}(x)\ \{\}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{main_8cpp_source_l00016}{curr\+UI}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_u_i_handler_a365012908440880bc1e1f6501e28c17f}\index{UIHandler@{UIHandler}!start@{start}}
+\index{start@{start}!UIHandler@{UIHandler}}
+\doxysubsubsection{\texorpdfstring{start()}{start()}}
+{\footnotesize\ttfamily \label{class_u_i_handler_a365012908440880bc1e1f6501e28c17f} 
+void UIHandler\+::start (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{main_8cpp_source_l00020}{20}} of file \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00021\ \ \ \ \ \{}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (\textcolor{keyword}{true})}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \ \ \ \ UserInterface\ *oldUI\ =\ \mbox{\hyperlink{class_u_i_handler_ac13916dbd48e6c760d892cd8d76c335f}{currUI}};\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Store\ the\ current\ pointer}}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \ \ \ \ UserInterface\ *nextUI\ =\ \mbox{\hyperlink{class_u_i_handler_ac13916dbd48e6c760d892cd8d76c335f}{currUI}}-\/>render();\ \textcolor{comment}{//\ Get\ the\ result\ from\ render}}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (nextUI\ !=\ oldUI)}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ oldUI;}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_u_i_handler_ac13916dbd48e6c760d892cd8d76c335f}{currUI}}\ =\ nextUI;}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_u_i_handler_ac13916dbd48e6c760d892cd8d76c335f}{currUI}}-\/>quitGame)}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ \mbox{\hyperlink{class_u_i_handler_ac13916dbd48e6c760d892cd8d76c335f}{currUI}};}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00038\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{main_8cpp_source_l00016}{curr\+UI}}.
+
+
+
+Referenced by \mbox{\hyperlink{main_8cpp_source_l00041}{main()}}.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=239pt]{class_u_i_handler_a365012908440880bc1e1f6501e28c17f_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_u_i_handler_ac13916dbd48e6c760d892cd8d76c335f}\index{UIHandler@{UIHandler}!currUI@{currUI}}
+\index{currUI@{currUI}!UIHandler@{UIHandler}}
+\doxysubsubsection{\texorpdfstring{currUI}{currUI}}
+{\footnotesize\ttfamily \label{class_u_i_handler_ac13916dbd48e6c760d892cd8d76c335f} 
+\mbox{\hyperlink{class_user_interface}{User\+Interface}}\texorpdfstring{$\ast$}{*} UIHandler\+::curr\+UI}
+
+
+
+Definition at line \mbox{\hyperlink{main_8cpp_source_l00016}{16}} of file \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
+
+
+
+Referenced by \mbox{\hyperlink{main_8cpp_source_l00020}{start()}}, and \mbox{\hyperlink{main_8cpp_source_l00018}{UIHandler()}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{main_8cpp}{main.\+cpp}}\end{DoxyCompactItemize}

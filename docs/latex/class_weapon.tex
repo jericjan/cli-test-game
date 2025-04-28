@@ -1,0 +1,172 @@
+\doxysection{Weapon Class Reference}
+\hypertarget{class_weapon}{}\label{class_weapon}\index{Weapon@{Weapon}}
+
+
+Weapons set the type to "{}\+Weapon"{} and implement the use function cuz all weapons attack lmao.  
+
+
+
+
+{\ttfamily \#include $<$items.\+h$>$}
+
+
+
+Inheritance diagram for Weapon\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_weapon__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Weapon\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=234pt]{class_weapon__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_weapon_a8d9631f8c67df4646e9b06516eff0cd0}{Weapon}} (string \mbox{\hyperlink{class_i_item_a7fdf57eb313baaea887b648bc13f247a}{name}}, string \mbox{\hyperlink{class_i_item_a9acebb5d530d823314bb1a8f29ff974a}{desc}}, int \mbox{\hyperlink{class_i_item_a0b30dc1f8eee51c2b78ac71d6c7b93b7}{count}}, int \mbox{\hyperlink{class_weapon_af7f5d5ecbb3ac0e95350a6750be1fb28}{dmg}})
+\item 
+bool \mbox{\hyperlink{class_weapon_a425b48c0e2c2422e244b7cb7227a0345}{use}} (\mbox{\hyperlink{class_player}{Player}} \&player, \mbox{\hyperlink{class_entity}{Entity}} \&enemy) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_i_enemy_item}{IEnemy\+Item}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_i_enemy_item_ab04428e73487bd8279945087a6b307fa}{IEnemy\+Item}} (string n, string t, string d, int c)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_i_item}{IItem}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_i_item_ab1bb86846077713c5847ec035115f09c}{IItem}} (string n, string t, string d, int c)
+\item 
+virtual \mbox{\hyperlink{class_i_item_a09483bee7e3f4f382e8eeac54493620e}{\texorpdfstring{$\sim$}{\string~}\+IItem}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_weapon_af7f5d5ecbb3ac0e95350a6750be1fb28}{dmg}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes inherited from \mbox{\hyperlink{class_i_item}{IItem}}}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{class_i_item_a7fdf57eb313baaea887b648bc13f247a}{name}}
+\item 
+string \mbox{\hyperlink{class_i_item_a3b3b58b237d89653e493c95fe22074ff}{type}}
+\item 
+string \mbox{\hyperlink{class_i_item_a9acebb5d530d823314bb1a8f29ff974a}{desc}}
+\item 
+int \mbox{\hyperlink{class_i_item_a0b30dc1f8eee51c2b78ac71d6c7b93b7}{count}}
+\begin{DoxyCompactList}\small\item\em A count of -\/1 means the item can be used infinitely. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Weapons set the type to "{}\+Weapon"{} and implement the use function cuz all weapons attack lmao. 
+
+Derived classes only need to set the {\ttfamily name}, {\ttfamily desc}, and {\ttfamily dmg} in the constructor 
+
+Definition at line \mbox{\hyperlink{items_8h_source_l00054}{54}} of file \mbox{\hyperlink{items_8h_source}{items.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_weapon_a8d9631f8c67df4646e9b06516eff0cd0}\index{Weapon@{Weapon}!Weapon@{Weapon}}
+\index{Weapon@{Weapon}!Weapon@{Weapon}}
+\doxysubsubsection{\texorpdfstring{Weapon()}{Weapon()}}
+{\footnotesize\ttfamily \label{class_weapon_a8d9631f8c67df4646e9b06516eff0cd0} 
+Weapon\+::\+Weapon (\begin{DoxyParamCaption}\item[{string}]{name}{, }\item[{string}]{desc}{, }\item[{int}]{count}{, }\item[{int}]{dmg}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{items_8cpp_source_l00029}{29}} of file \mbox{\hyperlink{items_8cpp_source}{items.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00029\ :\ \mbox{\hyperlink{class_i_enemy_item_ab04428e73487bd8279945087a6b307fa}{IEnemyItem}}(\mbox{\hyperlink{class_i_item_a7fdf57eb313baaea887b648bc13f247a}{name}},\ \textcolor{stringliteral}{"{}Weapon"{}},\ \mbox{\hyperlink{class_i_item_a9acebb5d530d823314bb1a8f29ff974a}{desc}},\ \mbox{\hyperlink{class_i_item_a0b30dc1f8eee51c2b78ac71d6c7b93b7}{count}}),\ \mbox{\hyperlink{class_weapon_af7f5d5ecbb3ac0e95350a6750be1fb28}{dmg}}(\mbox{\hyperlink{class_weapon_af7f5d5ecbb3ac0e95350a6750be1fb28}{dmg}})\ \{\}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{items_8h_source_l00013}{IItem\+::count}}, \mbox{\hyperlink{items_8h_source_l00012}{IItem\+::desc}}, \mbox{\hyperlink{items_8h_source_l00057}{dmg}}, \mbox{\hyperlink{items_8cpp_source_l00010}{IEnemy\+Item\+::\+IEnemy\+Item()}}, and \mbox{\hyperlink{items_8h_source_l00010}{IItem\+::name}}.
+
+
+
+Referenced by \mbox{\hyperlink{items_8cpp_source_l00036}{Cool\+Stick\+::\+Cool\+Stick()}}, and \mbox{\hyperlink{items_8cpp_source_l00038}{Yamato\+::\+Yamato()}}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_weapon_a8d9631f8c67df4646e9b06516eff0cd0_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=316pt]{class_weapon_a8d9631f8c67df4646e9b06516eff0cd0_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_weapon_a425b48c0e2c2422e244b7cb7227a0345}\index{Weapon@{Weapon}!use@{use}}
+\index{use@{use}!Weapon@{Weapon}}
+\doxysubsubsection{\texorpdfstring{use()}{use()}}
+{\footnotesize\ttfamily \label{class_weapon_a425b48c0e2c2422e244b7cb7227a0345} 
+bool Weapon\+::use (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_player}{Player}} \&}]{player}{, }\item[{\mbox{\hyperlink{class_entity}{Entity}} \&}]{enemy}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_i_enemy_item_a4f81ef24d49cb728a7a275db4b1b506c}{IEnemy\+Item}}.
+
+
+
+Definition at line \mbox{\hyperlink{items_8cpp_source_l00030}{30}} of file \mbox{\hyperlink{items_8cpp_source}{items.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00031\ \{}
+\DoxyCodeLine{00032\ \ \ \ \ player.\mbox{\hyperlink{class_entity_a44aad07756d6f00abf8f08ffde6eb217}{attack}}(enemy,\ \mbox{\hyperlink{class_weapon_af7f5d5ecbb3ac0e95350a6750be1fb28}{dmg}});}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00034\ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{entities_8cpp_source_l00036}{Entity\+::attack()}}, and \mbox{\hyperlink{items_8h_source_l00057}{dmg}}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_weapon_a425b48c0e2c2422e244b7cb7227a0345_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_weapon_af7f5d5ecbb3ac0e95350a6750be1fb28}\index{Weapon@{Weapon}!dmg@{dmg}}
+\index{dmg@{dmg}!Weapon@{Weapon}}
+\doxysubsubsection{\texorpdfstring{dmg}{dmg}}
+{\footnotesize\ttfamily \label{class_weapon_af7f5d5ecbb3ac0e95350a6750be1fb28} 
+int Weapon\+::dmg}
+
+
+
+Definition at line \mbox{\hyperlink{items_8h_source_l00057}{57}} of file \mbox{\hyperlink{items_8h_source}{items.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{items_8cpp_source_l00030}{use()}}, and \mbox{\hyperlink{items_8cpp_source_l00029}{Weapon()}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{items_8h}{items.\+h}}\item 
+src/\mbox{\hyperlink{items_8cpp}{items.\+cpp}}\end{DoxyCompactItemize}

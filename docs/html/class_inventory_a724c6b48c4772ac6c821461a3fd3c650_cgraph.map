@@ -1,0 +1,5 @@
+<map id="Inventory::listItems" name="Inventory::listItems">
+<area shape="rect" id="Node000001" title="Lists all items in the inventory." alt="" coords="5,5,139,32"/>
+<area shape="rect" id="Node000002" href="$extras_8cpp.html#a9f429ae2206e7d4a9b8b4071b64080b5" title="Centers text in a given num of characters." alt="" coords="187,5,243,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="139,16,171,16,171,21,139,21"/>
+</map>

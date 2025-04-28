@@ -1,0 +1,299 @@
+\doxysection{src/extras.h File Reference}
+\hypertarget{extras_8h}{}\label{extras_8h}\index{src/extras.h@{src/extras.h}}
+{\ttfamily \#include $<$chrono$>$}\newline
+{\ttfamily \#include $<$thread$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+Include dependency graph for extras.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=257pt]{extras_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{extras_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{extras_8h_ab87bacfdad76e61b9412d7124be44c1c}{Color}} \{ \newline
+\mbox{\hyperlink{extras_8h_ab87bacfdad76e61b9412d7124be44c1caf80f9a890089d211842d59625e561f88}{RED}} = 31
+, \mbox{\hyperlink{extras_8h_ab87bacfdad76e61b9412d7124be44c1caa60bd322f93178d68184e30e162571ca}{GREEN}} = 32
+, \mbox{\hyperlink{extras_8h_ab87bacfdad76e61b9412d7124be44c1cae735a848bf82163a19236ead1c3ef2d2}{YELLOW}} = 33
+, \mbox{\hyperlink{extras_8h_ab87bacfdad76e61b9412d7124be44c1ca35d6719cb4d7577c031b3d79057a1b79}{BLUE}} = 34
+, \newline
+\mbox{\hyperlink{extras_8h_ab87bacfdad76e61b9412d7124be44c1ca56926c820ad72d0977e7ee44d9916e62}{MAGENTA}} = 35
+, \mbox{\hyperlink{extras_8h_ab87bacfdad76e61b9412d7124be44c1caafe71cad474c15ce63b300c470eef8cc}{CYAN}} = 36
+, \mbox{\hyperlink{extras_8h_ab87bacfdad76e61b9412d7124be44c1ca283fc479650da98250635b9c3c0e7e50}{WHITE}} = 37
+ \}
+\begin{DoxyCompactList}\small\item\em ANSI color codes for colored text (ANSI) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{extras_8h_a5bd86794bcc36495cba6025a9bd99695}{pad\+To}} (string str, const size\+\_\+t num, const char padding\+Char=\textquotesingle{} \textquotesingle{})
+\begin{DoxyCompactList}\small\item\em Centers text in a given {\ttfamily num} of characters. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{extras_8h_aea0e34fe8a665ef6cb1fd6526ce1deb0}{sleep\+MS}} (int ms)
+\item 
+string \mbox{\hyperlink{extras_8h_a99d2755bf0660601280710515b3f512c}{colorize\+Text}} (string msg, \mbox{\hyperlink{extras_8h_ab87bacfdad76e61b9412d7124be44c1c}{Color}} color)
+\begin{DoxyCompactList}\small\item\em Colors text. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{extras_8h_a3816c0b1714f3be0c6c8a394a4faee7d}{input\+Num}} ()
+\begin{DoxyCompactList}\small\item\em Gets an integer from the user. Loops until a valid integer is entered. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{extras_8h_a3159a27b600ac27d3822fdb4407e62a4}{print\+Animate}} (string msg, int delay=10)
+\begin{DoxyCompactList}\small\item\em Outputs a text character by character with a given delay. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Enumeration Type Documentation}
+\Hypertarget{extras_8h_ab87bacfdad76e61b9412d7124be44c1c}\index{extras.h@{extras.h}!Color@{Color}}
+\index{Color@{Color}!extras.h@{extras.h}}
+\doxysubsubsection{\texorpdfstring{Color}{Color}}
+{\footnotesize\ttfamily \label{extras_8h_ab87bacfdad76e61b9412d7124be44c1c} 
+enum \mbox{\hyperlink{extras_8h_ab87bacfdad76e61b9412d7124be44c1c}{Color}}}
+
+
+
+ANSI color codes for colored text (ANSI) 
+
+\begin{DoxyEnumFields}[2]{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RED@{RED}!extras.h@{extras.h}}\index{extras.h@{extras.h}!RED@{RED}}}\Hypertarget{extras_8h_ab87bacfdad76e61b9412d7124be44c1caf80f9a890089d211842d59625e561f88}\label{extras_8h_ab87bacfdad76e61b9412d7124be44c1caf80f9a890089d211842d59625e561f88} 
+RED&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{GREEN@{GREEN}!extras.h@{extras.h}}\index{extras.h@{extras.h}!GREEN@{GREEN}}}\Hypertarget{extras_8h_ab87bacfdad76e61b9412d7124be44c1caa60bd322f93178d68184e30e162571ca}\label{extras_8h_ab87bacfdad76e61b9412d7124be44c1caa60bd322f93178d68184e30e162571ca} 
+GREEN&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{YELLOW@{YELLOW}!extras.h@{extras.h}}\index{extras.h@{extras.h}!YELLOW@{YELLOW}}}\Hypertarget{extras_8h_ab87bacfdad76e61b9412d7124be44c1cae735a848bf82163a19236ead1c3ef2d2}\label{extras_8h_ab87bacfdad76e61b9412d7124be44c1cae735a848bf82163a19236ead1c3ef2d2} 
+YELLOW&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BLUE@{BLUE}!extras.h@{extras.h}}\index{extras.h@{extras.h}!BLUE@{BLUE}}}\Hypertarget{extras_8h_ab87bacfdad76e61b9412d7124be44c1ca35d6719cb4d7577c031b3d79057a1b79}\label{extras_8h_ab87bacfdad76e61b9412d7124be44c1ca35d6719cb4d7577c031b3d79057a1b79} 
+BLUE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAGENTA@{MAGENTA}!extras.h@{extras.h}}\index{extras.h@{extras.h}!MAGENTA@{MAGENTA}}}\Hypertarget{extras_8h_ab87bacfdad76e61b9412d7124be44c1ca56926c820ad72d0977e7ee44d9916e62}\label{extras_8h_ab87bacfdad76e61b9412d7124be44c1ca56926c820ad72d0977e7ee44d9916e62} 
+MAGENTA&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CYAN@{CYAN}!extras.h@{extras.h}}\index{extras.h@{extras.h}!CYAN@{CYAN}}}\Hypertarget{extras_8h_ab87bacfdad76e61b9412d7124be44c1caafe71cad474c15ce63b300c470eef8cc}\label{extras_8h_ab87bacfdad76e61b9412d7124be44c1caafe71cad474c15ce63b300c470eef8cc} 
+CYAN&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{WHITE@{WHITE}!extras.h@{extras.h}}\index{extras.h@{extras.h}!WHITE@{WHITE}}}\Hypertarget{extras_8h_ab87bacfdad76e61b9412d7124be44c1ca283fc479650da98250635b9c3c0e7e50}\label{extras_8h_ab87bacfdad76e61b9412d7124be44c1ca283fc479650da98250635b9c3c0e7e50} 
+WHITE&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line \mbox{\hyperlink{extras_8h_source_l00015}{15}} of file \mbox{\hyperlink{extras_8h_source}{extras.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00016\ \{}
+\DoxyCodeLine{00017\ \ \ \ \ \mbox{\hyperlink{extras_8h_ab87bacfdad76e61b9412d7124be44c1caf80f9a890089d211842d59625e561f88}{RED}}\ =\ 31,}
+\DoxyCodeLine{00018\ \ \ \ \ \mbox{\hyperlink{extras_8h_ab87bacfdad76e61b9412d7124be44c1caa60bd322f93178d68184e30e162571ca}{GREEN}}\ =\ 32,}
+\DoxyCodeLine{00019\ \ \ \ \ \mbox{\hyperlink{extras_8h_ab87bacfdad76e61b9412d7124be44c1cae735a848bf82163a19236ead1c3ef2d2}{YELLOW}}\ =\ 33,}
+\DoxyCodeLine{00020\ \ \ \ \ \mbox{\hyperlink{extras_8h_ab87bacfdad76e61b9412d7124be44c1ca35d6719cb4d7577c031b3d79057a1b79}{BLUE}}\ =\ 34,}
+\DoxyCodeLine{00021\ \ \ \ \ \mbox{\hyperlink{extras_8h_ab87bacfdad76e61b9412d7124be44c1ca56926c820ad72d0977e7ee44d9916e62}{MAGENTA}}\ =\ 35,}
+\DoxyCodeLine{00022\ \ \ \ \ \mbox{\hyperlink{extras_8h_ab87bacfdad76e61b9412d7124be44c1caafe71cad474c15ce63b300c470eef8cc}{CYAN}}\ =\ 36,}
+\DoxyCodeLine{00023\ \ \ \ \ \mbox{\hyperlink{extras_8h_ab87bacfdad76e61b9412d7124be44c1ca283fc479650da98250635b9c3c0e7e50}{WHITE}}\ =\ 37}
+\DoxyCodeLine{00024\ \};}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{extras_8h_a99d2755bf0660601280710515b3f512c}\index{extras.h@{extras.h}!colorizeText@{colorizeText}}
+\index{colorizeText@{colorizeText}!extras.h@{extras.h}}
+\doxysubsubsection{\texorpdfstring{colorizeText()}{colorizeText()}}
+{\footnotesize\ttfamily \label{extras_8h_a99d2755bf0660601280710515b3f512c} 
+string colorize\+Text (\begin{DoxyParamCaption}\item[{string}]{msg}{, }\item[{\mbox{\hyperlink{extras_8h_ab87bacfdad76e61b9412d7124be44c1c}{Color}}}]{color}{}\end{DoxyParamCaption})}
+
+
+
+Colors text. 
+
+Usually used like this\+: {\ttfamily \textbackslash{}033\mbox{[}31m Your Text Here \textbackslash{}033\mbox{[}0m}, where {\ttfamily 31} is the color code for red. 
+
+Definition at line \mbox{\hyperlink{extras_8cpp_source_l00021}{21}} of file \mbox{\hyperlink{extras_8cpp_source}{extras.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00022\ \{}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordflow}{return}\ string(\textcolor{stringliteral}{"{}\(\backslash\)033["{}})\ +\ to\_string(color)\ +\ \textcolor{stringliteral}{"{}m"{}}\ +\ msg\ +\ \textcolor{stringliteral}{"{}\(\backslash\)033[0m"{}};}
+\DoxyCodeLine{00024\ \}}
+
+\end{DoxyCode}
+
+
+Referenced by \mbox{\hyperlink{entities_8cpp_source_l00013}{Player\+::add\+Money()}}, \mbox{\hyperlink{ui_8cpp_source_l00026}{Gamble\+Menu\+::render()}}, \mbox{\hyperlink{ui_8cpp_source_l00135}{Jovial\+Aftermath\+::render()}}, and \mbox{\hyperlink{ui_8cpp_source_l00240}{Jovial\+Cutscene\+::render()}}.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=302pt]{extras_8h_a99d2755bf0660601280710515b3f512c_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{extras_8h_a3816c0b1714f3be0c6c8a394a4faee7d}\index{extras.h@{extras.h}!inputNum@{inputNum}}
+\index{inputNum@{inputNum}!extras.h@{extras.h}}
+\doxysubsubsection{\texorpdfstring{inputNum()}{inputNum()}}
+{\footnotesize\ttfamily \label{extras_8h_a3816c0b1714f3be0c6c8a394a4faee7d} 
+int input\+Num (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Gets an integer from the user. Loops until a valid integer is entered. 
+
+
+
+Definition at line \mbox{\hyperlink{extras_8cpp_source_l00026}{26}} of file \mbox{\hyperlink{extras_8cpp_source}{extras.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00027\ \{}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{int}\ result;}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordflow}{while}\ (!(cin\ >>\ result))}
+\DoxyCodeLine{00032\ \ \ \ \ \{}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ cin.clear();}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ cin.ignore(numeric\_limits<streamsize>::max(),\ \textcolor{charliteral}{'\(\backslash\)n'});}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}That's\ not\ a\ number!"{}}\ <<\ std::endl;}
+\DoxyCodeLine{00036\ \ \ \ \ \}}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordflow}{return}\ result;}
+\DoxyCodeLine{00039\ \}}
+
+\end{DoxyCode}
+
+
+Referenced by \mbox{\hyperlink{ui_8cpp_source_l00165}{Battle\+::render()}}, \mbox{\hyperlink{ui_8cpp_source_l00268}{First\+Choice\+::render()}}, \mbox{\hyperlink{ui_8cpp_source_l00072}{Main\+Menu\+::render()}}, and \mbox{\hyperlink{ui_8cpp_source_l00312}{Start\+Menu\+::render()}}.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=273pt]{extras_8h_a3816c0b1714f3be0c6c8a394a4faee7d_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{extras_8h_a5bd86794bcc36495cba6025a9bd99695}\index{extras.h@{extras.h}!padTo@{padTo}}
+\index{padTo@{padTo}!extras.h@{extras.h}}
+\doxysubsubsection{\texorpdfstring{padTo()}{padTo()}}
+{\footnotesize\ttfamily \label{extras_8h_a5bd86794bcc36495cba6025a9bd99695} 
+string pad\+To (\begin{DoxyParamCaption}\item[{string}]{str}{, }\item[{const size\+\_\+t}]{num}{, }\item[{const char}]{padding\+Char}{ = {\ttfamily \textquotesingle{}~\textquotesingle{}}}\end{DoxyParamCaption})}
+
+
+
+Centers text in a given {\ttfamily num} of characters. 
+
+
+
+Definition at line \mbox{\hyperlink{extras_8cpp_source_l00003}{3}} of file \mbox{\hyperlink{extras_8cpp_source}{extras.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00004\ \{}
+\DoxyCodeLine{00005\ \ \ \ \ \textcolor{keywordflow}{if}\ (num\ >\ str.size())}
+\DoxyCodeLine{00006\ \ \ \ \ \{}
+\DoxyCodeLine{00007\ \ \ \ \ \ \ \ \ div\_t\ divided\ =\ div(num\ -\/\ str.size(),\ 2);}
+\DoxyCodeLine{00008\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ leftSpace\ =\ divided.quot;}
+\DoxyCodeLine{00009\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ rightSpace\ =\ divided.quot\ +\ divided.rem;}
+\DoxyCodeLine{00010\ \ \ \ \ \ \ \ \ str.insert(str.begin(),\ leftSpace,\ paddingChar);}
+\DoxyCodeLine{00011\ \ \ \ \ \ \ \ \ str.insert(str.end(),\ rightSpace,\ paddingChar);}
+\DoxyCodeLine{00012\ \ \ \ \ \}}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keywordflow}{return}\ str;}
+\DoxyCodeLine{00014\ \}}
+
+\end{DoxyCode}
+
+
+Referenced by \mbox{\hyperlink{inventory_8cpp_source_l00016}{Inventory\+::list\+Items()}}.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=258pt]{extras_8h_a5bd86794bcc36495cba6025a9bd99695_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{extras_8h_a3159a27b600ac27d3822fdb4407e62a4}\index{extras.h@{extras.h}!printAnimate@{printAnimate}}
+\index{printAnimate@{printAnimate}!extras.h@{extras.h}}
+\doxysubsubsection{\texorpdfstring{printAnimate()}{printAnimate()}}
+{\footnotesize\ttfamily \label{extras_8h_a3159a27b600ac27d3822fdb4407e62a4} 
+void print\+Animate (\begin{DoxyParamCaption}\item[{string}]{msg}{, }\item[{int}]{delay}{ = {\ttfamily 10}}\end{DoxyParamCaption})}
+
+
+
+Outputs a text character by character with a given delay. 
+
+
+
+Definition at line \mbox{\hyperlink{extras_8cpp_source_l00041}{41}} of file \mbox{\hyperlink{extras_8cpp_source}{extras.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00042\ \{}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{comment}{//\ cout\ <<\ msg;}}
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\ \&ch\ :\ msg)}
+\DoxyCodeLine{00045\ \ \ \ \ \{}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ cout\ <<\ ch;}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{extras_8cpp_aea0e34fe8a665ef6cb1fd6526ce1deb0}{sleepMS}}(delay);}
+\DoxyCodeLine{00048\ \ \ \ \ \}}
+\DoxyCodeLine{00049\ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{extras_8cpp_source_l00016}{sleep\+MS()}}.
+
+
+
+Referenced by \mbox{\hyperlink{inventory_8cpp_source_l00006}{Inventory\+::add\+Item()}}, \mbox{\hyperlink{ui_8cpp_source_l00268}{First\+Choice\+::render()}}, \mbox{\hyperlink{ui_8cpp_source_l00016}{Game\+Over\+::render()}}, \mbox{\hyperlink{ui_8cpp_source_l00294}{Intro\+Dialogue\+::render()}}, \mbox{\hyperlink{ui_8cpp_source_l00135}{Jovial\+Aftermath\+::render()}}, \mbox{\hyperlink{ui_8cpp_source_l00240}{Jovial\+Cutscene\+::render()}}, and \mbox{\hyperlink{ui_8cpp_source_l00072}{Main\+Menu\+::render()}}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=241pt]{extras_8h_a3159a27b600ac27d3822fdb4407e62a4_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=304pt]{extras_8h_a3159a27b600ac27d3822fdb4407e62a4_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{extras_8h_aea0e34fe8a665ef6cb1fd6526ce1deb0}\index{extras.h@{extras.h}!sleepMS@{sleepMS}}
+\index{sleepMS@{sleepMS}!extras.h@{extras.h}}
+\doxysubsubsection{\texorpdfstring{sleepMS()}{sleepMS()}}
+{\footnotesize\ttfamily \label{extras_8h_aea0e34fe8a665ef6cb1fd6526ce1deb0} 
+void sleep\+MS (\begin{DoxyParamCaption}\item[{int}]{ms}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{extras_8cpp_source_l00016}{16}} of file \mbox{\hyperlink{extras_8cpp_source}{extras.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00017\ \{}
+\DoxyCodeLine{00018\ \ \ \ \ this\_thread::sleep\_for(chrono::milliseconds(ms));}
+\DoxyCodeLine{00019\ \}}
+
+\end{DoxyCode}
+
+
+Referenced by \mbox{\hyperlink{extras_8cpp_source_l00041}{print\+Animate()}}.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{extras_8h_aea0e34fe8a665ef6cb1fd6526ce1deb0_icgraph}
+\end{center}
+\end{figure}

@@ -1,0 +1,118 @@
+\doxysection{Intro\+Dialogue Class Reference}
+\hypertarget{class_intro_dialogue}{}\label{class_intro_dialogue}\index{IntroDialogue@{IntroDialogue}}
+
+
+The intro dialogue. The player can choose their name and get a cool stick.  
+
+
+
+
+{\ttfamily \#include $<$ui.\+h$>$}
+
+
+
+Inheritance diagram for Intro\+Dialogue\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=241pt]{class_intro_dialogue__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Intro\+Dialogue\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_intro_dialogue__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_user_interface}{User\+Interface}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_intro_dialogue_a6ee887834eaf65af351062e70561d261}{render}} () override
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_u_i_with_player}{UIWith\+Player}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_u_i_with_player_a297e083951aeaf9e72d9746fab8eccd8}{UIWith\+Player}} ()
+\item 
+\mbox{\hyperlink{class_u_i_with_player_a8d2dca800c79f3d60af802cc4c302286}{UIWith\+Player}} (\mbox{\hyperlink{class_player}{Player}} \mbox{\hyperlink{class_u_i_with_player_a480502a8db864e1ec92eb19f87a35083}{player}})
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_user_interface}{User\+Interface}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{class_user_interface_ae588b2ff1711a016dd4c6fc5002c0841}{\texorpdfstring{$\sim$}{\string~}\+User\+Interface}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Public Attributes inherited from \mbox{\hyperlink{class_u_i_with_player}{UIWith\+Player}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_player}{Player}} \mbox{\hyperlink{class_u_i_with_player_a480502a8db864e1ec92eb19f87a35083}{player}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes inherited from \mbox{\hyperlink{class_user_interface}{User\+Interface}}}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_user_interface_aa95ee5089a1de7ad211fb3a1bb786e11}{quit\+Game}} = false
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The intro dialogue. The player can choose their name and get a cool stick. 
+
+Definition at line \mbox{\hyperlink{ui_8h_source_l00105}{105}} of file \mbox{\hyperlink{ui_8h_source}{ui.\+h}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_intro_dialogue_a6ee887834eaf65af351062e70561d261}\index{IntroDialogue@{IntroDialogue}!render@{render}}
+\index{render@{render}!IntroDialogue@{IntroDialogue}}
+\doxysubsubsection{\texorpdfstring{render()}{render()}}
+{\footnotesize\ttfamily \label{class_intro_dialogue_a6ee887834eaf65af351062e70561d261} 
+\mbox{\hyperlink{class_user_interface}{User\+Interface}} \texorpdfstring{$\ast$}{*} Intro\+Dialogue\+::render (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_user_interface_a6c4e70754407cdc9ed66986dcea60ece}{User\+Interface}}.
+
+
+
+Definition at line \mbox{\hyperlink{ui_8cpp_source_l00294}{294}} of file \mbox{\hyperlink{ui_8cpp_source}{ui.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00295\ \{}
+\DoxyCodeLine{00296\ \ \ \ \ \mbox{\hyperlink{extras_8cpp_aff1ce18cf1cd562e54189df70cee6299}{printAnimate}}(\textcolor{stringliteral}{"{}Woah!\ Didn't\ see\ you\ there.\ Who\ might\ you\ be?\(\backslash\)n>\ "{}});}
+\DoxyCodeLine{00297\ \ \ \ \ \textcolor{keywordtype}{string}\ userInput;}
+\DoxyCodeLine{00298\ \ \ \ \ getline(cin\ >>\ ws,\ userInput);}
+\DoxyCodeLine{00299\ \ \ \ \ \mbox{\hyperlink{class_u_i_with_player_a480502a8db864e1ec92eb19f87a35083}{player}}\ =\ Player(1000,\ userInput,\ 50,\ 50,\ 0);}
+\DoxyCodeLine{00300\ \ \ \ \ \mbox{\hyperlink{extras_8cpp_aff1ce18cf1cd562e54189df70cee6299}{printAnimate}}(\textcolor{stringliteral}{"{}Hello\ there\ "{}}\ +\ \mbox{\hyperlink{class_u_i_with_player_a480502a8db864e1ec92eb19f87a35083}{player}}.name\ +\ \textcolor{stringliteral}{"{}!\(\backslash\)n"{}}\ +}
+\DoxyCodeLine{00301\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}You\ are\ about\ to\ embark\ on\ a\ heroic\ journey\ of...\ something.\ I\ don't\ know.\ Go\ out\ there\ man.\ Go\ nuts.\(\backslash\)n"{}}\ +\ \textcolor{stringliteral}{"{}Me?\ You\ don't\ need\ to\ know\ who\ I\ am.\ Ooh,\ I'll\ give\ you\ this\ cool\ stick\ I\ found!\(\backslash\)n"{}});}
+\DoxyCodeLine{00302\ }
+\DoxyCodeLine{00303\ \ \ \ \ CoolStick\ *stick\ =\ \textcolor{keyword}{new}\ CoolStick();}
+\DoxyCodeLine{00304\ \ \ \ \ \mbox{\hyperlink{class_u_i_with_player_a480502a8db864e1ec92eb19f87a35083}{player}}.inventory.addItem(stick);}
+\DoxyCodeLine{00305\ }
+\DoxyCodeLine{00306\ \ \ \ \ \mbox{\hyperlink{extras_8cpp_aff1ce18cf1cd562e54189df70cee6299}{printAnimate}}(\textcolor{keywordtype}{string}(\textcolor{stringliteral}{"{}This\ will\ give\ you\ some\ extra\ damage\ in\ your\ battles.\ I\ should\ probably\ explain\ how\ that\ works.\(\backslash\)n"{}})\ +}
+\DoxyCodeLine{00307\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}In\ a\ battle,\ you\ can\ either:\ punch,\ use\ an\ item\ from\ your\ inventory,\ or\ run.\ I'm\ sure\ you're\ familiar\ with\ this\ formula.\(\backslash\)n"{}}\ +}
+\DoxyCodeLine{00308\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Alright,\ that's\ all\ from\ me.\ Get\ outta\ here.\(\backslash\)n"{}});}
+\DoxyCodeLine{00309\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ FirstChoice(\mbox{\hyperlink{class_u_i_with_player_a480502a8db864e1ec92eb19f87a35083}{player}});}
+\DoxyCodeLine{00310\ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{ui_8h_source_l00021}{UIWith\+Player\+::player}}, and \mbox{\hyperlink{extras_8cpp_source_l00041}{print\+Animate()}}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_intro_dialogue_a6ee887834eaf65af351062e70561d261_cgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{ui_8h}{ui.\+h}}\item 
+src/\mbox{\hyperlink{ui_8cpp}{ui.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,7 @@
+<map id="IWeapon::IWeapon" name="IWeapon::IWeapon">
+<area shape="rect" id="Node000001" title=" " alt="" coords="197,31,328,57"/>
+<area shape="rect" id="Node000002" href="$class_cool_stick.html#acfbae3a51f5ba2cddce652078b501f9d" title=" " alt="" coords="5,5,149,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="181,36,149,31,150,26,182,30"/>
+<area shape="rect" id="Node000003" href="$class_yamato.html#af87539b26b8f9de81c54cb80ba556f9c" title=" " alt="" coords="18,56,136,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="181,58,136,64,135,59,181,52"/>
+</map>

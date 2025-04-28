@@ -1,0 +1,15 @@
+<map id="FirstChoice" name="FirstChoice">
+<area shape="rect" id="Node000001" title="The part after the player meets the mysterious stranger." alt="" coords="29,764,239,855"/>
+<area shape="rect" id="Node000002" href="$class_u_i_with_player.html" title="Basically just the base class for all user interfaces that have a player." alt="" coords="41,624,227,715"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="136,730,136,764,131,764,131,730"/>
+<area shape="rect" id="Node000003" href="$class_user_interface.html" title="Base class for all user interfaces in the game." alt="" coords="5,451,219,541"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="122,556,131,624,126,625,117,557"/>
+<area shape="rect" id="Node000004" href="$class_player.html" title="The Player class is an Entity that has an inventory and money." alt="" coords="244,432,461,560"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="274,562,205,616,202,612,271,558"/>
+<area shape="rect" id="Node000005" href="$class_entity.html" title="Base class for all entities in the game. This includes the player and enemies." alt="" coords="122,181,298,368"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="280,379,314,431,309,434,275,382"/>
+<area shape="rect" id="Node000006" href="$class_stats.html" title="Stats for all entities." alt="" coords="149,5,270,117"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="212,117,212,164,207,164,207,117"/>
+<area shape="rect" id="Node000007" href="$class_inventory.html" title="Inventory class that holds all items for the player." alt="" coords="322,200,505,349"/>
+<area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="396,350,377,416,372,415,391,348"/>
+</map>

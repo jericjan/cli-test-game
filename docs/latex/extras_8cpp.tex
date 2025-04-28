@@ -1,0 +1,216 @@
+\doxysection{src/extras.cpp File Reference}
+\hypertarget{extras_8cpp}{}\label{extras_8cpp}\index{src/extras.cpp@{src/extras.cpp}}
+{\ttfamily \#include "{}extras.\+h"{}}\newline
+Include dependency graph for extras.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=257pt]{extras_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{extras_8cpp_a9f429ae2206e7d4a9b8b4071b64080b5}{pad\+To}} (string str, const size\+\_\+t num, const char padding\+Char)
+\begin{DoxyCompactList}\small\item\em Centers text in a given {\ttfamily num} of characters. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{extras_8cpp_aea0e34fe8a665ef6cb1fd6526ce1deb0}{sleep\+MS}} (int ms)
+\item 
+string \mbox{\hyperlink{extras_8cpp_a99d2755bf0660601280710515b3f512c}{colorize\+Text}} (string msg, \mbox{\hyperlink{extras_8h_ab87bacfdad76e61b9412d7124be44c1c}{Color}} color)
+\begin{DoxyCompactList}\small\item\em Colors text. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{extras_8cpp_a3816c0b1714f3be0c6c8a394a4faee7d}{input\+Num}} ()
+\begin{DoxyCompactList}\small\item\em Gets an integer from the user. Loops until a valid integer is entered. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{extras_8cpp_aff1ce18cf1cd562e54189df70cee6299}{print\+Animate}} (string msg, int delay)
+\begin{DoxyCompactList}\small\item\em Outputs a text character by character with a given delay. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{extras_8cpp_a99d2755bf0660601280710515b3f512c}\index{extras.cpp@{extras.cpp}!colorizeText@{colorizeText}}
+\index{colorizeText@{colorizeText}!extras.cpp@{extras.cpp}}
+\doxysubsubsection{\texorpdfstring{colorizeText()}{colorizeText()}}
+{\footnotesize\ttfamily \label{extras_8cpp_a99d2755bf0660601280710515b3f512c} 
+string colorize\+Text (\begin{DoxyParamCaption}\item[{string}]{msg}{, }\item[{\mbox{\hyperlink{extras_8h_ab87bacfdad76e61b9412d7124be44c1c}{Color}}}]{color}{}\end{DoxyParamCaption})}
+
+
+
+Colors text. 
+
+Usually used like this\+: {\ttfamily \textbackslash{}033\mbox{[}31m Your Text Here \textbackslash{}033\mbox{[}0m}, where {\ttfamily 31} is the color code for red. 
+
+Definition at line \mbox{\hyperlink{extras_8cpp_source_l00021}{21}} of file \mbox{\hyperlink{extras_8cpp_source}{extras.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00022\ \{}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordflow}{return}\ string(\textcolor{stringliteral}{"{}\(\backslash\)033["{}})\ +\ to\_string(color)\ +\ \textcolor{stringliteral}{"{}m"{}}\ +\ msg\ +\ \textcolor{stringliteral}{"{}\(\backslash\)033[0m"{}};}
+\DoxyCodeLine{00024\ \}}
+
+\end{DoxyCode}
+
+
+Referenced by \mbox{\hyperlink{entities_8cpp_source_l00013}{Player\+::add\+Money()}}, \mbox{\hyperlink{ui_8cpp_source_l00026}{Gamble\+Menu\+::render()}}, \mbox{\hyperlink{ui_8cpp_source_l00135}{Jovial\+Aftermath\+::render()}}, and \mbox{\hyperlink{ui_8cpp_source_l00240}{Jovial\+Cutscene\+::render()}}.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=302pt]{extras_8cpp_a99d2755bf0660601280710515b3f512c_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{extras_8cpp_a3816c0b1714f3be0c6c8a394a4faee7d}\index{extras.cpp@{extras.cpp}!inputNum@{inputNum}}
+\index{inputNum@{inputNum}!extras.cpp@{extras.cpp}}
+\doxysubsubsection{\texorpdfstring{inputNum()}{inputNum()}}
+{\footnotesize\ttfamily \label{extras_8cpp_a3816c0b1714f3be0c6c8a394a4faee7d} 
+int input\+Num (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Gets an integer from the user. Loops until a valid integer is entered. 
+
+
+
+Definition at line \mbox{\hyperlink{extras_8cpp_source_l00026}{26}} of file \mbox{\hyperlink{extras_8cpp_source}{extras.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00027\ \{}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{int}\ result;}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordflow}{while}\ (!(cin\ >>\ result))}
+\DoxyCodeLine{00032\ \ \ \ \ \{}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ cin.clear();}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ cin.ignore(numeric\_limits<streamsize>::max(),\ \textcolor{charliteral}{'\(\backslash\)n'});}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}That's\ not\ a\ number!"{}}\ <<\ std::endl;}
+\DoxyCodeLine{00036\ \ \ \ \ \}}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordflow}{return}\ result;}
+\DoxyCodeLine{00039\ \}}
+
+\end{DoxyCode}
+
+
+Referenced by \mbox{\hyperlink{ui_8cpp_source_l00165}{Battle\+::render()}}, \mbox{\hyperlink{ui_8cpp_source_l00268}{First\+Choice\+::render()}}, \mbox{\hyperlink{ui_8cpp_source_l00072}{Main\+Menu\+::render()}}, and \mbox{\hyperlink{ui_8cpp_source_l00312}{Start\+Menu\+::render()}}.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=273pt]{extras_8cpp_a3816c0b1714f3be0c6c8a394a4faee7d_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{extras_8cpp_a9f429ae2206e7d4a9b8b4071b64080b5}\index{extras.cpp@{extras.cpp}!padTo@{padTo}}
+\index{padTo@{padTo}!extras.cpp@{extras.cpp}}
+\doxysubsubsection{\texorpdfstring{padTo()}{padTo()}}
+{\footnotesize\ttfamily \label{extras_8cpp_a9f429ae2206e7d4a9b8b4071b64080b5} 
+string pad\+To (\begin{DoxyParamCaption}\item[{string}]{str}{, }\item[{const size\+\_\+t}]{num}{, }\item[{const char}]{padding\+Char}{}\end{DoxyParamCaption})}
+
+
+
+Centers text in a given {\ttfamily num} of characters. 
+
+
+
+Definition at line \mbox{\hyperlink{extras_8cpp_source_l00003}{3}} of file \mbox{\hyperlink{extras_8cpp_source}{extras.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00004\ \{}
+\DoxyCodeLine{00005\ \ \ \ \ \textcolor{keywordflow}{if}\ (num\ >\ str.size())}
+\DoxyCodeLine{00006\ \ \ \ \ \{}
+\DoxyCodeLine{00007\ \ \ \ \ \ \ \ \ div\_t\ divided\ =\ div(num\ -\/\ str.size(),\ 2);}
+\DoxyCodeLine{00008\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ leftSpace\ =\ divided.quot;}
+\DoxyCodeLine{00009\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ rightSpace\ =\ divided.quot\ +\ divided.rem;}
+\DoxyCodeLine{00010\ \ \ \ \ \ \ \ \ str.insert(str.begin(),\ leftSpace,\ paddingChar);}
+\DoxyCodeLine{00011\ \ \ \ \ \ \ \ \ str.insert(str.end(),\ rightSpace,\ paddingChar);}
+\DoxyCodeLine{00012\ \ \ \ \ \}}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keywordflow}{return}\ str;}
+\DoxyCodeLine{00014\ \}}
+
+\end{DoxyCode}
+
+
+Referenced by \mbox{\hyperlink{inventory_8cpp_source_l00016}{Inventory\+::list\+Items()}}.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=258pt]{extras_8cpp_a9f429ae2206e7d4a9b8b4071b64080b5_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{extras_8cpp_aff1ce18cf1cd562e54189df70cee6299}\index{extras.cpp@{extras.cpp}!printAnimate@{printAnimate}}
+\index{printAnimate@{printAnimate}!extras.cpp@{extras.cpp}}
+\doxysubsubsection{\texorpdfstring{printAnimate()}{printAnimate()}}
+{\footnotesize\ttfamily \label{extras_8cpp_aff1ce18cf1cd562e54189df70cee6299} 
+void print\+Animate (\begin{DoxyParamCaption}\item[{string}]{msg}{, }\item[{int}]{delay}{}\end{DoxyParamCaption})}
+
+
+
+Outputs a text character by character with a given delay. 
+
+
+
+Definition at line \mbox{\hyperlink{extras_8cpp_source_l00041}{41}} of file \mbox{\hyperlink{extras_8cpp_source}{extras.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00042\ \{}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{comment}{//\ cout\ <<\ msg;}}
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\ \&ch\ :\ msg)}
+\DoxyCodeLine{00045\ \ \ \ \ \{}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ cout\ <<\ ch;}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{extras_8cpp_aea0e34fe8a665ef6cb1fd6526ce1deb0}{sleepMS}}(delay);}
+\DoxyCodeLine{00048\ \ \ \ \ \}}
+\DoxyCodeLine{00049\ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{extras_8cpp_source_l00016}{sleep\+MS()}}.
+
+
+
+Referenced by \mbox{\hyperlink{inventory_8cpp_source_l00006}{Inventory\+::add\+Item()}}, \mbox{\hyperlink{ui_8cpp_source_l00268}{First\+Choice\+::render()}}, \mbox{\hyperlink{ui_8cpp_source_l00016}{Game\+Over\+::render()}}, \mbox{\hyperlink{ui_8cpp_source_l00294}{Intro\+Dialogue\+::render()}}, \mbox{\hyperlink{ui_8cpp_source_l00135}{Jovial\+Aftermath\+::render()}}, \mbox{\hyperlink{ui_8cpp_source_l00240}{Jovial\+Cutscene\+::render()}}, and \mbox{\hyperlink{ui_8cpp_source_l00072}{Main\+Menu\+::render()}}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=241pt]{extras_8cpp_aff1ce18cf1cd562e54189df70cee6299_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=304pt]{extras_8cpp_aff1ce18cf1cd562e54189df70cee6299_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{extras_8cpp_aea0e34fe8a665ef6cb1fd6526ce1deb0}\index{extras.cpp@{extras.cpp}!sleepMS@{sleepMS}}
+\index{sleepMS@{sleepMS}!extras.cpp@{extras.cpp}}
+\doxysubsubsection{\texorpdfstring{sleepMS()}{sleepMS()}}
+{\footnotesize\ttfamily \label{extras_8cpp_aea0e34fe8a665ef6cb1fd6526ce1deb0} 
+void sleep\+MS (\begin{DoxyParamCaption}\item[{int}]{ms}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{extras_8cpp_source_l00016}{16}} of file \mbox{\hyperlink{extras_8cpp_source}{extras.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00017\ \{}
+\DoxyCodeLine{00018\ \ \ \ \ this\_thread::sleep\_for(chrono::milliseconds(ms));}
+\DoxyCodeLine{00019\ \}}
+
+\end{DoxyCode}
+
+
+Referenced by \mbox{\hyperlink{extras_8cpp_source_l00041}{print\+Animate()}}.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{extras_8cpp_aea0e34fe8a665ef6cb1fd6526ce1deb0_icgraph}
+\end{center}
+\end{figure}

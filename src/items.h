@@ -10,7 +10,7 @@ public:
     string name;
     string type;
     string desc;
-    int count; // A count of -1 means the item can be used infinitely
+    int count; ///< A count of -1 means the item can be used infinitely
     IItem(string n, string t, string d, int c);
     virtual ~IItem();
 

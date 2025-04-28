@@ -1,0 +1,11 @@
+<map id="Entity::Entity" name="Entity::Entity">
+<area shape="rect" id="Node000001" title=" " alt="" coords="306,56,403,83"/>
+<area shape="rect" id="Node000002" href="$class_entity.html#a44aad07756d6f00abf8f08ffde6eb217" title=" " alt="" coords="157,5,256,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="298,53,247,35,249,30,300,48"/>
+<area shape="rect" id="Node000004" href="$class_player.html#affe0cc3cb714f6deb4e62f0c0d3f1fd8" title=" " alt="" coords="155,56,258,83"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="290,72,258,72,258,67,290,67"/>
+<area shape="rect" id="Node000005" href="$class_player.html#ab371d4d8f6a97b63e01b7caa51b543bd" title=" " alt="" coords="155,107,258,133"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="300,91,249,109,247,104,298,86"/>
+<area shape="rect" id="Node000003" href="$class_i_weapon.html#a53e8a73c5810e90431dabad3c8acb8f1" title=" " alt="" coords="5,5,107,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="141,21,107,21,107,16,141,16"/>
+</map>

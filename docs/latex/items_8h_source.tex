@@ -1,0 +1,72 @@
+\doxysection{items.\+h}
+\hypertarget{items_8h_source}{}\label{items_8h_source}\index{src/items.h@{src/items.h}}
+\mbox{\hyperlink{items_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{items_8h_source_l00001}00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{\Hypertarget{items_8h_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{items_8h_source_l00003}00003\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{\Hypertarget{items_8h_source_l00004}00004\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{\Hypertarget{items_8h_source_l00005}00005\ }
+\DoxyCodeLine{\Hypertarget{items_8h_source_l00007}\mbox{\hyperlink{class_i_item}{00007}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_i_item_ab1bb86846077713c5847ec035115f09c}{IItem}}}
+\DoxyCodeLine{\Hypertarget{items_8h_source_l00008}00008\ \{}
+\DoxyCodeLine{\Hypertarget{items_8h_source_l00009}00009\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{items_8h_source_l00010}\mbox{\hyperlink{class_i_item_a7fdf57eb313baaea887b648bc13f247a}{00010}}\ \ \ \ \ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{class_i_item_a7fdf57eb313baaea887b648bc13f247a}{name}};}
+\DoxyCodeLine{\Hypertarget{items_8h_source_l00011}\mbox{\hyperlink{class_i_item_a3b3b58b237d89653e493c95fe22074ff}{00011}}\ \ \ \ \ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{class_i_item_a3b3b58b237d89653e493c95fe22074ff}{type}};}
+\DoxyCodeLine{\Hypertarget{items_8h_source_l00012}\mbox{\hyperlink{class_i_item_a9acebb5d530d823314bb1a8f29ff974a}{00012}}\ \ \ \ \ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{class_i_item_a9acebb5d530d823314bb1a8f29ff974a}{desc}};}
+\DoxyCodeLine{\Hypertarget{items_8h_source_l00013}\mbox{\hyperlink{class_i_item_a0b30dc1f8eee51c2b78ac71d6c7b93b7}{00013}}\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_i_item_a0b30dc1f8eee51c2b78ac71d6c7b93b7}{count}};\ }
+\DoxyCodeLine{\Hypertarget{items_8h_source_l00014}00014\ \ \ \ \ \mbox{\hyperlink{class_i_item_ab1bb86846077713c5847ec035115f09c}{IItem}}(\textcolor{keywordtype}{string}\ n,\ \textcolor{keywordtype}{string}\ t,\ \textcolor{keywordtype}{string}\ d,\ \textcolor{keywordtype}{int}\ c);}
+\DoxyCodeLine{\Hypertarget{items_8h_source_l00015}\mbox{\hyperlink{class_i_item_a09483bee7e3f4f382e8eeac54493620e}{00015}}\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_i_item_a09483bee7e3f4f382e8eeac54493620e}{\string~IItem}}();}
+\DoxyCodeLine{\Hypertarget{items_8h_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{items_8h_source_l00017}00017\ \};}
+\DoxyCodeLine{\Hypertarget{items_8h_source_l00018}00018\ }
+\DoxyCodeLine{\Hypertarget{items_8h_source_l00020}\mbox{\hyperlink{class_i_enemy_item}{00020}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_i_enemy_item_ab04428e73487bd8279945087a6b307fa}{IEnemyItem}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_i_item_ab1bb86846077713c5847ec035115f09c}{IItem}}}
+\DoxyCodeLine{\Hypertarget{items_8h_source_l00021}00021\ \{}
+\DoxyCodeLine{\Hypertarget{items_8h_source_l00022}00022\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{items_8h_source_l00023}00023\ \ \ \ \ \mbox{\hyperlink{class_i_enemy_item_ab04428e73487bd8279945087a6b307fa}{IEnemyItem}}(\textcolor{keywordtype}{string}\ n,\ \textcolor{keywordtype}{string}\ t,\ \textcolor{keywordtype}{string}\ d,\ \textcolor{keywordtype}{int}\ c);}
+\DoxyCodeLine{\Hypertarget{items_8h_source_l00024}\mbox{\hyperlink{class_i_enemy_item_a4f81ef24d49cb728a7a275db4b1b506c}{00024}}\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_i_enemy_item_a4f81ef24d49cb728a7a275db4b1b506c}{use}}(\mbox{\hyperlink{class_player}{Player}}\ \&player,\ \mbox{\hyperlink{class_entity}{Entity}}\ \&enemy)\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{items_8h_source_l00025}00025\ \};}
+\DoxyCodeLine{\Hypertarget{items_8h_source_l00026}00026\ }
+\DoxyCodeLine{\Hypertarget{items_8h_source_l00028}\mbox{\hyperlink{class_i_player_item}{00028}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_i_player_item_afc3002fdaacb41cd6862b2301cd279e3}{IPlayerItem}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_i_item_ab1bb86846077713c5847ec035115f09c}{IItem}}}
+\DoxyCodeLine{\Hypertarget{items_8h_source_l00029}00029\ \{}
+\DoxyCodeLine{\Hypertarget{items_8h_source_l00030}00030\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{items_8h_source_l00031}00031\ \ \ \ \ \mbox{\hyperlink{class_i_player_item_afc3002fdaacb41cd6862b2301cd279e3}{IPlayerItem}}(\textcolor{keywordtype}{string}\ n,\ \textcolor{keywordtype}{string}\ t,\ \textcolor{keywordtype}{string}\ d,\ \textcolor{keywordtype}{int}\ c);}
+\DoxyCodeLine{\Hypertarget{items_8h_source_l00032}\mbox{\hyperlink{class_i_player_item_a22a1323dae95369aab54ef7ce3fe0a14}{00032}}\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_i_player_item_a22a1323dae95369aab54ef7ce3fe0a14}{use}}(\mbox{\hyperlink{class_player}{Player}}\ \&player)\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{items_8h_source_l00033}00033\ \};}
+\DoxyCodeLine{\Hypertarget{items_8h_source_l00034}00034\ }
+\DoxyCodeLine{\Hypertarget{items_8h_source_l00036}\mbox{\hyperlink{class_i_potion}{00036}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_i_potion_aa93950ffed81f33407bdce018c60de58}{IPotion}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_i_player_item_afc3002fdaacb41cd6862b2301cd279e3}{IPlayerItem}}}
+\DoxyCodeLine{\Hypertarget{items_8h_source_l00037}00037\ \{}
+\DoxyCodeLine{\Hypertarget{items_8h_source_l00038}00038\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{items_8h_source_l00039}00039\ \ \ \ \ \mbox{\hyperlink{class_i_potion_aa93950ffed81f33407bdce018c60de58}{IPotion}}(\textcolor{keywordtype}{string}\ n,\ \textcolor{keywordtype}{string}\ d,\ \textcolor{keywordtype}{int}\ c);}
+\DoxyCodeLine{\Hypertarget{items_8h_source_l00040}00040\ \};}
+\DoxyCodeLine{\Hypertarget{items_8h_source_l00041}00041\ }
+\DoxyCodeLine{\Hypertarget{items_8h_source_l00043}\mbox{\hyperlink{class_health_potion}{00043}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_health_potion_a6ff8807a7aae10c5ce186c793b7f359c}{HealthPotion}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_i_potion_aa93950ffed81f33407bdce018c60de58}{IPotion}}}
+\DoxyCodeLine{\Hypertarget{items_8h_source_l00044}00044\ \{}
+\DoxyCodeLine{\Hypertarget{items_8h_source_l00045}00045\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{items_8h_source_l00046}\mbox{\hyperlink{class_health_potion_a0de23d022ced2f84647eccddf62f5896}{00046}}\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_health_potion_a0de23d022ced2f84647eccddf62f5896}{healAmount}}\ =\ 100;\ \textcolor{comment}{//\ declared\ static\ to\ constructor\ can\ use\ it}}
+\DoxyCodeLine{\Hypertarget{items_8h_source_l00047}00047\ \ \ \ \ \mbox{\hyperlink{class_health_potion_a6ff8807a7aae10c5ce186c793b7f359c}{HealthPotion}}(\textcolor{keywordtype}{int}\ c);}
+\DoxyCodeLine{\Hypertarget{items_8h_source_l00048}00048\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_health_potion_acd72ba2a1a6dc046c5d60920c4e297fc}{use}}(\mbox{\hyperlink{class_player}{Player}}\ \&player)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{\Hypertarget{items_8h_source_l00049}00049\ \};}
+\DoxyCodeLine{\Hypertarget{items_8h_source_l00050}00050\ }
+\DoxyCodeLine{\Hypertarget{items_8h_source_l00054}\mbox{\hyperlink{class_weapon}{00054}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_weapon_a8d9631f8c67df4646e9b06516eff0cd0}{Weapon}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_i_enemy_item_ab04428e73487bd8279945087a6b307fa}{IEnemyItem}}}
+\DoxyCodeLine{\Hypertarget{items_8h_source_l00055}00055\ \{}
+\DoxyCodeLine{\Hypertarget{items_8h_source_l00056}00056\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{items_8h_source_l00057}\mbox{\hyperlink{class_weapon_af7f5d5ecbb3ac0e95350a6750be1fb28}{00057}}\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_weapon_af7f5d5ecbb3ac0e95350a6750be1fb28}{dmg}};}
+\DoxyCodeLine{\Hypertarget{items_8h_source_l00058}00058\ \ \ \ \ \mbox{\hyperlink{class_weapon_a8d9631f8c67df4646e9b06516eff0cd0}{Weapon}}(\textcolor{keywordtype}{string}\ \mbox{\hyperlink{class_i_item_a7fdf57eb313baaea887b648bc13f247a}{name}},\ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{class_i_item_a9acebb5d530d823314bb1a8f29ff974a}{desc}},\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_i_item_a0b30dc1f8eee51c2b78ac71d6c7b93b7}{count}},\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_weapon_af7f5d5ecbb3ac0e95350a6750be1fb28}{dmg}});}
+\DoxyCodeLine{\Hypertarget{items_8h_source_l00059}00059\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_weapon_a425b48c0e2c2422e244b7cb7227a0345}{use}}(\mbox{\hyperlink{class_player}{Player}}\ \&player,\ \mbox{\hyperlink{class_entity}{Entity}}\ \&enemy)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{\Hypertarget{items_8h_source_l00060}00060\ \};}
+\DoxyCodeLine{\Hypertarget{items_8h_source_l00061}00061\ }
+\DoxyCodeLine{\Hypertarget{items_8h_source_l00063}\mbox{\hyperlink{class_cool_stick}{00063}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_cool_stick_acfbae3a51f5ba2cddce652078b501f9d}{CoolStick}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_weapon_a8d9631f8c67df4646e9b06516eff0cd0}{Weapon}}}
+\DoxyCodeLine{\Hypertarget{items_8h_source_l00064}00064\ \{}
+\DoxyCodeLine{\Hypertarget{items_8h_source_l00065}00065\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{items_8h_source_l00066}\mbox{\hyperlink{class_cool_stick_affea97bbcc2e54c23d4e0e127d6de158}{00066}}\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_cool_stick_affea97bbcc2e54c23d4e0e127d6de158}{dmg}}\ =\ 60;}
+\DoxyCodeLine{\Hypertarget{items_8h_source_l00067}00067\ \ \ \ \ \mbox{\hyperlink{class_cool_stick_acfbae3a51f5ba2cddce652078b501f9d}{CoolStick}}();}
+\DoxyCodeLine{\Hypertarget{items_8h_source_l00068}00068\ \};}
+\DoxyCodeLine{\Hypertarget{items_8h_source_l00069}00069\ }
+\DoxyCodeLine{\Hypertarget{items_8h_source_l00071}\mbox{\hyperlink{class_yamato}{00071}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_yamato_af87539b26b8f9de81c54cb80ba556f9c}{Yamato}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_weapon_a8d9631f8c67df4646e9b06516eff0cd0}{Weapon}}}
+\DoxyCodeLine{\Hypertarget{items_8h_source_l00072}00072\ \{}
+\DoxyCodeLine{\Hypertarget{items_8h_source_l00073}00073\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{items_8h_source_l00074}\mbox{\hyperlink{class_yamato_aede256ea614913e4bc9b70d8ac130568}{00074}}\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_yamato_aede256ea614913e4bc9b70d8ac130568}{dmg}}\ =\ 500;}
+\DoxyCodeLine{\Hypertarget{items_8h_source_l00075}00075\ \ \ \ \ \mbox{\hyperlink{class_yamato_af87539b26b8f9de81c54cb80ba556f9c}{Yamato}}();}
+\DoxyCodeLine{\Hypertarget{items_8h_source_l00076}00076\ \};}
+
+\end{DoxyCode}

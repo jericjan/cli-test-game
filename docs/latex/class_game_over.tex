@@ -1,0 +1,97 @@
+\doxysection{Game\+Over Class Reference}
+\hypertarget{class_game_over}{}\label{class_game_over}\index{GameOver@{GameOver}}
+
+
+The game over screen. The user is sent back to the start menu after this.  
+
+
+
+
+{\ttfamily \#include $<$ui.\+h$>$}
+
+
+
+Inheritance diagram for Game\+Over\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=241pt]{class_game_over__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Game\+Over\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=241pt]{class_game_over__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_user_interface}{User\+Interface}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_game_over_a372e2cf047530b9726c9d805ed10970a}{render}} () override
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_user_interface}{User\+Interface}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{class_user_interface_ae588b2ff1711a016dd4c6fc5002c0841}{\texorpdfstring{$\sim$}{\string~}\+User\+Interface}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Public Attributes inherited from \mbox{\hyperlink{class_user_interface}{User\+Interface}}}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_user_interface_aa95ee5089a1de7ad211fb3a1bb786e11}{quit\+Game}} = false
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The game over screen. The user is sent back to the start menu after this. 
+
+Definition at line \mbox{\hyperlink{ui_8h_source_l00034}{34}} of file \mbox{\hyperlink{ui_8h_source}{ui.\+h}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_game_over_a372e2cf047530b9726c9d805ed10970a}\index{GameOver@{GameOver}!render@{render}}
+\index{render@{render}!GameOver@{GameOver}}
+\doxysubsubsection{\texorpdfstring{render()}{render()}}
+{\footnotesize\ttfamily \label{class_game_over_a372e2cf047530b9726c9d805ed10970a} 
+\mbox{\hyperlink{class_user_interface}{User\+Interface}} \texorpdfstring{$\ast$}{*} Game\+Over\+::render (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_user_interface_a6c4e70754407cdc9ed66986dcea60ece}{User\+Interface}}.
+
+
+
+Definition at line \mbox{\hyperlink{ui_8cpp_source_l00016}{16}} of file \mbox{\hyperlink{ui_8cpp_source}{ui.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00017\ \{}
+\DoxyCodeLine{00018\ \ \ \ \ \mbox{\hyperlink{extras_8cpp_aff1ce18cf1cd562e54189df70cee6299}{printAnimate}}(\textcolor{keywordtype}{string}(\textcolor{stringliteral}{"{}Game\ Over!\ You\ lost\ the\ game.\ No\ respawns\ here.\ You're\ gone.\ Sorry.\(\backslash\)n"{}})\ +}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Press\ Enter\ to\ try\ again.\(\backslash\)n"{}});}
+\DoxyCodeLine{00020\ \ \ \ \ cin.ignore(numeric\_limits<streamsize>::max(),\ \textcolor{charliteral}{'\(\backslash\)n'});}
+\DoxyCodeLine{00021\ \ \ \ \ cin.get();}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ StartMenu();}
+\DoxyCodeLine{00023\ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{extras_8cpp_source_l00041}{print\+Animate()}}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_over_a372e2cf047530b9726c9d805ed10970a_cgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{ui_8h}{ui.\+h}}\item 
+src/\mbox{\hyperlink{ui_8cpp}{ui.\+cpp}}\end{DoxyCompactItemize}
