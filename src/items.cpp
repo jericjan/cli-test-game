@@ -35,4 +35,4 @@ bool IWeapon::use(Player &player, Entity &enemy)
 
 CoolStick::CoolStick() : IWeapon("Cool Stick", "A cool stick some stranger gave you. " + to_string(dmg) + "DMG", -1, dmg) {}
 
-Yamato::Yamato() : IWeapon("Yamato", "A legendary sword that does 500 damage!", -1, 500) {}
+Yamato::Yamato() : IWeapon("Yamato", "A legendary sword that does " + to_string(dmg) + " damage!", -1, dmg) {}

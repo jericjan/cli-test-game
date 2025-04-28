@@ -5,7 +5,7 @@ using namespace std;
 
 Entity::~Entity() = default;
 Player::Player() : Entity(0, "", 0, 0), money(0) {}
-Player::Player(int _health, string _name, int _atk, int _def, int _money) : Entity(_health, _name, _atk, _def), money(_money)
+Player::Player(int health, string name, int atk, int def, int money) : Entity(health, name, atk, def), money(money)
 {
     inventory = Inventory();
 }
@@ -30,13 +30,8 @@ void Player::addMoney(int amount)
 Stats::Stats() : atk(0), def(0) {}
 Stats::Stats(int x, int y) : atk(x), def(y) {}
 
-Entity::Entity(int _health, string _name, int atk, int def)
-{
-    currHealth = _health;
-    maxHealth = _health;
-    name = _name;
-    stats = Stats(atk, def);
-}
+Entity::Entity(int health, string name, int atk, int def):
+currHealth(health), maxHealth(health), stats(Stats(atk, def)), name(name) {}
 
 void Entity::attack(Entity &target, int extraDmg)
 {

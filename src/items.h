@@ -3,6 +3,7 @@
 #include <iostream>
 using namespace std;
 
+/// Base class for all items in the game
 class IItem
 {
 public:
@@ -15,6 +16,7 @@ public:
 
 };
 
+/// Enemy items. The use function takes in a player and an enemy.
 class IEnemyItem : public IItem
 {
 public:
@@ -22,6 +24,7 @@ public:
     virtual bool use(Player &player, Entity &enemy) = 0;
 };
 
+/// Player items. The use function takes in a player only
 class IPlayerItem : public IItem
 {
 public:
@@ -29,12 +32,14 @@ public:
     virtual bool use(Player &player) = 0;
 };
 
+/// Potions set the type to "Potion"
 class IPotion : public IPlayerItem
 {
 public:
     IPotion(string n, string d, int c);
 };
 
+/// Health potions heal the player of course
 class HealthPotion : public IPotion
 {
 public:
@@ -43,6 +48,9 @@ public:
     bool use(Player &player) override;
 };
 
+/// Weapons set the type to "Weapon" and implement the use function
+/// cuz all weapons attack lmao.
+/// Derived classes only need to set the `name`, `desc`, and `dmg` in the constructor
 class IWeapon : public IEnemyItem
 {
 public:
@@ -51,6 +59,7 @@ public:
     bool use(Player &player, Entity &enemy) override;
 };
 
+/// The Cool Stick is the first weapon the player gets
 class CoolStick : public IWeapon
 {
 public:
@@ -58,8 +67,10 @@ public:
     CoolStick();
 };
 
+/// The OP weapon of the game, the Yamato!!!
 class Yamato : public IWeapon
 {
 public:
+    static const int dmg = 500;
     Yamato();
 };

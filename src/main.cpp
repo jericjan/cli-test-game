@@ -7,6 +7,9 @@
 
 using namespace std;
 
+/// Handles UI in the game.
+/// Basically runs the UI in a loop, and the UIs can return other UIs to switch to.
+/// Ends when the current UI is a GameOver screen or when UserInterface#quitGame is set to true.
 class UIHandler
 {
 public:

@@ -4,6 +4,7 @@
 #include "inventory.h"
 using namespace std;
 
+/// Stats for all entities
 class Stats
 {
 public:
@@ -13,6 +14,7 @@ public:
     Stats(int x, int y);
 };
 
+/// Base class for all entities in the game. This includes the player and enemies.
 class Entity
 {
 public:
@@ -20,18 +22,19 @@ public:
     int currHealth;
     Stats stats;
     string name;
-    Entity(int _health, string _name, int atk, int def);
+    Entity(int health, string name, int atk, int def);
     virtual ~Entity();
     void attack(Entity &target, int extraDmg = 0);
 };
 
+/// The Player class is an Entity that has an inventory and money.
 class Player : public Entity
 {
 public:
     Inventory inventory;
     int money;
     Player();
-    Player(int _health, string _name, int _atk, int _def, int _money);
+    Player(int health, string name, int atk, int def, int money);
 
     void addMoney(int amount);
 };

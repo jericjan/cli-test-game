@@ -5,6 +5,7 @@
 #include <list>
 #include <functional>
 
+/// Base class for all user interfaces in the game
 class UserInterface
 {
 public:
@@ -13,6 +14,7 @@ public:
     virtual ~UserInterface();
 };
 
+/// Basically just the base class for all user interfaces that have a player
 class UIWithPlayer : public UserInterface
 {
 public:
@@ -21,19 +23,21 @@ public:
     UIWithPlayer(Player player);
 };
 
-// forward declaration of StartMenu because c++ sucks
+/// The first menu the user sees when they start the game
 class StartMenu : public UserInterface
 {
 public:
     UserInterface *render() override;
 };
 
+/// The game over screen. The user is sent back to the start menu after this.
 class GameOver : public UserInterface
 {
 public:
     UserInterface *render() override;
 };
 
+/// The main menu after all the cutscenes and stuff
 class MainMenu : public UIWithPlayer
 {
 public:
@@ -41,6 +45,7 @@ public:
     UserInterface *render() override;
 };
 
+/// The menu for gambling. The user can win a legendary sword or nothing.
 class GambleMenu : public UIWithPlayer
 {
 public:
@@ -48,6 +53,7 @@ public:
     UserInterface *render() override;
 };
 
+/// The battle screen. The user can attack, use an item, or run away.
 class Battle : public UIWithPlayer
 {
 public:
@@ -62,6 +68,7 @@ public:
     UserInterface *render() override;
 };
 
+/// The cutscene after the player wins the Jovial fight.
 class JovialAftermath : public UIWithPlayer
 {
 public:
@@ -70,6 +77,7 @@ public:
     UserInterface *render() override;
 };
 
+/// The cutscene before the player fights Jovial.
 class JovialCutscene : public UIWithPlayer
 {
 public:
@@ -77,6 +85,8 @@ public:
     UserInterface *render() override;
 };
 
+/// The part after the player meets the mysterious stranger.
+/// The player can stay for funny dialogue.
 class FirstChoice : public UIWithPlayer
 {
 public:
@@ -91,6 +101,7 @@ public:
     UserInterface *render() override;
 };
 
+/// The intro dialogue. The player can choose their name and get a cool stick.
 class IntroDialogue : public UIWithPlayer
 {
 public:
