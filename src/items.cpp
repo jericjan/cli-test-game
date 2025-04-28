@@ -26,13 +26,13 @@ bool HealthPotion::use(Player &player)
     return true;
 }
 
-IWeapon::IWeapon(string name, string desc, int count, int dmg) : IEnemyItem(name, "Weapon", desc, count), dmg(dmg) {}
-bool IWeapon::use(Player &player, Entity &enemy)
+Weapon::Weapon(string name, string desc, int count, int dmg) : IEnemyItem(name, "Weapon", desc, count), dmg(dmg) {}
+bool Weapon::use(Player &player, Entity &enemy)
 {
     player.attack(enemy, dmg);
     return true;
 }
 
-CoolStick::CoolStick() : IWeapon("Cool Stick", "A cool stick some stranger gave you. " + to_string(dmg) + "DMG", -1, dmg) {}
+CoolStick::CoolStick() : Weapon("Cool Stick", "A cool stick some stranger gave you. " + to_string(dmg) + "DMG", -1, dmg) {}
 
-Yamato::Yamato() : IWeapon("Yamato", "A legendary sword that does " + to_string(dmg) + " damage!", -1, dmg) {}
+Yamato::Yamato() : Weapon("Yamato", "A legendary sword that does " + to_string(dmg) + " damage!", -1, dmg) {}

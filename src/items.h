@@ -51,16 +51,16 @@ public:
 /// Weapons set the type to "Weapon" and implement the use function
 /// cuz all weapons attack lmao.
 /// Derived classes only need to set the `name`, `desc`, and `dmg` in the constructor
-class IWeapon : public IEnemyItem
+class Weapon : public IEnemyItem
 {
 public:
     int dmg;
-    IWeapon(string name, string desc, int count, int dmg);
+    Weapon(string name, string desc, int count, int dmg);
     bool use(Player &player, Entity &enemy) override;
 };
 
 /// The Cool Stick is the first weapon the player gets
-class CoolStick : public IWeapon
+class CoolStick : public Weapon
 {
 public:
     static const int dmg = 60;
@@ -68,7 +68,7 @@ public:
 };
 
 /// The OP weapon of the game, the Yamato!!!
-class Yamato : public IWeapon
+class Yamato : public Weapon
 {
 public:
     static const int dmg = 500;
