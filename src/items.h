@@ -3,6 +3,9 @@
 #include <iostream>
 using namespace std;
 
+class Player;
+class Entity;
+
 /// Base class for all items in the game
 class IItem
 {
@@ -46,6 +49,15 @@ class HealthPotion : public IPotion
 public:
     static const int strength = 100; // declared static to constructor can use it
     HealthPotion(int c);
+    bool use(Player &player) override;
+};
+
+/// Increases player ATK
+class StrengthPotion : public IPotion
+{
+public:
+    static const int strength = 100;
+    StrengthPotion(int c);
     bool use(Player &player) override;
 };
 

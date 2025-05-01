@@ -40,10 +40,10 @@ int inputNum()
 
 void printAnimate(string msg, int delay)
 {
-    // cout << msg;
-    for (auto &ch : msg)
-    {
-        cout << ch;
-        sleepMS(delay);
-    }
+    cout << msg;
+    // for (auto &ch : msg)
+    // {
+    //     cout << ch;
+    //     sleepMS(delay);
+    // }
 }

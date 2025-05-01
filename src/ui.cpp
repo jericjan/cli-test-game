@@ -4,6 +4,7 @@
 #include <random>
 #include <list>
 #include <functional>
+#include <string>
 #include "ui.h"
 #include "shop.h"
 
@@ -77,9 +78,10 @@ UserInterface *MainMenu::render()
     cout << "Money: " << player.money << endl;
     cout << "[1] Inventory" << endl;
     cout << "[2] Grind" << endl;
-    cout << "[3] Gamble" << endl;
-    cout << "[4] Hospital" << endl;
-    cout << "[5] Quit" << endl;
+    cout << "[3] Shop" << endl;
+    cout << "[4] Gamble" << endl;
+    cout << "[5] Hospital" << endl;
+    cout << "[6] Quit" << endl;
     int userInput = inputNum();
     if (userInput == 1)
     {
@@ -113,15 +115,19 @@ UserInterface *MainMenu::render()
     }
     else if (userInput == 3)
     {
+        return new ShopMenu(player);
+    }    
+    else if (userInput == 4)
+    {
         return new GambleMenu(player);
     }
-    else if (userInput == 4)
+    else if (userInput == 5)
     {
         printAnimate("You were healed to full health!\n");
         player.currHealth = player.maxHealth;
         return this;
     }
-    else if (userInput == 5)
+    else if (userInput == 6)
     {
         return new StartMenu();
     }
@@ -139,49 +145,18 @@ UserInterface *ShopMenu::render()
     cout << "Welcome to the shop! What would you like to buy?" << endl;
     Shop shop;
     shop.addItem(new HealthPotion(1), 50);
-    shop.addItem(new CoolStick(), 70);
+    shop.addItem(new StrengthPotion(1), 70);
+    shop.listItems(player);
     int userInput = inputNum();
-    if (userInput == 1)
-    {
-        if (player.money < 50)
-        {
-            cout << colorizeText("You don't have enough money!", RED) << endl;
-            return this;
-        }
-        else
-        {
-            player.addMoney(-50);
-            HealthPotion *hp = new HealthPotion(1);
-            player.inventory.addItem(hp);
-            cout << "You bought a health potion!" << endl;
-            return this;
-        }
-    }
-    else if (userInput == 2)
-    {
-        if (player.money < 70)
-        {
-            cout << colorizeText("You don't have enough money!", RED) << endl;
-            return this;
-        }
-        else
-        {
-            player.addMoney(-70);
-            CoolStick *stick = new CoolStick();
-            player.inventory.addItem(stick);
-            cout << "You bought a cool stick!" << endl;
-            return this;
-        }
-    }
-    else if (userInput == 3)
+    if (userInput == 0)
     {
         return new MainMenu(player);
     }
     else
     {
-        cout << "That's not one of the options!" << endl;
-        return this;
+        shop.buyItem(player, userInput);
     }
+    return this;
 }
 
 JovialAftermath::JovialAftermath(Player player, string bs) : UIWithPlayer(player), battleStatus(bs) {}

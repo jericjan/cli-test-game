@@ -1,5 +1,6 @@
 
 #include <iostream>
+#include <string>
 #include "entities.h"
 #include "items.h"
 using namespace std;
@@ -24,6 +25,17 @@ bool HealthPotion::use(Player &player)
         return false;
     }
     player.currHealth = min(player.maxHealth, player.currHealth + strength);
+    return true;
+}
+
+StrengthPotion::StrengthPotion(int c) :
+IPotion("Strength Potion", "Inceases the user's ATK by " + to_string(strength), c, strength) {}
+
+bool StrengthPotion::use(Player &player)
+{
+    player.stats.atk += strength;    
+    cout << "Your ATK increased by " + to_string(strength) + "!" << endl;
+    cout << "Your new ATK is " + to_string(player.stats.atk) + "!" << endl;
     return true;
 }
 

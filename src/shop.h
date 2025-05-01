@@ -20,7 +20,7 @@ public:
     /// Remove an item from the shop.
     /// @param idx 1-indexed item number
     void removeItem(int idx); 
-    void listItems();
+    void listItems(Player &player);
 
     /// @brief Buy an item from the shop.
     /// @param player The player buying the item

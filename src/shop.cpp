@@ -1,5 +1,5 @@
 #include "shop.h"
-
+#include "extras.h"
 ShopItem::ShopItem(IItem *item, int price) : item(item), price(price) {}
 
 void Shop::addItem(IItem *item, int price) {
@@ -14,13 +14,14 @@ void Shop::removeItem(int idx) {
     }
     items.erase(items.begin() + idx);
 }
-void Shop::listItems() {    
+void Shop::listItems(Player &player) {    
     int idx = 1;
+    cout << "Money: " << player.money << endl;
+    cout << "[0] Leave" << endl;
     for (ShopItem &shopItem : items) {
-        cout << "[" << idx << "] " << shopItem.item->name << " (" << shopItem.price << ")" << endl;
+        cout << "[" << idx << "] " << shopItem.item->name << " [Cost: " << shopItem.price << "]" << endl;
         idx += 1;
-      }
-    cout << "[" << idx << "] Leave" << endl;
+      }    
 }
 
 bool Shop::buyItem(Player &player, int idx) {
@@ -32,10 +33,10 @@ bool Shop::buyItem(Player &player, int idx) {
     ShopItem &shopItem = items[idx];
     
     if (player.money < shopItem.price) {
-        cout << "You don't have enough money!" << endl;
+        cout << colorizeText("You don't have enough money!", RED) << endl;
         return false;
     }
-    
+
     player.addMoney(-shopItem.price);
     player.inventory.addItem(shopItem.item);
     cout << "You bought a " << shopItem.item->name << "!" << endl;
