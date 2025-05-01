@@ -37,8 +37,8 @@ bool Shop::buyItem(Player &player, int idx) {
         return false;
     }
 
-    player.addMoney(-shopItem.price);
-    player.inventory.addItem(shopItem.item);
+    player.addMoney(-shopItem.price);    
     cout << "You bought a " << shopItem.item->name << "!" << endl;
+    player.inventory.addItem(shopItem.item);
     return true;
 }

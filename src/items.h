@@ -84,6 +84,6 @@ public:
 class Yamato : public Weapon
 {
 public:
-    static const int dmg = 500;
+    static const int dmg = 1000;
     Yamato();
 };

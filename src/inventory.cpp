@@ -1,10 +1,28 @@
 #include <iostream>
+#include <string>
 #include "inventory.h"
 #include "extras.h"
 #include "items.h"
 
 void Inventory::addItem(IItem *item)
 {
+    for (IItem *existingItem : items)
+    {
+        if (existingItem->name == item->name) // Kinda bad implementation but it works for now
+        {
+            if (existingItem->count != -1)
+            {
+                existingItem->count += item->count;
+            }
+            string msg = "You now have " + to_string(existingItem->count) + "x " + existingItem->name + "!";
+            string border = "\n" + string(msg.length(), '=') + "\n";
+            printAnimate(border, 1);
+            printAnimate(msg);
+            printAnimate(border, 1);
+            return;
+        }
+    }
+
     string msg = item->name + " added to inventory!";
     string border = "\n" + string(msg.length(), '=') + "\n";
     printAnimate(border, 1);
@@ -68,6 +86,7 @@ bool Inventory::useItem(int idx, Player &player, Entity *enemy)
         if (item->count == 0)
         {
             items.erase(items.begin() + idx - 1);
+            delete item;
         }
     }
     return true;

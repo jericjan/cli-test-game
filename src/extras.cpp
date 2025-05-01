@@ -1,4 +1,5 @@
 #include "extras.h"
+#include <string>
 
 string padTo(string str, const size_t num, const char paddingChar)
 {
