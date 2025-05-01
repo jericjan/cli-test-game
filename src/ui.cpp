@@ -5,6 +5,7 @@
 #include <list>
 #include <functional>
 #include "ui.h"
+#include "shop.h"
 
 using namespace std;
 
@@ -123,6 +124,58 @@ UserInterface *MainMenu::render()
     else if (userInput == 5)
     {
         return new StartMenu();
+    }
+    else
+    {
+        cout << "That's not one of the options!" << endl;
+        return this;
+    }
+}
+
+ShopMenu::ShopMenu(Player player) : UIWithPlayer(player) {}
+
+UserInterface *ShopMenu::render()
+{
+    cout << "Welcome to the shop! What would you like to buy?" << endl;
+    Shop shop;
+    shop.addItem(new HealthPotion(1), 50);
+    shop.addItem(new CoolStick(), 70);
+    int userInput = inputNum();
+    if (userInput == 1)
+    {
+        if (player.money < 50)
+        {
+            cout << colorizeText("You don't have enough money!", RED) << endl;
+            return this;
+        }
+        else
+        {
+            player.addMoney(-50);
+            HealthPotion *hp = new HealthPotion(1);
+            player.inventory.addItem(hp);
+            cout << "You bought a health potion!" << endl;
+            return this;
+        }
+    }
+    else if (userInput == 2)
+    {
+        if (player.money < 70)
+        {
+            cout << colorizeText("You don't have enough money!", RED) << endl;
+            return this;
+        }
+        else
+        {
+            player.addMoney(-70);
+            CoolStick *stick = new CoolStick();
+            player.inventory.addItem(stick);
+            cout << "You bought a cool stick!" << endl;
+            return this;
+        }
+    }
+    else if (userInput == 3)
+    {
+        return new MainMenu(player);
     }
     else
     {

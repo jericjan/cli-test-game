@@ -45,6 +45,14 @@ public:
     UserInterface *render() override;
 };
 
+/// The main menu after all the cutscenes and stuff
+class ShopMenu : public UIWithPlayer
+{
+public:
+    ShopMenu(Player player);
+    UserInterface *render() override;
+};
+
 /// The menu for gambling. The user can win a legendary sword or nothing.
 class GambleMenu : public UIWithPlayer
 {
