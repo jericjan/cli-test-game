@@ -11,8 +11,7 @@ The main menu after all the cutscenes and stuff.
 
 
 
-Inheritance diagram for Shop\+Menu\+:
-\nopagebreak
+Inheritance diagram for Shop\+Menu\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -21,8 +20,7 @@ Inheritance diagram for Shop\+Menu\+:
 \end{figure}
 
 
-Collaboration diagram for Shop\+Menu\+:
-\nopagebreak
+Collaboration diagram for Shop\+Menu\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -77,11 +75,11 @@ Shop\+Menu\+::\+Shop\+Menu (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{clas
 
 
 
-Definition at line \mbox{\hyperlink{ui_8cpp_source_l00152}{152}} of file \mbox{\hyperlink{ui_8cpp_source}{ui.\+cpp}}.
+Definition at line \mbox{\hyperlink{ui_8cpp_source_l00157}{157}} of file \mbox{\hyperlink{ui_8cpp_source}{ui.\+cpp}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00152\ :\ \mbox{\hyperlink{class_u_i_with_player_a297e083951aeaf9e72d9746fab8eccd8}{UIWithPlayer}}(\mbox{\hyperlink{class_u_i_with_player_a480502a8db864e1ec92eb19f87a35083}{player}})\ \{\}}
+\DoxyCodeLine{00157\ :\ \mbox{\hyperlink{class_u_i_with_player_a297e083951aeaf9e72d9746fab8eccd8}{UIWithPlayer}}(\mbox{\hyperlink{class_u_i_with_player_a480502a8db864e1ec92eb19f87a35083}{player}})\ \{\}}
 
 \end{DoxyCode}
 
@@ -110,35 +108,34 @@ Implements \mbox{\hyperlink{class_user_interface_a6c4e70754407cdc9ed66986dcea60e
 
 
 
-Definition at line \mbox{\hyperlink{ui_8cpp_source_l00154}{154}} of file \mbox{\hyperlink{ui_8cpp_source}{ui.\+cpp}}.
+Definition at line \mbox{\hyperlink{ui_8cpp_source_l00159}{159}} of file \mbox{\hyperlink{ui_8cpp_source}{ui.\+cpp}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00155\ \{}
-\DoxyCodeLine{00156\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Welcome\ to\ the\ shop!\ What\ would\ you\ like\ to\ buy?"{}}\ <<\ endl;}
-\DoxyCodeLine{00157\ \ \ \ \ Shop\ shop;}
-\DoxyCodeLine{00158\ \ \ \ \ shop.\mbox{\hyperlink{class_shop_a562501e5746bdef39699bc39203f8973}{addItem}}(\textcolor{keyword}{new}\ HealthPotion(1),\ 50);}
-\DoxyCodeLine{00159\ \ \ \ \ shop.\mbox{\hyperlink{class_shop_a562501e5746bdef39699bc39203f8973}{addItem}}(\textcolor{keyword}{new}\ StrengthPotion(1),\ 70);}
-\DoxyCodeLine{00160\ \ \ \ \ shop.\mbox{\hyperlink{class_shop_ac213488671e8d976d97c3530e691fd44}{listItems}}(\mbox{\hyperlink{class_u_i_with_player_a480502a8db864e1ec92eb19f87a35083}{player}});}
-\DoxyCodeLine{00161\ \ \ \ \ \textcolor{keywordtype}{int}\ userInput\ =\ \mbox{\hyperlink{extras_8cpp_a3816c0b1714f3be0c6c8a394a4faee7d}{inputNum}}();}
-\DoxyCodeLine{00162\ \ \ \ \ \textcolor{keywordflow}{if}\ (userInput\ ==\ 0)}
-\DoxyCodeLine{00163\ \ \ \ \ \{}
-\DoxyCodeLine{00164\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ MainMenu(\mbox{\hyperlink{class_u_i_with_player_a480502a8db864e1ec92eb19f87a35083}{player}});}
-\DoxyCodeLine{00165\ \ \ \ \ \}}
-\DoxyCodeLine{00166\ \ \ \ \ \textcolor{keywordflow}{else}}
-\DoxyCodeLine{00167\ \ \ \ \ \{}
-\DoxyCodeLine{00168\ \ \ \ \ \ \ \ \ shop.\mbox{\hyperlink{class_shop_a6c1a27422ecdd1a5248f156f1355632b}{buyItem}}(\mbox{\hyperlink{class_u_i_with_player_a480502a8db864e1ec92eb19f87a35083}{player}},\ userInput);}
-\DoxyCodeLine{00169\ \ \ \ \ \}}
-\DoxyCodeLine{00170\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{this};}
-\DoxyCodeLine{00171\ \}}
+\DoxyCodeLine{00160\ \{}
+\DoxyCodeLine{00161\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Welcome\ to\ the\ shop!\ What\ would\ you\ like\ to\ buy?"{}}\ <<\ endl;}
+\DoxyCodeLine{00162\ \ \ \ \ Shop\ shop;}
+\DoxyCodeLine{00163\ \ \ \ \ shop.\mbox{\hyperlink{class_shop_a562501e5746bdef39699bc39203f8973}{addItem}}(\textcolor{keyword}{new}\ HealthPotion(1),\ 50);}
+\DoxyCodeLine{00164\ \ \ \ \ shop.\mbox{\hyperlink{class_shop_a562501e5746bdef39699bc39203f8973}{addItem}}(\textcolor{keyword}{new}\ StrengthPotion(1),\ 70);}
+\DoxyCodeLine{00165\ \ \ \ \ shop.\mbox{\hyperlink{class_shop_ac213488671e8d976d97c3530e691fd44}{listItems}}(\mbox{\hyperlink{class_u_i_with_player_a480502a8db864e1ec92eb19f87a35083}{player}});}
+\DoxyCodeLine{00166\ \ \ \ \ \textcolor{keywordtype}{int}\ userInput\ =\ \mbox{\hyperlink{extras_8cpp_a3816c0b1714f3be0c6c8a394a4faee7d}{inputNum}}();}
+\DoxyCodeLine{00167\ \ \ \ \ \textcolor{keywordflow}{if}\ (userInput\ ==\ 0)}
+\DoxyCodeLine{00168\ \ \ \ \ \{}
+\DoxyCodeLine{00169\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ MainMenu(\mbox{\hyperlink{class_u_i_with_player_a480502a8db864e1ec92eb19f87a35083}{player}});}
+\DoxyCodeLine{00170\ \ \ \ \ \}}
+\DoxyCodeLine{00171\ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00172\ \ \ \ \ \{}
+\DoxyCodeLine{00173\ \ \ \ \ \ \ \ \ shop.\mbox{\hyperlink{class_shop_a6c1a27422ecdd1a5248f156f1355632b}{buyItem}}(\mbox{\hyperlink{class_u_i_with_player_a480502a8db864e1ec92eb19f87a35083}{player}},\ userInput);}
+\DoxyCodeLine{00174\ \ \ \ \ \}}
+\DoxyCodeLine{00175\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{this};}
+\DoxyCodeLine{00176\ \}}
 
 \end{DoxyCode}
 
 
 References \mbox{\hyperlink{shop_8cpp_source_l00007}{Shop\+::add\+Item()}}, \mbox{\hyperlink{shop_8cpp_source_l00030}{Shop\+::buy\+Item()}}, \mbox{\hyperlink{extras_8cpp_source_l00027}{input\+Num()}}, \mbox{\hyperlink{shop_8cpp_source_l00019}{Shop\+::list\+Items()}}, and \mbox{\hyperlink{ui_8h_source_l00021}{UIWith\+Player\+::player}}.
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode

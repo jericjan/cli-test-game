@@ -168,29 +168,29 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="class_user_interface.html#a6c4e70754407cdc9ed66986dcea60ece">UserInterface</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="ui_8cpp_source.html#l00357">357</a> of file <a class="el" href="ui_8cpp_source.html">ui.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  358</span>{</div>
-<div class="line"><span class="lineno">  359</span>    cout &lt;&lt; <span class="stringliteral">&quot;Welcome to The Game!&quot;</span> &lt;&lt; endl</div>
-<div class="line"><span class="lineno">  360</span>         &lt;&lt; <span class="stringliteral">&quot;[1] Start&quot;</span> &lt;&lt; endl</div>
-<div class="line"><span class="lineno">  361</span>         &lt;&lt; <span class="stringliteral">&quot;[2] Quit&quot;</span> &lt;&lt; endl;</div>
-<div class="line"><span class="lineno">  362</span>    <span class="keywordtype">int</span> userInput = <a class="code hl_function" href="extras_8cpp.html#a3816c0b1714f3be0c6c8a394a4faee7d">inputNum</a>();</div>
-<div class="line"><span class="lineno">  363</span>    <span class="keywordflow">if</span> (userInput == 1)</div>
-<div class="line"><span class="lineno">  364</span>    {</div>
-<div class="line"><span class="lineno">  365</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> IntroDialogue();</div>
-<div class="line"><span class="lineno">  366</span>    }</div>
-<div class="line"><span class="lineno">  367</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (userInput == 2)</div>
-<div class="line"><span class="lineno">  368</span>    {</div>
-<div class="line"><span class="lineno">  369</span>        cout &lt;&lt; <span class="stringliteral">&quot;See you next time!&quot;</span> &lt;&lt; endl;</div>
-<div class="line"><span class="lineno">  370</span>        <span class="comment">// quitGame = true;</span></div>
-<div class="line"><span class="lineno">  371</span>        this-&gt;<a class="code hl_variable" href="class_user_interface.html#aa95ee5089a1de7ad211fb3a1bb786e11">quitGame</a> = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  372</span>        <span class="keywordflow">return</span> <span class="keyword">this</span>;</div>
-<div class="line"><span class="lineno">  373</span>    }</div>
-<div class="line"><span class="lineno">  374</span>    <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  375</span>    {</div>
-<div class="line"><span class="lineno">  376</span>        cout &lt;&lt; <span class="stringliteral">&quot;That&#39;s not one of the options!&quot;</span> &lt;&lt; endl;</div>
+<p class="definition">Definition at line <a class="el" href="ui_8cpp_source.html#l00362">362</a> of file <a class="el" href="ui_8cpp_source.html">ui.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  363</span>{</div>
+<div class="line"><span class="lineno">  364</span>    cout &lt;&lt; <span class="stringliteral">&quot;Welcome to The Game!&quot;</span> &lt;&lt; endl</div>
+<div class="line"><span class="lineno">  365</span>         &lt;&lt; <span class="stringliteral">&quot;[1] Start&quot;</span> &lt;&lt; endl</div>
+<div class="line"><span class="lineno">  366</span>         &lt;&lt; <span class="stringliteral">&quot;[2] Quit&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><span class="lineno">  367</span>    <span class="keywordtype">int</span> userInput = <a class="code hl_function" href="extras_8cpp.html#a3816c0b1714f3be0c6c8a394a4faee7d">inputNum</a>();</div>
+<div class="line"><span class="lineno">  368</span>    <span class="keywordflow">if</span> (userInput == 1)</div>
+<div class="line"><span class="lineno">  369</span>    {</div>
+<div class="line"><span class="lineno">  370</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> IntroDialogue();</div>
+<div class="line"><span class="lineno">  371</span>    }</div>
+<div class="line"><span class="lineno">  372</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (userInput == 2)</div>
+<div class="line"><span class="lineno">  373</span>    {</div>
+<div class="line"><span class="lineno">  374</span>        cout &lt;&lt; <span class="stringliteral">&quot;See you next time!&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><span class="lineno">  375</span>        <span class="comment">// quitGame = true;</span></div>
+<div class="line"><span class="lineno">  376</span>        this-&gt;<a class="code hl_variable" href="class_user_interface.html#aa95ee5089a1de7ad211fb3a1bb786e11">quitGame</a> = <span class="keyword">true</span>;</div>
 <div class="line"><span class="lineno">  377</span>        <span class="keywordflow">return</span> <span class="keyword">this</span>;</div>
 <div class="line"><span class="lineno">  378</span>    }</div>
-<div class="line"><span class="lineno">  379</span>}</div>
+<div class="line"><span class="lineno">  379</span>    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  380</span>    {</div>
+<div class="line"><span class="lineno">  381</span>        cout &lt;&lt; <span class="stringliteral">&quot;That&#39;s not one of the options!&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><span class="lineno">  382</span>        <span class="keywordflow">return</span> <span class="keyword">this</span>;</div>
+<div class="line"><span class="lineno">  383</span>    }</div>
+<div class="line"><span class="lineno">  384</span>}</div>
 <div class="ttc" id="aclass_user_interface_html_aa95ee5089a1de7ad211fb3a1bb786e11"><div class="ttname"><a href="class_user_interface.html#aa95ee5089a1de7ad211fb3a1bb786e11">UserInterface::quitGame</a></div><div class="ttdeci">bool quitGame</div><div class="ttdef"><b>Definition</b> <a href="ui_8h_source.html#l00012">ui.h:12</a></div></div>
 <div class="ttc" id="aextras_8cpp_html_a3816c0b1714f3be0c6c8a394a4faee7d"><div class="ttname"><a href="extras_8cpp.html#a3816c0b1714f3be0c6c8a394a4faee7d">inputNum</a></div><div class="ttdeci">int inputNum()</div><div class="ttdoc">Gets an integer from the user. Loops until a valid integer is entered.</div><div class="ttdef"><b>Definition</b> <a href="extras_8cpp_source.html#l00027">extras.cpp:27</a></div></div>
 </div><!-- fragment -->

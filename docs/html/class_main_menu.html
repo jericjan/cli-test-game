@@ -250,42 +250,47 @@ Here is the caller graph for this function:</div>
 <div class="line"><span class="lineno">  112</span>    }</div>
 <div class="line"><span class="lineno">  113</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (userInput == 2)</div>
 <div class="line"><span class="lineno">  114</span>    {</div>
-<div class="line"><span class="lineno">  115</span>        Entity enemy = Entity(500, <span class="stringliteral">&quot;Random Guy&quot;</span>, 50, 50);</div>
-<div class="line"><span class="lineno">  116</span>        <span class="keyword">auto</span> after = [=](Player <a class="code hl_variable" href="class_u_i_with_player.html#a480502a8db864e1ec92eb19f87a35083">player</a>) -&gt; UserInterface *</div>
+<div class="line"><span class="lineno">  115</span>        Entity enemy = Entity(500, <span class="stringliteral">&quot;Random Guy&quot;</span>, 70, 50);</div>
+<div class="line"><span class="lineno">  116</span>        <span class="keyword">auto</span> win = [=](Player <a class="code hl_variable" href="class_u_i_with_player.html#a480502a8db864e1ec92eb19f87a35083">player</a>) -&gt; UserInterface *</div>
 <div class="line"><span class="lineno">  117</span>        {</div>
 <div class="line"><span class="lineno">  118</span>            <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code hl_function" href="#a40f98ff78c92e3f79b781b7ed18507a7">MainMenu</a>(<a class="code hl_variable" href="class_u_i_with_player.html#a480502a8db864e1ec92eb19f87a35083">player</a>);</div>
 <div class="line"><span class="lineno">  119</span>        };</div>
-<div class="line"><span class="lineno">  120</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> Battle(<a class="code hl_variable" href="class_u_i_with_player.html#a480502a8db864e1ec92eb19f87a35083">player</a>, enemy, 50, after, after);</div>
-<div class="line"><span class="lineno">  121</span>    }</div>
-<div class="line"><span class="lineno">  122</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (userInput == 3)</div>
-<div class="line"><span class="lineno">  123</span>    {</div>
-<div class="line"><span class="lineno">  124</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> ShopMenu(<a class="code hl_variable" href="class_u_i_with_player.html#a480502a8db864e1ec92eb19f87a35083">player</a>);</div>
-<div class="line"><span class="lineno">  125</span>    }    </div>
-<div class="line"><span class="lineno">  126</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (userInput == 4)</div>
-<div class="line"><span class="lineno">  127</span>    {</div>
-<div class="line"><span class="lineno">  128</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> GambleMenu(<a class="code hl_variable" href="class_u_i_with_player.html#a480502a8db864e1ec92eb19f87a35083">player</a>);</div>
-<div class="line"><span class="lineno">  129</span>    }</div>
-<div class="line"><span class="lineno">  130</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (userInput == 5)</div>
-<div class="line"><span class="lineno">  131</span>    {</div>
-<div class="line"><span class="lineno">  132</span>        <a class="code hl_function" href="extras_8cpp.html#a251383c9dea6cb260fb6f9ebb010139f">printAnimate</a>(<span class="stringliteral">&quot;You were healed to full health!\n&quot;</span>);</div>
-<div class="line"><span class="lineno">  133</span>        <a class="code hl_variable" href="class_u_i_with_player.html#a480502a8db864e1ec92eb19f87a35083">player</a>.fullyHeal();        </div>
-<div class="line"><span class="lineno">  134</span>        <span class="keywordflow">return</span> <span class="keyword">this</span>;</div>
-<div class="line"><span class="lineno">  135</span>    }</div>
-<div class="line"><span class="lineno">  136</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (userInput == 6)</div>
-<div class="line"><span class="lineno">  137</span>    {</div>
-<div class="line"><span class="lineno">  138</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> StartMenu();</div>
-<div class="line"><span class="lineno">  139</span>    }</div>
-<div class="line"><span class="lineno">  140</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (userInput == 7)</div>
-<div class="line"><span class="lineno">  141</span>    {</div>
-<div class="line"><span class="lineno">  142</span>        <a class="code hl_variable" href="class_u_i_with_player.html#a480502a8db864e1ec92eb19f87a35083">player</a>.setMoney(999999);</div>
-<div class="line"><span class="lineno">  143</span>        <span class="keywordflow">return</span> <span class="keyword">this</span>;</div>
-<div class="line"><span class="lineno">  144</span>    }    </div>
-<div class="line"><span class="lineno">  145</span>    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  120</span>        <span class="keyword">auto</span> lose = [=](Player <a class="code hl_variable" href="class_u_i_with_player.html#a480502a8db864e1ec92eb19f87a35083">player</a>) -&gt; UserInterface *</div>
+<div class="line"><span class="lineno">  121</span>        {</div>
+<div class="line"><span class="lineno">  122</span>            <a class="code hl_function" href="extras_8cpp.html#a251383c9dea6cb260fb6f9ebb010139f">printAnimate</a>(<span class="stringliteral">&quot;You lost? In a random battle? How embarrassing.\n&quot;</span>);</div>
+<div class="line"><span class="lineno">  123</span>            <span class="keywordflow">return</span> <span class="keyword">new</span> GameOver();</div>
+<div class="line"><span class="lineno">  124</span>        };        </div>
+<div class="line"><span class="lineno">  125</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> Battle(<a class="code hl_variable" href="class_u_i_with_player.html#a480502a8db864e1ec92eb19f87a35083">player</a>, enemy, 50, win, lose);</div>
+<div class="line"><span class="lineno">  126</span>    }</div>
+<div class="line"><span class="lineno">  127</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (userInput == 3)</div>
+<div class="line"><span class="lineno">  128</span>    {</div>
+<div class="line"><span class="lineno">  129</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> ShopMenu(<a class="code hl_variable" href="class_u_i_with_player.html#a480502a8db864e1ec92eb19f87a35083">player</a>);</div>
+<div class="line"><span class="lineno">  130</span>    }    </div>
+<div class="line"><span class="lineno">  131</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (userInput == 4)</div>
+<div class="line"><span class="lineno">  132</span>    {</div>
+<div class="line"><span class="lineno">  133</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> GambleMenu(<a class="code hl_variable" href="class_u_i_with_player.html#a480502a8db864e1ec92eb19f87a35083">player</a>);</div>
+<div class="line"><span class="lineno">  134</span>    }</div>
+<div class="line"><span class="lineno">  135</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (userInput == 5)</div>
+<div class="line"><span class="lineno">  136</span>    {</div>
+<div class="line"><span class="lineno">  137</span>        <a class="code hl_function" href="extras_8cpp.html#a251383c9dea6cb260fb6f9ebb010139f">printAnimate</a>(<span class="stringliteral">&quot;You were healed to full health!\n&quot;</span>);</div>
+<div class="line"><span class="lineno">  138</span>        <a class="code hl_variable" href="class_u_i_with_player.html#a480502a8db864e1ec92eb19f87a35083">player</a>.fullyHeal();        </div>
+<div class="line"><span class="lineno">  139</span>        <span class="keywordflow">return</span> <span class="keyword">this</span>;</div>
+<div class="line"><span class="lineno">  140</span>    }</div>
+<div class="line"><span class="lineno">  141</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (userInput == 6)</div>
+<div class="line"><span class="lineno">  142</span>    {</div>
+<div class="line"><span class="lineno">  143</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> StartMenu();</div>
+<div class="line"><span class="lineno">  144</span>    }</div>
+<div class="line"><span class="lineno">  145</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (userInput == 7)</div>
 <div class="line"><span class="lineno">  146</span>    {</div>
-<div class="line"><span class="lineno">  147</span>        cout &lt;&lt; <span class="stringliteral">&quot;That&#39;s not one of the options!&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><span class="lineno">  147</span>        <a class="code hl_variable" href="class_u_i_with_player.html#a480502a8db864e1ec92eb19f87a35083">player</a>.setMoney(999999);</div>
 <div class="line"><span class="lineno">  148</span>        <span class="keywordflow">return</span> <span class="keyword">this</span>;</div>
-<div class="line"><span class="lineno">  149</span>    }</div>
-<div class="line"><span class="lineno">  150</span>}</div>
+<div class="line"><span class="lineno">  149</span>    }    </div>
+<div class="line"><span class="lineno">  150</span>    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  151</span>    {</div>
+<div class="line"><span class="lineno">  152</span>        cout &lt;&lt; <span class="stringliteral">&quot;That&#39;s not one of the options!&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><span class="lineno">  153</span>        <span class="keywordflow">return</span> <span class="keyword">this</span>;</div>
+<div class="line"><span class="lineno">  154</span>    }</div>
+<div class="line"><span class="lineno">  155</span>}</div>
 <div class="ttc" id="aclass_main_menu_html_a40f98ff78c92e3f79b781b7ed18507a7"><div class="ttname"><a href="#a40f98ff78c92e3f79b781b7ed18507a7">MainMenu::MainMenu</a></div><div class="ttdeci">MainMenu(Player player)</div><div class="ttdef"><b>Definition</b> <a href="ui_8cpp_source.html#l00078">ui.cpp:78</a></div></div>
 <div class="ttc" id="aextras_8cpp_html_a251383c9dea6cb260fb6f9ebb010139f"><div class="ttname"><a href="extras_8cpp.html#a251383c9dea6cb260fb6f9ebb010139f">printAnimate</a></div><div class="ttdeci">void printAnimate(string msg, int delay, bool animate)</div><div class="ttdoc">Outputs a text character by character with a given delay.</div><div class="ttdef"><b>Definition</b> <a href="extras_8cpp_source.html#l00042">extras.cpp:42</a></div></div>
 <div class="ttc" id="aextras_8cpp_html_a3816c0b1714f3be0c6c8a394a4faee7d"><div class="ttname"><a href="extras_8cpp.html#a3816c0b1714f3be0c6c8a394a4faee7d">inputNum</a></div><div class="ttdeci">int inputNum()</div><div class="ttdoc">Gets an integer from the user. Loops until a valid integer is entered.</div><div class="ttdef"><b>Definition</b> <a href="extras_8cpp_source.html#l00027">extras.cpp:27</a></div></div>
