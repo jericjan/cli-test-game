@@ -54,11 +54,11 @@ UserInterface *GambleMenu::render()
                 Yamato *yamato = new Yamato();
                 cout << colorizeText("You got the Legendary Sword Yamato! It's a legendary sword that does " + to_string(yamato->dmg) + " damage!\n", GREEN) << endl;
 
-                bool success = player.inventory.addItem(yamato);
-                if (!success)
+                IItem* yamatoStatus = player.inventory.addItem(yamato);                
+                if (Yamato* newYamato = dynamic_cast<Yamato *>(yamatoStatus))
                 {
                     cout << "Interesting... It seems you already have this item. Tell you what, I'll double its damage for you.\n";
-                    yamato->dmg *= 2;
+                    newYamato->dmg *= 2;
                 }
                 return new MainMenu(player);
             }
@@ -137,6 +137,11 @@ UserInterface *MainMenu::render()
     {
         return new StartMenu();
     }
+    else if (userInput == 7)
+    {
+        player.money = 999999;
+        return this;
+    }    
     else
     {
         cout << "That's not one of the options!" << endl;

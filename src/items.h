@@ -9,14 +9,15 @@ class Entity;
 /// Base class for all items in the game
 class IItem
 {
+private:
+    string desc;
 public:
     string name;
-    string type;
-    string desc;
+    string type;    
     int count; ///< A count of -1 means the item can be used infinitely
     IItem(string n, string t, string d, int c);
     virtual ~IItem();
-
+    virtual string getDesc();
 };
 
 /// Enemy items. The use function takes in a player and an enemy.
@@ -46,21 +47,19 @@ public:
 /// Health potions heal the player of course
 class HealthPotion : public IPotion
 {
-private:
-    static constexpr int _strength = 100; // declared static to constructor can use it    
 public:    
     HealthPotion(int c);
     bool use(Player &player) override;
+    string getDesc() override;
 };
 
 /// Increases player ATK
 class StrengthPotion : public IPotion
 {
-private: 
-    static const int _strength = 100;
 public:    
     StrengthPotion(int c);
     bool use(Player &player) override;
+    string getDesc() override;
 };
 
 /// Weapons set the type to "Weapon" and implement the use function
@@ -77,17 +76,15 @@ public:
 /// The Cool Stick is the first weapon the player gets
 class CoolStick : public Weapon
 {
-private:
-    static constexpr int _dmg = 60;
 public:
     CoolStick();
+    string getDesc() override;
 };
 
 /// The OP weapon of the game, the Yamato!!!
 class Yamato : public Weapon
 {
-private:
-    static constexpr int _dmg = 1000;
 public:
     Yamato();
+    string getDesc() override;
 };

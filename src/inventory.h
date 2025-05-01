@@ -19,8 +19,8 @@ public:
     /// Adds an item to inventory
     /// @param item The item to add
     /// @param animate Whether to animate the text or not
-    /// @return Only returns false if adding an infinite item that already exists
-    bool addItem(IItem *item, bool animate = true);
+    /// @return Either the item if it was already in the inventory, or nullptr if it was added successfully
+    IItem *addItem(IItem *item, bool animate = true);
 
     /// Lists all items in the inventory.
     /// Should probably include the user input functionality too.

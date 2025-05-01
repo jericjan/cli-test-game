@@ -4,7 +4,7 @@
 #include "extras.h"
 #include "items.h"
 
-bool Inventory::addItem(IItem *item, bool animate)
+IItem *Inventory::addItem(IItem *item, bool animate)
 {
     for (IItem *existingItem : items)
     {
@@ -14,14 +14,14 @@ bool Inventory::addItem(IItem *item, bool animate)
             {
                 existingItem->count += item->count;
             } else {  // Infinite item alr exists
-                return false;
+                return existingItem;
             }
             string msg = "You now have " + to_string(existingItem->count) + "x " + existingItem->name + "!";
             string border = "\n" + string(msg.length(), '=') + "\n";
             printAnimate(border, 1, animate);
             printAnimate(msg, 10, animate);
             printAnimate(border, 1, animate);
-            return true;
+            return nullptr;
         }
     }
 
@@ -31,7 +31,7 @@ bool Inventory::addItem(IItem *item, bool animate)
     printAnimate(msg, 10, animate);
     printAnimate(border, 1, animate);
     items.push_back(item);
-    return true;
+    return nullptr;
 }
 
 void Inventory::listItems()
@@ -43,7 +43,7 @@ void Inventory::listItems()
     {
         string count = (item->count == -1) ? "Infinite" : to_string(item->count) + "x";
         string numberedName = string("[") + to_string(idx) + "] " + item->name;
-        cout << padTo(numberedName, 20) << "|" << padTo(item->type, 20) << "|" << padTo(item->desc, 50) << "|" << padTo(count, 20) << endl;
+        cout << padTo(numberedName, 20) << "|" << padTo(item->type, 20) << "|" << padTo(item->getDesc(), 50) << "|" << padTo(count, 20) << endl;
         idx++;
     }
     cout << "Type the # of the item to use, 0 to exit > ";

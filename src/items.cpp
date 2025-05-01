@@ -8,6 +8,10 @@ using namespace std;
 IItem::IItem(string n, string t, string d, int c) : name(n), type(t), desc(d), count(c) {}
 IItem::~IItem() = default; // required for polymorphic base class for dynamic_cast
 
+string IItem::getDesc() {
+    return desc;
+}
+
 IEnemyItem::IEnemyItem(string n, string t, string d, int c) : IItem(n, t, d, c) {}
 
 IPlayerItem::IPlayerItem(string n, string t, string d, int c) : IItem(n, t, d, c) {}
@@ -15,7 +19,11 @@ IPlayerItem::IPlayerItem(string n, string t, string d, int c) : IItem(n, t, d, c
 IPotion::IPotion(string n, string d, int c, int strength) : IPlayerItem(n, "Potion", d, c), strength(strength) {}
 
 HealthPotion::HealthPotion(int c) :
-IPotion("Health Potion", "Heals the user " + to_string(_strength) + "HP", c, _strength) {}
+IPotion("Health Potion", "", c, 100) {}
+string HealthPotion::getDesc()
+{
+    return "Heals the user " + to_string(strength) + "HP";
+}
 
 bool HealthPotion::use(Player &player)
 {
@@ -28,8 +36,11 @@ bool HealthPotion::use(Player &player)
     return true;
 }
 
-StrengthPotion::StrengthPotion(int c) :
-IPotion("Strength Potion", "Inceases the user's ATK by " + to_string(_strength), c, _strength) {}
+StrengthPotion::StrengthPotion(int c) : IPotion("Strength Potion", "", c, 100) {}
+string StrengthPotion::getDesc()
+{
+    return "Increases the user's ATK by " + to_string(strength) + "!";
+}
 
 bool StrengthPotion::use(Player &player)
 {
@@ -39,6 +50,8 @@ bool StrengthPotion::use(Player &player)
     return true;
 }
 
+
+
 Weapon::Weapon(string name, string desc, int count, int dmg) : IEnemyItem(name, "Weapon", desc, count), dmg(dmg) {}
 bool Weapon::use(Player &player, Entity &enemy)
 {
@@ -46,7 +59,15 @@ bool Weapon::use(Player &player, Entity &enemy)
     return true;
 }
 
-CoolStick::CoolStick() : Weapon("Cool Stick", "A cool stick some stranger gave you. " + to_string(_dmg) + "DMG", -1, _dmg) {}
+CoolStick::CoolStick() : Weapon("Cool Stick", "", -1, 60) {}
+string CoolStick::getDesc()
+{
+    return "A cool stick that does " + to_string(dmg) + " damage!";
+}
 
-Yamato::Yamato() : 
-Weapon("Yamato", "A legendary sword that does " + to_string(_dmg) + " damage!", -1, _dmg) {}
+
+Yamato::Yamato() : Weapon("Yamato", "", -1, 1000) {}
+string Yamato::getDesc()
+{
+    return "A legendary sword that does " + to_string(dmg) + " damage!";
+}
