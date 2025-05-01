@@ -87,10 +87,6 @@ void Entity::kill(){
     health.current = 0;
 }
 
-bool Entity::isDead() {
-    return health.current == 0;
-}
-
 string Entity::getName() {
     return name;
 }
@@ -111,3 +107,10 @@ void Entity::boostDef(int amount) {
     stats.def += amount;    
 }
 
+void Entity::printInfo(bool showName) {
+    if (showName)
+    {
+        cout << "[" << getName() << "] ";
+    }
+    cout  << "HP: " << getHealth() << "/" << getMaxHealth() << " ATK: " << getAtk() << " DEF: " << getDef() << endl;
+}

@@ -80,7 +80,7 @@ MainMenu::MainMenu(Player player) : UIWithPlayer(player) {}
 UserInterface *MainMenu::render()
 {
     cout << "[Main Menu]" << endl;
-    cout << "HP: " << player.getHealth() << "/" << player.getMaxHealth() << " ATK: " << player.getAtk() << " DEF: " << player.getDef() << endl;
+    player.printInfo(false);
     cout << "Money: " << player.getMoney() << endl;
     cout << "[1] Inventory" << endl;
     cout << "[2] Grind" << endl;
@@ -213,9 +213,9 @@ UserInterface *Battle::render()
         cout << "\n\n===BATTLE START!!===\n\n";
         didIntro = true;
     }
-    cout << enemy.getName() << ": " << enemy.getHealth() << "/" << enemy.getMaxHealth() << endl
-         << player.getName() << ": " << player.getHealth() << "/" << player.getMaxHealth() << "\n\n"
-         << "[1] Punch\n[2] Bag\n[3] Run\n";
+    enemy.printInfo();
+    player.printInfo();
+    cout << "\n[1] Punch\n[2] Bag\n[3] Run\n";
     int userInput = inputNum();
     cout << endl;
     if (userInput == 1)
@@ -269,12 +269,12 @@ UserInterface *Battle::render()
         return this;
     }
 
-    if (player.isDead())
+    if (!player.isAlive())
     {
         cout << player.getName() << " lost the battle!" << endl;
         return onLose(player);
     }
-    else if (enemy.isDead())
+    else if (!enemy.isAlive())
     {
         cout << enemy.getName() << " lost the battle!" << endl;
         if (rewardMoney > 0)

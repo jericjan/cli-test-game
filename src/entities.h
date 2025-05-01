@@ -40,12 +40,12 @@ public:
     bool isAlive();
     void heal(int amount);
     void kill();
-    bool isDead();
     string getName();
     int getAtk();
     int getDef();
     void boostAtk(int amount);
     void boostDef(int amount);
+    void printInfo(bool showName = true);
 };
 
 /// The Player class is an Entity that has an inventory and money.
