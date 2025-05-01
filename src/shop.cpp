@@ -1,5 +1,7 @@
 #include "shop.h"
 #include "extras.h"
+#include <string>
+
 ShopItem::ShopItem(IItem *item, int price) : item(item), price(price) {}
 
 void Shop::addItem(IItem *item, int price) {
@@ -19,7 +21,8 @@ void Shop::listItems(Player &player) {
     cout << "Money: " << player.money << endl;
     cout << "[0] Leave" << endl;
     for (ShopItem &shopItem : items) {
-        cout << "[" << idx << "] " << shopItem.item->name << " [Cost: " << shopItem.price << "]" << endl;
+        Color textColor = (player.money < shopItem.price) ? RED : GREEN;
+        cout << colorizeText("[" + to_string(idx) + "] " + shopItem.item->name + " [Cost: " + to_string(shopItem.price) + "]", textColor) << endl;
         idx += 1;
       }    
 }
