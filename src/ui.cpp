@@ -52,8 +52,14 @@ UserInterface *GambleMenu::render()
             else
             {
                 Yamato *yamato = new Yamato();
-                cout << colorizeText("You got the Legendary Sword Yamato! It's a legendary sword that does " + to_string(yamato->dmg) + " damage!\n", GREEN) << endl;                
-                player.inventory.addItem(yamato);
+                cout << colorizeText("You got the Legendary Sword Yamato! It's a legendary sword that does " + to_string(yamato->dmg) + " damage!\n", GREEN) << endl;
+
+                bool success = player.inventory.addItem(yamato);
+                if (!success)
+                {
+                    cout << "Interesting... It seems you already have this item. Tell you what, I'll double its damage for you.\n";
+                    yamato->dmg *= 2;
+                }
                 return new MainMenu(player);
             }
         }
@@ -205,7 +211,10 @@ UserInterface *Battle::render()
     if (userInput == 1)
     {
         player.attack(enemy);
-        enemy.attack(player);
+        if (enemy.currHealth > 0)
+        {
+            enemy.attack(player);
+        }
     }
     else if (userInput == 2)
     {
@@ -225,7 +234,10 @@ UserInterface *Battle::render()
                 }
                 else
                 {
-                    enemy.attack(player);
+                    if (enemy.currHealth > 0)
+                    {
+                        enemy.attack(player);
+                    }
                     break;
                 };
                 

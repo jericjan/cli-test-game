@@ -16,7 +16,11 @@ class Inventory
 public:
     vector<IItem *> items;
 
-    void addItem(IItem *item, bool animate = true);
+    /// Adds an item to inventory
+    /// @param item The item to add
+    /// @param animate Whether to animate the text or not
+    /// @return Only returns false if adding an infinite item that already exists
+    bool addItem(IItem *item, bool animate = true);
 
     /// Lists all items in the inventory.
     /// Should probably include the user input functionality too.

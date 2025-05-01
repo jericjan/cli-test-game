@@ -46,8 +46,9 @@ public:
 /// Health potions heal the player of course
 class HealthPotion : public IPotion
 {
-public:
-    static const int strength = 100; // declared static to constructor can use it
+private:
+    static constexpr int _strength = 100; // declared static to constructor can use it    
+public:    
     HealthPotion(int c);
     bool use(Player &player) override;
 };
@@ -55,8 +56,9 @@ public:
 /// Increases player ATK
 class StrengthPotion : public IPotion
 {
-public:
-    static const int strength = 100;
+private: 
+    static const int _strength = 100;
+public:    
     StrengthPotion(int c);
     bool use(Player &player) override;
 };
@@ -75,15 +77,17 @@ public:
 /// The Cool Stick is the first weapon the player gets
 class CoolStick : public Weapon
 {
+private:
+    static constexpr int _dmg = 60;
 public:
-    static const int dmg = 60;
     CoolStick();
 };
 
 /// The OP weapon of the game, the Yamato!!!
 class Yamato : public Weapon
 {
+private:
+    static constexpr int _dmg = 1000;
 public:
-    static const int dmg = 1000;
     Yamato();
 };

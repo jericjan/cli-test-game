@@ -41,8 +41,8 @@ int inputNum()
 
 void printAnimate(string msg, int delay, bool animate)
 {
-    // 
-    if (!animate)
+    // if (!animate)
+    if (true)
     {
         cout << msg;
         return;

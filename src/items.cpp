@@ -15,7 +15,7 @@ IPlayerItem::IPlayerItem(string n, string t, string d, int c) : IItem(n, t, d, c
 IPotion::IPotion(string n, string d, int c, int strength) : IPlayerItem(n, "Potion", d, c), strength(strength) {}
 
 HealthPotion::HealthPotion(int c) :
-IPotion("Health Potion", "Heals the user " + to_string(strength) + "HP", c, strength) {}
+IPotion("Health Potion", "Heals the user " + to_string(_strength) + "HP", c, _strength) {}
 
 bool HealthPotion::use(Player &player)
 {
@@ -29,7 +29,7 @@ bool HealthPotion::use(Player &player)
 }
 
 StrengthPotion::StrengthPotion(int c) :
-IPotion("Strength Potion", "Inceases the user's ATK by " + to_string(strength), c, strength) {}
+IPotion("Strength Potion", "Inceases the user's ATK by " + to_string(_strength), c, _strength) {}
 
 bool StrengthPotion::use(Player &player)
 {
@@ -46,6 +46,7 @@ bool Weapon::use(Player &player, Entity &enemy)
     return true;
 }
 
-CoolStick::CoolStick() : Weapon("Cool Stick", "A cool stick some stranger gave you. " + to_string(dmg) + "DMG", -1, dmg) {}
+CoolStick::CoolStick() : Weapon("Cool Stick", "A cool stick some stranger gave you. " + to_string(_dmg) + "DMG", -1, _dmg) {}
 
-Yamato::Yamato() : Weapon("Yamato", "A legendary sword that does " + to_string(dmg) + " damage!", -1, dmg) {}
+Yamato::Yamato() : 
+Weapon("Yamato", "A legendary sword that does " + to_string(_dmg) + " damage!", -1, _dmg) {}

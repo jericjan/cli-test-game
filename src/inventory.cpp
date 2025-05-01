@@ -4,7 +4,7 @@
 #include "extras.h"
 #include "items.h"
 
-void Inventory::addItem(IItem *item, bool animate)
+bool Inventory::addItem(IItem *item, bool animate)
 {
     for (IItem *existingItem : items)
     {
@@ -13,13 +13,15 @@ void Inventory::addItem(IItem *item, bool animate)
             if (existingItem->count != -1)
             {
                 existingItem->count += item->count;
+            } else {  // Infinite item alr exists
+                return false;
             }
             string msg = "You now have " + to_string(existingItem->count) + "x " + existingItem->name + "!";
             string border = "\n" + string(msg.length(), '=') + "\n";
             printAnimate(border, 1, animate);
             printAnimate(msg, 10, animate);
             printAnimate(border, 1, animate);
-            return;
+            return true;
         }
     }
 
@@ -29,6 +31,7 @@ void Inventory::addItem(IItem *item, bool animate)
     printAnimate(msg, 10, animate);
     printAnimate(border, 1, animate);
     items.push_back(item);
+    return true;
 }
 
 void Inventory::listItems()

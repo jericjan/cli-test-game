@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>
 #include "entities.h"
 #include "extras.h"
 using namespace std;
