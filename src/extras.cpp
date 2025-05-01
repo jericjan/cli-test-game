@@ -39,9 +39,15 @@ int inputNum()
     return result;
 }
 
-void printAnimate(string msg, int delay)
+void printAnimate(string msg, int delay, bool animate)
 {
-    // cout << msg;
+    // 
+    if (!animate)
+    {
+        cout << msg;
+        return;
+    }
+
     for (auto &ch : msg)
     {
         cout << ch;

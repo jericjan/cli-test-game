@@ -31,4 +31,4 @@ string colorizeText(string msg, Color color);
 int inputNum();
 
 /// Outputs a text character by character with a given delay.
-void printAnimate(string msg, int delay = 10);
+void printAnimate(string msg, int delay = 10, bool animate = true);

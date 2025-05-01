@@ -4,7 +4,7 @@
 #include "extras.h"
 #include "items.h"
 
-void Inventory::addItem(IItem *item)
+void Inventory::addItem(IItem *item, bool animate)
 {
     for (IItem *existingItem : items)
     {
@@ -16,18 +16,18 @@ void Inventory::addItem(IItem *item)
             }
             string msg = "You now have " + to_string(existingItem->count) + "x " + existingItem->name + "!";
             string border = "\n" + string(msg.length(), '=') + "\n";
-            printAnimate(border, 1);
-            printAnimate(msg);
-            printAnimate(border, 1);
+            printAnimate(border, 1, animate);
+            printAnimate(msg, 10, animate);
+            printAnimate(border, 1, animate);
             return;
         }
     }
 
     string msg = item->name + " added to inventory!";
     string border = "\n" + string(msg.length(), '=') + "\n";
-    printAnimate(border, 1);
-    printAnimate(msg);
-    printAnimate(border, 1);
+    printAnimate(border, 1, animate);
+    printAnimate(msg, 10, animate);
+    printAnimate(border, 1, animate);
     items.push_back(item);
 }
 

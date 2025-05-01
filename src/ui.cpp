@@ -51,8 +51,8 @@ UserInterface *GambleMenu::render()
             }
             else
             {
-                cout << colorizeText("You got the Legendary Sword Yamato! It's a legendary sword that does 500 damage!\n", GREEN) << endl;
                 Yamato *yamato = new Yamato();
+                cout << colorizeText("You got the Legendary Sword Yamato! It's a legendary sword that does " + to_string(yamato->dmg) + " damage!\n", GREEN) << endl;                
                 player.inventory.addItem(yamato);
                 return new MainMenu(player);
             }

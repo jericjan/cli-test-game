@@ -16,7 +16,7 @@ class Inventory
 public:
     vector<IItem *> items;
 
-    void addItem(IItem *item);
+    void addItem(IItem *item, bool animate = true);
 
     /// Lists all items in the inventory.
     /// Should probably include the user input functionality too.
