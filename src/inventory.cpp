@@ -8,15 +8,15 @@ IItem *Inventory::addItem(IItem *item, bool animate)
 {
     for (IItem *existingItem : items)
     {
-        if (existingItem->name == item->name) // Kinda bad implementation but it works for now
+        if (existingItem->matches(item))
         {
-            if (existingItem->count != -1)
+            if (!existingItem->isInfinite())
             {
-                existingItem->count += item->count;
+                existingItem->increment(item->getCount());
             } else {  // Infinite item alr exists
                 return existingItem;
             }
-            string msg = "You now have " + to_string(existingItem->count) + "x " + existingItem->name + "!";
+            string msg = "You now have " + to_string(existingItem->getCount()) + "x " + existingItem->getName() + "!";
             string border = "\n" + string(msg.length(), '=') + "\n";
             printAnimate(border, 1, animate);
             printAnimate(msg, 10, animate);
@@ -25,7 +25,7 @@ IItem *Inventory::addItem(IItem *item, bool animate)
         }
     }
 
-    string msg = item->name + " added to inventory!";
+    string msg = item->getName() + " added to inventory!";
     string border = "\n" + string(msg.length(), '=') + "\n";
     printAnimate(border, 1, animate);
     printAnimate(msg, 10, animate);
@@ -41,9 +41,9 @@ void Inventory::listItems()
     cout << padTo("[Name]", 20) << "|" << padTo("[Type]", 20) << "|" << padTo("[Description]", 50) << "|" << padTo("[Count]", 20) << endl;
     for (IItem *item : items)
     {
-        string count = (item->count == -1) ? "Infinite" : to_string(item->count) + "x";
-        string numberedName = string("[") + to_string(idx) + "] " + item->name;
-        cout << padTo(numberedName, 20) << "|" << padTo(item->type, 20) << "|" << padTo(item->getDesc(), 50) << "|" << padTo(count, 20) << endl;
+        string count = item->isInfinite() ? "Infinite" : to_string(item->getCount()) + "x";
+        string numberedName = string("[") + to_string(idx) + "] " + item->getName();
+        cout << padTo(numberedName, 20) << "|" << padTo(item->getType(), 20) << "|" << padTo(item->getDesc(), 50) << "|" << padTo(count, 20) << endl;
         idx++;
     }
     cout << "Type the # of the item to use, 0 to exit > ";
@@ -83,10 +83,10 @@ bool Inventory::useItem(int idx, Player &player, Entity *enemy)
         return false;
     }
 
-    if (item->count != -1)
+    if (!item->isInfinite())
     {
-        item->count--;
-        if (item->count == 0)
+        item->decrement(1);
+        if (item->isDepleted())
         {
             items.erase(items.begin() + idx - 1);
             delete item;

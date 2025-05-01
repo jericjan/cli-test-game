@@ -1,0 +1,16 @@
+<map id="src/shop.h" name="src/shop.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="108,5,191,32"/>
+<area shape="rect" id="Node000002" href="$items_8h.html" title=" " alt="" coords="5,155,70,181"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="141,34,102,82,57,143,53,140,98,78,137,31"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="202,229,260,256"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="165,31,207,81,229,116,244,154,247,185,242,215,237,214,241,185,239,155,224,118,203,84,161,34"/>
+<area shape="rect" id="Node000005" href="$entities_8h.html" title=" " alt="" coords="112,80,187,107"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="152,33,152,64,147,64,147,33"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="71,229,142,256"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="51,180,86,216,82,220,48,184"/>
+<area shape="poly" id="edge5_Node000005_Node000003" title=" " alt="" coords="148,108,117,215,112,213,143,106"/>
+<area shape="rect" id="Node000006" href="$inventory_8h.html" title=" " alt="" coords="145,155,229,181"/>
+<area shape="poly" id="edge6_Node000005_Node000006" title=" " alt="" coords="158,106,176,140,171,142,154,108"/>
+<area shape="poly" id="edge8_Node000006_Node000003" title=" " alt="" coords="175,184,133,221,130,217,171,180"/>
+<area shape="poly" id="edge7_Node000006_Node000004" title=" " alt="" coords="197,180,218,215,213,217,192,183"/>
+</map>

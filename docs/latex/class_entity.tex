@@ -65,12 +65,12 @@ Entity\+::\+Entity (\begin{DoxyParamCaption}\item[{int}]{health}{, }\item[{strin
 
 
 
-Definition at line \mbox{\hyperlink{entities_8cpp_source_l00033}{33}} of file \mbox{\hyperlink{entities_8cpp_source}{entities.\+cpp}}.
+Definition at line \mbox{\hyperlink{entities_8cpp_source_l00034}{34}} of file \mbox{\hyperlink{entities_8cpp_source}{entities.\+cpp}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :}
-\DoxyCodeLine{00034\ \mbox{\hyperlink{class_entity_a6995bd098a6e6afb4abf9f4c42f6b15c}{currHealth}}(health),\ \mbox{\hyperlink{class_entity_a6e20c965f14c04d09be06d07a471565d}{maxHealth}}(health),\ \mbox{\hyperlink{class_entity_a679100a4f20bbf0fba4dfcbb40406d88}{stats}}(Stats(atk,\ def)),\ \mbox{\hyperlink{class_entity_afb45718695f537c330a463168616c262}{name}}(\mbox{\hyperlink{class_entity_afb45718695f537c330a463168616c262}{name}})\ \{\}}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :}
+\DoxyCodeLine{00035\ \mbox{\hyperlink{class_entity_a6995bd098a6e6afb4abf9f4c42f6b15c}{currHealth}}(health),\ \mbox{\hyperlink{class_entity_a6e20c965f14c04d09be06d07a471565d}{maxHealth}}(health),\ \mbox{\hyperlink{class_entity_a679100a4f20bbf0fba4dfcbb40406d88}{stats}}(Stats(atk,\ def)),\ \mbox{\hyperlink{class_entity_afb45718695f537c330a463168616c262}{name}}(\mbox{\hyperlink{class_entity_afb45718695f537c330a463168616c262}{name}})\ \{\}}
 
 \end{DoxyCode}
 
@@ -79,7 +79,7 @@ References \mbox{\hyperlink{entities_8h_source_l00022}{curr\+Health}}, \mbox{\hy
 
 
 
-Referenced by \mbox{\hyperlink{entities_8cpp_source_l00036}{attack()}}, \mbox{\hyperlink{entities_8cpp_source_l00007}{Player\+::\+Player()}}, \mbox{\hyperlink{entities_8cpp_source_l00008}{Player\+::\+Player()}}, and \mbox{\hyperlink{class_entity_adf6d3f7cb1b2ba029b6b048a395cc8ae}{\texorpdfstring{$\sim$}{\string~}\+Entity()}}.
+Referenced by \mbox{\hyperlink{entities_8cpp_source_l00037}{attack()}}, \mbox{\hyperlink{entities_8cpp_source_l00008}{Player\+::\+Player()}}, \mbox{\hyperlink{entities_8cpp_source_l00009}{Player\+::\+Player()}}, and \mbox{\hyperlink{class_entity_adf6d3f7cb1b2ba029b6b048a395cc8ae}{\texorpdfstring{$\sim$}{\string~}\+Entity()}}.
 
 Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -96,7 +96,7 @@ Entity\+::\texorpdfstring{$\sim$}{\string~}\+Entity (\begin{DoxyParamCaption}{}{
 
 
 
-References \mbox{\hyperlink{entities_8cpp_source_l00033}{Entity()}}.
+References \mbox{\hyperlink{entities_8cpp_source_l00034}{Entity()}}.
 
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -116,24 +116,24 @@ void Entity\+::attack (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_ent
 
 
 
-Definition at line \mbox{\hyperlink{entities_8cpp_source_l00036}{36}} of file \mbox{\hyperlink{entities_8cpp_source}{entities.\+cpp}}.
+Definition at line \mbox{\hyperlink{entities_8cpp_source_l00037}{37}} of file \mbox{\hyperlink{entities_8cpp_source}{entities.\+cpp}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00037\ \{}
-\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{int}\ calcDmg\ =\ max(1,\ (\mbox{\hyperlink{class_entity_a679100a4f20bbf0fba4dfcbb40406d88}{stats}}.atk\ +\ extraDmg)\ -\/\ target.\mbox{\hyperlink{class_entity_a679100a4f20bbf0fba4dfcbb40406d88}{stats}}.\mbox{\hyperlink{class_stats_ac34395ac3019a82d1bff83ceab6f1889}{def}});}
-\DoxyCodeLine{00039\ \ \ \ \ target.\mbox{\hyperlink{class_entity_a6995bd098a6e6afb4abf9f4c42f6b15c}{currHealth}}\ =\ max(0,\ target.\mbox{\hyperlink{class_entity_a6995bd098a6e6afb4abf9f4c42f6b15c}{currHealth}}\ -\/\ calcDmg);}
-\DoxyCodeLine{00040\ \ \ \ \ cout\ <<\ target.\mbox{\hyperlink{class_entity_afb45718695f537c330a463168616c262}{name}}\ <<\ \textcolor{stringliteral}{"{}\ took\ "{}}\ <<\ calcDmg\ <<\ \textcolor{stringliteral}{"{}\ DMG!"{}}\ <<\ endl;}
-\DoxyCodeLine{00041\ \}}
+\DoxyCodeLine{00038\ \{}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordtype}{int}\ calcDmg\ =\ max(1,\ (\mbox{\hyperlink{class_entity_a679100a4f20bbf0fba4dfcbb40406d88}{stats}}.atk\ +\ extraDmg)\ -\/\ target.\mbox{\hyperlink{class_entity_a679100a4f20bbf0fba4dfcbb40406d88}{stats}}.\mbox{\hyperlink{class_stats_ac34395ac3019a82d1bff83ceab6f1889}{def}});}
+\DoxyCodeLine{00040\ \ \ \ \ target.\mbox{\hyperlink{class_entity_a6995bd098a6e6afb4abf9f4c42f6b15c}{currHealth}}\ =\ max(0,\ target.\mbox{\hyperlink{class_entity_a6995bd098a6e6afb4abf9f4c42f6b15c}{currHealth}}\ -\/\ calcDmg);}
+\DoxyCodeLine{00041\ \ \ \ \ cout\ <<\ target.\mbox{\hyperlink{class_entity_afb45718695f537c330a463168616c262}{name}}\ <<\ \textcolor{stringliteral}{"{}\ took\ "{}}\ <<\ calcDmg\ <<\ \textcolor{stringliteral}{"{}\ DMG!"{}}\ <<\ endl;}
+\DoxyCodeLine{00042\ \}}
 
 \end{DoxyCode}
 
 
-References \mbox{\hyperlink{entities_8h_source_l00022}{curr\+Health}}, \mbox{\hyperlink{entities_8h_source_l00012}{Stats\+::def}}, \mbox{\hyperlink{entities_8cpp_source_l00033}{Entity()}}, \mbox{\hyperlink{entities_8h_source_l00024}{name}}, and \mbox{\hyperlink{entities_8h_source_l00023}{stats}}.
+References \mbox{\hyperlink{entities_8h_source_l00022}{curr\+Health}}, \mbox{\hyperlink{entities_8h_source_l00012}{Stats\+::def}}, \mbox{\hyperlink{entities_8cpp_source_l00034}{Entity()}}, \mbox{\hyperlink{entities_8h_source_l00024}{name}}, and \mbox{\hyperlink{entities_8h_source_l00023}{stats}}.
 
 
 
-Referenced by \mbox{\hyperlink{items_8cpp_source_l00030}{Weapon\+::use()}}.
+Referenced by \mbox{\hyperlink{items_8cpp_source_l00056}{Weapon\+::use()}}.
 
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -164,7 +164,7 @@ Definition at line \mbox{\hyperlink{entities_8h_source_l00022}{22}} of file \mbo
 
 
 
-Referenced by \mbox{\hyperlink{entities_8cpp_source_l00036}{attack()}}, \mbox{\hyperlink{entities_8cpp_source_l00033}{Entity()}}, and \mbox{\hyperlink{items_8cpp_source_l00018}{Health\+Potion\+::use()}}.
+Referenced by \mbox{\hyperlink{entities_8cpp_source_l00037}{attack()}}, \mbox{\hyperlink{entities_8cpp_source_l00034}{Entity()}}, and \mbox{\hyperlink{items_8cpp_source_l00028}{Health\+Potion\+::use()}}.
 
 \Hypertarget{class_entity_a6e20c965f14c04d09be06d07a471565d}\index{Entity@{Entity}!maxHealth@{maxHealth}}
 \index{maxHealth@{maxHealth}!Entity@{Entity}}
@@ -178,7 +178,7 @@ Definition at line \mbox{\hyperlink{entities_8h_source_l00021}{21}} of file \mbo
 
 
 
-Referenced by \mbox{\hyperlink{entities_8cpp_source_l00033}{Entity()}}, and \mbox{\hyperlink{items_8cpp_source_l00018}{Health\+Potion\+::use()}}.
+Referenced by \mbox{\hyperlink{entities_8cpp_source_l00034}{Entity()}}, and \mbox{\hyperlink{items_8cpp_source_l00028}{Health\+Potion\+::use()}}.
 
 \Hypertarget{class_entity_afb45718695f537c330a463168616c262}\index{Entity@{Entity}!name@{name}}
 \index{name@{name}!Entity@{Entity}}
@@ -192,7 +192,7 @@ Definition at line \mbox{\hyperlink{entities_8h_source_l00024}{24}} of file \mbo
 
 
 
-Referenced by \mbox{\hyperlink{entities_8cpp_source_l00036}{attack()}}, \mbox{\hyperlink{entities_8cpp_source_l00033}{Entity()}}, and \mbox{\hyperlink{entities_8cpp_source_l00008}{Player\+::\+Player()}}.
+Referenced by \mbox{\hyperlink{entities_8cpp_source_l00037}{attack()}}, \mbox{\hyperlink{entities_8cpp_source_l00034}{Entity()}}, and \mbox{\hyperlink{entities_8cpp_source_l00009}{Player\+::\+Player()}}.
 
 \Hypertarget{class_entity_a679100a4f20bbf0fba4dfcbb40406d88}\index{Entity@{Entity}!stats@{stats}}
 \index{stats@{stats}!Entity@{Entity}}
@@ -206,7 +206,7 @@ Definition at line \mbox{\hyperlink{entities_8h_source_l00023}{23}} of file \mbo
 
 
 
-Referenced by \mbox{\hyperlink{entities_8cpp_source_l00036}{attack()}}, and \mbox{\hyperlink{entities_8cpp_source_l00033}{Entity()}}.
+Referenced by \mbox{\hyperlink{entities_8cpp_source_l00037}{attack()}}, \mbox{\hyperlink{entities_8cpp_source_l00034}{Entity()}}, and \mbox{\hyperlink{items_8cpp_source_l00045}{Strength\+Potion\+::use()}}.
 
 
 

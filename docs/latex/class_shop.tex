@@ -1,0 +1,242 @@
+\doxysection{Shop Class Reference}
+\hypertarget{class_shop}{}\label{class_shop}\index{Shop@{Shop}}
+
+
+{\ttfamily \#include $<$shop.\+h$>$}
+
+
+
+Collaboration diagram for Shop\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=249pt]{class_shop__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_shop_a562501e5746bdef39699bc39203f8973}{add\+Item}} (\mbox{\hyperlink{class_i_item}{IItem}} \texorpdfstring{$\ast$}{*}item, int price)
+\item 
+void \mbox{\hyperlink{class_shop_a8d58df2e5b4a8449ab937724c4e96e61}{remove\+Item}} (int idx)
+\begin{DoxyCompactList}\small\item\em Remove an item from the shop. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_shop_ac213488671e8d976d97c3530e691fd44}{list\+Items}} (\mbox{\hyperlink{class_player}{Player}} \&player)
+\item 
+bool \mbox{\hyperlink{class_shop_a6c1a27422ecdd1a5248f156f1355632b}{buy\+Item}} (\mbox{\hyperlink{class_player}{Player}} \&player, int idx)
+\begin{DoxyCompactList}\small\item\em Buy an item from the shop. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+vector$<$ \mbox{\hyperlink{class_shop_item}{Shop\+Item}} $>$ \mbox{\hyperlink{class_shop_a2e7691d6eaa6339b5416981538c656fc}{items}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{shop_8h_source_l00015}{15}} of file \mbox{\hyperlink{shop_8h_source}{shop.\+h}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_shop_a562501e5746bdef39699bc39203f8973}\index{Shop@{Shop}!addItem@{addItem}}
+\index{addItem@{addItem}!Shop@{Shop}}
+\doxysubsubsection{\texorpdfstring{addItem()}{addItem()}}
+{\footnotesize\ttfamily \label{class_shop_a562501e5746bdef39699bc39203f8973} 
+void Shop\+::add\+Item (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_i_item}{IItem}} \texorpdfstring{$\ast$}{*}}]{item}{, }\item[{int}]{price}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{shop_8cpp_source_l00007}{7}} of file \mbox{\hyperlink{shop_8cpp_source}{shop.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00007\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00008\ \ \ \ \ \mbox{\hyperlink{class_shop_a2e7691d6eaa6339b5416981538c656fc}{items}}.push\_back(ShopItem(item,\ price));}
+\DoxyCodeLine{00009\ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{shop_8h_source_l00017}{items}}.
+
+
+
+Referenced by \mbox{\hyperlink{ui_8cpp_source_l00154}{Shop\+Menu\+::render()}}.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=291pt]{class_shop_a562501e5746bdef39699bc39203f8973_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_shop_a6c1a27422ecdd1a5248f156f1355632b}\index{Shop@{Shop}!buyItem@{buyItem}}
+\index{buyItem@{buyItem}!Shop@{Shop}}
+\doxysubsubsection{\texorpdfstring{buyItem()}{buyItem()}}
+{\footnotesize\ttfamily \label{class_shop_a6c1a27422ecdd1a5248f156f1355632b} 
+bool Shop\+::buy\+Item (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_player}{Player}} \&}]{player}{, }\item[{int}]{idx}{}\end{DoxyParamCaption})}
+
+
+
+Buy an item from the shop. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & The player buying the item \\
+\hline
+{\em idx} & 1-\/indexed item number \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{shop_8cpp_source_l00030}{30}} of file \mbox{\hyperlink{shop_8cpp_source}{shop.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00031\ \ \ \ \ idx\ -\/=\ 1;}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordflow}{if}\ (idx\ <\ 0\ ||\ idx\ >=\ \mbox{\hyperlink{class_shop_a2e7691d6eaa6339b5416981538c656fc}{items}}.size())\ \{}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Invalid\ item\ index."{}}\ <<\ endl;}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00035\ \ \ \ \ \}}
+\DoxyCodeLine{00036\ \ \ \ \ ShopItem\ \&shopItem\ =\ \mbox{\hyperlink{class_shop_a2e7691d6eaa6339b5416981538c656fc}{items}}[idx];}
+\DoxyCodeLine{00037\ \ \ \ \ }
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordflow}{if}\ (player.\mbox{\hyperlink{class_player_a9545beef70350d5c3b3a5719a890dd2f}{money}}\ <\ shopItem.\mbox{\hyperlink{class_shop_item_aa0112a46da1cf213541d4221e352a5e8}{price}})\ \{}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ cout\ <<\ \mbox{\hyperlink{extras_8cpp_a99d2755bf0660601280710515b3f512c}{colorizeText}}(\textcolor{stringliteral}{"{}You\ don't\ have\ enough\ money!"{}},\ \mbox{\hyperlink{extras_8h_ab87bacfdad76e61b9412d7124be44c1caf80f9a890089d211842d59625e561f88}{RED}})\ <<\ endl;}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00041\ \ \ \ \ \}}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \ \ \ \ player.\mbox{\hyperlink{class_player_a86ad66429e7bf8ef4640bac1d0f3476f}{addMoney}}(-\/shopItem.\mbox{\hyperlink{class_shop_item_aa0112a46da1cf213541d4221e352a5e8}{price}});\ \ \ \ }
+\DoxyCodeLine{00044\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}You\ bought\ a\ "{}}\ <<\ shopItem.\mbox{\hyperlink{class_shop_item_ab2822bb6662cae38cf4cfa4bc842a07d}{item}}-\/>\mbox{\hyperlink{class_i_item_a7fdf57eb313baaea887b648bc13f247a}{name}}\ <<\ \textcolor{stringliteral}{"{}!"{}}\ <<\ endl;}
+\DoxyCodeLine{00045\ \ \ \ \ player.\mbox{\hyperlink{class_player_ab8d436b5727749f7be05ffdf744d1041}{inventory}}.\mbox{\hyperlink{class_inventory_a7a3d5b1157d8212186746eade80b5630}{addItem}}(shopItem.\mbox{\hyperlink{class_shop_item_ab2822bb6662cae38cf4cfa4bc842a07d}{item}},\ \textcolor{keyword}{false});}
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00047\ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{inventory_8cpp_source_l00007}{Inventory\+::add\+Item()}}, \mbox{\hyperlink{entities_8cpp_source_l00014}{Player\+::add\+Money()}}, \mbox{\hyperlink{extras_8cpp_source_l00022}{colorize\+Text()}}, \mbox{\hyperlink{entities_8h_source_l00034}{Player\+::inventory}}, \mbox{\hyperlink{shop_8h_source_l00010}{Shop\+Item\+::item}}, \mbox{\hyperlink{shop_8h_source_l00017}{items}}, \mbox{\hyperlink{entities_8h_source_l00035}{Player\+::money}}, \mbox{\hyperlink{items_8h_source_l00015}{IItem\+::name}}, \mbox{\hyperlink{shop_8h_source_l00011}{Shop\+Item\+::price}}, and \mbox{\hyperlink{extras_8h_source_l00017}{RED}}.
+
+
+
+Referenced by \mbox{\hyperlink{ui_8cpp_source_l00154}{Shop\+Menu\+::render()}}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_shop_a6c1a27422ecdd1a5248f156f1355632b_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=291pt]{class_shop_a6c1a27422ecdd1a5248f156f1355632b_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_shop_ac213488671e8d976d97c3530e691fd44}\index{Shop@{Shop}!listItems@{listItems}}
+\index{listItems@{listItems}!Shop@{Shop}}
+\doxysubsubsection{\texorpdfstring{listItems()}{listItems()}}
+{\footnotesize\ttfamily \label{class_shop_ac213488671e8d976d97c3530e691fd44} 
+void Shop\+::list\+Items (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_player}{Player}} \&}]{player}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{shop_8cpp_source_l00019}{19}} of file \mbox{\hyperlink{shop_8cpp_source}{shop.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{\ \ \ \ }
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{int}\ idx\ =\ 1;}
+\DoxyCodeLine{00021\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Money:\ "{}}\ <<\ player.\mbox{\hyperlink{class_player_a9545beef70350d5c3b3a5719a890dd2f}{money}}\ <<\ endl;}
+\DoxyCodeLine{00022\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}[0]\ Leave"{}}\ <<\ endl;}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordflow}{for}\ (ShopItem\ \&shopItem\ :\ \mbox{\hyperlink{class_shop_a2e7691d6eaa6339b5416981538c656fc}{items}})\ \{}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{extras_8h_ab87bacfdad76e61b9412d7124be44c1c}{Color}}\ textColor\ =\ (player.\mbox{\hyperlink{class_player_a9545beef70350d5c3b3a5719a890dd2f}{money}}\ <\ shopItem.price)\ ?\ \mbox{\hyperlink{extras_8h_ab87bacfdad76e61b9412d7124be44c1caf80f9a890089d211842d59625e561f88}{RED}}\ :\ \mbox{\hyperlink{extras_8h_ab87bacfdad76e61b9412d7124be44c1caa60bd322f93178d68184e30e162571ca}{GREEN}};}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ cout\ <<\ \mbox{\hyperlink{extras_8cpp_a99d2755bf0660601280710515b3f512c}{colorizeText}}(\textcolor{stringliteral}{"{}["{}}\ +\ to\_string(idx)\ +\ \textcolor{stringliteral}{"{}]\ "{}}\ +\ shopItem.item-\/>name\ +\ \textcolor{stringliteral}{"{}\ [Cost:\ "{}}\ +\ to\_string(shopItem.price)\ +\ \textcolor{stringliteral}{"{}]"{}},\ textColor)\ <<\ endl;}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ idx\ +=\ 1;}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \}\ \ \ \ }
+\DoxyCodeLine{00028\ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{extras_8cpp_source_l00022}{colorize\+Text()}}, \mbox{\hyperlink{extras_8h_source_l00018}{GREEN}}, \mbox{\hyperlink{shop_8h_source_l00017}{items}}, \mbox{\hyperlink{entities_8h_source_l00035}{Player\+::money}}, and \mbox{\hyperlink{extras_8h_source_l00017}{RED}}.
+
+
+
+Referenced by \mbox{\hyperlink{ui_8cpp_source_l00154}{Shop\+Menu\+::render()}}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=267pt]{class_shop_ac213488671e8d976d97c3530e691fd44_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=294pt]{class_shop_ac213488671e8d976d97c3530e691fd44_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_shop_a8d58df2e5b4a8449ab937724c4e96e61}\index{Shop@{Shop}!removeItem@{removeItem}}
+\index{removeItem@{removeItem}!Shop@{Shop}}
+\doxysubsubsection{\texorpdfstring{removeItem()}{removeItem()}}
+{\footnotesize\ttfamily \label{class_shop_a8d58df2e5b4a8449ab937724c4e96e61} 
+void Shop\+::remove\+Item (\begin{DoxyParamCaption}\item[{int}]{idx}{}\end{DoxyParamCaption})}
+
+
+
+Remove an item from the shop. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em idx} & 1-\/indexed item number \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{shop_8cpp_source_l00011}{11}} of file \mbox{\hyperlink{shop_8cpp_source}{shop.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00011\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00012\ \ \ \ \ idx\ -\/=\ 1;}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keywordflow}{if}\ (idx\ <\ 0\ ||\ idx\ >=\ \mbox{\hyperlink{class_shop_a2e7691d6eaa6339b5416981538c656fc}{items}}.size())\ \{}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Invalid\ item\ index."{}}\ <<\ endl;}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00016\ \ \ \ \ \}}
+\DoxyCodeLine{00017\ \ \ \ \ \mbox{\hyperlink{class_shop_a2e7691d6eaa6339b5416981538c656fc}{items}}.erase(\mbox{\hyperlink{class_shop_a2e7691d6eaa6339b5416981538c656fc}{items}}.begin()\ +\ idx);}
+\DoxyCodeLine{00018\ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{shop_8h_source_l00017}{items}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_shop_a2e7691d6eaa6339b5416981538c656fc}\index{Shop@{Shop}!items@{items}}
+\index{items@{items}!Shop@{Shop}}
+\doxysubsubsection{\texorpdfstring{items}{items}}
+{\footnotesize\ttfamily \label{class_shop_a2e7691d6eaa6339b5416981538c656fc} 
+vector$<$\mbox{\hyperlink{class_shop_item}{Shop\+Item}}$>$ Shop\+::items}
+
+
+
+Definition at line \mbox{\hyperlink{shop_8h_source_l00017}{17}} of file \mbox{\hyperlink{shop_8h_source}{shop.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{shop_8cpp_source_l00007}{add\+Item()}}, \mbox{\hyperlink{shop_8cpp_source_l00030}{buy\+Item()}}, \mbox{\hyperlink{shop_8cpp_source_l00019}{list\+Items()}}, and \mbox{\hyperlink{shop_8cpp_source_l00011}{remove\+Item()}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{shop_8h}{shop.\+h}}\item 
+src/\mbox{\hyperlink{shop_8cpp}{shop.\+cpp}}\end{DoxyCompactItemize}

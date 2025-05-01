@@ -62,7 +62,7 @@ bool \mbox{\hyperlink{class_user_interface_aa95ee5089a1de7ad211fb3a1bb786e11}{qu
 \doxysubsection{Detailed Description}
 The cutscene before the player fights Jovial. 
 
-Definition at line \mbox{\hyperlink{ui_8h_source_l00081}{81}} of file \mbox{\hyperlink{ui_8h_source}{ui.\+h}}.
+Definition at line \mbox{\hyperlink{ui_8h_source_l00089}{89}} of file \mbox{\hyperlink{ui_8h_source}{ui.\+h}}.
 
 
 
@@ -75,16 +75,16 @@ Jovial\+Cutscene\+::\+Jovial\+Cutscene (\begin{DoxyParamCaption}\item[{\mbox{\hy
 
 
 
-Definition at line \mbox{\hyperlink{ui_8cpp_source_l00239}{239}} of file \mbox{\hyperlink{ui_8cpp_source}{ui.\+cpp}}.
+Definition at line \mbox{\hyperlink{ui_8cpp_source_l00284}{284}} of file \mbox{\hyperlink{ui_8cpp_source}{ui.\+cpp}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00239\ :\ \mbox{\hyperlink{class_u_i_with_player_a297e083951aeaf9e72d9746fab8eccd8}{UIWithPlayer}}(\mbox{\hyperlink{class_u_i_with_player_a480502a8db864e1ec92eb19f87a35083}{player}})\ \{\}}
+\DoxyCodeLine{00284\ :\ \mbox{\hyperlink{class_u_i_with_player_a297e083951aeaf9e72d9746fab8eccd8}{UIWithPlayer}}(\mbox{\hyperlink{class_u_i_with_player_a480502a8db864e1ec92eb19f87a35083}{player}})\ \{\}}
 
 \end{DoxyCode}
 
 
-References \mbox{\hyperlink{ui_8h_source_l00021}{UIWith\+Player\+::player}}, and \mbox{\hyperlink{ui_8cpp_source_l00013}{UIWith\+Player\+::\+UIWith\+Player()}}.
+References \mbox{\hyperlink{ui_8h_source_l00021}{UIWith\+Player\+::player}}, and \mbox{\hyperlink{ui_8cpp_source_l00015}{UIWith\+Player\+::\+UIWith\+Player()}}.
 
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -108,39 +108,39 @@ Implements \mbox{\hyperlink{class_user_interface_a6c4e70754407cdc9ed66986dcea60e
 
 
 
-Definition at line \mbox{\hyperlink{ui_8cpp_source_l00240}{240}} of file \mbox{\hyperlink{ui_8cpp_source}{ui.\+cpp}}.
+Definition at line \mbox{\hyperlink{ui_8cpp_source_l00285}{285}} of file \mbox{\hyperlink{ui_8cpp_source}{ui.\+cpp}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00241\ \{}
-\DoxyCodeLine{00242\ \ \ \ \ \mbox{\hyperlink{extras_8cpp_aff1ce18cf1cd562e54189df70cee6299}{printAnimate}}(\textcolor{keywordtype}{string}(\textcolor{stringliteral}{"{}Villager\ 1:\ Hey,\ did\ you\ know?\ Jovial\ lost\ the\ final\ race\ today...\(\backslash\)n"{}})\ +}
-\DoxyCodeLine{00243\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Villager\ 2:\ What??\ That\ can't\ be!\ She's\ the\ best\ horse\ there\ is.\ I\ put\ all\ my\ money\ on\ her\ and\ she\ LOST???\(\backslash\)n"{}}\ +}
-\DoxyCodeLine{00244\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Villager\ 1:\ Okay,\ calm\ your\ horses\ (hehe).\ It's\ gonna\ be\ fine.\(\backslash\)n"{}}\ +}
-\DoxyCodeLine{00245\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Villager\ 2:\ NO\ IT\ WON'T!!\ When\ I\ see\ that\ horse\ again,\ I'll...\ I'll...\(\backslash\)n"{}}\ +}
-\DoxyCodeLine{00246\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{extras_8cpp_a99d2755bf0660601280710515b3f512c}{colorizeText}}(\textcolor{stringliteral}{"{}Jovial:\ You'll\ what?\(\backslash\)n"{}},\ \mbox{\hyperlink{extras_8h_ab87bacfdad76e61b9412d7124be44c1cae735a848bf82163a19236ead1c3ef2d2}{YELLOW}})\ +}
-\DoxyCodeLine{00247\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}*Jovial\ approaches\ Villager\ 2\ very\ menacingly*\(\backslash\)n\(\backslash\)n"{}}\ +}
-\DoxyCodeLine{00248\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_u_i_with_player_a480502a8db864e1ec92eb19f87a35083}{player}}.name\ +\ \textcolor{stringliteral}{"{}:\ STOP!!\ If\ anybody's\ fighting,\ it'll\ be\ you\ and\ me,\ Jovial.\(\backslash\)n"{}}\ +}
-\DoxyCodeLine{00249\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Jovial:\ Alright\ then,\ kid,\ let's\ fight!\(\backslash\)n"{}});}
-\DoxyCodeLine{00250\ }
-\DoxyCodeLine{00251\ \ \ \ \ Entity\ jovial\ =\ Entity(1000,\ \textcolor{stringliteral}{"{}Jovial\ Merryment"{}},\ 100,\ 50);}
-\DoxyCodeLine{00252\ }
-\DoxyCodeLine{00253\ \ \ \ \ \textcolor{keyword}{auto}\ onWin\ =\ [=](Player\ \mbox{\hyperlink{class_u_i_with_player_a480502a8db864e1ec92eb19f87a35083}{player}})\ -\/>\ UserInterface\ *}
-\DoxyCodeLine{00254\ \ \ \ \ \{}
-\DoxyCodeLine{00255\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ JovialAftermath(\mbox{\hyperlink{class_u_i_with_player_a480502a8db864e1ec92eb19f87a35083}{player}},\ \textcolor{stringliteral}{"{}win"{}});}
-\DoxyCodeLine{00256\ \ \ \ \ \};}
-\DoxyCodeLine{00257\ }
-\DoxyCodeLine{00258\ \ \ \ \ \textcolor{keyword}{auto}\ onLose\ =\ [=](Player\ \mbox{\hyperlink{class_u_i_with_player_a480502a8db864e1ec92eb19f87a35083}{player}})\ -\/>\ UserInterface\ *}
-\DoxyCodeLine{00259\ \ \ \ \ \{}
-\DoxyCodeLine{00260\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ JovialAftermath(\mbox{\hyperlink{class_u_i_with_player_a480502a8db864e1ec92eb19f87a35083}{player}},\ \textcolor{stringliteral}{"{}lose"{}});}
-\DoxyCodeLine{00261\ \ \ \ \ \};}
-\DoxyCodeLine{00262\ }
-\DoxyCodeLine{00263\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ Battle(\mbox{\hyperlink{class_u_i_with_player_a480502a8db864e1ec92eb19f87a35083}{player}},\ jovial,\ 0,\ onWin,\ onLose);}
-\DoxyCodeLine{00264\ \}}
+\DoxyCodeLine{00286\ \{}
+\DoxyCodeLine{00287\ \ \ \ \ \mbox{\hyperlink{extras_8cpp_a251383c9dea6cb260fb6f9ebb010139f}{printAnimate}}(\textcolor{keywordtype}{string}(\textcolor{stringliteral}{"{}Villager\ 1:\ Hey,\ did\ you\ know?\ Jovial\ lost\ the\ final\ race\ today...\(\backslash\)n"{}})\ +}
+\DoxyCodeLine{00288\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Villager\ 2:\ What??\ That\ can't\ be!\ She's\ the\ best\ horse\ there\ is.\ I\ put\ all\ my\ money\ on\ her\ and\ she\ LOST???\(\backslash\)n"{}}\ +}
+\DoxyCodeLine{00289\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Villager\ 1:\ Okay,\ calm\ your\ horses\ (hehe).\ It's\ gonna\ be\ fine.\(\backslash\)n"{}}\ +}
+\DoxyCodeLine{00290\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Villager\ 2:\ NO\ IT\ WON'T!!\ When\ I\ see\ that\ horse\ again,\ I'll...\ I'll...\(\backslash\)n"{}}\ +}
+\DoxyCodeLine{00291\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{extras_8cpp_a99d2755bf0660601280710515b3f512c}{colorizeText}}(\textcolor{stringliteral}{"{}Jovial:\ You'll\ what?\(\backslash\)n"{}},\ \mbox{\hyperlink{extras_8h_ab87bacfdad76e61b9412d7124be44c1cae735a848bf82163a19236ead1c3ef2d2}{YELLOW}})\ +}
+\DoxyCodeLine{00292\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}*Jovial\ approaches\ Villager\ 2\ very\ menacingly*\(\backslash\)n\(\backslash\)n"{}}\ +}
+\DoxyCodeLine{00293\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_u_i_with_player_a480502a8db864e1ec92eb19f87a35083}{player}}.name\ +\ \textcolor{stringliteral}{"{}:\ STOP!!\ If\ anybody's\ fighting,\ it'll\ be\ you\ and\ me,\ Jovial.\(\backslash\)n"{}}\ +}
+\DoxyCodeLine{00294\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Jovial:\ Alright\ then,\ kid,\ let's\ fight!\(\backslash\)n"{}});}
+\DoxyCodeLine{00295\ }
+\DoxyCodeLine{00296\ \ \ \ \ Entity\ jovial\ =\ Entity(1000,\ \textcolor{stringliteral}{"{}Jovial\ Merryment"{}},\ 100,\ 50);}
+\DoxyCodeLine{00297\ }
+\DoxyCodeLine{00298\ \ \ \ \ \textcolor{keyword}{auto}\ onWin\ =\ [=](Player\ \mbox{\hyperlink{class_u_i_with_player_a480502a8db864e1ec92eb19f87a35083}{player}})\ -\/>\ UserInterface\ *}
+\DoxyCodeLine{00299\ \ \ \ \ \{}
+\DoxyCodeLine{00300\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ JovialAftermath(\mbox{\hyperlink{class_u_i_with_player_a480502a8db864e1ec92eb19f87a35083}{player}},\ \textcolor{stringliteral}{"{}win"{}});}
+\DoxyCodeLine{00301\ \ \ \ \ \};}
+\DoxyCodeLine{00302\ }
+\DoxyCodeLine{00303\ \ \ \ \ \textcolor{keyword}{auto}\ onLose\ =\ [=](Player\ \mbox{\hyperlink{class_u_i_with_player_a480502a8db864e1ec92eb19f87a35083}{player}})\ -\/>\ UserInterface\ *}
+\DoxyCodeLine{00304\ \ \ \ \ \{}
+\DoxyCodeLine{00305\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ JovialAftermath(\mbox{\hyperlink{class_u_i_with_player_a480502a8db864e1ec92eb19f87a35083}{player}},\ \textcolor{stringliteral}{"{}lose"{}});}
+\DoxyCodeLine{00306\ \ \ \ \ \};}
+\DoxyCodeLine{00307\ }
+\DoxyCodeLine{00308\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ Battle(\mbox{\hyperlink{class_u_i_with_player_a480502a8db864e1ec92eb19f87a35083}{player}},\ jovial,\ 0,\ onWin,\ onLose);}
+\DoxyCodeLine{00309\ \}}
 
 \end{DoxyCode}
 
 
-References \mbox{\hyperlink{extras_8cpp_source_l00021}{colorize\+Text()}}, \mbox{\hyperlink{ui_8h_source_l00021}{UIWith\+Player\+::player}}, \mbox{\hyperlink{extras_8cpp_source_l00041}{print\+Animate()}}, and \mbox{\hyperlink{extras_8h_source_l00019}{YELLOW}}.
+References \mbox{\hyperlink{extras_8cpp_source_l00022}{colorize\+Text()}}, \mbox{\hyperlink{ui_8h_source_l00021}{UIWith\+Player\+::player}}, \mbox{\hyperlink{extras_8cpp_source_l00042}{print\+Animate()}}, and \mbox{\hyperlink{extras_8h_source_l00019}{YELLOW}}.
 
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]

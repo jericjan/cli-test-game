@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['inventory_0',['inventory',['../class_player.html#ab8d436b5727749f7be05ffdf744d1041',1,'Player']]],
-  ['items_1',['items',['../class_inventory.html#adfeb1d487d3180b4741506b9452e8c5c',1,'Inventory']]]
+  ['maxhealth_0',['maxHealth',['../class_entity.html#a6e20c965f14c04d09be06d07a471565d',1,'Entity']]],
+  ['money_1',['money',['../class_player.html#a9545beef70350d5c3b3a5719a890dd2f',1,'Player']]]
 ];

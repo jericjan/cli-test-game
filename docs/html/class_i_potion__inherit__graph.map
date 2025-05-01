@@ -1,9 +1,11 @@
 <map id="IPotion" name="IPotion">
-<area shape="rect" id="Node000001" title="Potions set the type to &quot;Potion&quot;." alt="" coords="15,379,215,448"/>
-<area shape="rect" id="Node000004" href="$class_health_potion.html" title="Health potions heal the player of course." alt="" coords="7,496,223,587"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="118,463,118,496,113,496,113,463"/>
-<area shape="rect" id="Node000002" href="$class_i_player_item.html" title="Player items. The use function takes in a player only." alt="" coords="5,224,225,331"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="118,346,118,379,113,379,113,346"/>
-<area shape="rect" id="Node000003" href="$class_i_item.html" title="Base class for all items in the game." alt="" coords="39,5,192,176"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="118,191,118,224,113,224,113,191"/>
+<area shape="rect" id="Node000001" title="Potions set the type to &quot;Potion&quot;." alt="" coords="150,400,317,485"/>
+<area shape="rect" id="Node000004" href="$class_health_potion.html" title="Health potions heal the player of course." alt="" coords="5,533,221,645"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="191,499,161,536,156,532,187,495"/>
+<area shape="rect" id="Node000005" href="$class_strength_potion.html" title="Increases player ATK." alt="" coords="245,533,461,645"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="280,495,310,532,306,536,275,499"/>
+<area shape="rect" id="Node000002" href="$class_i_player_item.html" title="Player items. The use function takes in a player only." alt="" coords="123,245,343,352"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="236,367,236,400,231,400,231,367"/>
+<area shape="rect" id="Node000003" href="$class_i_item.html" title="Base class for all items in the game." alt="" coords="155,5,311,197"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="236,212,236,246,231,246,231,212"/>
 </map>

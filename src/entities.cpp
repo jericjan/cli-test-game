@@ -2,6 +2,7 @@
 #include <string>
 #include "entities.h"
 #include "extras.h"
+#include "shop.h"
 using namespace std;
 
 Entity::~Entity() = default;
@@ -28,17 +29,85 @@ void Player::addMoney(int amount)
     money += amount;
 }
 
-Stats::Stats() : atk(0), def(0) {}
-Stats::Stats(int x, int y) : atk(x), def(y) {}
+int Player::getMoney()
+{
+    return money;
+}
+
+void Player::setMoney(int amount)
+{
+    money = amount;
+}
+
+bool Player::canAfford(int amount)
+{
+    return money >= amount;
+}
+
+bool Player::canAfford(ShopItem &item){
+    return canAfford(item.price);
+}
+
+Stats::Stats(int atk, int def) : atk(atk), def(def) {}
+
+Health::Health(int current, int max) : current(current), max(max) {}
 
 Entity::Entity(int health, string name, int atk, int def):
-currHealth(health), maxHealth(health), stats(Stats(atk, def)), name(name) {}
+health(health, health), stats(Stats(atk, def)), name(name) {}
 
 void Entity::attack(Entity &target, int extraDmg)
 {
     int calcDmg = max(1, (stats.atk + extraDmg) - target.stats.def);
-    target.currHealth = max(0, target.currHealth - calcDmg);
-    cout << target.name << " took " << calcDmg << " DMG!" << endl;
+    target.health.current = max(0, target.health.current - calcDmg);
+    cout << target.getName() << " took " << calcDmg << " DMG!" << endl;
 }
 
+int Entity::getHealth() {
+    return health.current;
+}
+int Entity::getMaxHealth(){
+    return health.max;
+}
+bool Entity::isFullHealth(){
+    return health.current == health.max;
+}
+void Entity::fullyHeal(){
+    health.current = health.max;
+    printAnimate(name + " was fully healed!\n");
+}
+
+bool Entity::isAlive(){
+    return health.current > 0;
+}
+void Entity::heal(int amount){
+    health.current = min(health.max, health.current + amount);
+}
+
+void Entity::kill(){
+    health.current = 0;
+}
+
+bool Entity::isDead() {
+    return health.current == 0;
+}
+
+string Entity::getName() {
+    return name;
+}
+
+int Entity::getAtk() {
+    return stats.atk;
+}
+
+int Entity::getDef() {
+    return stats.def;
+}
+
+void Entity::boostAtk(int amount) {
+    stats.atk += amount;    
+}
+
+void Entity::boostDef(int amount) {
+    stats.def += amount;    
+}
 

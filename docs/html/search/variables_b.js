@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['quitgame_0',['quitGame',['../class_user_interface.html#aa95ee5089a1de7ad211fb3a1bb786e11',1,'UserInterface']]]
+  ['rewardmoney_0',['rewardMoney',['../class_battle.html#a0a1e8309e19d498ca17c640948d3588f',1,'Battle']]]
 ];

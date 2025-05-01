@@ -67,7 +67,7 @@ var sectionId = 'dynsection-2';
 <!-- Node2 -->
 <g id="Node000002" class="node">
 <title>Node2</title>
-<g id="a_Node000002"><a xlink:href="class_i_potion.html#aa93950ffed81f33407bdce018c60de58" target="_top" xlink:title=" ">
+<g id="a_Node000002"><a xlink:href="class_i_potion.html#af960db386ba9efea5adcde6ec80fe943" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="#666666" points="254,-20 170.5,-20 170.5,0 254,0 254,-20"/>
 <text text-anchor="middle" x="212.25" y="-6.5" font-family="Helvetica,sans-Serif" font-size="10.00">IPotion::IPotion</text>
 </a>

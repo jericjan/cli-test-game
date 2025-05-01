@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['player_0',['player',['../class_u_i_with_player.html#a480502a8db864e1ec92eb19f87a35083',1,'UIWithPlayer']]]
+  ['quitgame_0',['quitGame',['../class_user_interface.html#aa95ee5089a1de7ad211fb3a1bb786e11',1,'UserInterface']]]
 ];

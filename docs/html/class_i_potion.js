@@ -1,4 +1,5 @@
 var class_i_potion =
 [
-    [ "IPotion", "class_i_potion.html#aa93950ffed81f33407bdce018c60de58", null ]
+    [ "IPotion", "class_i_potion.html#af960db386ba9efea5adcde6ec80fe943", null ],
+    [ "strength", "class_i_potion.html#ac28213c6eade179ede27d122491ba2fd", null ]
 ];

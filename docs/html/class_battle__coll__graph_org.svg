@@ -205,23 +205,24 @@
 <g id="Node000007" class="node">
 <title>Node7</title>
 <g id="a_Node000007"><a xlink:href="class_inventory.html" target="_top" xlink:title="Inventory class that holds all items for the player.">
-<polygon fill="white" stroke="none" points="150,-599 12.75,-599 12.75,-487 150,-487 150,-599"/>
-<text text-anchor="start" x="61.12" y="-585.5" font-family="Helvetica,sans-Serif" font-size="10.00">Inventory</text>
-<text text-anchor="start" x="16.75" y="-569.5" font-family="Helvetica,sans-Serif" font-size="10.00">+</text>
-<text text-anchor="start" x="26.75" y="-569.5" font-family="Helvetica,sans-Serif" font-size="10.00">vector&lt; IItem * &gt; items</text>
-<text text-anchor="start" x="16.75" y="-553.5" font-family="Helvetica,sans-Serif" font-size="10.00">+</text>
-<text text-anchor="start" x="26.75" y="-553.5" font-family="Helvetica,sans-Serif" font-size="10.00">void addItem(IItem *item)</text>
-<text text-anchor="start" x="16.75" y="-537.5" font-family="Helvetica,sans-Serif" font-size="10.00">+</text>
-<text text-anchor="start" x="26.75" y="-537.5" font-family="Helvetica,sans-Serif" font-size="10.00">void listItems()</text>
-<text text-anchor="start" x="16.75" y="-521.5" font-family="Helvetica,sans-Serif" font-size="10.00">+</text>
-<text text-anchor="start" x="26.75" y="-521.5" font-family="Helvetica,sans-Serif" font-size="10.00">bool useItem(int idx, Player</text>
-<text text-anchor="start" x="26.75" y="-509.5" font-family="Helvetica,sans-Serif" font-size="10.00"> &amp;player, Entity *enemy)</text>
-<text text-anchor="start" x="16.75" y="-493.5" font-family="Helvetica,sans-Serif" font-size="10.00">+</text>
-<text text-anchor="start" x="26.75" y="-493.5" font-family="Helvetica,sans-Serif" font-size="10.00">void dropItem(int idx)</text>
-<polygon fill="#666666" stroke="#666666" points="12.75,-581 12.75,-581 150,-581 150,-581 12.75,-581"/>
-<polygon fill="#666666" stroke="#666666" points="12.75,-565 12.75,-565 24.75,-565 24.75,-565 12.75,-565"/>
-<polygon fill="#666666" stroke="#666666" points="24.75,-565 24.75,-565 150,-565 150,-565 24.75,-565"/>
-<polygon fill="none" stroke="#666666" points="12.75,-487 12.75,-599 150,-599 150,-487 12.75,-487"/>
+<polygon fill="white" stroke="none" points="151.12,-605 11.62,-605 11.62,-481 151.12,-481 151.12,-605"/>
+<text text-anchor="start" x="61.12" y="-591.5" font-family="Helvetica,sans-Serif" font-size="10.00">Inventory</text>
+<text text-anchor="start" x="15.62" y="-575.5" font-family="Helvetica,sans-Serif" font-size="10.00">+</text>
+<text text-anchor="start" x="25.62" y="-575.5" font-family="Helvetica,sans-Serif" font-size="10.00">vector&lt; IItem * &gt; items</text>
+<text text-anchor="start" x="15.62" y="-559.5" font-family="Helvetica,sans-Serif" font-size="10.00">+</text>
+<text text-anchor="start" x="25.62" y="-559.5" font-family="Helvetica,sans-Serif" font-size="10.00">IItem * addItem(IItem *item,</text>
+<text text-anchor="start" x="25.62" y="-547.5" font-family="Helvetica,sans-Serif" font-size="10.00"> bool animate=true)</text>
+<text text-anchor="start" x="15.62" y="-531.5" font-family="Helvetica,sans-Serif" font-size="10.00">+</text>
+<text text-anchor="start" x="25.62" y="-531.5" font-family="Helvetica,sans-Serif" font-size="10.00">void listItems()</text>
+<text text-anchor="start" x="15.62" y="-515.5" font-family="Helvetica,sans-Serif" font-size="10.00">+</text>
+<text text-anchor="start" x="25.62" y="-515.5" font-family="Helvetica,sans-Serif" font-size="10.00">bool useItem(int idx, Player</text>
+<text text-anchor="start" x="25.62" y="-503.5" font-family="Helvetica,sans-Serif" font-size="10.00"> &amp;player, Entity *enemy)</text>
+<text text-anchor="start" x="15.62" y="-487.5" font-family="Helvetica,sans-Serif" font-size="10.00">+</text>
+<text text-anchor="start" x="25.62" y="-487.5" font-family="Helvetica,sans-Serif" font-size="10.00">void dropItem(int idx)</text>
+<polygon fill="#666666" stroke="#666666" points="11.62,-587 11.62,-587 151.12,-587 151.12,-587 11.62,-587"/>
+<polygon fill="#666666" stroke="#666666" points="11.62,-571 11.62,-571 23.62,-571 23.62,-571 11.62,-571"/>
+<polygon fill="#666666" stroke="#666666" points="23.62,-571 23.62,-571 151.12,-571 151.12,-571 23.62,-571"/>
+<polygon fill="none" stroke="#666666" points="11.62,-481 11.62,-605 151.12,-605 151.12,-481 11.62,-481"/>
 </a>
 </g>
 </g>
@@ -229,8 +230,8 @@
 <g id="edge6_Node000004_Node000007" class="edge">
 <title>Node7&#45;&gt;Node4</title>
 <g id="a_edge6_Node000004_Node000007"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M81.38,-487.39C81.38,-471.44 81.38,-453.92 81.38,-437.67"/>
-<polygon fill="none" stroke="#63b8ff" points="81.38,-437.86 77.38,-431.86 81.38,-425.86 85.38,-431.86 81.38,-437.86"/>
+<path fill="none" stroke="#63b8ff" d="M81.38,-481.4C81.38,-467.08 81.38,-451.82 81.38,-437.55"/>
+<polygon fill="none" stroke="#63b8ff" points="81.38,-437.67 77.38,-431.67 81.38,-425.67 85.38,-431.67 81.38,-437.67"/>
 </a>
 </g>
 <text text-anchor="middle" x="105.75" y="-445.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="grey"> +inventory</text>

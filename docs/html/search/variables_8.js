@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['name_0',['name',['../class_entity.html#afb45718695f537c330a463168616c262',1,'Entity::name'],['../class_i_item.html#a7fdf57eb313baaea887b648bc13f247a',1,'IItem::name']]]
+  ['onlose_0',['onLose',['../class_battle.html#a064158274f411279974695550d970923',1,'Battle']]],
+  ['onwin_1',['onWin',['../class_battle.html#a950aaddd9ca889342d18e6746637fe46',1,'Battle']]]
 ];

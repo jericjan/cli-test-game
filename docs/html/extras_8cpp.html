@@ -108,6 +108,7 @@ $(function(){initNavTree('extras_8cpp.html',''); initResizable(true); });
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="extras_8h_source.html">extras.h</a>&quot;</code><br />
+<code>#include &lt;string&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for extras.cpp:</div>
 <div class="dyncontent">
@@ -129,9 +130,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a3816c0b1714f3be0c6c8a394a4faee7d" id="r_a3816c0b1714f3be0c6c8a394a4faee7d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3816c0b1714f3be0c6c8a394a4faee7d">inputNum</a> ()</td></tr>
 <tr class="memdesc:a3816c0b1714f3be0c6c8a394a4faee7d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets an integer from the user. Loops until a valid integer is entered.  <br /></td></tr>
 <tr class="separator:a3816c0b1714f3be0c6c8a394a4faee7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aff1ce18cf1cd562e54189df70cee6299" id="r_aff1ce18cf1cd562e54189df70cee6299"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aff1ce18cf1cd562e54189df70cee6299">printAnimate</a> (string msg, int delay)</td></tr>
-<tr class="memdesc:aff1ce18cf1cd562e54189df70cee6299"><td class="mdescLeft">&#160;</td><td class="mdescRight">Outputs a text character by character with a given delay.  <br /></td></tr>
-<tr class="separator:aff1ce18cf1cd562e54189df70cee6299"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a251383c9dea6cb260fb6f9ebb010139f" id="r_a251383c9dea6cb260fb6f9ebb010139f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a251383c9dea6cb260fb6f9ebb010139f">printAnimate</a> (string msg, int delay, bool animate)</td></tr>
+<tr class="memdesc:a251383c9dea6cb260fb6f9ebb010139f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Outputs a text character by character with a given delay.  <br /></td></tr>
+<tr class="separator:a251383c9dea6cb260fb6f9ebb010139f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="a99d2755bf0660601280710515b3f512c" name="a99d2755bf0660601280710515b3f512c"></a>
@@ -156,16 +157,16 @@ Functions</h2></td></tr>
 <p>Colors text. </p>
 <p>Usually used like this: <code>\033[31m Your Text Here \033[0m</code>, where <code>31</code> is the color code for red. </p>
 
-<p class="definition">Definition at line <a class="el" href="extras_8cpp_source.html#l00021">21</a> of file <a class="el" href="extras_8cpp_source.html">extras.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   22</span>{</div>
-<div class="line"><span class="lineno">   23</span>    <span class="keywordflow">return</span> string(<span class="stringliteral">&quot;\033[&quot;</span>) + to_string(color) + <span class="stringliteral">&quot;m&quot;</span> + msg + <span class="stringliteral">&quot;\033[0m&quot;</span>;</div>
-<div class="line"><span class="lineno">   24</span>}</div>
+<p class="definition">Definition at line <a class="el" href="extras_8cpp_source.html#l00022">22</a> of file <a class="el" href="extras_8cpp_source.html">extras.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   23</span>{</div>
+<div class="line"><span class="lineno">   24</span>    <span class="keywordflow">return</span> string(<span class="stringliteral">&quot;\033[&quot;</span>) + to_string(color) + <span class="stringliteral">&quot;m&quot;</span> + msg + <span class="stringliteral">&quot;\033[0m&quot;</span>;</div>
+<div class="line"><span class="lineno">   25</span>}</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="entities_8cpp_source.html#l00013">Player::addMoney()</a>, <a class="el" href="ui_8cpp_source.html#l00026">GambleMenu::render()</a>, <a class="el" href="ui_8cpp_source.html#l00135">JovialAftermath::render()</a>, and <a class="el" href="ui_8cpp_source.html#l00240">JovialCutscene::render()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="entities_8cpp_source.html#l00014">Player::addMoney()</a>, <a class="el" href="shop_8cpp_source.html#l00030">Shop::buyItem()</a>, <a class="el" href="shop_8cpp_source.html#l00019">Shop::listItems()</a>, <a class="el" href="ui_8cpp_source.html#l00028">GambleMenu::render()</a>, <a class="el" href="ui_8cpp_source.html#l00174">JovialAftermath::render()</a>, and <a class="el" href="ui_8cpp_source.html#l00285">JovialCutscene::render()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="extras_8cpp_a99d2755bf0660601280710515b3f512c_icgraph.svg" width="307" height="190"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="extras_8cpp_a99d2755bf0660601280710515b3f512c_icgraph.svg" width="639" height="291"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -187,26 +188,26 @@ Here is the caller graph for this function:</div>
 
 <p>Gets an integer from the user. Loops until a valid integer is entered. </p>
 
-<p class="definition">Definition at line <a class="el" href="extras_8cpp_source.html#l00026">26</a> of file <a class="el" href="extras_8cpp_source.html">extras.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   27</span>{</div>
-<div class="line"><span class="lineno">   28</span> </div>
-<div class="line"><span class="lineno">   29</span>    <span class="keywordtype">int</span> result;</div>
-<div class="line"><span class="lineno">   30</span> </div>
-<div class="line"><span class="lineno">   31</span>    <span class="keywordflow">while</span> (!(cin &gt;&gt; result))</div>
-<div class="line"><span class="lineno">   32</span>    {</div>
-<div class="line"><span class="lineno">   33</span>        cin.clear();</div>
-<div class="line"><span class="lineno">   34</span>        cin.ignore(numeric_limits&lt;streamsize&gt;::max(), <span class="charliteral">&#39;\n&#39;</span>);</div>
-<div class="line"><span class="lineno">   35</span>        cout &lt;&lt; <span class="stringliteral">&quot;That&#39;s not a number!&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><span class="lineno">   36</span>    }</div>
-<div class="line"><span class="lineno">   37</span> </div>
-<div class="line"><span class="lineno">   38</span>    <span class="keywordflow">return</span> result;</div>
-<div class="line"><span class="lineno">   39</span>}</div>
+<p class="definition">Definition at line <a class="el" href="extras_8cpp_source.html#l00027">27</a> of file <a class="el" href="extras_8cpp_source.html">extras.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   28</span>{</div>
+<div class="line"><span class="lineno">   29</span> </div>
+<div class="line"><span class="lineno">   30</span>    <span class="keywordtype">int</span> result;</div>
+<div class="line"><span class="lineno">   31</span> </div>
+<div class="line"><span class="lineno">   32</span>    <span class="keywordflow">while</span> (!(cin &gt;&gt; result))</div>
+<div class="line"><span class="lineno">   33</span>    {</div>
+<div class="line"><span class="lineno">   34</span>        cin.clear();</div>
+<div class="line"><span class="lineno">   35</span>        cin.ignore(numeric_limits&lt;streamsize&gt;::max(), <span class="charliteral">&#39;\n&#39;</span>);</div>
+<div class="line"><span class="lineno">   36</span>        cout &lt;&lt; <span class="stringliteral">&quot;That&#39;s not a number!&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><span class="lineno">   37</span>    }</div>
+<div class="line"><span class="lineno">   38</span> </div>
+<div class="line"><span class="lineno">   39</span>    <span class="keywordflow">return</span> result;</div>
+<div class="line"><span class="lineno">   40</span>}</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="ui_8cpp_source.html#l00165">Battle::render()</a>, <a class="el" href="ui_8cpp_source.html#l00268">FirstChoice::render()</a>, <a class="el" href="ui_8cpp_source.html#l00072">MainMenu::render()</a>, and <a class="el" href="ui_8cpp_source.html#l00312">StartMenu::render()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ui_8cpp_source.html#l00204">Battle::render()</a>, <a class="el" href="ui_8cpp_source.html#l00313">FirstChoice::render()</a>, <a class="el" href="ui_8cpp_source.html#l00080">MainMenu::render()</a>, <a class="el" href="ui_8cpp_source.html#l00154">ShopMenu::render()</a>, and <a class="el" href="ui_8cpp_source.html#l00357">StartMenu::render()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="extras_8cpp_a3816c0b1714f3be0c6c8a394a4faee7d_icgraph.svg" width="268" height="190"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="extras_8cpp_a3816c0b1714f3be0c6c8a394a4faee7d_icgraph.svg" width="268" height="240"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -237,20 +238,20 @@ Here is the caller graph for this function:</div>
 
 <p>Centers text in a given <code>num</code> of characters. </p>
 
-<p class="definition">Definition at line <a class="el" href="extras_8cpp_source.html#l00003">3</a> of file <a class="el" href="extras_8cpp_source.html">extras.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">    4</span>{</div>
-<div class="line"><span class="lineno">    5</span>    <span class="keywordflow">if</span> (num &gt; str.size())</div>
-<div class="line"><span class="lineno">    6</span>    {</div>
-<div class="line"><span class="lineno">    7</span>        div_t divided = div(num - str.size(), 2);</div>
-<div class="line"><span class="lineno">    8</span>        <span class="keywordtype">size_t</span> leftSpace = divided.quot;</div>
-<div class="line"><span class="lineno">    9</span>        <span class="keywordtype">size_t</span> rightSpace = divided.quot + divided.rem;</div>
-<div class="line"><span class="lineno">   10</span>        str.insert(str.begin(), leftSpace, paddingChar);</div>
-<div class="line"><span class="lineno">   11</span>        str.insert(str.end(), rightSpace, paddingChar);</div>
-<div class="line"><span class="lineno">   12</span>    }</div>
-<div class="line"><span class="lineno">   13</span>    <span class="keywordflow">return</span> str;</div>
-<div class="line"><span class="lineno">   14</span>}</div>
+<p class="definition">Definition at line <a class="el" href="extras_8cpp_source.html#l00004">4</a> of file <a class="el" href="extras_8cpp_source.html">extras.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">    5</span>{</div>
+<div class="line"><span class="lineno">    6</span>    <span class="keywordflow">if</span> (num &gt; str.size())</div>
+<div class="line"><span class="lineno">    7</span>    {</div>
+<div class="line"><span class="lineno">    8</span>        div_t divided = div(num - str.size(), 2);</div>
+<div class="line"><span class="lineno">    9</span>        <span class="keywordtype">size_t</span> leftSpace = divided.quot;</div>
+<div class="line"><span class="lineno">   10</span>        <span class="keywordtype">size_t</span> rightSpace = divided.quot + divided.rem;</div>
+<div class="line"><span class="lineno">   11</span>        str.insert(str.begin(), leftSpace, paddingChar);</div>
+<div class="line"><span class="lineno">   12</span>        str.insert(str.end(), rightSpace, paddingChar);</div>
+<div class="line"><span class="lineno">   13</span>    }</div>
+<div class="line"><span class="lineno">   14</span>    <span class="keywordflow">return</span> str;</div>
+<div class="line"><span class="lineno">   15</span>}</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="inventory_8cpp_source.html#l00016">Inventory::listItems()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="inventory_8cpp_source.html#l00037">Inventory::listItems()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -259,8 +260,8 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="aff1ce18cf1cd562e54189df70cee6299" name="aff1ce18cf1cd562e54189df70cee6299"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aff1ce18cf1cd562e54189df70cee6299">&#9670;&#160;</a></span>printAnimate()</h2>
+<a id="a251383c9dea6cb260fb6f9ebb010139f" name="a251383c9dea6cb260fb6f9ebb010139f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a251383c9dea6cb260fb6f9ebb010139f">&#9670;&#160;</a></span>printAnimate()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -273,36 +274,47 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>delay</em></span>&#160;)</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>delay</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>animate</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>Outputs a text character by character with a given delay. </p>
 
-<p class="definition">Definition at line <a class="el" href="extras_8cpp_source.html#l00041">41</a> of file <a class="el" href="extras_8cpp_source.html">extras.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   42</span>{</div>
-<div class="line"><span class="lineno">   43</span>    <span class="comment">// cout &lt;&lt; msg;</span></div>
-<div class="line"><span class="lineno">   44</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;ch : msg)</div>
-<div class="line"><span class="lineno">   45</span>    {</div>
-<div class="line"><span class="lineno">   46</span>        cout &lt;&lt; ch;</div>
-<div class="line"><span class="lineno">   47</span>        <a class="code hl_function" href="#aea0e34fe8a665ef6cb1fd6526ce1deb0">sleepMS</a>(delay);</div>
-<div class="line"><span class="lineno">   48</span>    }</div>
-<div class="line"><span class="lineno">   49</span>}</div>
-<div class="ttc" id="aextras_8cpp_html_aea0e34fe8a665ef6cb1fd6526ce1deb0"><div class="ttname"><a href="#aea0e34fe8a665ef6cb1fd6526ce1deb0">sleepMS</a></div><div class="ttdeci">void sleepMS(int ms)</div><div class="ttdef"><b>Definition</b> <a href="extras_8cpp_source.html#l00016">extras.cpp:16</a></div></div>
+<p class="definition">Definition at line <a class="el" href="extras_8cpp_source.html#l00042">42</a> of file <a class="el" href="extras_8cpp_source.html">extras.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   43</span>{</div>
+<div class="line"><span class="lineno">   44</span>    <span class="comment">// if (!animate)</span></div>
+<div class="line"><span class="lineno">   45</span>    <span class="keywordflow">if</span> (<span class="keyword">true</span>)</div>
+<div class="line"><span class="lineno">   46</span>    {</div>
+<div class="line"><span class="lineno">   47</span>        cout &lt;&lt; msg;</div>
+<div class="line"><span class="lineno">   48</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   49</span>    }</div>
+<div class="line"><span class="lineno">   50</span> </div>
+<div class="line"><span class="lineno">   51</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;ch : msg)</div>
+<div class="line"><span class="lineno">   52</span>    {</div>
+<div class="line"><span class="lineno">   53</span>        cout &lt;&lt; ch;</div>
+<div class="line"><span class="lineno">   54</span>        <a class="code hl_function" href="#aea0e34fe8a665ef6cb1fd6526ce1deb0">sleepMS</a>(delay);</div>
+<div class="line"><span class="lineno">   55</span>    }</div>
+<div class="line"><span class="lineno">   56</span>}</div>
+<div class="ttc" id="aextras_8cpp_html_aea0e34fe8a665ef6cb1fd6526ce1deb0"><div class="ttname"><a href="#aea0e34fe8a665ef6cb1fd6526ce1deb0">sleepMS</a></div><div class="ttdeci">void sleepMS(int ms)</div><div class="ttdef"><b>Definition</b> <a href="extras_8cpp_source.html#l00017">extras.cpp:17</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="extras_8cpp_source.html#l00016">sleepMS()</a>.</p>
+<p class="reference">References <a class="el" href="extras_8cpp_source.html#l00017">sleepMS()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="inventory_8cpp_source.html#l00006">Inventory::addItem()</a>, <a class="el" href="ui_8cpp_source.html#l00268">FirstChoice::render()</a>, <a class="el" href="ui_8cpp_source.html#l00016">GameOver::render()</a>, <a class="el" href="ui_8cpp_source.html#l00294">IntroDialogue::render()</a>, <a class="el" href="ui_8cpp_source.html#l00135">JovialAftermath::render()</a>, <a class="el" href="ui_8cpp_source.html#l00240">JovialCutscene::render()</a>, and <a class="el" href="ui_8cpp_source.html#l00072">MainMenu::render()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="inventory_8cpp_source.html#l00007">Inventory::addItem()</a>, <a class="el" href="ui_8cpp_source.html#l00313">FirstChoice::render()</a>, <a class="el" href="ui_8cpp_source.html#l00018">GameOver::render()</a>, <a class="el" href="ui_8cpp_source.html#l00339">IntroDialogue::render()</a>, <a class="el" href="ui_8cpp_source.html#l00174">JovialAftermath::render()</a>, <a class="el" href="ui_8cpp_source.html#l00285">JovialCutscene::render()</a>, and <a class="el" href="ui_8cpp_source.html#l00080">MainMenu::render()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="extras_8cpp_aff1ce18cf1cd562e54189df70cee6299_cgraph.svg" width="226" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="extras_8cpp_a251383c9dea6cb260fb6f9ebb010139f_cgraph.svg" width="226" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="extras_8cpp_aff1ce18cf1cd562e54189df70cee6299_icgraph.svg" width="310" height="342"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="extras_8cpp_a251383c9dea6cb260fb6f9ebb010139f_icgraph.svg" width="639" height="342"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -322,16 +334,16 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="extras_8cpp_source.html#l00016">16</a> of file <a class="el" href="extras_8cpp_source.html">extras.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   17</span>{</div>
-<div class="line"><span class="lineno">   18</span>    this_thread::sleep_for(chrono::milliseconds(ms));</div>
-<div class="line"><span class="lineno">   19</span>}</div>
+<p class="definition">Definition at line <a class="el" href="extras_8cpp_source.html#l00017">17</a> of file <a class="el" href="extras_8cpp_source.html">extras.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   18</span>{</div>
+<div class="line"><span class="lineno">   19</span>    this_thread::sleep_for(chrono::milliseconds(ms));</div>
+<div class="line"><span class="lineno">   20</span>}</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="extras_8cpp_source.html#l00041">printAnimate()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="extras_8cpp_source.html#l00042">printAnimate()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="extras_8cpp_aea0e34fe8a665ef6cb1fd6526ce1deb0_icgraph.svg" width="430" height="342"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="extras_8cpp_aea0e34fe8a665ef6cb1fd6526ce1deb0_icgraph.svg" width="100%" height="556"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>

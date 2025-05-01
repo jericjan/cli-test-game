@@ -18,11 +18,11 @@ void Shop::removeItem(int idx) {
 }
 void Shop::listItems(Player &player) {    
     int idx = 1;
-    cout << "Money: " << player.money << endl;
+    cout << "Money: " << player.getMoney() << endl;
     cout << "[0] Leave" << endl;
     for (ShopItem &shopItem : items) {
-        Color textColor = (player.money < shopItem.price) ? RED : GREEN;
-        cout << colorizeText("[" + to_string(idx) + "] " + shopItem.item->name + " [Cost: " + to_string(shopItem.price) + "]", textColor) << endl;
+        Color textColor = (!player.canAfford(shopItem)) ? RED : GREEN;
+        cout << colorizeText("[" + to_string(idx) + "] " + shopItem.item->getName() + " [Cost: " + to_string(shopItem.price) + "]", textColor) << endl;
         idx += 1;
       }    
 }
@@ -35,13 +35,13 @@ bool Shop::buyItem(Player &player, int idx) {
     }
     ShopItem &shopItem = items[idx];
     
-    if (player.money < shopItem.price) {
+    if (!player.canAfford(shopItem)) {
         cout << colorizeText("You don't have enough money!", RED) << endl;
         return false;
     }
 
     player.addMoney(-shopItem.price);    
-    cout << "You bought a " << shopItem.item->name << "!" << endl;
+    cout << "You bought a " << shopItem.item->getName() << "!" << endl;
     player.inventory.addItem(shopItem.item, false);
     return true;
 }

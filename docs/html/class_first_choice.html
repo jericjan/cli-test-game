@@ -155,7 +155,7 @@ Public Attributes</h2></td></tr>
 <div class="textblock"><p>The part after the player meets the mysterious stranger. </p>
 <p>The player can stay for funny dialogue. </p>
 
-<p class="definition">Definition at line <a class="el" href="ui_8h_source.html#l00090">90</a> of file <a class="el" href="ui_8h_source.html">ui.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ui_8h_source.html#l00098">98</a> of file <a class="el" href="ui_8h_source.html">ui.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ab558b2266c9fd092cce3961d7ed318dd" name="ab558b2266c9fd092cce3961d7ed318dd"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab558b2266c9fd092cce3961d7ed318dd">&#9670;&#160;</a></span>FirstChoice()</h2>
@@ -172,12 +172,12 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ui_8cpp_source.html#l00266">266</a> of file <a class="el" href="ui_8cpp_source.html">ui.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  266</span>: <a class="code hl_function" href="class_u_i_with_player.html#a297e083951aeaf9e72d9746fab8eccd8">UIWithPlayer</a>(<a class="code hl_variable" href="class_u_i_with_player.html#a480502a8db864e1ec92eb19f87a35083">player</a>) {}</div>
-<div class="ttc" id="aclass_u_i_with_player_html_a297e083951aeaf9e72d9746fab8eccd8"><div class="ttname"><a href="class_u_i_with_player.html#a297e083951aeaf9e72d9746fab8eccd8">UIWithPlayer::UIWithPlayer</a></div><div class="ttdeci">UIWithPlayer()</div><div class="ttdef"><b>Definition</b> <a href="ui_8cpp_source.html#l00013">ui.cpp:13</a></div></div>
+<p class="definition">Definition at line <a class="el" href="ui_8cpp_source.html#l00311">311</a> of file <a class="el" href="ui_8cpp_source.html">ui.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  311</span>: <a class="code hl_function" href="class_u_i_with_player.html#a297e083951aeaf9e72d9746fab8eccd8">UIWithPlayer</a>(<a class="code hl_variable" href="class_u_i_with_player.html#a480502a8db864e1ec92eb19f87a35083">player</a>) {}</div>
+<div class="ttc" id="aclass_u_i_with_player_html_a297e083951aeaf9e72d9746fab8eccd8"><div class="ttname"><a href="class_u_i_with_player.html#a297e083951aeaf9e72d9746fab8eccd8">UIWithPlayer::UIWithPlayer</a></div><div class="ttdeci">UIWithPlayer()</div><div class="ttdef"><b>Definition</b> <a href="ui_8cpp_source.html#l00015">ui.cpp:15</a></div></div>
 <div class="ttc" id="aclass_u_i_with_player_html_a480502a8db864e1ec92eb19f87a35083"><div class="ttname"><a href="class_u_i_with_player.html#a480502a8db864e1ec92eb19f87a35083">UIWithPlayer::player</a></div><div class="ttdeci">Player player</div><div class="ttdef"><b>Definition</b> <a href="ui_8h_source.html#l00021">ui.h:21</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="ui_8h_source.html#l00021">UIWithPlayer::player</a>, and <a class="el" href="ui_8cpp_source.html#l00013">UIWithPlayer::UIWithPlayer()</a>.</p>
+<p class="reference">References <a class="el" href="ui_8h_source.html#l00021">UIWithPlayer::player</a>, and <a class="el" href="ui_8cpp_source.html#l00015">UIWithPlayer::UIWithPlayer()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -212,36 +212,36 @@ Here is the call graph for this function:</div>
 
 <p>Implements <a class="el" href="class_user_interface.html#a6c4e70754407cdc9ed66986dcea60ece">UserInterface</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="ui_8cpp_source.html#l00268">268</a> of file <a class="el" href="ui_8cpp_source.html">ui.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  269</span>{</div>
-<div class="line"><span class="lineno">  270</span>    cout &lt;&lt; <span class="stringliteral">&quot;[1] Stay&quot;</span> &lt;&lt; endl</div>
-<div class="line"><span class="lineno">  271</span>         &lt;&lt; <span class="stringliteral">&quot;[2] Leave&quot;</span> &lt;&lt; endl;</div>
-<div class="line"><span class="lineno">  272</span>    <span class="keywordtype">int</span> userInput = <a class="code hl_function" href="extras_8cpp.html#a3816c0b1714f3be0c6c8a394a4faee7d">inputNum</a>();</div>
-<div class="line"><span class="lineno">  273</span>    cout &lt;&lt; endl;</div>
-<div class="line"><span class="lineno">  274</span>    <span class="keywordflow">if</span> (userInput == 1)</div>
-<div class="line"><span class="lineno">  275</span>    {</div>
-<div class="line"><span class="lineno">  276</span>        <a class="code hl_function" href="extras_8cpp.html#aff1ce18cf1cd562e54189df70cee6299">printAnimate</a>(<a class="code hl_variable" href="#a782472949fb6b88b593c9dcc30294015">stayResps</a>.front() + <span class="stringliteral">&quot;\n&quot;</span>);</div>
-<div class="line"><span class="lineno">  277</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a782472949fb6b88b593c9dcc30294015">stayResps</a>.size() &gt; 1)</div>
-<div class="line"><span class="lineno">  278</span>        {</div>
-<div class="line"><span class="lineno">  279</span>            <a class="code hl_variable" href="#a782472949fb6b88b593c9dcc30294015">stayResps</a>.pop_front();</div>
-<div class="line"><span class="lineno">  280</span>        }</div>
-<div class="line"><span class="lineno">  281</span>        <span class="keywordflow">return</span> <span class="keyword">this</span>;</div>
-<div class="line"><span class="lineno">  282</span>    }</div>
-<div class="line"><span class="lineno">  283</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (userInput == 2)</div>
-<div class="line"><span class="lineno">  284</span>    {</div>
-<div class="line"><span class="lineno">  285</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> JovialCutscene(<a class="code hl_variable" href="class_u_i_with_player.html#a480502a8db864e1ec92eb19f87a35083">player</a>);</div>
-<div class="line"><span class="lineno">  286</span>    }</div>
-<div class="line"><span class="lineno">  287</span>    <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  288</span>    {</div>
-<div class="line"><span class="lineno">  289</span>        cout &lt;&lt; <span class="stringliteral">&quot;That&#39;s not one of the options!&quot;</span> &lt;&lt; endl;</div>
-<div class="line"><span class="lineno">  290</span>        <span class="keywordflow">return</span> <span class="keyword">this</span>;</div>
-<div class="line"><span class="lineno">  291</span>    }</div>
-<div class="line"><span class="lineno">  292</span>}</div>
-<div class="ttc" id="aclass_first_choice_html_a782472949fb6b88b593c9dcc30294015"><div class="ttname"><a href="#a782472949fb6b88b593c9dcc30294015">FirstChoice::stayResps</a></div><div class="ttdeci">list&lt; string &gt; stayResps</div><div class="ttdef"><b>Definition</b> <a href="ui_8h_source.html#l00093">ui.h:93</a></div></div>
-<div class="ttc" id="aextras_8cpp_html_a3816c0b1714f3be0c6c8a394a4faee7d"><div class="ttname"><a href="extras_8cpp.html#a3816c0b1714f3be0c6c8a394a4faee7d">inputNum</a></div><div class="ttdeci">int inputNum()</div><div class="ttdoc">Gets an integer from the user. Loops until a valid integer is entered.</div><div class="ttdef"><b>Definition</b> <a href="extras_8cpp_source.html#l00026">extras.cpp:26</a></div></div>
-<div class="ttc" id="aextras_8cpp_html_aff1ce18cf1cd562e54189df70cee6299"><div class="ttname"><a href="extras_8cpp.html#aff1ce18cf1cd562e54189df70cee6299">printAnimate</a></div><div class="ttdeci">void printAnimate(string msg, int delay)</div><div class="ttdoc">Outputs a text character by character with a given delay.</div><div class="ttdef"><b>Definition</b> <a href="extras_8cpp_source.html#l00041">extras.cpp:41</a></div></div>
+<p class="definition">Definition at line <a class="el" href="ui_8cpp_source.html#l00313">313</a> of file <a class="el" href="ui_8cpp_source.html">ui.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  314</span>{</div>
+<div class="line"><span class="lineno">  315</span>    cout &lt;&lt; <span class="stringliteral">&quot;[1] Stay&quot;</span> &lt;&lt; endl</div>
+<div class="line"><span class="lineno">  316</span>         &lt;&lt; <span class="stringliteral">&quot;[2] Leave&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><span class="lineno">  317</span>    <span class="keywordtype">int</span> userInput = <a class="code hl_function" href="extras_8cpp.html#a3816c0b1714f3be0c6c8a394a4faee7d">inputNum</a>();</div>
+<div class="line"><span class="lineno">  318</span>    cout &lt;&lt; endl;</div>
+<div class="line"><span class="lineno">  319</span>    <span class="keywordflow">if</span> (userInput == 1)</div>
+<div class="line"><span class="lineno">  320</span>    {</div>
+<div class="line"><span class="lineno">  321</span>        <a class="code hl_function" href="extras_8cpp.html#a251383c9dea6cb260fb6f9ebb010139f">printAnimate</a>(<a class="code hl_variable" href="#a782472949fb6b88b593c9dcc30294015">stayResps</a>.front() + <span class="stringliteral">&quot;\n&quot;</span>);</div>
+<div class="line"><span class="lineno">  322</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a782472949fb6b88b593c9dcc30294015">stayResps</a>.size() &gt; 1)</div>
+<div class="line"><span class="lineno">  323</span>        {</div>
+<div class="line"><span class="lineno">  324</span>            <a class="code hl_variable" href="#a782472949fb6b88b593c9dcc30294015">stayResps</a>.pop_front();</div>
+<div class="line"><span class="lineno">  325</span>        }</div>
+<div class="line"><span class="lineno">  326</span>        <span class="keywordflow">return</span> <span class="keyword">this</span>;</div>
+<div class="line"><span class="lineno">  327</span>    }</div>
+<div class="line"><span class="lineno">  328</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (userInput == 2)</div>
+<div class="line"><span class="lineno">  329</span>    {</div>
+<div class="line"><span class="lineno">  330</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> JovialCutscene(<a class="code hl_variable" href="class_u_i_with_player.html#a480502a8db864e1ec92eb19f87a35083">player</a>);</div>
+<div class="line"><span class="lineno">  331</span>    }</div>
+<div class="line"><span class="lineno">  332</span>    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  333</span>    {</div>
+<div class="line"><span class="lineno">  334</span>        cout &lt;&lt; <span class="stringliteral">&quot;That&#39;s not one of the options!&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><span class="lineno">  335</span>        <span class="keywordflow">return</span> <span class="keyword">this</span>;</div>
+<div class="line"><span class="lineno">  336</span>    }</div>
+<div class="line"><span class="lineno">  337</span>}</div>
+<div class="ttc" id="aclass_first_choice_html_a782472949fb6b88b593c9dcc30294015"><div class="ttname"><a href="#a782472949fb6b88b593c9dcc30294015">FirstChoice::stayResps</a></div><div class="ttdeci">list&lt; string &gt; stayResps</div><div class="ttdef"><b>Definition</b> <a href="ui_8h_source.html#l00101">ui.h:101</a></div></div>
+<div class="ttc" id="aextras_8cpp_html_a251383c9dea6cb260fb6f9ebb010139f"><div class="ttname"><a href="extras_8cpp.html#a251383c9dea6cb260fb6f9ebb010139f">printAnimate</a></div><div class="ttdeci">void printAnimate(string msg, int delay, bool animate)</div><div class="ttdoc">Outputs a text character by character with a given delay.</div><div class="ttdef"><b>Definition</b> <a href="extras_8cpp_source.html#l00042">extras.cpp:42</a></div></div>
+<div class="ttc" id="aextras_8cpp_html_a3816c0b1714f3be0c6c8a394a4faee7d"><div class="ttname"><a href="extras_8cpp.html#a3816c0b1714f3be0c6c8a394a4faee7d">inputNum</a></div><div class="ttdeci">int inputNum()</div><div class="ttdoc">Gets an integer from the user. Loops until a valid integer is entered.</div><div class="ttdef"><b>Definition</b> <a href="extras_8cpp_source.html#l00027">extras.cpp:27</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="extras_8cpp_source.html#l00026">inputNum()</a>, <a class="el" href="ui_8h_source.html#l00021">UIWithPlayer::player</a>, <a class="el" href="extras_8cpp_source.html#l00041">printAnimate()</a>, and <a class="el" href="ui_8h_source.html#l00093">stayResps</a>.</p>
+<p class="reference">References <a class="el" href="extras_8cpp_source.html#l00027">inputNum()</a>, <a class="el" href="ui_8h_source.html#l00021">UIWithPlayer::player</a>, <a class="el" href="extras_8cpp_source.html#l00042">printAnimate()</a>, and <a class="el" href="ui_8h_source.html#l00101">stayResps</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -269,15 +269,15 @@ Here is the call graph for this function:</div>
 <div class="line">        <span class="stringliteral">&quot;Alright, I&#39;m giving you the silent treatment.&quot;</span>,</div>
 <div class="line">        <span class="stringliteral">&quot;...&quot;</span>}</div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="ui_8h_source.html#l00093">93</a> of file <a class="el" href="ui_8h_source.html">ui.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   93</span>                             {</div>
-<div class="line"><span class="lineno">   94</span>        <span class="stringliteral">&quot;Hello? I said get out.&quot;</span>,</div>
-<div class="line"><span class="lineno">   95</span>        <span class="stringliteral">&quot;Come on man. I have stuff to do. Please leave.&quot;</span>,</div>
-<div class="line"><span class="lineno">   96</span>        <span class="stringliteral">&quot;I&#39;m gonna run out of dialogue options here. The devs didn&#39;t give me that many lines.&quot;</span>,</div>
-<div class="line"><span class="lineno">   97</span>        <span class="stringliteral">&quot;Alright, I&#39;m giving you the silent treatment.&quot;</span>,</div>
-<div class="line"><span class="lineno">   98</span>        <span class="stringliteral">&quot;...&quot;</span>};</div>
+<p class="definition">Definition at line <a class="el" href="ui_8h_source.html#l00101">101</a> of file <a class="el" href="ui_8h_source.html">ui.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  101</span>                             {</div>
+<div class="line"><span class="lineno">  102</span>        <span class="stringliteral">&quot;Hello? I said get out.&quot;</span>,</div>
+<div class="line"><span class="lineno">  103</span>        <span class="stringliteral">&quot;Come on man. I have stuff to do. Please leave.&quot;</span>,</div>
+<div class="line"><span class="lineno">  104</span>        <span class="stringliteral">&quot;I&#39;m gonna run out of dialogue options here. The devs didn&#39;t give me that many lines.&quot;</span>,</div>
+<div class="line"><span class="lineno">  105</span>        <span class="stringliteral">&quot;Alright, I&#39;m giving you the silent treatment.&quot;</span>,</div>
+<div class="line"><span class="lineno">  106</span>        <span class="stringliteral">&quot;...&quot;</span>};</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="ui_8cpp_source.html#l00268">render()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ui_8cpp_source.html#l00313">render()</a>.</p>
 
 </div>
 </div>

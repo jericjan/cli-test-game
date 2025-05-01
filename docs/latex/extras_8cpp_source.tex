@@ -3,53 +3,60 @@
 \mbox{\hyperlink{extras_8cpp}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\Hypertarget{extras_8cpp_source_l00001}00001\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{extras_8h}{extras.h}}"{}}}
-\DoxyCodeLine{\Hypertarget{extras_8cpp_source_l00002}00002\ }
-\DoxyCodeLine{\Hypertarget{extras_8cpp_source_l00003}\mbox{\hyperlink{extras_8cpp_a9f429ae2206e7d4a9b8b4071b64080b5}{00003}}\ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{extras_8cpp_a9f429ae2206e7d4a9b8b4071b64080b5}{padTo}}(\textcolor{keywordtype}{string}\ str,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{size\_t}\ num,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ paddingChar)}
-\DoxyCodeLine{\Hypertarget{extras_8cpp_source_l00004}00004\ \{}
-\DoxyCodeLine{\Hypertarget{extras_8cpp_source_l00005}00005\ \ \ \ \ \textcolor{keywordflow}{if}\ (num\ >\ str.size())}
-\DoxyCodeLine{\Hypertarget{extras_8cpp_source_l00006}00006\ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{extras_8cpp_source_l00007}00007\ \ \ \ \ \ \ \ \ div\_t\ divided\ =\ div(num\ -\/\ str.size(),\ 2);}
-\DoxyCodeLine{\Hypertarget{extras_8cpp_source_l00008}00008\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ leftSpace\ =\ divided.quot;}
-\DoxyCodeLine{\Hypertarget{extras_8cpp_source_l00009}00009\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ rightSpace\ =\ divided.quot\ +\ divided.rem;}
-\DoxyCodeLine{\Hypertarget{extras_8cpp_source_l00010}00010\ \ \ \ \ \ \ \ \ str.insert(str.begin(),\ leftSpace,\ paddingChar);}
-\DoxyCodeLine{\Hypertarget{extras_8cpp_source_l00011}00011\ \ \ \ \ \ \ \ \ str.insert(str.end(),\ rightSpace,\ paddingChar);}
-\DoxyCodeLine{\Hypertarget{extras_8cpp_source_l00012}00012\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{extras_8cpp_source_l00013}00013\ \ \ \ \ \textcolor{keywordflow}{return}\ str;}
-\DoxyCodeLine{\Hypertarget{extras_8cpp_source_l00014}00014\ \}}
-\DoxyCodeLine{\Hypertarget{extras_8cpp_source_l00015}00015\ }
-\DoxyCodeLine{\Hypertarget{extras_8cpp_source_l00016}\mbox{\hyperlink{extras_8cpp_aea0e34fe8a665ef6cb1fd6526ce1deb0}{00016}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{extras_8cpp_aea0e34fe8a665ef6cb1fd6526ce1deb0}{sleepMS}}(\textcolor{keywordtype}{int}\ ms)}
-\DoxyCodeLine{\Hypertarget{extras_8cpp_source_l00017}00017\ \{}
-\DoxyCodeLine{\Hypertarget{extras_8cpp_source_l00018}00018\ \ \ \ \ this\_thread::sleep\_for(chrono::milliseconds(ms));}
-\DoxyCodeLine{\Hypertarget{extras_8cpp_source_l00019}00019\ \}}
-\DoxyCodeLine{\Hypertarget{extras_8cpp_source_l00020}00020\ }
-\DoxyCodeLine{\Hypertarget{extras_8cpp_source_l00021}\mbox{\hyperlink{extras_8cpp_a99d2755bf0660601280710515b3f512c}{00021}}\ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{extras_8cpp_a99d2755bf0660601280710515b3f512c}{colorizeText}}(\textcolor{keywordtype}{string}\ msg,\ \mbox{\hyperlink{extras_8h_ab87bacfdad76e61b9412d7124be44c1c}{Color}}\ color)}
-\DoxyCodeLine{\Hypertarget{extras_8cpp_source_l00022}00022\ \{}
-\DoxyCodeLine{\Hypertarget{extras_8cpp_source_l00023}00023\ \ \ \ \ \textcolor{keywordflow}{return}\ string(\textcolor{stringliteral}{"{}\(\backslash\)033["{}})\ +\ to\_string(color)\ +\ \textcolor{stringliteral}{"{}m"{}}\ +\ msg\ +\ \textcolor{stringliteral}{"{}\(\backslash\)033[0m"{}};}
-\DoxyCodeLine{\Hypertarget{extras_8cpp_source_l00024}00024\ \}}
-\DoxyCodeLine{\Hypertarget{extras_8cpp_source_l00025}00025\ }
-\DoxyCodeLine{\Hypertarget{extras_8cpp_source_l00026}\mbox{\hyperlink{extras_8cpp_a3816c0b1714f3be0c6c8a394a4faee7d}{00026}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{extras_8cpp_a3816c0b1714f3be0c6c8a394a4faee7d}{inputNum}}()}
-\DoxyCodeLine{\Hypertarget{extras_8cpp_source_l00027}00027\ \{}
-\DoxyCodeLine{\Hypertarget{extras_8cpp_source_l00028}00028\ }
-\DoxyCodeLine{\Hypertarget{extras_8cpp_source_l00029}00029\ \ \ \ \ \textcolor{keywordtype}{int}\ result;}
-\DoxyCodeLine{\Hypertarget{extras_8cpp_source_l00030}00030\ }
-\DoxyCodeLine{\Hypertarget{extras_8cpp_source_l00031}00031\ \ \ \ \ \textcolor{keywordflow}{while}\ (!(cin\ >>\ result))}
-\DoxyCodeLine{\Hypertarget{extras_8cpp_source_l00032}00032\ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{extras_8cpp_source_l00033}00033\ \ \ \ \ \ \ \ \ cin.clear();}
-\DoxyCodeLine{\Hypertarget{extras_8cpp_source_l00034}00034\ \ \ \ \ \ \ \ \ cin.ignore(numeric\_limits<streamsize>::max(),\ \textcolor{charliteral}{'\(\backslash\)n'});}
-\DoxyCodeLine{\Hypertarget{extras_8cpp_source_l00035}00035\ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}That's\ not\ a\ number!"{}}\ <<\ std::endl;}
-\DoxyCodeLine{\Hypertarget{extras_8cpp_source_l00036}00036\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{extras_8cpp_source_l00037}00037\ }
-\DoxyCodeLine{\Hypertarget{extras_8cpp_source_l00038}00038\ \ \ \ \ \textcolor{keywordflow}{return}\ result;}
-\DoxyCodeLine{\Hypertarget{extras_8cpp_source_l00039}00039\ \}}
-\DoxyCodeLine{\Hypertarget{extras_8cpp_source_l00040}00040\ }
-\DoxyCodeLine{\Hypertarget{extras_8cpp_source_l00041}\mbox{\hyperlink{extras_8cpp_aff1ce18cf1cd562e54189df70cee6299}{00041}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{extras_8cpp_aff1ce18cf1cd562e54189df70cee6299}{printAnimate}}(\textcolor{keywordtype}{string}\ msg,\ \textcolor{keywordtype}{int}\ delay)}
-\DoxyCodeLine{\Hypertarget{extras_8cpp_source_l00042}00042\ \{}
-\DoxyCodeLine{\Hypertarget{extras_8cpp_source_l00043}00043\ \ \ \ \ \textcolor{comment}{//\ cout\ <<\ msg;}}
-\DoxyCodeLine{\Hypertarget{extras_8cpp_source_l00044}00044\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\ \&ch\ :\ msg)}
-\DoxyCodeLine{\Hypertarget{extras_8cpp_source_l00045}00045\ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{extras_8cpp_source_l00046}00046\ \ \ \ \ \ \ \ \ cout\ <<\ ch;}
-\DoxyCodeLine{\Hypertarget{extras_8cpp_source_l00047}00047\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{extras_8cpp_aea0e34fe8a665ef6cb1fd6526ce1deb0}{sleepMS}}(delay);}
-\DoxyCodeLine{\Hypertarget{extras_8cpp_source_l00048}00048\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{extras_8cpp_source_l00049}00049\ \}}
+\DoxyCodeLine{\Hypertarget{extras_8cpp_source_l00002}00002\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{\Hypertarget{extras_8cpp_source_l00003}00003\ }
+\DoxyCodeLine{\Hypertarget{extras_8cpp_source_l00004}\mbox{\hyperlink{extras_8cpp_a9f429ae2206e7d4a9b8b4071b64080b5}{00004}}\ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{extras_8cpp_a9f429ae2206e7d4a9b8b4071b64080b5}{padTo}}(\textcolor{keywordtype}{string}\ str,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{size\_t}\ num,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ paddingChar)}
+\DoxyCodeLine{\Hypertarget{extras_8cpp_source_l00005}00005\ \{}
+\DoxyCodeLine{\Hypertarget{extras_8cpp_source_l00006}00006\ \ \ \ \ \textcolor{keywordflow}{if}\ (num\ >\ str.size())}
+\DoxyCodeLine{\Hypertarget{extras_8cpp_source_l00007}00007\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{extras_8cpp_source_l00008}00008\ \ \ \ \ \ \ \ \ div\_t\ divided\ =\ div(num\ -\/\ str.size(),\ 2);}
+\DoxyCodeLine{\Hypertarget{extras_8cpp_source_l00009}00009\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ leftSpace\ =\ divided.quot;}
+\DoxyCodeLine{\Hypertarget{extras_8cpp_source_l00010}00010\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ rightSpace\ =\ divided.quot\ +\ divided.rem;}
+\DoxyCodeLine{\Hypertarget{extras_8cpp_source_l00011}00011\ \ \ \ \ \ \ \ \ str.insert(str.begin(),\ leftSpace,\ paddingChar);}
+\DoxyCodeLine{\Hypertarget{extras_8cpp_source_l00012}00012\ \ \ \ \ \ \ \ \ str.insert(str.end(),\ rightSpace,\ paddingChar);}
+\DoxyCodeLine{\Hypertarget{extras_8cpp_source_l00013}00013\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{extras_8cpp_source_l00014}00014\ \ \ \ \ \textcolor{keywordflow}{return}\ str;}
+\DoxyCodeLine{\Hypertarget{extras_8cpp_source_l00015}00015\ \}}
+\DoxyCodeLine{\Hypertarget{extras_8cpp_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{extras_8cpp_source_l00017}\mbox{\hyperlink{extras_8cpp_aea0e34fe8a665ef6cb1fd6526ce1deb0}{00017}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{extras_8cpp_aea0e34fe8a665ef6cb1fd6526ce1deb0}{sleepMS}}(\textcolor{keywordtype}{int}\ ms)}
+\DoxyCodeLine{\Hypertarget{extras_8cpp_source_l00018}00018\ \{}
+\DoxyCodeLine{\Hypertarget{extras_8cpp_source_l00019}00019\ \ \ \ \ this\_thread::sleep\_for(chrono::milliseconds(ms));}
+\DoxyCodeLine{\Hypertarget{extras_8cpp_source_l00020}00020\ \}}
+\DoxyCodeLine{\Hypertarget{extras_8cpp_source_l00021}00021\ }
+\DoxyCodeLine{\Hypertarget{extras_8cpp_source_l00022}\mbox{\hyperlink{extras_8cpp_a99d2755bf0660601280710515b3f512c}{00022}}\ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{extras_8cpp_a99d2755bf0660601280710515b3f512c}{colorizeText}}(\textcolor{keywordtype}{string}\ msg,\ \mbox{\hyperlink{extras_8h_ab87bacfdad76e61b9412d7124be44c1c}{Color}}\ color)}
+\DoxyCodeLine{\Hypertarget{extras_8cpp_source_l00023}00023\ \{}
+\DoxyCodeLine{\Hypertarget{extras_8cpp_source_l00024}00024\ \ \ \ \ \textcolor{keywordflow}{return}\ string(\textcolor{stringliteral}{"{}\(\backslash\)033["{}})\ +\ to\_string(color)\ +\ \textcolor{stringliteral}{"{}m"{}}\ +\ msg\ +\ \textcolor{stringliteral}{"{}\(\backslash\)033[0m"{}};}
+\DoxyCodeLine{\Hypertarget{extras_8cpp_source_l00025}00025\ \}}
+\DoxyCodeLine{\Hypertarget{extras_8cpp_source_l00026}00026\ }
+\DoxyCodeLine{\Hypertarget{extras_8cpp_source_l00027}\mbox{\hyperlink{extras_8cpp_a3816c0b1714f3be0c6c8a394a4faee7d}{00027}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{extras_8cpp_a3816c0b1714f3be0c6c8a394a4faee7d}{inputNum}}()}
+\DoxyCodeLine{\Hypertarget{extras_8cpp_source_l00028}00028\ \{}
+\DoxyCodeLine{\Hypertarget{extras_8cpp_source_l00029}00029\ }
+\DoxyCodeLine{\Hypertarget{extras_8cpp_source_l00030}00030\ \ \ \ \ \textcolor{keywordtype}{int}\ result;}
+\DoxyCodeLine{\Hypertarget{extras_8cpp_source_l00031}00031\ }
+\DoxyCodeLine{\Hypertarget{extras_8cpp_source_l00032}00032\ \ \ \ \ \textcolor{keywordflow}{while}\ (!(cin\ >>\ result))}
+\DoxyCodeLine{\Hypertarget{extras_8cpp_source_l00033}00033\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{extras_8cpp_source_l00034}00034\ \ \ \ \ \ \ \ \ cin.clear();}
+\DoxyCodeLine{\Hypertarget{extras_8cpp_source_l00035}00035\ \ \ \ \ \ \ \ \ cin.ignore(numeric\_limits<streamsize>::max(),\ \textcolor{charliteral}{'\(\backslash\)n'});}
+\DoxyCodeLine{\Hypertarget{extras_8cpp_source_l00036}00036\ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}That's\ not\ a\ number!"{}}\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{extras_8cpp_source_l00037}00037\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{extras_8cpp_source_l00038}00038\ }
+\DoxyCodeLine{\Hypertarget{extras_8cpp_source_l00039}00039\ \ \ \ \ \textcolor{keywordflow}{return}\ result;}
+\DoxyCodeLine{\Hypertarget{extras_8cpp_source_l00040}00040\ \}}
+\DoxyCodeLine{\Hypertarget{extras_8cpp_source_l00041}00041\ }
+\DoxyCodeLine{\Hypertarget{extras_8cpp_source_l00042}\mbox{\hyperlink{extras_8cpp_a251383c9dea6cb260fb6f9ebb010139f}{00042}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{extras_8cpp_a251383c9dea6cb260fb6f9ebb010139f}{printAnimate}}(\textcolor{keywordtype}{string}\ msg,\ \textcolor{keywordtype}{int}\ delay,\ \textcolor{keywordtype}{bool}\ animate)}
+\DoxyCodeLine{\Hypertarget{extras_8cpp_source_l00043}00043\ \{}
+\DoxyCodeLine{\Hypertarget{extras_8cpp_source_l00044}00044\ \ \ \ \ \textcolor{comment}{//\ if\ (!animate)}}
+\DoxyCodeLine{\Hypertarget{extras_8cpp_source_l00045}00045\ \ \ \ \ \textcolor{keywordflow}{if}\ (\textcolor{keyword}{true})}
+\DoxyCodeLine{\Hypertarget{extras_8cpp_source_l00046}00046\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{extras_8cpp_source_l00047}00047\ \ \ \ \ \ \ \ \ cout\ <<\ msg;}
+\DoxyCodeLine{\Hypertarget{extras_8cpp_source_l00048}00048\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{extras_8cpp_source_l00049}00049\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{extras_8cpp_source_l00050}00050\ }
+\DoxyCodeLine{\Hypertarget{extras_8cpp_source_l00051}00051\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\ \&ch\ :\ msg)}
+\DoxyCodeLine{\Hypertarget{extras_8cpp_source_l00052}00052\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{extras_8cpp_source_l00053}00053\ \ \ \ \ \ \ \ \ cout\ <<\ ch;}
+\DoxyCodeLine{\Hypertarget{extras_8cpp_source_l00054}00054\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{extras_8cpp_aea0e34fe8a665ef6cb1fd6526ce1deb0}{sleepMS}}(delay);}
+\DoxyCodeLine{\Hypertarget{extras_8cpp_source_l00055}00055\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{extras_8cpp_source_l00056}00056\ \}}
 
 \end{DoxyCode}

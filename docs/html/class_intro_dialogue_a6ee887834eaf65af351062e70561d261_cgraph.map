@@ -1,6 +1,6 @@
 <map id="IntroDialogue::render" name="IntroDialogue::render">
 <area shape="rect" id="Node000001" title=" " alt="" coords="5,5,148,32"/>
-<area shape="rect" id="Node000002" href="$extras_8cpp.html#aff1ce18cf1cd562e54189df70cee6299" title="Outputs a text character by character with a given delay." alt="" coords="196,5,290,32"/>
+<area shape="rect" id="Node000002" href="$extras_8cpp.html#a251383c9dea6cb260fb6f9ebb010139f" title="Outputs a text character by character with a given delay." alt="" coords="196,5,290,32"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="148,16,180,16,180,21,148,21"/>
 <area shape="rect" id="Node000003" href="$extras_8cpp.html#aea0e34fe8a665ef6cb1fd6526ce1deb0" title=" " alt="" coords="338,5,410,32"/>
 <area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="291,16,322,16,322,21,291,21"/>

@@ -15,7 +15,7 @@ Inheritance diagram for IPotion\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=245pt]{class_i_potion__inherit__graph}
+\includegraphics[width=350pt]{class_i_potion__inherit__graph}
 \end{center}
 \end{figure}
 
@@ -30,7 +30,7 @@ Collaboration diagram for IPotion\+:\nopagebreak
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{class_i_potion_aa93950ffed81f33407bdce018c60de58}{IPotion}} (string n, string d, int c)
+\mbox{\hyperlink{class_i_potion_af960db386ba9efea5adcde6ec80fe943}{IPotion}} (string n, string d, int c, int \mbox{\hyperlink{class_i_potion_ac28213c6eade179ede27d122491ba2fd}{strength}})
 \end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_i_player_item}{IPlayer\+Item}}}
 \begin{DoxyCompactItemize}
@@ -45,16 +45,20 @@ virtual bool \mbox{\hyperlink{class_i_player_item_a22a1323dae95369aab54ef7ce3fe0
 \mbox{\hyperlink{class_i_item_ab1bb86846077713c5847ec035115f09c}{IItem}} (string n, string t, string d, int c)
 \item 
 virtual \mbox{\hyperlink{class_i_item_a09483bee7e3f4f382e8eeac54493620e}{\texorpdfstring{$\sim$}{\string~}\+IItem}} ()
+\item 
+virtual string \mbox{\hyperlink{class_i_item_aa7a7455949b90aed6b2f7fcd91fead8b}{get\+Desc}} ()
 \end{DoxyCompactItemize}
-\doxysubsubsection*{Additional Inherited Members}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_i_potion_ac28213c6eade179ede27d122491ba2fd}{strength}}
+\end{DoxyCompactItemize}
 \doxysubsection*{Public Attributes inherited from \mbox{\hyperlink{class_i_item}{IItem}}}
 \begin{DoxyCompactItemize}
 \item 
 string \mbox{\hyperlink{class_i_item_a7fdf57eb313baaea887b648bc13f247a}{name}}
 \item 
 string \mbox{\hyperlink{class_i_item_a3b3b58b237d89653e493c95fe22074ff}{type}}
-\item 
-string \mbox{\hyperlink{class_i_item_a9acebb5d530d823314bb1a8f29ff974a}{desc}}
 \item 
 int \mbox{\hyperlink{class_i_item_a0b30dc1f8eee51c2b78ac71d6c7b93b7}{count}}
 \begin{DoxyCompactList}\small\item\em A count of -\/1 means the item can be used infinitely. \end{DoxyCompactList}\end{DoxyCompactItemize}
@@ -63,48 +67,65 @@ int \mbox{\hyperlink{class_i_item_a0b30dc1f8eee51c2b78ac71d6c7b93b7}{count}}
 \doxysubsection{Detailed Description}
 Potions set the type to "{}\+Potion"{}. 
 
-Definition at line \mbox{\hyperlink{items_8h_source_l00036}{36}} of file \mbox{\hyperlink{items_8h_source}{items.\+h}}.
+Definition at line \mbox{\hyperlink{items_8h_source_l00040}{40}} of file \mbox{\hyperlink{items_8h_source}{items.\+h}}.
 
 
 
 \doxysubsection{Constructor \& Destructor Documentation}
-\Hypertarget{class_i_potion_aa93950ffed81f33407bdce018c60de58}\index{IPotion@{IPotion}!IPotion@{IPotion}}
+\Hypertarget{class_i_potion_af960db386ba9efea5adcde6ec80fe943}\index{IPotion@{IPotion}!IPotion@{IPotion}}
 \index{IPotion@{IPotion}!IPotion@{IPotion}}
 \doxysubsubsection{\texorpdfstring{IPotion()}{IPotion()}}
-{\footnotesize\ttfamily \label{class_i_potion_aa93950ffed81f33407bdce018c60de58} 
-IPotion\+::\+IPotion (\begin{DoxyParamCaption}\item[{string}]{n}{, }\item[{string}]{d}{, }\item[{int}]{c}{}\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \label{class_i_potion_af960db386ba9efea5adcde6ec80fe943} 
+IPotion\+::\+IPotion (\begin{DoxyParamCaption}\item[{string}]{n}{, }\item[{string}]{d}{, }\item[{int}]{c}{, }\item[{int}]{strength}{}\end{DoxyParamCaption})}
 
 
 
-Definition at line \mbox{\hyperlink{items_8cpp_source_l00014}{14}} of file \mbox{\hyperlink{items_8cpp_source}{items.\+cpp}}.
+Definition at line \mbox{\hyperlink{items_8cpp_source_l00019}{19}} of file \mbox{\hyperlink{items_8cpp_source}{items.\+cpp}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00014\ :\ \mbox{\hyperlink{class_i_player_item_afc3002fdaacb41cd6862b2301cd279e3}{IPlayerItem}}(n,\ \textcolor{stringliteral}{"{}Potion"{}},\ d,\ c)\ \{\}}
+\DoxyCodeLine{00019\ :\ \mbox{\hyperlink{class_i_player_item_afc3002fdaacb41cd6862b2301cd279e3}{IPlayerItem}}(n,\ \textcolor{stringliteral}{"{}Potion"{}},\ d,\ c),\ \mbox{\hyperlink{class_i_potion_ac28213c6eade179ede27d122491ba2fd}{strength}}(\mbox{\hyperlink{class_i_potion_ac28213c6eade179ede27d122491ba2fd}{strength}})\ \{\}}
 
 \end{DoxyCode}
 
 
-References \mbox{\hyperlink{items_8cpp_source_l00012}{IPlayer\+Item\+::\+IPlayer\+Item()}}.
+References \mbox{\hyperlink{items_8cpp_source_l00017}{IPlayer\+Item\+::\+IPlayer\+Item()}}, and \mbox{\hyperlink{items_8h_source_l00043}{strength}}.
 
 
 
-Referenced by \mbox{\hyperlink{items_8cpp_source_l00016}{Health\+Potion\+::\+Health\+Potion()}}.
+Referenced by \mbox{\hyperlink{items_8cpp_source_l00021}{Health\+Potion\+::\+Health\+Potion()}}, and \mbox{\hyperlink{items_8cpp_source_l00039}{Strength\+Potion\+::\+Strength\+Potion()}}.
 
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{class_i_potion_aa93950ffed81f33407bdce018c60de58_cgraph}
+\includegraphics[width=350pt]{class_i_potion_af960db386ba9efea5adcde6ec80fe943_cgraph}
 \end{center}
 \end{figure}
 Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=334pt]{class_i_potion_aa93950ffed81f33407bdce018c60de58_icgraph}
+\includegraphics[width=350pt]{class_i_potion_af960db386ba9efea5adcde6ec80fe943_icgraph}
 \end{center}
 \end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_i_potion_ac28213c6eade179ede27d122491ba2fd}\index{IPotion@{IPotion}!strength@{strength}}
+\index{strength@{strength}!IPotion@{IPotion}}
+\doxysubsubsection{\texorpdfstring{strength}{strength}}
+{\footnotesize\ttfamily \label{class_i_potion_ac28213c6eade179ede27d122491ba2fd} 
+int IPotion\+::strength}
+
+
+
+Definition at line \mbox{\hyperlink{items_8h_source_l00043}{43}} of file \mbox{\hyperlink{items_8h_source}{items.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{items_8cpp_source_l00023}{Health\+Potion\+::get\+Desc()}}, \mbox{\hyperlink{items_8cpp_source_l00040}{Strength\+Potion\+::get\+Desc()}}, \mbox{\hyperlink{items_8cpp_source_l00019}{IPotion()}}, \mbox{\hyperlink{items_8cpp_source_l00028}{Health\+Potion\+::use()}}, and \mbox{\hyperlink{items_8cpp_source_l00045}{Strength\+Potion\+::use()}}.
+
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

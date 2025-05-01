@@ -47,7 +47,7 @@
   </g>
 </defs>
 <script type="application/ecmascript">
-var viewWidth = 383;
+var viewWidth = 384;
 var viewHeight = 629;
 var sectionId = 'dynsection-1';
 </script>
@@ -160,26 +160,26 @@ var sectionId = 'dynsection-1';
 <g id="Node000005" class="node">
 <title>Node5</title>
 <g id="a_Node000005"><a xlink:href="class_entity.html" target="_top" xlink:title="Base class for all entities in the game. This includes the player and enemies.">
-<polygon fill="white" stroke="none" points="219.25,-489 87.25,-489 87.25,-349 219.25,-349 219.25,-489"/>
-<text text-anchor="start" x="140.5" y="-475.5" font-family="Helvetica,sans-Serif" font-size="10.00">Entity</text>
-<text text-anchor="start" x="91.25" y="-459.5" font-family="Helvetica,sans-Serif" font-size="10.00">+</text>
-<text text-anchor="start" x="101.25" y="-459.5" font-family="Helvetica,sans-Serif" font-size="10.00">int maxHealth</text>
-<text text-anchor="start" x="91.25" y="-443.5" font-family="Helvetica,sans-Serif" font-size="10.00">+</text>
-<text text-anchor="start" x="101.25" y="-443.5" font-family="Helvetica,sans-Serif" font-size="10.00">int currHealth</text>
-<text text-anchor="start" x="91.25" y="-427.5" font-family="Helvetica,sans-Serif" font-size="10.00">+</text>
-<text text-anchor="start" x="101.25" y="-427.5" font-family="Helvetica,sans-Serif" font-size="10.00">string name</text>
-<text text-anchor="start" x="91.25" y="-411.5" font-family="Helvetica,sans-Serif" font-size="10.00">+</text>
-<text text-anchor="start" x="101.25" y="-411.5" font-family="Helvetica,sans-Serif" font-size="10.00">Entity(int health, string</text>
-<text text-anchor="start" x="101.25" y="-399.5" font-family="Helvetica,sans-Serif" font-size="10.00"> name, int atk, int def)</text>
-<text text-anchor="start" x="91.25" y="-383.5" font-family="Helvetica,sans-Serif" font-size="10.00">+</text>
-<text text-anchor="start" x="101.25" y="-383.5" font-family="Helvetica,sans-Serif" font-size="10.00">virtual ~Entity()</text>
-<text text-anchor="start" x="91.25" y="-367.5" font-family="Helvetica,sans-Serif" font-size="10.00">+</text>
-<text text-anchor="start" x="101.25" y="-367.5" font-family="Helvetica,sans-Serif" font-size="10.00">void attack(Entity &amp;target,</text>
-<text text-anchor="start" x="101.25" y="-355.5" font-family="Helvetica,sans-Serif" font-size="10.00"> int extraDmg=0)</text>
-<polygon fill="#666666" stroke="#666666" points="87.25,-471 87.25,-471 219.25,-471 219.25,-471 87.25,-471"/>
-<polygon fill="#666666" stroke="#666666" points="87.25,-423 87.25,-423 99.25,-423 99.25,-423 87.25,-423"/>
-<polygon fill="#666666" stroke="#666666" points="99.25,-423 99.25,-423 219.25,-423 219.25,-423 99.25,-423"/>
-<polygon fill="none" stroke="#666666" points="87.25,-349 87.25,-489 219.25,-489 219.25,-349 87.25,-349"/>
+<polygon fill="white" stroke="none" points="218.25,-489 86.25,-489 86.25,-349 218.25,-349 218.25,-489"/>
+<text text-anchor="start" x="139.5" y="-475.5" font-family="Helvetica,sans-Serif" font-size="10.00">Entity</text>
+<text text-anchor="start" x="90.25" y="-459.5" font-family="Helvetica,sans-Serif" font-size="10.00">+</text>
+<text text-anchor="start" x="100.25" y="-459.5" font-family="Helvetica,sans-Serif" font-size="10.00">int maxHealth</text>
+<text text-anchor="start" x="90.25" y="-443.5" font-family="Helvetica,sans-Serif" font-size="10.00">+</text>
+<text text-anchor="start" x="100.25" y="-443.5" font-family="Helvetica,sans-Serif" font-size="10.00">int currHealth</text>
+<text text-anchor="start" x="90.25" y="-427.5" font-family="Helvetica,sans-Serif" font-size="10.00">+</text>
+<text text-anchor="start" x="100.25" y="-427.5" font-family="Helvetica,sans-Serif" font-size="10.00">string name</text>
+<text text-anchor="start" x="90.25" y="-411.5" font-family="Helvetica,sans-Serif" font-size="10.00">+</text>
+<text text-anchor="start" x="100.25" y="-411.5" font-family="Helvetica,sans-Serif" font-size="10.00">Entity(int health, string</text>
+<text text-anchor="start" x="100.25" y="-399.5" font-family="Helvetica,sans-Serif" font-size="10.00"> name, int atk, int def)</text>
+<text text-anchor="start" x="90.25" y="-383.5" font-family="Helvetica,sans-Serif" font-size="10.00">+</text>
+<text text-anchor="start" x="100.25" y="-383.5" font-family="Helvetica,sans-Serif" font-size="10.00">virtual ~Entity()</text>
+<text text-anchor="start" x="90.25" y="-367.5" font-family="Helvetica,sans-Serif" font-size="10.00">+</text>
+<text text-anchor="start" x="100.25" y="-367.5" font-family="Helvetica,sans-Serif" font-size="10.00">void attack(Entity &amp;target,</text>
+<text text-anchor="start" x="100.25" y="-355.5" font-family="Helvetica,sans-Serif" font-size="10.00"> int extraDmg=0)</text>
+<polygon fill="#666666" stroke="#666666" points="86.25,-471 86.25,-471 218.25,-471 218.25,-471 86.25,-471"/>
+<polygon fill="#666666" stroke="#666666" points="86.25,-423 86.25,-423 98.25,-423 98.25,-423 86.25,-423"/>
+<polygon fill="#666666" stroke="#666666" points="98.25,-423 98.25,-423 218.25,-423 218.25,-423 98.25,-423"/>
+<polygon fill="none" stroke="#666666" points="86.25,-349 86.25,-489 218.25,-489 218.25,-349 86.25,-349"/>
 </a>
 </g>
 </g>
@@ -187,8 +187,8 @@ var sectionId = 'dynsection-1';
 <g id="edge4_Node000004_Node000005" class="edge">
 <title>Node5&#45;&gt;Node4</title>
 <g id="a_edge4_Node000004_Node000005"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M204.29,-339.77C212.96,-326.49 221.71,-313.07 229.64,-300.92"/>
-<polygon fill="none" stroke="#63b8ff" points="201.37,-337.84 198.83,-348.13 207.23,-341.67 201.37,-337.84"/>
+<path fill="none" stroke="#63b8ff" d="M203.51,-340.16C212.34,-326.75 221.27,-313.19 229.35,-300.92"/>
+<polygon fill="none" stroke="#63b8ff" points="200.84,-337.86 198.26,-348.14 206.68,-341.71 200.84,-337.86"/>
 </a>
 </g>
 </g>
@@ -196,20 +196,20 @@ var sectionId = 'dynsection-1';
 <g id="Node000006" class="node">
 <title>Node6</title>
 <g id="a_Node000006"><a xlink:href="class_stats.html" target="_top" xlink:title="Stats for all entities.">
-<polygon fill="white" stroke="none" points="198.62,-621 107.88,-621 107.88,-537 198.62,-537 198.62,-621"/>
-<text text-anchor="start" x="141.62" y="-607.5" font-family="Helvetica,sans-Serif" font-size="10.00">Stats</text>
-<text text-anchor="start" x="111.88" y="-591.5" font-family="Helvetica,sans-Serif" font-size="10.00">+</text>
-<text text-anchor="start" x="121.88" y="-591.5" font-family="Helvetica,sans-Serif" font-size="10.00">int atk</text>
-<text text-anchor="start" x="111.88" y="-575.5" font-family="Helvetica,sans-Serif" font-size="10.00">+</text>
-<text text-anchor="start" x="121.88" y="-575.5" font-family="Helvetica,sans-Serif" font-size="10.00">int def</text>
-<text text-anchor="start" x="111.88" y="-559.5" font-family="Helvetica,sans-Serif" font-size="10.00">+</text>
-<text text-anchor="start" x="121.88" y="-559.5" font-family="Helvetica,sans-Serif" font-size="10.00">Stats()</text>
-<text text-anchor="start" x="111.88" y="-543.5" font-family="Helvetica,sans-Serif" font-size="10.00">+</text>
-<text text-anchor="start" x="121.88" y="-543.5" font-family="Helvetica,sans-Serif" font-size="10.00">Stats(int x, int y)</text>
-<polygon fill="#666666" stroke="#666666" points="107.88,-603 107.88,-603 198.62,-603 198.62,-603 107.88,-603"/>
-<polygon fill="#666666" stroke="#666666" points="107.88,-571 107.88,-571 119.88,-571 119.88,-571 107.88,-571"/>
-<polygon fill="#666666" stroke="#666666" points="119.88,-571 119.88,-571 198.62,-571 198.62,-571 119.88,-571"/>
-<polygon fill="none" stroke="#666666" points="107.88,-537 107.88,-621 198.62,-621 198.62,-537 107.88,-537"/>
+<polygon fill="white" stroke="none" points="197.62,-621 106.88,-621 106.88,-537 197.62,-537 197.62,-621"/>
+<text text-anchor="start" x="140.62" y="-607.5" font-family="Helvetica,sans-Serif" font-size="10.00">Stats</text>
+<text text-anchor="start" x="110.88" y="-591.5" font-family="Helvetica,sans-Serif" font-size="10.00">+</text>
+<text text-anchor="start" x="120.88" y="-591.5" font-family="Helvetica,sans-Serif" font-size="10.00">int atk</text>
+<text text-anchor="start" x="110.88" y="-575.5" font-family="Helvetica,sans-Serif" font-size="10.00">+</text>
+<text text-anchor="start" x="120.88" y="-575.5" font-family="Helvetica,sans-Serif" font-size="10.00">int def</text>
+<text text-anchor="start" x="110.88" y="-559.5" font-family="Helvetica,sans-Serif" font-size="10.00">+</text>
+<text text-anchor="start" x="120.88" y="-559.5" font-family="Helvetica,sans-Serif" font-size="10.00">Stats()</text>
+<text text-anchor="start" x="110.88" y="-543.5" font-family="Helvetica,sans-Serif" font-size="10.00">+</text>
+<text text-anchor="start" x="120.88" y="-543.5" font-family="Helvetica,sans-Serif" font-size="10.00">Stats(int x, int y)</text>
+<polygon fill="#666666" stroke="#666666" points="106.88,-603 106.88,-603 197.62,-603 197.62,-603 106.88,-603"/>
+<polygon fill="#666666" stroke="#666666" points="106.88,-571 106.88,-571 118.88,-571 118.88,-571 106.88,-571"/>
+<polygon fill="#666666" stroke="#666666" points="118.88,-571 118.88,-571 197.62,-571 197.62,-571 118.88,-571"/>
+<polygon fill="none" stroke="#666666" points="106.88,-537 106.88,-621 197.62,-621 197.62,-537 106.88,-537"/>
 </a>
 </g>
 </g>
@@ -217,33 +217,34 @@ var sectionId = 'dynsection-1';
 <g id="edge5_Node000005_Node000006" class="edge">
 <title>Node6&#45;&gt;Node5</title>
 <g id="a_edge5_Node000005_Node000006"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M153.25,-537.31C153.25,-526.32 153.25,-514.02 153.25,-501.63"/>
-<polygon fill="none" stroke="#63b8ff" points="153.25,-501.65 149.25,-495.65 153.25,-489.65 157.25,-495.65 153.25,-501.65"/>
+<path fill="none" stroke="#63b8ff" d="M152.25,-537.31C152.25,-526.32 152.25,-514.02 152.25,-501.63"/>
+<polygon fill="none" stroke="#63b8ff" points="152.25,-501.65 148.25,-495.65 152.25,-489.65 156.25,-495.65 152.25,-501.65"/>
 </a>
 </g>
-<text text-anchor="middle" x="168.62" y="-509.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="grey"> +stats</text>
+<text text-anchor="middle" x="167.62" y="-509.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="grey"> +stats</text>
 </g>
 <!-- Node7 -->
 <g id="Node000007" class="node">
 <title>Node7</title>
 <g id="a_Node000007"><a xlink:href="class_inventory.html" target="_top" xlink:title="Inventory class that holds all items for the player.">
-<polygon fill="white" stroke="none" points="374.88,-475 237.62,-475 237.62,-363 374.88,-363 374.88,-475"/>
-<text text-anchor="start" x="286" y="-461.5" font-family="Helvetica,sans-Serif" font-size="10.00">Inventory</text>
-<text text-anchor="start" x="241.62" y="-445.5" font-family="Helvetica,sans-Serif" font-size="10.00">+</text>
-<text text-anchor="start" x="251.62" y="-445.5" font-family="Helvetica,sans-Serif" font-size="10.00">vector&lt; IItem * &gt; items</text>
-<text text-anchor="start" x="241.62" y="-429.5" font-family="Helvetica,sans-Serif" font-size="10.00">+</text>
-<text text-anchor="start" x="251.62" y="-429.5" font-family="Helvetica,sans-Serif" font-size="10.00">void addItem(IItem *item)</text>
-<text text-anchor="start" x="241.62" y="-413.5" font-family="Helvetica,sans-Serif" font-size="10.00">+</text>
-<text text-anchor="start" x="251.62" y="-413.5" font-family="Helvetica,sans-Serif" font-size="10.00">void listItems()</text>
-<text text-anchor="start" x="241.62" y="-397.5" font-family="Helvetica,sans-Serif" font-size="10.00">+</text>
-<text text-anchor="start" x="251.62" y="-397.5" font-family="Helvetica,sans-Serif" font-size="10.00">bool useItem(int idx, Player</text>
-<text text-anchor="start" x="251.62" y="-385.5" font-family="Helvetica,sans-Serif" font-size="10.00"> &amp;player, Entity *enemy)</text>
-<text text-anchor="start" x="241.62" y="-369.5" font-family="Helvetica,sans-Serif" font-size="10.00">+</text>
-<text text-anchor="start" x="251.62" y="-369.5" font-family="Helvetica,sans-Serif" font-size="10.00">void dropItem(int idx)</text>
-<polygon fill="#666666" stroke="#666666" points="237.62,-457 237.62,-457 374.88,-457 374.88,-457 237.62,-457"/>
-<polygon fill="#666666" stroke="#666666" points="237.62,-441 237.62,-441 249.62,-441 249.62,-441 237.62,-441"/>
-<polygon fill="#666666" stroke="#666666" points="249.62,-441 249.62,-441 374.88,-441 374.88,-441 249.62,-441"/>
-<polygon fill="none" stroke="#666666" points="237.62,-363 237.62,-475 374.88,-475 374.88,-363 237.62,-363"/>
+<polygon fill="white" stroke="none" points="376,-481 236.5,-481 236.5,-357 376,-357 376,-481"/>
+<text text-anchor="start" x="286" y="-467.5" font-family="Helvetica,sans-Serif" font-size="10.00">Inventory</text>
+<text text-anchor="start" x="240.5" y="-451.5" font-family="Helvetica,sans-Serif" font-size="10.00">+</text>
+<text text-anchor="start" x="250.5" y="-451.5" font-family="Helvetica,sans-Serif" font-size="10.00">vector&lt; IItem * &gt; items</text>
+<text text-anchor="start" x="240.5" y="-435.5" font-family="Helvetica,sans-Serif" font-size="10.00">+</text>
+<text text-anchor="start" x="250.5" y="-435.5" font-family="Helvetica,sans-Serif" font-size="10.00">IItem * addItem(IItem *item,</text>
+<text text-anchor="start" x="250.5" y="-423.5" font-family="Helvetica,sans-Serif" font-size="10.00"> bool animate=true)</text>
+<text text-anchor="start" x="240.5" y="-407.5" font-family="Helvetica,sans-Serif" font-size="10.00">+</text>
+<text text-anchor="start" x="250.5" y="-407.5" font-family="Helvetica,sans-Serif" font-size="10.00">void listItems()</text>
+<text text-anchor="start" x="240.5" y="-391.5" font-family="Helvetica,sans-Serif" font-size="10.00">+</text>
+<text text-anchor="start" x="250.5" y="-391.5" font-family="Helvetica,sans-Serif" font-size="10.00">bool useItem(int idx, Player</text>
+<text text-anchor="start" x="250.5" y="-379.5" font-family="Helvetica,sans-Serif" font-size="10.00"> &amp;player, Entity *enemy)</text>
+<text text-anchor="start" x="240.5" y="-363.5" font-family="Helvetica,sans-Serif" font-size="10.00">+</text>
+<text text-anchor="start" x="250.5" y="-363.5" font-family="Helvetica,sans-Serif" font-size="10.00">void dropItem(int idx)</text>
+<polygon fill="#666666" stroke="#666666" points="236.5,-463 236.5,-463 376,-463 376,-463 236.5,-463"/>
+<polygon fill="#666666" stroke="#666666" points="236.5,-447 236.5,-447 248.5,-447 248.5,-447 236.5,-447"/>
+<polygon fill="#666666" stroke="#666666" points="248.5,-447 248.5,-447 376,-447 376,-447 248.5,-447"/>
+<polygon fill="none" stroke="#666666" points="236.5,-357 236.5,-481 376,-481 376,-357 236.5,-357"/>
 </a>
 </g>
 </g>
@@ -251,8 +252,8 @@ var sectionId = 'dynsection-1';
 <g id="edge6_Node000004_Node000007" class="edge">
 <title>Node7&#45;&gt;Node4</title>
 <g id="a_edge6_Node000004_Node000007"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M290.93,-363.39C286.41,-347.28 281.45,-329.57 276.85,-313.18"/>
-<polygon fill="none" stroke="#63b8ff" points="276.91,-313.38 271.43,-308.69 273.67,-301.83 279.14,-306.52 276.91,-313.38"/>
+<path fill="none" stroke="#63b8ff" d="M289.25,-357.4C285.19,-342.93 280.87,-327.51 276.83,-313.11"/>
+<polygon fill="none" stroke="#63b8ff" points="276.85,-313.19 271.38,-308.49 273.61,-301.64 279.08,-306.33 276.85,-313.19"/>
 </a>
 </g>
 <text text-anchor="middle" x="304.87" y="-321.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="grey"> +inventory</text>

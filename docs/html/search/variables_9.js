@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['onlose_0',['onLose',['../class_battle.html#a064158274f411279974695550d970923',1,'Battle']]],
-  ['onwin_1',['onWin',['../class_battle.html#a950aaddd9ca889342d18e6746637fe46',1,'Battle']]]
+  ['player_0',['player',['../class_u_i_with_player.html#a480502a8db864e1ec92eb19f87a35083',1,'UIWithPlayer']]],
+  ['price_1',['price',['../class_shop_item.html#aa0112a46da1cf213541d4221e352a5e8',1,'ShopItem']]]
 ];

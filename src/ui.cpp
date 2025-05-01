@@ -32,7 +32,7 @@ UserInterface *GambleMenu::render()
     cin >> userInput;
     if (userInput == "y")
     {
-        if (player.money < 100)
+        if (!player.canAfford(100))
         {
             cout << colorizeText("You don't have enough money!", RED) << endl;
             return this;
@@ -54,8 +54,8 @@ UserInterface *GambleMenu::render()
                 Yamato *yamato = new Yamato();
                 cout << colorizeText("You got the Legendary Sword Yamato! It's a legendary sword that does " + to_string(yamato->dmg) + " damage!\n", GREEN) << endl;
 
-                IItem* yamatoStatus = player.inventory.addItem(yamato);                
-                if (Yamato* newYamato = dynamic_cast<Yamato *>(yamatoStatus))
+                IItem* possibleYamato = player.inventory.addItem(yamato);                
+                if (Yamato* newYamato = dynamic_cast<Yamato *>(possibleYamato))
                 {
                     cout << "Interesting... It seems you already have this item. Tell you what, I'll double its damage for you.\n";
                     newYamato->dmg *= 2;
@@ -80,8 +80,8 @@ MainMenu::MainMenu(Player player) : UIWithPlayer(player) {}
 UserInterface *MainMenu::render()
 {
     cout << "[Main Menu]" << endl;
-    cout << "HP: " << player.currHealth << "/" << player.maxHealth << " ATK: " << player.stats.atk << " DEF: " << player.stats.def << endl;
-    cout << "Money: " << player.money << endl;
+    cout << "HP: " << player.getHealth() << "/" << player.getMaxHealth() << " ATK: " << player.getAtk() << " DEF: " << player.getDef() << endl;
+    cout << "Money: " << player.getMoney() << endl;
     cout << "[1] Inventory" << endl;
     cout << "[2] Grind" << endl;
     cout << "[3] Shop" << endl;
@@ -130,7 +130,7 @@ UserInterface *MainMenu::render()
     else if (userInput == 5)
     {
         printAnimate("You were healed to full health!\n");
-        player.currHealth = player.maxHealth;
+        player.fullyHeal();        
         return this;
     }
     else if (userInput == 6)
@@ -139,7 +139,7 @@ UserInterface *MainMenu::render()
     }
     else if (userInput == 7)
     {
-        player.money = 999999;
+        player.setMoney(999999);
         return this;
     }    
     else
@@ -176,7 +176,7 @@ UserInterface *JovialAftermath::render()
     if (battleStatus == "win")
     {
         printAnimate(colorizeText("Jovial: I- I lost? I can't believe it...\n", YELLOW) +
-                     player.name + ": Yeah, tough luck man. Now get outta here.\n" +
+                     player.getName() + ": Yeah, tough luck man. Now get outta here.\n" +
                      colorizeText("Jovial: Okay, geez.\n", YELLOW) +
                      "Villager 2: You saved us! Take these health potions and cash as a form of gratitude from us.\n");
         HealthPotion *hp = new HealthPotion(20);
@@ -208,15 +208,15 @@ UserInterface *Battle::render()
         cout << "\n\n===BATTLE START!!===\n\n";
         didIntro = true;
     }
-    cout << enemy.name << ": " << enemy.currHealth << "/" << enemy.maxHealth << endl
-         << player.name << ": " << player.currHealth << "/" << player.maxHealth << "\n\n"
+    cout << enemy.getName() << ": " << enemy.getHealth() << "/" << enemy.getMaxHealth() << endl
+         << player.getName() << ": " << player.getHealth() << "/" << player.getMaxHealth() << "\n\n"
          << "[1] Punch\n[2] Bag\n[3] Run\n";
     int userInput = inputNum();
     cout << endl;
     if (userInput == 1)
     {
         player.attack(enemy);
-        if (enemy.currHealth > 0)
+        if (enemy.isAlive())
         {
             enemy.attack(player);
         }
@@ -239,7 +239,7 @@ UserInterface *Battle::render()
                 }
                 else
                 {
-                    if (enemy.currHealth > 0)
+                    if (enemy.isAlive())
                     {
                         enemy.attack(player);
                     }
@@ -255,7 +255,7 @@ UserInterface *Battle::render()
     }
     else if (userInput == 4)
     { // for testing purposes
-        enemy.currHealth = 0;
+        enemy.kill();
         cout << "You punched the enemy so hard, they died instantly!" << endl;
     }
     else
@@ -264,14 +264,14 @@ UserInterface *Battle::render()
         return this;
     }
 
-    if (player.currHealth == 0)
+    if (player.isDead())
     {
-        cout << player.name << " lost the battle!" << endl;
+        cout << player.getName() << " lost the battle!" << endl;
         return onLose(player);
     }
-    else if (enemy.currHealth == 0)
+    else if (enemy.isDead())
     {
-        cout << enemy.name << " lost the battle!" << endl;
+        cout << enemy.getName() << " lost the battle!" << endl;
         if (rewardMoney > 0)
         {
             player.addMoney(rewardMoney);
@@ -290,7 +290,7 @@ UserInterface *JovialCutscene::render()
                  "Villager 2: NO IT WON'T!! When I see that horse again, I'll... I'll...\n" +
                  colorizeText("Jovial: You'll what?\n", YELLOW) +
                  "*Jovial approaches Villager 2 very menacingly*\n\n" +
-                 player.name + ": STOP!! If anybody's fighting, it'll be you and me, Jovial.\n" +
+                 player.getName() + ": STOP!! If anybody's fighting, it'll be you and me, Jovial.\n" +
                  "Jovial: Alright then, kid, let's fight!\n");
 
     Entity jovial = Entity(1000, "Jovial Merryment", 100, 50);
@@ -342,7 +342,7 @@ UserInterface *IntroDialogue::render()
     string userInput;
     getline(cin >> ws, userInput);
     player = Player(1000, userInput, 50, 50, 0);
-    printAnimate("Hello there " + player.name + "!\n" +
+    printAnimate("Hello there " + player.getName() + "!\n" +
                  "You are about to embark on a heroic journey of... something. I don't know. Go out there man. Go nuts.\n" + "Me? You don't need to know who I am. Ooh, I'll give you this cool stick I found!\n");
 
     CoolStick *stick = new CoolStick();

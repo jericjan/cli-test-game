@@ -45,6 +45,8 @@ bool \mbox{\hyperlink{class_weapon_a425b48c0e2c2422e244b7cb7227a0345}{use}} (\mb
 \mbox{\hyperlink{class_i_item_ab1bb86846077713c5847ec035115f09c}{IItem}} (string n, string t, string d, int c)
 \item 
 virtual \mbox{\hyperlink{class_i_item_a09483bee7e3f4f382e8eeac54493620e}{\texorpdfstring{$\sim$}{\string~}\+IItem}} ()
+\item 
+virtual string \mbox{\hyperlink{class_i_item_aa7a7455949b90aed6b2f7fcd91fead8b}{get\+Desc}} ()
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
@@ -58,8 +60,6 @@ string \mbox{\hyperlink{class_i_item_a7fdf57eb313baaea887b648bc13f247a}{name}}
 \item 
 string \mbox{\hyperlink{class_i_item_a3b3b58b237d89653e493c95fe22074ff}{type}}
 \item 
-string \mbox{\hyperlink{class_i_item_a9acebb5d530d823314bb1a8f29ff974a}{desc}}
-\item 
 int \mbox{\hyperlink{class_i_item_a0b30dc1f8eee51c2b78ac71d6c7b93b7}{count}}
 \begin{DoxyCompactList}\small\item\em A count of -\/1 means the item can be used infinitely. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
@@ -69,7 +69,7 @@ Weapons set the type to "{}\+Weapon"{} and implement the use function cuz all we
 
 Derived classes only need to set the {\ttfamily name}, {\ttfamily desc}, and {\ttfamily dmg} in the constructor 
 
-Definition at line \mbox{\hyperlink{items_8h_source_l00054}{54}} of file \mbox{\hyperlink{items_8h_source}{items.\+h}}.
+Definition at line \mbox{\hyperlink{items_8h_source_l00068}{68}} of file \mbox{\hyperlink{items_8h_source}{items.\+h}}.
 
 
 
@@ -82,20 +82,20 @@ Weapon\+::\+Weapon (\begin{DoxyParamCaption}\item[{string}]{name}{, }\item[{stri
 
 
 
-Definition at line \mbox{\hyperlink{items_8cpp_source_l00029}{29}} of file \mbox{\hyperlink{items_8cpp_source}{items.\+cpp}}.
+Definition at line \mbox{\hyperlink{items_8cpp_source_l00055}{55}} of file \mbox{\hyperlink{items_8cpp_source}{items.\+cpp}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00029\ :\ \mbox{\hyperlink{class_i_enemy_item_ab04428e73487bd8279945087a6b307fa}{IEnemyItem}}(\mbox{\hyperlink{class_i_item_a7fdf57eb313baaea887b648bc13f247a}{name}},\ \textcolor{stringliteral}{"{}Weapon"{}},\ \mbox{\hyperlink{class_i_item_a9acebb5d530d823314bb1a8f29ff974a}{desc}},\ \mbox{\hyperlink{class_i_item_a0b30dc1f8eee51c2b78ac71d6c7b93b7}{count}}),\ \mbox{\hyperlink{class_weapon_af7f5d5ecbb3ac0e95350a6750be1fb28}{dmg}}(\mbox{\hyperlink{class_weapon_af7f5d5ecbb3ac0e95350a6750be1fb28}{dmg}})\ \{\}}
+\DoxyCodeLine{00055\ :\ \mbox{\hyperlink{class_i_enemy_item_ab04428e73487bd8279945087a6b307fa}{IEnemyItem}}(\mbox{\hyperlink{class_i_item_a7fdf57eb313baaea887b648bc13f247a}{name}},\ \textcolor{stringliteral}{"{}Weapon"{}},\ \mbox{\hyperlink{class_i_item_a9acebb5d530d823314bb1a8f29ff974a}{desc}},\ \mbox{\hyperlink{class_i_item_a0b30dc1f8eee51c2b78ac71d6c7b93b7}{count}}),\ \mbox{\hyperlink{class_weapon_af7f5d5ecbb3ac0e95350a6750be1fb28}{dmg}}(\mbox{\hyperlink{class_weapon_af7f5d5ecbb3ac0e95350a6750be1fb28}{dmg}})\ \{\}}
 
 \end{DoxyCode}
 
 
-References \mbox{\hyperlink{items_8h_source_l00013}{IItem\+::count}}, \mbox{\hyperlink{items_8h_source_l00012}{IItem\+::desc}}, \mbox{\hyperlink{items_8h_source_l00057}{dmg}}, \mbox{\hyperlink{items_8cpp_source_l00010}{IEnemy\+Item\+::\+IEnemy\+Item()}}, and \mbox{\hyperlink{items_8h_source_l00010}{IItem\+::name}}.
+References \mbox{\hyperlink{items_8h_source_l00017}{IItem\+::count}}, \mbox{\hyperlink{items_8h_source_l00013}{IItem\+::desc}}, \mbox{\hyperlink{items_8h_source_l00071}{dmg}}, \mbox{\hyperlink{items_8cpp_source_l00015}{IEnemy\+Item\+::\+IEnemy\+Item()}}, and \mbox{\hyperlink{items_8h_source_l00015}{IItem\+::name}}.
 
 
 
-Referenced by \mbox{\hyperlink{items_8cpp_source_l00036}{Cool\+Stick\+::\+Cool\+Stick()}}, and \mbox{\hyperlink{items_8cpp_source_l00038}{Yamato\+::\+Yamato()}}.
+Referenced by \mbox{\hyperlink{items_8cpp_source_l00062}{Cool\+Stick\+::\+Cool\+Stick()}}, and \mbox{\hyperlink{items_8cpp_source_l00069}{Yamato\+::\+Yamato()}}.
 
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -126,19 +126,19 @@ Implements \mbox{\hyperlink{class_i_enemy_item_a4f81ef24d49cb728a7a275db4b1b506c
 
 
 
-Definition at line \mbox{\hyperlink{items_8cpp_source_l00030}{30}} of file \mbox{\hyperlink{items_8cpp_source}{items.\+cpp}}.
+Definition at line \mbox{\hyperlink{items_8cpp_source_l00056}{56}} of file \mbox{\hyperlink{items_8cpp_source}{items.\+cpp}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00031\ \{}
-\DoxyCodeLine{00032\ \ \ \ \ player.\mbox{\hyperlink{class_entity_a44aad07756d6f00abf8f08ffde6eb217}{attack}}(enemy,\ \mbox{\hyperlink{class_weapon_af7f5d5ecbb3ac0e95350a6750be1fb28}{dmg}});}
-\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
-\DoxyCodeLine{00034\ \}}
+\DoxyCodeLine{00057\ \{}
+\DoxyCodeLine{00058\ \ \ \ \ player.\mbox{\hyperlink{class_entity_a44aad07756d6f00abf8f08ffde6eb217}{attack}}(enemy,\ \mbox{\hyperlink{class_weapon_af7f5d5ecbb3ac0e95350a6750be1fb28}{dmg}});}
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00060\ \}}
 
 \end{DoxyCode}
 
 
-References \mbox{\hyperlink{entities_8cpp_source_l00036}{Entity\+::attack()}}, and \mbox{\hyperlink{items_8h_source_l00057}{dmg}}.
+References \mbox{\hyperlink{entities_8cpp_source_l00037}{Entity\+::attack()}}, and \mbox{\hyperlink{items_8h_source_l00071}{dmg}}.
 
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -158,11 +158,11 @@ int Weapon\+::dmg}
 
 
 
-Definition at line \mbox{\hyperlink{items_8h_source_l00057}{57}} of file \mbox{\hyperlink{items_8h_source}{items.\+h}}.
+Definition at line \mbox{\hyperlink{items_8h_source_l00071}{71}} of file \mbox{\hyperlink{items_8h_source}{items.\+h}}.
 
 
 
-Referenced by \mbox{\hyperlink{items_8cpp_source_l00030}{use()}}, and \mbox{\hyperlink{items_8cpp_source_l00029}{Weapon()}}.
+Referenced by \mbox{\hyperlink{items_8cpp_source_l00063}{Cool\+Stick\+::get\+Desc()}}, \mbox{\hyperlink{items_8cpp_source_l00070}{Yamato\+::get\+Desc()}}, \mbox{\hyperlink{ui_8cpp_source_l00028}{Gamble\+Menu\+::render()}}, \mbox{\hyperlink{items_8cpp_source_l00056}{use()}}, and \mbox{\hyperlink{items_8cpp_source_l00055}{Weapon()}}.
 
 
 

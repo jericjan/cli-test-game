@@ -31,6 +31,8 @@ Collaboration diagram for Yamato\+:\nopagebreak
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_yamato_af87539b26b8f9de81c54cb80ba556f9c}{Yamato}} ()
+\item 
+string \mbox{\hyperlink{class_yamato_a7558e285be2b509b138392969547a55a}{get\+Desc}} () override
 \end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_weapon}{Weapon}}}
 \begin{DoxyCompactItemize}
@@ -51,11 +53,6 @@ bool \mbox{\hyperlink{class_weapon_a425b48c0e2c2422e244b7cb7227a0345}{use}} (\mb
 \item 
 virtual \mbox{\hyperlink{class_i_item_a09483bee7e3f4f382e8eeac54493620e}{\texorpdfstring{$\sim$}{\string~}\+IItem}} ()
 \end{DoxyCompactItemize}
-\doxysubsubsection*{Static Public Attributes}
-\begin{DoxyCompactItemize}
-\item 
-static const int \mbox{\hyperlink{class_yamato_aede256ea614913e4bc9b70d8ac130568}{dmg}} = 500
-\end{DoxyCompactItemize}
 \doxysubsubsection*{Additional Inherited Members}
 \doxysubsection*{Public Attributes inherited from \mbox{\hyperlink{class_weapon}{Weapon}}}
 \begin{DoxyCompactItemize}
@@ -69,8 +66,6 @@ string \mbox{\hyperlink{class_i_item_a7fdf57eb313baaea887b648bc13f247a}{name}}
 \item 
 string \mbox{\hyperlink{class_i_item_a3b3b58b237d89653e493c95fe22074ff}{type}}
 \item 
-string \mbox{\hyperlink{class_i_item_a9acebb5d530d823314bb1a8f29ff974a}{desc}}
-\item 
 int \mbox{\hyperlink{class_i_item_a0b30dc1f8eee51c2b78ac71d6c7b93b7}{count}}
 \begin{DoxyCompactList}\small\item\em A count of -\/1 means the item can be used infinitely. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
@@ -78,7 +73,7 @@ int \mbox{\hyperlink{class_i_item_a0b30dc1f8eee51c2b78ac71d6c7b93b7}{count}}
 \doxysubsection{Detailed Description}
 The OP weapon of the game, the Yamato!!! 
 
-Definition at line \mbox{\hyperlink{items_8h_source_l00071}{71}} of file \mbox{\hyperlink{items_8h_source}{items.\+h}}.
+Definition at line \mbox{\hyperlink{items_8h_source_l00085}{85}} of file \mbox{\hyperlink{items_8h_source}{items.\+h}}.
 
 
 
@@ -91,16 +86,16 @@ Yamato\+::\+Yamato (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
 
 
-Definition at line \mbox{\hyperlink{items_8cpp_source_l00038}{38}} of file \mbox{\hyperlink{items_8cpp_source}{items.\+cpp}}.
+Definition at line \mbox{\hyperlink{items_8cpp_source_l00069}{69}} of file \mbox{\hyperlink{items_8cpp_source}{items.\+cpp}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00038\ :\ \mbox{\hyperlink{class_weapon_a8d9631f8c67df4646e9b06516eff0cd0}{Weapon}}(\textcolor{stringliteral}{"{}Yamato"{}},\ \textcolor{stringliteral}{"{}A\ legendary\ sword\ that\ does\ "{}}\ +\ to\_string(\mbox{\hyperlink{class_yamato_aede256ea614913e4bc9b70d8ac130568}{dmg}})\ +\ \textcolor{stringliteral}{"{}\ damage!"{}},\ -\/1,\ \mbox{\hyperlink{class_yamato_aede256ea614913e4bc9b70d8ac130568}{dmg}})\ \{\}}
+\DoxyCodeLine{00069\ :\ \mbox{\hyperlink{class_weapon_a8d9631f8c67df4646e9b06516eff0cd0}{Weapon}}(\textcolor{stringliteral}{"{}Yamato"{}},\ \textcolor{stringliteral}{"{}"{}},\ -\/1,\ 1000)\ \{\}}
 
 \end{DoxyCode}
 
 
-References \mbox{\hyperlink{items_8h_source_l00074}{dmg}}, and \mbox{\hyperlink{items_8cpp_source_l00029}{Weapon\+::\+Weapon()}}.
+References \mbox{\hyperlink{items_8cpp_source_l00055}{Weapon\+::\+Weapon()}}.
 
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -111,20 +106,31 @@ Here is the call graph for this function\+:\nopagebreak
 \end{figure}
 
 
-\doxysubsection{Member Data Documentation}
-\Hypertarget{class_yamato_aede256ea614913e4bc9b70d8ac130568}\index{Yamato@{Yamato}!dmg@{dmg}}
-\index{dmg@{dmg}!Yamato@{Yamato}}
-\doxysubsubsection{\texorpdfstring{dmg}{dmg}}
-{\footnotesize\ttfamily \label{class_yamato_aede256ea614913e4bc9b70d8ac130568} 
-const int Yamato\+::dmg = 500\hspace{0.3cm}{\ttfamily [static]}}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_yamato_a7558e285be2b509b138392969547a55a}\index{Yamato@{Yamato}!getDesc@{getDesc}}
+\index{getDesc@{getDesc}!Yamato@{Yamato}}
+\doxysubsubsection{\texorpdfstring{getDesc()}{getDesc()}}
+{\footnotesize\ttfamily \label{class_yamato_a7558e285be2b509b138392969547a55a} 
+string Yamato\+::get\+Desc (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
 
-Definition at line \mbox{\hyperlink{items_8h_source_l00074}{74}} of file \mbox{\hyperlink{items_8h_source}{items.\+h}}.
+Reimplemented from \mbox{\hyperlink{class_i_item_aa7a7455949b90aed6b2f7fcd91fead8b}{IItem}}.
 
 
 
-Referenced by \mbox{\hyperlink{items_8cpp_source_l00038}{Yamato()}}.
+Definition at line \mbox{\hyperlink{items_8cpp_source_l00070}{70}} of file \mbox{\hyperlink{items_8cpp_source}{items.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00071\ \{}
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}A\ legendary\ sword\ that\ does\ "{}}\ +\ to\_string(\mbox{\hyperlink{class_weapon_af7f5d5ecbb3ac0e95350a6750be1fb28}{dmg}})\ +\ \textcolor{stringliteral}{"{}\ damage!"{}};}
+\DoxyCodeLine{00073\ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{items_8h_source_l00071}{Weapon\+::dmg}}.
 
 
 

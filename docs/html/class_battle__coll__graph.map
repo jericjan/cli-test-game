@@ -11,6 +11,6 @@
 <area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="317,351,201,434,198,430,314,346"/>
 <area shape="rect" id="Node000006" href="$class_stats.html" title="Stats for all entities." alt="" coords="355,5,476,117"/>
 <area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="418,117,418,164,412,164,412,117"/>
-<area shape="rect" id="Node000007" href="$class_inventory.html" title="Inventory class that holds all items for the player." alt="" coords="22,200,205,349"/>
-<area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="116,349,116,415,111,415,111,349"/>
+<area shape="rect" id="Node000007" href="$class_inventory.html" title="Inventory class that holds all items for the player." alt="" coords="21,192,207,357"/>
+<area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="116,357,116,415,111,415,111,357"/>
 </map>

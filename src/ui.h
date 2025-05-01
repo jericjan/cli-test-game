@@ -17,8 +17,9 @@ public:
 /// Basically just the base class for all user interfaces that have a player
 class UIWithPlayer : public UserInterface
 {
-public:
+protected:
     Player player;
+public:
     UIWithPlayer();
     UIWithPlayer(Player player);
 };
@@ -64,12 +65,14 @@ public:
 /// The battle screen. The user can attack, use an item, or run away.
 class Battle : public UIWithPlayer
 {
-public:
+private:
     Entity enemy;
     bool didIntro;
     int rewardMoney;
     function<UserInterface *(Player)> onWin;
     function<UserInterface *(Player)> onLose;
+public:
+
     Battle(Player player, Entity enemy, int reward,
            function<UserInterface *(Player)> winCallback,
            function<UserInterface *(Player)> loseCallback);
@@ -97,15 +100,15 @@ public:
 /// The player can stay for funny dialogue.
 class FirstChoice : public UIWithPlayer
 {
-public:
+private:
     list<string> stayResps = {
         "Hello? I said get out.",
         "Come on man. I have stuff to do. Please leave.",
         "I'm gonna run out of dialogue options here. The devs didn't give me that many lines.",
         "Alright, I'm giving you the silent treatment.",
-        "..."};
-    FirstChoice(Player player);
-
+        "..."};    
+public:
+    FirstChoice(Player player); 
     UserInterface *render() override;
 };
 

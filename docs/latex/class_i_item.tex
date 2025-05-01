@@ -24,7 +24,7 @@ Collaboration diagram for IItem\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=195pt]{class_i_item__coll__graph}
+\includegraphics[width=197pt]{class_i_item__coll__graph}
 \end{center}
 \end{figure}
 \doxysubsubsection*{Public Member Functions}
@@ -33,6 +33,8 @@ Collaboration diagram for IItem\+:\nopagebreak
 \mbox{\hyperlink{class_i_item_ab1bb86846077713c5847ec035115f09c}{IItem}} (string n, string t, string d, int c)
 \item 
 virtual \mbox{\hyperlink{class_i_item_a09483bee7e3f4f382e8eeac54493620e}{\texorpdfstring{$\sim$}{\string~}\+IItem}} ()
+\item 
+virtual string \mbox{\hyperlink{class_i_item_aa7a7455949b90aed6b2f7fcd91fead8b}{get\+Desc}} ()
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
@@ -41,16 +43,19 @@ string \mbox{\hyperlink{class_i_item_a7fdf57eb313baaea887b648bc13f247a}{name}}
 \item 
 string \mbox{\hyperlink{class_i_item_a3b3b58b237d89653e493c95fe22074ff}{type}}
 \item 
-string \mbox{\hyperlink{class_i_item_a9acebb5d530d823314bb1a8f29ff974a}{desc}}
-\item 
 int \mbox{\hyperlink{class_i_item_a0b30dc1f8eee51c2b78ac71d6c7b93b7}{count}}
 \begin{DoxyCompactList}\small\item\em A count of -\/1 means the item can be used infinitely. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{class_i_item_a9acebb5d530d823314bb1a8f29ff974a}{desc}}
+\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
 Base class for all items in the game. 
 
-Definition at line \mbox{\hyperlink{items_8h_source_l00007}{7}} of file \mbox{\hyperlink{items_8h_source}{items.\+h}}.
+Definition at line \mbox{\hyperlink{items_8h_source_l00010}{10}} of file \mbox{\hyperlink{items_8h_source}{items.\+h}}.
 
 
 
@@ -63,20 +68,20 @@ IItem\+::\+IItem (\begin{DoxyParamCaption}\item[{string}]{n}{, }\item[{string}]{
 
 
 
-Definition at line \mbox{\hyperlink{items_8cpp_source_l00007}{7}} of file \mbox{\hyperlink{items_8cpp_source}{items.\+cpp}}.
+Definition at line \mbox{\hyperlink{items_8cpp_source_l00008}{8}} of file \mbox{\hyperlink{items_8cpp_source}{items.\+cpp}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00007\ :\ \mbox{\hyperlink{class_i_item_a7fdf57eb313baaea887b648bc13f247a}{name}}(n),\ \mbox{\hyperlink{class_i_item_a3b3b58b237d89653e493c95fe22074ff}{type}}(t),\ \mbox{\hyperlink{class_i_item_a9acebb5d530d823314bb1a8f29ff974a}{desc}}(d),\ \mbox{\hyperlink{class_i_item_a0b30dc1f8eee51c2b78ac71d6c7b93b7}{count}}(c)\ \{\}}
+\DoxyCodeLine{00008\ :\ \mbox{\hyperlink{class_i_item_a7fdf57eb313baaea887b648bc13f247a}{name}}(n),\ \mbox{\hyperlink{class_i_item_a3b3b58b237d89653e493c95fe22074ff}{type}}(t),\ \mbox{\hyperlink{class_i_item_a9acebb5d530d823314bb1a8f29ff974a}{desc}}(d),\ \mbox{\hyperlink{class_i_item_a0b30dc1f8eee51c2b78ac71d6c7b93b7}{count}}(c)\ \{\}}
 
 \end{DoxyCode}
 
 
-References \mbox{\hyperlink{items_8h_source_l00013}{count}}, \mbox{\hyperlink{items_8h_source_l00012}{desc}}, \mbox{\hyperlink{items_8h_source_l00010}{name}}, and \mbox{\hyperlink{items_8h_source_l00011}{type}}.
+References \mbox{\hyperlink{items_8h_source_l00017}{count}}, \mbox{\hyperlink{items_8h_source_l00013}{desc}}, \mbox{\hyperlink{items_8h_source_l00015}{name}}, and \mbox{\hyperlink{items_8h_source_l00016}{type}}.
 
 
 
-Referenced by \mbox{\hyperlink{items_8cpp_source_l00010}{IEnemy\+Item\+::\+IEnemy\+Item()}}, and \mbox{\hyperlink{items_8cpp_source_l00012}{IPlayer\+Item\+::\+IPlayer\+Item()}}.
+Referenced by \mbox{\hyperlink{items_8cpp_source_l00015}{IEnemy\+Item\+::\+IEnemy\+Item()}}, and \mbox{\hyperlink{items_8cpp_source_l00017}{IPlayer\+Item\+::\+IPlayer\+Item()}}.
 
 Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -93,6 +98,34 @@ IItem\+::\texorpdfstring{$\sim$}{\string~}\+IItem (\begin{DoxyParamCaption}{}{}\
 
 
 
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_i_item_aa7a7455949b90aed6b2f7fcd91fead8b}\index{IItem@{IItem}!getDesc@{getDesc}}
+\index{getDesc@{getDesc}!IItem@{IItem}}
+\doxysubsubsection{\texorpdfstring{getDesc()}{getDesc()}}
+{\footnotesize\ttfamily \label{class_i_item_aa7a7455949b90aed6b2f7fcd91fead8b} 
+string IItem\+::get\+Desc (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{class_cool_stick_a560f763c302e433a13338dae10c6d7d0}{Cool\+Stick}}, \mbox{\hyperlink{class_health_potion_a81b5d416cd54c9aa7c4e9d06a300acda}{Health\+Potion}}, \mbox{\hyperlink{class_strength_potion_a44d9d0a5601c9d14460b33217b9d319f}{Strength\+Potion}}, and \mbox{\hyperlink{class_yamato_a7558e285be2b509b138392969547a55a}{Yamato}}.
+
+
+
+Definition at line \mbox{\hyperlink{items_8cpp_source_l00011}{11}} of file \mbox{\hyperlink{items_8cpp_source}{items.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00011\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_i_item_a9acebb5d530d823314bb1a8f29ff974a}{desc}};}
+\DoxyCodeLine{00013\ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{items_8h_source_l00013}{desc}}.
+
+
+
 \doxysubsection{Member Data Documentation}
 \Hypertarget{class_i_item_a0b30dc1f8eee51c2b78ac71d6c7b93b7}\index{IItem@{IItem}!count@{count}}
 \index{count@{count}!IItem@{IItem}}
@@ -106,25 +139,25 @@ A count of -\/1 means the item can be used infinitely.
 
 
 
-Definition at line \mbox{\hyperlink{items_8h_source_l00013}{13}} of file \mbox{\hyperlink{items_8h_source}{items.\+h}}.
+Definition at line \mbox{\hyperlink{items_8h_source_l00017}{17}} of file \mbox{\hyperlink{items_8h_source}{items.\+h}}.
 
 
 
-Referenced by \mbox{\hyperlink{items_8cpp_source_l00007}{IItem()}}, \mbox{\hyperlink{inventory_8cpp_source_l00032}{Inventory\+::use\+Item()}}, and \mbox{\hyperlink{items_8cpp_source_l00029}{Weapon\+::\+Weapon()}}.
+Referenced by \mbox{\hyperlink{inventory_8cpp_source_l00007}{Inventory\+::add\+Item()}}, \mbox{\hyperlink{items_8cpp_source_l00008}{IItem()}}, \mbox{\hyperlink{inventory_8cpp_source_l00053}{Inventory\+::use\+Item()}}, and \mbox{\hyperlink{items_8cpp_source_l00055}{Weapon\+::\+Weapon()}}.
 
 \Hypertarget{class_i_item_a9acebb5d530d823314bb1a8f29ff974a}\index{IItem@{IItem}!desc@{desc}}
 \index{desc@{desc}!IItem@{IItem}}
 \doxysubsubsection{\texorpdfstring{desc}{desc}}
 {\footnotesize\ttfamily \label{class_i_item_a9acebb5d530d823314bb1a8f29ff974a} 
-string IItem\+::desc}
+string IItem\+::desc\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
-Definition at line \mbox{\hyperlink{items_8h_source_l00012}{12}} of file \mbox{\hyperlink{items_8h_source}{items.\+h}}.
+Definition at line \mbox{\hyperlink{items_8h_source_l00013}{13}} of file \mbox{\hyperlink{items_8h_source}{items.\+h}}.
 
 
 
-Referenced by \mbox{\hyperlink{items_8cpp_source_l00007}{IItem()}}, and \mbox{\hyperlink{items_8cpp_source_l00029}{Weapon\+::\+Weapon()}}.
+Referenced by \mbox{\hyperlink{items_8cpp_source_l00011}{get\+Desc()}}, \mbox{\hyperlink{items_8cpp_source_l00008}{IItem()}}, and \mbox{\hyperlink{items_8cpp_source_l00055}{Weapon\+::\+Weapon()}}.
 
 \Hypertarget{class_i_item_a7fdf57eb313baaea887b648bc13f247a}\index{IItem@{IItem}!name@{name}}
 \index{name@{name}!IItem@{IItem}}
@@ -134,11 +167,11 @@ string IItem\+::name}
 
 
 
-Definition at line \mbox{\hyperlink{items_8h_source_l00010}{10}} of file \mbox{\hyperlink{items_8h_source}{items.\+h}}.
+Definition at line \mbox{\hyperlink{items_8h_source_l00015}{15}} of file \mbox{\hyperlink{items_8h_source}{items.\+h}}.
 
 
 
-Referenced by \mbox{\hyperlink{inventory_8cpp_source_l00006}{Inventory\+::add\+Item()}}, \mbox{\hyperlink{items_8cpp_source_l00007}{IItem()}}, and \mbox{\hyperlink{items_8cpp_source_l00029}{Weapon\+::\+Weapon()}}.
+Referenced by \mbox{\hyperlink{inventory_8cpp_source_l00007}{Inventory\+::add\+Item()}}, \mbox{\hyperlink{shop_8cpp_source_l00030}{Shop\+::buy\+Item()}}, \mbox{\hyperlink{items_8cpp_source_l00008}{IItem()}}, and \mbox{\hyperlink{items_8cpp_source_l00055}{Weapon\+::\+Weapon()}}.
 
 \Hypertarget{class_i_item_a3b3b58b237d89653e493c95fe22074ff}\index{IItem@{IItem}!type@{type}}
 \index{type@{type}!IItem@{IItem}}
@@ -148,11 +181,11 @@ string IItem\+::type}
 
 
 
-Definition at line \mbox{\hyperlink{items_8h_source_l00011}{11}} of file \mbox{\hyperlink{items_8h_source}{items.\+h}}.
+Definition at line \mbox{\hyperlink{items_8h_source_l00016}{16}} of file \mbox{\hyperlink{items_8h_source}{items.\+h}}.
 
 
 
-Referenced by \mbox{\hyperlink{items_8cpp_source_l00007}{IItem()}}.
+Referenced by \mbox{\hyperlink{items_8cpp_source_l00008}{IItem()}}.
 
 
 

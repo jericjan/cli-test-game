@@ -116,12 +116,12 @@ $(function(){initNavTree('class_i_player_item.html',''); initResizable(true); })
 <div class="dynheader">
 Inheritance diagram for IPlayerItem:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_i_player_item__inherit__graph.svg" width="231" height="592"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_i_player_item__inherit__graph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 <div class="dynheader">
 Collaboration diagram for IPlayerItem:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_i_player_item__coll__graph.svg" width="231" height="336"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_i_player_item__coll__graph.svg" width="231" height="358"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
@@ -135,6 +135,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ab1bb86846077713c5847ec035115f09c inherit pub_methods_class_i_item"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a09483bee7e3f4f382e8eeac54493620e inherit pub_methods_class_i_item" id="r_a09483bee7e3f4f382e8eeac54493620e"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_item.html#a09483bee7e3f4f382e8eeac54493620e">~IItem</a> ()</td></tr>
 <tr class="separator:a09483bee7e3f4f382e8eeac54493620e inherit pub_methods_class_i_item"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa7a7455949b90aed6b2f7fcd91fead8b inherit pub_methods_class_i_item" id="r_aa7a7455949b90aed6b2f7fcd91fead8b"><td class="memItemLeft" align="right" valign="top">virtual string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_item.html#aa7a7455949b90aed6b2f7fcd91fead8b">getDesc</a> ()</td></tr>
+<tr class="separator:aa7a7455949b90aed6b2f7fcd91fead8b inherit pub_methods_class_i_item"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
@@ -143,8 +145,6 @@ Additional Inherited Members</h2></td></tr>
 <tr class="separator:a7fdf57eb313baaea887b648bc13f247a inherit pub_attribs_class_i_item"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3b3b58b237d89653e493c95fe22074ff inherit pub_attribs_class_i_item" id="r_a3b3b58b237d89653e493c95fe22074ff"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_item.html#a3b3b58b237d89653e493c95fe22074ff">type</a></td></tr>
 <tr class="separator:a3b3b58b237d89653e493c95fe22074ff inherit pub_attribs_class_i_item"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9acebb5d530d823314bb1a8f29ff974a inherit pub_attribs_class_i_item" id="r_a9acebb5d530d823314bb1a8f29ff974a"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_item.html#a9acebb5d530d823314bb1a8f29ff974a">desc</a></td></tr>
-<tr class="separator:a9acebb5d530d823314bb1a8f29ff974a inherit pub_attribs_class_i_item"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0b30dc1f8eee51c2b78ac71d6c7b93b7 inherit pub_attribs_class_i_item" id="r_a0b30dc1f8eee51c2b78ac71d6c7b93b7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_item.html#a0b30dc1f8eee51c2b78ac71d6c7b93b7">count</a></td></tr>
 <tr class="memdesc:a0b30dc1f8eee51c2b78ac71d6c7b93b7 inherit pub_attribs_class_i_item"><td class="mdescLeft">&#160;</td><td class="mdescRight">A count of -1 means the item can be used infinitely.  <br /></td></tr>
 <tr class="separator:a0b30dc1f8eee51c2b78ac71d6c7b93b7 inherit pub_attribs_class_i_item"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -152,7 +152,7 @@ Additional Inherited Members</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="class_player.html" title="The Player class is an Entity that has an inventory and money.">Player</a> items. The use function takes in a player only. </p>
 
-<p class="definition">Definition at line <a class="el" href="items_8h_source.html#l00028">28</a> of file <a class="el" href="items_8h_source.html">items.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="items_8h_source.html#l00032">32</a> of file <a class="el" href="items_8h_source.html">items.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="afc3002fdaacb41cd6862b2301cd279e3" name="afc3002fdaacb41cd6862b2301cd279e3"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#afc3002fdaacb41cd6862b2301cd279e3">&#9670;&#160;</a></span>IPlayerItem()</h2>
@@ -183,13 +183,13 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="items_8cpp_source.html#l00012">12</a> of file <a class="el" href="items_8cpp_source.html">items.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   12</span>: <a class="code hl_function" href="class_i_item.html#ab1bb86846077713c5847ec035115f09c">IItem</a>(n, t, d, c) {}</div>
-<div class="ttc" id="aclass_i_item_html_ab1bb86846077713c5847ec035115f09c"><div class="ttname"><a href="class_i_item.html#ab1bb86846077713c5847ec035115f09c">IItem::IItem</a></div><div class="ttdeci">IItem(string n, string t, string d, int c)</div><div class="ttdef"><b>Definition</b> <a href="items_8cpp_source.html#l00007">items.cpp:7</a></div></div>
+<p class="definition">Definition at line <a class="el" href="items_8cpp_source.html#l00017">17</a> of file <a class="el" href="items_8cpp_source.html">items.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   17</span>: <a class="code hl_function" href="class_i_item.html#ab1bb86846077713c5847ec035115f09c">IItem</a>(n, t, d, c) {}</div>
+<div class="ttc" id="aclass_i_item_html_ab1bb86846077713c5847ec035115f09c"><div class="ttname"><a href="class_i_item.html#ab1bb86846077713c5847ec035115f09c">IItem::IItem</a></div><div class="ttdeci">IItem(string n, string t, string d, int c)</div><div class="ttdef"><b>Definition</b> <a href="items_8cpp_source.html#l00008">items.cpp:8</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="items_8cpp_source.html#l00007">IItem::IItem()</a>.</p>
+<p class="reference">References <a class="el" href="items_8cpp_source.html#l00008">IItem::IItem()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="items_8cpp_source.html#l00014">IPotion::IPotion()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="items_8cpp_source.html#l00019">IPotion::IPotion()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -198,7 +198,7 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_i_player_item_afc3002fdaacb41cd6862b2301cd279e3_icgraph.svg" width="562" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_i_player_item_afc3002fdaacb41cd6862b2301cd279e3_icgraph.svg" width="583" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -227,7 +227,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="class_health_potion.html#acd72ba2a1a6dc046c5d60920c4e297fc">HealthPotion</a>.</p>
+<p>Implemented in <a class="el" href="class_health_potion.html#acd72ba2a1a6dc046c5d60920c4e297fc">HealthPotion</a>, and <a class="el" href="class_strength_potion.html#ade578d9d7d7fa2152c3adaec3d302427">StrengthPotion</a>.</p>
 
 </div>
 </div>

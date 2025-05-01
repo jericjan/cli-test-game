@@ -12,11 +12,14 @@ var hierarchy =
       ] ],
       [ "IPlayerItem", "class_i_player_item.html", [
         [ "IPotion", "class_i_potion.html", [
-          [ "HealthPotion", "class_health_potion.html", null ]
+          [ "HealthPotion", "class_health_potion.html", null ],
+          [ "StrengthPotion", "class_strength_potion.html", null ]
         ] ]
       ] ]
     ] ],
     [ "Inventory", "class_inventory.html", null ],
+    [ "Shop", "class_shop.html", null ],
+    [ "ShopItem", "class_shop_item.html", null ],
     [ "Stats", "class_stats.html", null ],
     [ "UIHandler", "class_u_i_handler.html", null ],
     [ "UserInterface", "class_user_interface.html", [
@@ -29,7 +32,8 @@ var hierarchy =
         [ "IntroDialogue", "class_intro_dialogue.html", null ],
         [ "JovialAftermath", "class_jovial_aftermath.html", null ],
         [ "JovialCutscene", "class_jovial_cutscene.html", null ],
-        [ "MainMenu", "class_main_menu.html", null ]
+        [ "MainMenu", "class_main_menu.html", null ],
+        [ "ShopMenu", "class_shop_menu.html", null ]
       ] ]
     ] ]
 ];

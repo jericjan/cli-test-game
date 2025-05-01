@@ -1,0 +1,53 @@
+\doxysection{shop.\+cpp}
+\hypertarget{shop_8cpp_source}{}\label{shop_8cpp_source}\index{src/shop.cpp@{src/shop.cpp}}
+\mbox{\hyperlink{shop_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{shop_8cpp_source_l00001}00001\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{shop_8h}{shop.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{shop_8cpp_source_l00002}00002\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{extras_8h}{extras.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{shop_8cpp_source_l00003}00003\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{\Hypertarget{shop_8cpp_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{shop_8cpp_source_l00005}\mbox{\hyperlink{class_shop_item_a942932b5b420ab055d6f3ab95eb90c1f}{00005}}\ \mbox{\hyperlink{class_shop_item_a942932b5b420ab055d6f3ab95eb90c1f}{ShopItem::ShopItem}}(\mbox{\hyperlink{class_i_item}{IItem}}\ *\mbox{\hyperlink{class_shop_item_ab2822bb6662cae38cf4cfa4bc842a07d}{item}},\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_shop_item_aa0112a46da1cf213541d4221e352a5e8}{price}})\ :\ \mbox{\hyperlink{class_shop_item_ab2822bb6662cae38cf4cfa4bc842a07d}{item}}(\mbox{\hyperlink{class_shop_item_ab2822bb6662cae38cf4cfa4bc842a07d}{item}}),\ \mbox{\hyperlink{class_shop_item_aa0112a46da1cf213541d4221e352a5e8}{price}}(\mbox{\hyperlink{class_shop_item_aa0112a46da1cf213541d4221e352a5e8}{price}})\ \{\}}
+\DoxyCodeLine{\Hypertarget{shop_8cpp_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{shop_8cpp_source_l00007}\mbox{\hyperlink{class_shop_a562501e5746bdef39699bc39203f8973}{00007}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_shop_a562501e5746bdef39699bc39203f8973}{Shop::addItem}}(\mbox{\hyperlink{class_i_item}{IItem}}\ *item,\ \textcolor{keywordtype}{int}\ price)\ \{}
+\DoxyCodeLine{\Hypertarget{shop_8cpp_source_l00008}00008\ \ \ \ \ \mbox{\hyperlink{class_shop_a2e7691d6eaa6339b5416981538c656fc}{items}}.push\_back(\mbox{\hyperlink{class_shop_item}{ShopItem}}(item,\ price));}
+\DoxyCodeLine{\Hypertarget{shop_8cpp_source_l00009}00009\ \}}
+\DoxyCodeLine{\Hypertarget{shop_8cpp_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{shop_8cpp_source_l00011}\mbox{\hyperlink{class_shop_a8d58df2e5b4a8449ab937724c4e96e61}{00011}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_shop_a8d58df2e5b4a8449ab937724c4e96e61}{Shop::removeItem}}(\textcolor{keywordtype}{int}\ idx)\ \{}
+\DoxyCodeLine{\Hypertarget{shop_8cpp_source_l00012}00012\ \ \ \ \ idx\ -\/=\ 1;}
+\DoxyCodeLine{\Hypertarget{shop_8cpp_source_l00013}00013\ \ \ \ \ \textcolor{keywordflow}{if}\ (idx\ <\ 0\ ||\ idx\ >=\ \mbox{\hyperlink{class_shop_a2e7691d6eaa6339b5416981538c656fc}{items}}.size())\ \{}
+\DoxyCodeLine{\Hypertarget{shop_8cpp_source_l00014}00014\ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Invalid\ item\ index."{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{shop_8cpp_source_l00015}00015\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{shop_8cpp_source_l00016}00016\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{shop_8cpp_source_l00017}00017\ \ \ \ \ \mbox{\hyperlink{class_shop_a2e7691d6eaa6339b5416981538c656fc}{items}}.erase(\mbox{\hyperlink{class_shop_a2e7691d6eaa6339b5416981538c656fc}{items}}.begin()\ +\ idx);}
+\DoxyCodeLine{\Hypertarget{shop_8cpp_source_l00018}00018\ \}}
+\DoxyCodeLine{\Hypertarget{shop_8cpp_source_l00019}\mbox{\hyperlink{class_shop_ac213488671e8d976d97c3530e691fd44}{00019}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_shop_ac213488671e8d976d97c3530e691fd44}{Shop::listItems}}(\mbox{\hyperlink{class_player}{Player}}\ \&player)\ \{\ \ \ \ }
+\DoxyCodeLine{\Hypertarget{shop_8cpp_source_l00020}00020\ \ \ \ \ \textcolor{keywordtype}{int}\ idx\ =\ 1;}
+\DoxyCodeLine{\Hypertarget{shop_8cpp_source_l00021}00021\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Money:\ "{}}\ <<\ player.\mbox{\hyperlink{class_player_a9545beef70350d5c3b3a5719a890dd2f}{money}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{shop_8cpp_source_l00022}00022\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}[0]\ Leave"{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{shop_8cpp_source_l00023}00023\ \ \ \ \ \textcolor{keywordflow}{for}\ (\mbox{\hyperlink{class_shop_item}{ShopItem}}\ \&shopItem\ :\ \mbox{\hyperlink{class_shop_a2e7691d6eaa6339b5416981538c656fc}{items}})\ \{}
+\DoxyCodeLine{\Hypertarget{shop_8cpp_source_l00024}00024\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{extras_8h_ab87bacfdad76e61b9412d7124be44c1c}{Color}}\ textColor\ =\ (player.\mbox{\hyperlink{class_player_a9545beef70350d5c3b3a5719a890dd2f}{money}}\ <\ shopItem.price)\ ?\ \mbox{\hyperlink{extras_8h_ab87bacfdad76e61b9412d7124be44c1caf80f9a890089d211842d59625e561f88}{RED}}\ :\ \mbox{\hyperlink{extras_8h_ab87bacfdad76e61b9412d7124be44c1caa60bd322f93178d68184e30e162571ca}{GREEN}};}
+\DoxyCodeLine{\Hypertarget{shop_8cpp_source_l00025}00025\ \ \ \ \ \ \ \ \ cout\ <<\ \mbox{\hyperlink{extras_8cpp_a99d2755bf0660601280710515b3f512c}{colorizeText}}(\textcolor{stringliteral}{"{}["{}}\ +\ to\_string(idx)\ +\ \textcolor{stringliteral}{"{}]\ "{}}\ +\ shopItem.item-\/>name\ +\ \textcolor{stringliteral}{"{}\ [Cost:\ "{}}\ +\ to\_string(shopItem.price)\ +\ \textcolor{stringliteral}{"{}]"{}},\ textColor)\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{shop_8cpp_source_l00026}00026\ \ \ \ \ \ \ \ \ idx\ +=\ 1;}
+\DoxyCodeLine{\Hypertarget{shop_8cpp_source_l00027}00027\ \ \ \ \ \ \ \}\ \ \ \ }
+\DoxyCodeLine{\Hypertarget{shop_8cpp_source_l00028}00028\ \}}
+\DoxyCodeLine{\Hypertarget{shop_8cpp_source_l00029}00029\ }
+\DoxyCodeLine{\Hypertarget{shop_8cpp_source_l00030}\mbox{\hyperlink{class_shop_a6c1a27422ecdd1a5248f156f1355632b}{00030}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_shop_a6c1a27422ecdd1a5248f156f1355632b}{Shop::buyItem}}(\mbox{\hyperlink{class_player}{Player}}\ \&player,\ \textcolor{keywordtype}{int}\ idx)\ \{}
+\DoxyCodeLine{\Hypertarget{shop_8cpp_source_l00031}00031\ \ \ \ \ idx\ -\/=\ 1;}
+\DoxyCodeLine{\Hypertarget{shop_8cpp_source_l00032}00032\ \ \ \ \ \textcolor{keywordflow}{if}\ (idx\ <\ 0\ ||\ idx\ >=\ \mbox{\hyperlink{class_shop_a2e7691d6eaa6339b5416981538c656fc}{items}}.size())\ \{}
+\DoxyCodeLine{\Hypertarget{shop_8cpp_source_l00033}00033\ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Invalid\ item\ index."{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{shop_8cpp_source_l00034}00034\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{shop_8cpp_source_l00035}00035\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{shop_8cpp_source_l00036}00036\ \ \ \ \ \mbox{\hyperlink{class_shop_item}{ShopItem}}\ \&shopItem\ =\ \mbox{\hyperlink{class_shop_a2e7691d6eaa6339b5416981538c656fc}{items}}[idx];}
+\DoxyCodeLine{\Hypertarget{shop_8cpp_source_l00037}00037\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{shop_8cpp_source_l00038}00038\ \ \ \ \ \textcolor{keywordflow}{if}\ (player.\mbox{\hyperlink{class_player_a9545beef70350d5c3b3a5719a890dd2f}{money}}\ <\ shopItem.\mbox{\hyperlink{class_shop_item_aa0112a46da1cf213541d4221e352a5e8}{price}})\ \{}
+\DoxyCodeLine{\Hypertarget{shop_8cpp_source_l00039}00039\ \ \ \ \ \ \ \ \ cout\ <<\ \mbox{\hyperlink{extras_8cpp_a99d2755bf0660601280710515b3f512c}{colorizeText}}(\textcolor{stringliteral}{"{}You\ don't\ have\ enough\ money!"{}},\ \mbox{\hyperlink{extras_8h_ab87bacfdad76e61b9412d7124be44c1caf80f9a890089d211842d59625e561f88}{RED}})\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{shop_8cpp_source_l00040}00040\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{shop_8cpp_source_l00041}00041\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{shop_8cpp_source_l00042}00042\ }
+\DoxyCodeLine{\Hypertarget{shop_8cpp_source_l00043}00043\ \ \ \ \ player.\mbox{\hyperlink{class_player_a86ad66429e7bf8ef4640bac1d0f3476f}{addMoney}}(-\/shopItem.\mbox{\hyperlink{class_shop_item_aa0112a46da1cf213541d4221e352a5e8}{price}});\ \ \ \ }
+\DoxyCodeLine{\Hypertarget{shop_8cpp_source_l00044}00044\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}You\ bought\ a\ "{}}\ <<\ shopItem.\mbox{\hyperlink{class_shop_item_ab2822bb6662cae38cf4cfa4bc842a07d}{item}}-\/>\mbox{\hyperlink{class_i_item_a7fdf57eb313baaea887b648bc13f247a}{name}}\ <<\ \textcolor{stringliteral}{"{}!"{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{shop_8cpp_source_l00045}00045\ \ \ \ \ player.\mbox{\hyperlink{class_player_ab8d436b5727749f7be05ffdf744d1041}{inventory}}.\mbox{\hyperlink{class_inventory_a7a3d5b1157d8212186746eade80b5630}{addItem}}(shopItem.\mbox{\hyperlink{class_shop_item_ab2822bb6662cae38cf4cfa4bc842a07d}{item}},\ \textcolor{keyword}{false});}
+\DoxyCodeLine{\Hypertarget{shop_8cpp_source_l00046}00046\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{shop_8cpp_source_l00047}00047\ \}}
+
+\end{DoxyCode}

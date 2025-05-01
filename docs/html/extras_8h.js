@@ -12,6 +12,6 @@ var extras_8h =
     [ "colorizeText", "extras_8h.html#a99d2755bf0660601280710515b3f512c", null ],
     [ "inputNum", "extras_8h.html#a3816c0b1714f3be0c6c8a394a4faee7d", null ],
     [ "padTo", "extras_8h.html#a5bd86794bcc36495cba6025a9bd99695", null ],
-    [ "printAnimate", "extras_8h.html#a3159a27b600ac27d3822fdb4407e62a4", null ],
+    [ "printAnimate", "extras_8h.html#a313eff96265a2ad32cc582d613dc4e1f", null ],
     [ "sleepMS", "extras_8h.html#aea0e34fe8a665ef6cb1fd6526ce1deb0", null ]
 ];

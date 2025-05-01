@@ -1,4 +1,4 @@
-#include <iostream>
+    #include <iostream>
 #include <vector>
 #include "extras.h"
 #include "ui.h"
@@ -12,9 +12,9 @@ using namespace std;
 /// Ends when the current UI is a GameOver screen or when UserInterface#quitGame is set to true.
 class UIHandler
 {
-public:
+private:    
     UserInterface *currUI;
-
+public:    
     UIHandler(UserInterface *x) : currUI(x) {}
 
     void start()

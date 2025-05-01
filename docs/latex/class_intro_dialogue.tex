@@ -60,7 +60,7 @@ bool \mbox{\hyperlink{class_user_interface_aa95ee5089a1de7ad211fb3a1bb786e11}{qu
 \doxysubsection{Detailed Description}
 The intro dialogue. The player can choose their name and get a cool stick. 
 
-Definition at line \mbox{\hyperlink{ui_8h_source_l00105}{105}} of file \mbox{\hyperlink{ui_8h_source}{ui.\+h}}.
+Definition at line \mbox{\hyperlink{ui_8h_source_l00113}{113}} of file \mbox{\hyperlink{ui_8h_source}{ui.\+h}}.
 
 
 
@@ -77,31 +77,31 @@ Implements \mbox{\hyperlink{class_user_interface_a6c4e70754407cdc9ed66986dcea60e
 
 
 
-Definition at line \mbox{\hyperlink{ui_8cpp_source_l00294}{294}} of file \mbox{\hyperlink{ui_8cpp_source}{ui.\+cpp}}.
+Definition at line \mbox{\hyperlink{ui_8cpp_source_l00339}{339}} of file \mbox{\hyperlink{ui_8cpp_source}{ui.\+cpp}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00295\ \{}
-\DoxyCodeLine{00296\ \ \ \ \ \mbox{\hyperlink{extras_8cpp_aff1ce18cf1cd562e54189df70cee6299}{printAnimate}}(\textcolor{stringliteral}{"{}Woah!\ Didn't\ see\ you\ there.\ Who\ might\ you\ be?\(\backslash\)n>\ "{}});}
-\DoxyCodeLine{00297\ \ \ \ \ \textcolor{keywordtype}{string}\ userInput;}
-\DoxyCodeLine{00298\ \ \ \ \ getline(cin\ >>\ ws,\ userInput);}
-\DoxyCodeLine{00299\ \ \ \ \ \mbox{\hyperlink{class_u_i_with_player_a480502a8db864e1ec92eb19f87a35083}{player}}\ =\ Player(1000,\ userInput,\ 50,\ 50,\ 0);}
-\DoxyCodeLine{00300\ \ \ \ \ \mbox{\hyperlink{extras_8cpp_aff1ce18cf1cd562e54189df70cee6299}{printAnimate}}(\textcolor{stringliteral}{"{}Hello\ there\ "{}}\ +\ \mbox{\hyperlink{class_u_i_with_player_a480502a8db864e1ec92eb19f87a35083}{player}}.name\ +\ \textcolor{stringliteral}{"{}!\(\backslash\)n"{}}\ +}
-\DoxyCodeLine{00301\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}You\ are\ about\ to\ embark\ on\ a\ heroic\ journey\ of...\ something.\ I\ don't\ know.\ Go\ out\ there\ man.\ Go\ nuts.\(\backslash\)n"{}}\ +\ \textcolor{stringliteral}{"{}Me?\ You\ don't\ need\ to\ know\ who\ I\ am.\ Ooh,\ I'll\ give\ you\ this\ cool\ stick\ I\ found!\(\backslash\)n"{}});}
-\DoxyCodeLine{00302\ }
-\DoxyCodeLine{00303\ \ \ \ \ CoolStick\ *stick\ =\ \textcolor{keyword}{new}\ CoolStick();}
-\DoxyCodeLine{00304\ \ \ \ \ \mbox{\hyperlink{class_u_i_with_player_a480502a8db864e1ec92eb19f87a35083}{player}}.inventory.addItem(stick);}
-\DoxyCodeLine{00305\ }
-\DoxyCodeLine{00306\ \ \ \ \ \mbox{\hyperlink{extras_8cpp_aff1ce18cf1cd562e54189df70cee6299}{printAnimate}}(\textcolor{keywordtype}{string}(\textcolor{stringliteral}{"{}This\ will\ give\ you\ some\ extra\ damage\ in\ your\ battles.\ I\ should\ probably\ explain\ how\ that\ works.\(\backslash\)n"{}})\ +}
-\DoxyCodeLine{00307\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}In\ a\ battle,\ you\ can\ either:\ punch,\ use\ an\ item\ from\ your\ inventory,\ or\ run.\ I'm\ sure\ you're\ familiar\ with\ this\ formula.\(\backslash\)n"{}}\ +}
-\DoxyCodeLine{00308\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Alright,\ that's\ all\ from\ me.\ Get\ outta\ here.\(\backslash\)n"{}});}
-\DoxyCodeLine{00309\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ FirstChoice(\mbox{\hyperlink{class_u_i_with_player_a480502a8db864e1ec92eb19f87a35083}{player}});}
-\DoxyCodeLine{00310\ \}}
+\DoxyCodeLine{00340\ \{}
+\DoxyCodeLine{00341\ \ \ \ \ \mbox{\hyperlink{extras_8cpp_a251383c9dea6cb260fb6f9ebb010139f}{printAnimate}}(\textcolor{stringliteral}{"{}Woah!\ Didn't\ see\ you\ there.\ Who\ might\ you\ be?\(\backslash\)n>\ "{}});}
+\DoxyCodeLine{00342\ \ \ \ \ \textcolor{keywordtype}{string}\ userInput;}
+\DoxyCodeLine{00343\ \ \ \ \ getline(cin\ >>\ ws,\ userInput);}
+\DoxyCodeLine{00344\ \ \ \ \ \mbox{\hyperlink{class_u_i_with_player_a480502a8db864e1ec92eb19f87a35083}{player}}\ =\ Player(1000,\ userInput,\ 50,\ 50,\ 0);}
+\DoxyCodeLine{00345\ \ \ \ \ \mbox{\hyperlink{extras_8cpp_a251383c9dea6cb260fb6f9ebb010139f}{printAnimate}}(\textcolor{stringliteral}{"{}Hello\ there\ "{}}\ +\ \mbox{\hyperlink{class_u_i_with_player_a480502a8db864e1ec92eb19f87a35083}{player}}.name\ +\ \textcolor{stringliteral}{"{}!\(\backslash\)n"{}}\ +}
+\DoxyCodeLine{00346\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}You\ are\ about\ to\ embark\ on\ a\ heroic\ journey\ of...\ something.\ I\ don't\ know.\ Go\ out\ there\ man.\ Go\ nuts.\(\backslash\)n"{}}\ +\ \textcolor{stringliteral}{"{}Me?\ You\ don't\ need\ to\ know\ who\ I\ am.\ Ooh,\ I'll\ give\ you\ this\ cool\ stick\ I\ found!\(\backslash\)n"{}});}
+\DoxyCodeLine{00347\ }
+\DoxyCodeLine{00348\ \ \ \ \ CoolStick\ *stick\ =\ \textcolor{keyword}{new}\ CoolStick();}
+\DoxyCodeLine{00349\ \ \ \ \ \mbox{\hyperlink{class_u_i_with_player_a480502a8db864e1ec92eb19f87a35083}{player}}.inventory.addItem(stick);}
+\DoxyCodeLine{00350\ }
+\DoxyCodeLine{00351\ \ \ \ \ \mbox{\hyperlink{extras_8cpp_a251383c9dea6cb260fb6f9ebb010139f}{printAnimate}}(\textcolor{keywordtype}{string}(\textcolor{stringliteral}{"{}This\ will\ give\ you\ some\ extra\ damage\ in\ your\ battles.\ I\ should\ probably\ explain\ how\ that\ works.\(\backslash\)n"{}})\ +}
+\DoxyCodeLine{00352\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}In\ a\ battle,\ you\ can\ either:\ punch,\ use\ an\ item\ from\ your\ inventory,\ or\ run.\ I'm\ sure\ you're\ familiar\ with\ this\ formula.\(\backslash\)n"{}}\ +}
+\DoxyCodeLine{00353\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Alright,\ that's\ all\ from\ me.\ Get\ outta\ here.\(\backslash\)n"{}});}
+\DoxyCodeLine{00354\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ FirstChoice(\mbox{\hyperlink{class_u_i_with_player_a480502a8db864e1ec92eb19f87a35083}{player}});}
+\DoxyCodeLine{00355\ \}}
 
 \end{DoxyCode}
 
 
-References \mbox{\hyperlink{ui_8h_source_l00021}{UIWith\+Player\+::player}}, and \mbox{\hyperlink{extras_8cpp_source_l00041}{print\+Animate()}}.
+References \mbox{\hyperlink{ui_8h_source_l00021}{UIWith\+Player\+::player}}, and \mbox{\hyperlink{extras_8cpp_source_l00042}{print\+Animate()}}.
 
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]

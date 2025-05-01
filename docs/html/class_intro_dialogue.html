@@ -149,7 +149,7 @@ Additional Inherited Members</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>The intro dialogue. The player can choose their name and get a cool stick. </p>
 
-<p class="definition">Definition at line <a class="el" href="ui_8h_source.html#l00105">105</a> of file <a class="el" href="ui_8h_source.html">ui.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ui_8h_source.html#l00113">113</a> of file <a class="el" href="ui_8h_source.html">ui.h</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a6ee887834eaf65af351062e70561d261" name="a6ee887834eaf65af351062e70561d261"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6ee887834eaf65af351062e70561d261">&#9670;&#160;</a></span>render()</h2>
@@ -176,27 +176,27 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="class_user_interface.html#a6c4e70754407cdc9ed66986dcea60ece">UserInterface</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="ui_8cpp_source.html#l00294">294</a> of file <a class="el" href="ui_8cpp_source.html">ui.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  295</span>{</div>
-<div class="line"><span class="lineno">  296</span>    <a class="code hl_function" href="extras_8cpp.html#aff1ce18cf1cd562e54189df70cee6299">printAnimate</a>(<span class="stringliteral">&quot;Woah! Didn&#39;t see you there. Who might you be?\n&gt; &quot;</span>);</div>
-<div class="line"><span class="lineno">  297</span>    <span class="keywordtype">string</span> userInput;</div>
-<div class="line"><span class="lineno">  298</span>    getline(cin &gt;&gt; ws, userInput);</div>
-<div class="line"><span class="lineno">  299</span>    <a class="code hl_variable" href="class_u_i_with_player.html#a480502a8db864e1ec92eb19f87a35083">player</a> = Player(1000, userInput, 50, 50, 0);</div>
-<div class="line"><span class="lineno">  300</span>    <a class="code hl_function" href="extras_8cpp.html#aff1ce18cf1cd562e54189df70cee6299">printAnimate</a>(<span class="stringliteral">&quot;Hello there &quot;</span> + <a class="code hl_variable" href="class_u_i_with_player.html#a480502a8db864e1ec92eb19f87a35083">player</a>.name + <span class="stringliteral">&quot;!\n&quot;</span> +</div>
-<div class="line"><span class="lineno">  301</span>                 <span class="stringliteral">&quot;You are about to embark on a heroic journey of... something. I don&#39;t know. Go out there man. Go nuts.\n&quot;</span> + <span class="stringliteral">&quot;Me? You don&#39;t need to know who I am. Ooh, I&#39;ll give you this cool stick I found!\n&quot;</span>);</div>
-<div class="line"><span class="lineno">  302</span> </div>
-<div class="line"><span class="lineno">  303</span>    CoolStick *stick = <span class="keyword">new</span> CoolStick();</div>
-<div class="line"><span class="lineno">  304</span>    <a class="code hl_variable" href="class_u_i_with_player.html#a480502a8db864e1ec92eb19f87a35083">player</a>.inventory.addItem(stick);</div>
-<div class="line"><span class="lineno">  305</span> </div>
-<div class="line"><span class="lineno">  306</span>    <a class="code hl_function" href="extras_8cpp.html#aff1ce18cf1cd562e54189df70cee6299">printAnimate</a>(<span class="keywordtype">string</span>(<span class="stringliteral">&quot;This will give you some extra damage in your battles. I should probably explain how that works.\n&quot;</span>) +</div>
-<div class="line"><span class="lineno">  307</span>                 <span class="stringliteral">&quot;In a battle, you can either: punch, use an item from your inventory, or run. I&#39;m sure you&#39;re familiar with this formula.\n&quot;</span> +</div>
-<div class="line"><span class="lineno">  308</span>                 <span class="stringliteral">&quot;Alright, that&#39;s all from me. Get outta here.\n&quot;</span>);</div>
-<div class="line"><span class="lineno">  309</span>    <span class="keywordflow">return</span> <span class="keyword">new</span> FirstChoice(<a class="code hl_variable" href="class_u_i_with_player.html#a480502a8db864e1ec92eb19f87a35083">player</a>);</div>
-<div class="line"><span class="lineno">  310</span>}</div>
+<p class="definition">Definition at line <a class="el" href="ui_8cpp_source.html#l00339">339</a> of file <a class="el" href="ui_8cpp_source.html">ui.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  340</span>{</div>
+<div class="line"><span class="lineno">  341</span>    <a class="code hl_function" href="extras_8cpp.html#a251383c9dea6cb260fb6f9ebb010139f">printAnimate</a>(<span class="stringliteral">&quot;Woah! Didn&#39;t see you there. Who might you be?\n&gt; &quot;</span>);</div>
+<div class="line"><span class="lineno">  342</span>    <span class="keywordtype">string</span> userInput;</div>
+<div class="line"><span class="lineno">  343</span>    getline(cin &gt;&gt; ws, userInput);</div>
+<div class="line"><span class="lineno">  344</span>    <a class="code hl_variable" href="class_u_i_with_player.html#a480502a8db864e1ec92eb19f87a35083">player</a> = Player(1000, userInput, 50, 50, 0);</div>
+<div class="line"><span class="lineno">  345</span>    <a class="code hl_function" href="extras_8cpp.html#a251383c9dea6cb260fb6f9ebb010139f">printAnimate</a>(<span class="stringliteral">&quot;Hello there &quot;</span> + <a class="code hl_variable" href="class_u_i_with_player.html#a480502a8db864e1ec92eb19f87a35083">player</a>.name + <span class="stringliteral">&quot;!\n&quot;</span> +</div>
+<div class="line"><span class="lineno">  346</span>                 <span class="stringliteral">&quot;You are about to embark on a heroic journey of... something. I don&#39;t know. Go out there man. Go nuts.\n&quot;</span> + <span class="stringliteral">&quot;Me? You don&#39;t need to know who I am. Ooh, I&#39;ll give you this cool stick I found!\n&quot;</span>);</div>
+<div class="line"><span class="lineno">  347</span> </div>
+<div class="line"><span class="lineno">  348</span>    CoolStick *stick = <span class="keyword">new</span> CoolStick();</div>
+<div class="line"><span class="lineno">  349</span>    <a class="code hl_variable" href="class_u_i_with_player.html#a480502a8db864e1ec92eb19f87a35083">player</a>.inventory.addItem(stick);</div>
+<div class="line"><span class="lineno">  350</span> </div>
+<div class="line"><span class="lineno">  351</span>    <a class="code hl_function" href="extras_8cpp.html#a251383c9dea6cb260fb6f9ebb010139f">printAnimate</a>(<span class="keywordtype">string</span>(<span class="stringliteral">&quot;This will give you some extra damage in your battles. I should probably explain how that works.\n&quot;</span>) +</div>
+<div class="line"><span class="lineno">  352</span>                 <span class="stringliteral">&quot;In a battle, you can either: punch, use an item from your inventory, or run. I&#39;m sure you&#39;re familiar with this formula.\n&quot;</span> +</div>
+<div class="line"><span class="lineno">  353</span>                 <span class="stringliteral">&quot;Alright, that&#39;s all from me. Get outta here.\n&quot;</span>);</div>
+<div class="line"><span class="lineno">  354</span>    <span class="keywordflow">return</span> <span class="keyword">new</span> FirstChoice(<a class="code hl_variable" href="class_u_i_with_player.html#a480502a8db864e1ec92eb19f87a35083">player</a>);</div>
+<div class="line"><span class="lineno">  355</span>}</div>
 <div class="ttc" id="aclass_u_i_with_player_html_a480502a8db864e1ec92eb19f87a35083"><div class="ttname"><a href="class_u_i_with_player.html#a480502a8db864e1ec92eb19f87a35083">UIWithPlayer::player</a></div><div class="ttdeci">Player player</div><div class="ttdef"><b>Definition</b> <a href="ui_8h_source.html#l00021">ui.h:21</a></div></div>
-<div class="ttc" id="aextras_8cpp_html_aff1ce18cf1cd562e54189df70cee6299"><div class="ttname"><a href="extras_8cpp.html#aff1ce18cf1cd562e54189df70cee6299">printAnimate</a></div><div class="ttdeci">void printAnimate(string msg, int delay)</div><div class="ttdoc">Outputs a text character by character with a given delay.</div><div class="ttdef"><b>Definition</b> <a href="extras_8cpp_source.html#l00041">extras.cpp:41</a></div></div>
+<div class="ttc" id="aextras_8cpp_html_a251383c9dea6cb260fb6f9ebb010139f"><div class="ttname"><a href="extras_8cpp.html#a251383c9dea6cb260fb6f9ebb010139f">printAnimate</a></div><div class="ttdeci">void printAnimate(string msg, int delay, bool animate)</div><div class="ttdoc">Outputs a text character by character with a given delay.</div><div class="ttdef"><b>Definition</b> <a href="extras_8cpp_source.html#l00042">extras.cpp:42</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="ui_8h_source.html#l00021">UIWithPlayer::player</a>, and <a class="el" href="extras_8cpp_source.html#l00041">printAnimate()</a>.</p>
+<p class="reference">References <a class="el" href="ui_8h_source.html#l00021">UIWithPlayer::player</a>, and <a class="el" href="extras_8cpp_source.html#l00042">printAnimate()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">

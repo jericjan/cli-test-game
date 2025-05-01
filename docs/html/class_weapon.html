@@ -122,7 +122,7 @@ Inheritance diagram for Weapon:</div>
 <div class="dynheader">
 Collaboration diagram for Weapon:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_weapon__coll__graph.svg" width="216" height="523"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_weapon__coll__graph.svg" width="216" height="544"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
@@ -139,6 +139,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ab1bb86846077713c5847ec035115f09c inherit pub_methods_class_i_item"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a09483bee7e3f4f382e8eeac54493620e inherit pub_methods_class_i_item" id="r_a09483bee7e3f4f382e8eeac54493620e"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_item.html#a09483bee7e3f4f382e8eeac54493620e">~IItem</a> ()</td></tr>
 <tr class="separator:a09483bee7e3f4f382e8eeac54493620e inherit pub_methods_class_i_item"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa7a7455949b90aed6b2f7fcd91fead8b inherit pub_methods_class_i_item" id="r_aa7a7455949b90aed6b2f7fcd91fead8b"><td class="memItemLeft" align="right" valign="top">virtual string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_item.html#aa7a7455949b90aed6b2f7fcd91fead8b">getDesc</a> ()</td></tr>
+<tr class="separator:aa7a7455949b90aed6b2f7fcd91fead8b inherit pub_methods_class_i_item"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -149,8 +151,6 @@ Public Attributes</h2></td></tr>
 <tr class="separator:a7fdf57eb313baaea887b648bc13f247a inherit pub_attribs_class_i_item"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3b3b58b237d89653e493c95fe22074ff inherit pub_attribs_class_i_item" id="r_a3b3b58b237d89653e493c95fe22074ff"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_item.html#a3b3b58b237d89653e493c95fe22074ff">type</a></td></tr>
 <tr class="separator:a3b3b58b237d89653e493c95fe22074ff inherit pub_attribs_class_i_item"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9acebb5d530d823314bb1a8f29ff974a inherit pub_attribs_class_i_item" id="r_a9acebb5d530d823314bb1a8f29ff974a"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_item.html#a9acebb5d530d823314bb1a8f29ff974a">desc</a></td></tr>
-<tr class="separator:a9acebb5d530d823314bb1a8f29ff974a inherit pub_attribs_class_i_item"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0b30dc1f8eee51c2b78ac71d6c7b93b7 inherit pub_attribs_class_i_item" id="r_a0b30dc1f8eee51c2b78ac71d6c7b93b7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_item.html#a0b30dc1f8eee51c2b78ac71d6c7b93b7">count</a></td></tr>
 <tr class="memdesc:a0b30dc1f8eee51c2b78ac71d6c7b93b7 inherit pub_attribs_class_i_item"><td class="mdescLeft">&#160;</td><td class="mdescRight">A count of -1 means the item can be used infinitely.  <br /></td></tr>
 <tr class="separator:a0b30dc1f8eee51c2b78ac71d6c7b93b7 inherit pub_attribs_class_i_item"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -159,7 +159,7 @@ Public Attributes</h2></td></tr>
 <div class="textblock"><p>Weapons set the type to "Weapon" and implement the use function cuz all weapons attack lmao. </p>
 <p>Derived classes only need to set the <code>name</code>, <code>desc</code>, and <code>dmg</code> in the constructor </p>
 
-<p class="definition">Definition at line <a class="el" href="items_8h_source.html#l00054">54</a> of file <a class="el" href="items_8h_source.html">items.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="items_8h_source.html#l00068">68</a> of file <a class="el" href="items_8h_source.html">items.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a8d9631f8c67df4646e9b06516eff0cd0" name="a8d9631f8c67df4646e9b06516eff0cd0"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8d9631f8c67df4646e9b06516eff0cd0">&#9670;&#160;</a></span>Weapon()</h2>
@@ -190,17 +190,17 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="items_8cpp_source.html#l00029">29</a> of file <a class="el" href="items_8cpp_source.html">items.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   29</span>: <a class="code hl_function" href="class_i_enemy_item.html#ab04428e73487bd8279945087a6b307fa">IEnemyItem</a>(<a class="code hl_variable" href="class_i_item.html#a7fdf57eb313baaea887b648bc13f247a">name</a>, <span class="stringliteral">&quot;Weapon&quot;</span>, <a class="code hl_variable" href="class_i_item.html#a9acebb5d530d823314bb1a8f29ff974a">desc</a>, <a class="code hl_variable" href="class_i_item.html#a0b30dc1f8eee51c2b78ac71d6c7b93b7">count</a>), <a class="code hl_variable" href="#af7f5d5ecbb3ac0e95350a6750be1fb28">dmg</a>(<a class="code hl_variable" href="#af7f5d5ecbb3ac0e95350a6750be1fb28">dmg</a>) {}</div>
-<div class="ttc" id="aclass_i_enemy_item_html_ab04428e73487bd8279945087a6b307fa"><div class="ttname"><a href="class_i_enemy_item.html#ab04428e73487bd8279945087a6b307fa">IEnemyItem::IEnemyItem</a></div><div class="ttdeci">IEnemyItem(string n, string t, string d, int c)</div><div class="ttdef"><b>Definition</b> <a href="items_8cpp_source.html#l00010">items.cpp:10</a></div></div>
-<div class="ttc" id="aclass_i_item_html_a0b30dc1f8eee51c2b78ac71d6c7b93b7"><div class="ttname"><a href="class_i_item.html#a0b30dc1f8eee51c2b78ac71d6c7b93b7">IItem::count</a></div><div class="ttdeci">int count</div><div class="ttdoc">A count of -1 means the item can be used infinitely.</div><div class="ttdef"><b>Definition</b> <a href="items_8h_source.html#l00013">items.h:13</a></div></div>
-<div class="ttc" id="aclass_i_item_html_a7fdf57eb313baaea887b648bc13f247a"><div class="ttname"><a href="class_i_item.html#a7fdf57eb313baaea887b648bc13f247a">IItem::name</a></div><div class="ttdeci">string name</div><div class="ttdef"><b>Definition</b> <a href="items_8h_source.html#l00010">items.h:10</a></div></div>
-<div class="ttc" id="aclass_i_item_html_a9acebb5d530d823314bb1a8f29ff974a"><div class="ttname"><a href="class_i_item.html#a9acebb5d530d823314bb1a8f29ff974a">IItem::desc</a></div><div class="ttdeci">string desc</div><div class="ttdef"><b>Definition</b> <a href="items_8h_source.html#l00012">items.h:12</a></div></div>
-<div class="ttc" id="aclass_weapon_html_af7f5d5ecbb3ac0e95350a6750be1fb28"><div class="ttname"><a href="#af7f5d5ecbb3ac0e95350a6750be1fb28">Weapon::dmg</a></div><div class="ttdeci">int dmg</div><div class="ttdef"><b>Definition</b> <a href="items_8h_source.html#l00057">items.h:57</a></div></div>
+<p class="definition">Definition at line <a class="el" href="items_8cpp_source.html#l00055">55</a> of file <a class="el" href="items_8cpp_source.html">items.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   55</span>: <a class="code hl_function" href="class_i_enemy_item.html#ab04428e73487bd8279945087a6b307fa">IEnemyItem</a>(<a class="code hl_variable" href="class_i_item.html#a7fdf57eb313baaea887b648bc13f247a">name</a>, <span class="stringliteral">&quot;Weapon&quot;</span>, <a class="code hl_variable" href="class_i_item.html#a9acebb5d530d823314bb1a8f29ff974a">desc</a>, <a class="code hl_variable" href="class_i_item.html#a0b30dc1f8eee51c2b78ac71d6c7b93b7">count</a>), <a class="code hl_variable" href="#af7f5d5ecbb3ac0e95350a6750be1fb28">dmg</a>(<a class="code hl_variable" href="#af7f5d5ecbb3ac0e95350a6750be1fb28">dmg</a>) {}</div>
+<div class="ttc" id="aclass_i_enemy_item_html_ab04428e73487bd8279945087a6b307fa"><div class="ttname"><a href="class_i_enemy_item.html#ab04428e73487bd8279945087a6b307fa">IEnemyItem::IEnemyItem</a></div><div class="ttdeci">IEnemyItem(string n, string t, string d, int c)</div><div class="ttdef"><b>Definition</b> <a href="items_8cpp_source.html#l00015">items.cpp:15</a></div></div>
+<div class="ttc" id="aclass_i_item_html_a0b30dc1f8eee51c2b78ac71d6c7b93b7"><div class="ttname"><a href="class_i_item.html#a0b30dc1f8eee51c2b78ac71d6c7b93b7">IItem::count</a></div><div class="ttdeci">int count</div><div class="ttdoc">A count of -1 means the item can be used infinitely.</div><div class="ttdef"><b>Definition</b> <a href="items_8h_source.html#l00017">items.h:17</a></div></div>
+<div class="ttc" id="aclass_i_item_html_a7fdf57eb313baaea887b648bc13f247a"><div class="ttname"><a href="class_i_item.html#a7fdf57eb313baaea887b648bc13f247a">IItem::name</a></div><div class="ttdeci">string name</div><div class="ttdef"><b>Definition</b> <a href="items_8h_source.html#l00015">items.h:15</a></div></div>
+<div class="ttc" id="aclass_i_item_html_a9acebb5d530d823314bb1a8f29ff974a"><div class="ttname"><a href="class_i_item.html#a9acebb5d530d823314bb1a8f29ff974a">IItem::desc</a></div><div class="ttdeci">string desc</div><div class="ttdef"><b>Definition</b> <a href="items_8h_source.html#l00013">items.h:13</a></div></div>
+<div class="ttc" id="aclass_weapon_html_af7f5d5ecbb3ac0e95350a6750be1fb28"><div class="ttname"><a href="#af7f5d5ecbb3ac0e95350a6750be1fb28">Weapon::dmg</a></div><div class="ttdeci">int dmg</div><div class="ttdef"><b>Definition</b> <a href="items_8h_source.html#l00071">items.h:71</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="items_8h_source.html#l00013">IItem::count</a>, <a class="el" href="items_8h_source.html#l00012">IItem::desc</a>, <a class="el" href="items_8h_source.html#l00057">dmg</a>, <a class="el" href="items_8cpp_source.html#l00010">IEnemyItem::IEnemyItem()</a>, and <a class="el" href="items_8h_source.html#l00010">IItem::name</a>.</p>
+<p class="reference">References <a class="el" href="items_8h_source.html#l00017">IItem::count</a>, <a class="el" href="items_8h_source.html#l00013">IItem::desc</a>, <a class="el" href="items_8h_source.html#l00071">dmg</a>, <a class="el" href="items_8cpp_source.html#l00015">IEnemyItem::IEnemyItem()</a>, and <a class="el" href="items_8h_source.html#l00015">IItem::name</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="items_8cpp_source.html#l00036">CoolStick::CoolStick()</a>, and <a class="el" href="items_8cpp_source.html#l00038">Yamato::Yamato()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="items_8cpp_source.html#l00062">CoolStick::CoolStick()</a>, and <a class="el" href="items_8cpp_source.html#l00069">Yamato::Yamato()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -244,14 +244,14 @@ Here is the caller graph for this function:</div>
 
 <p>Implements <a class="el" href="class_i_enemy_item.html#a4f81ef24d49cb728a7a275db4b1b506c">IEnemyItem</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="items_8cpp_source.html#l00030">30</a> of file <a class="el" href="items_8cpp_source.html">items.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   31</span>{</div>
-<div class="line"><span class="lineno">   32</span>    player.<a class="code hl_function" href="class_entity.html#a44aad07756d6f00abf8f08ffde6eb217">attack</a>(enemy, <a class="code hl_variable" href="#af7f5d5ecbb3ac0e95350a6750be1fb28">dmg</a>);</div>
-<div class="line"><span class="lineno">   33</span>    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   34</span>}</div>
-<div class="ttc" id="aclass_entity_html_a44aad07756d6f00abf8f08ffde6eb217"><div class="ttname"><a href="class_entity.html#a44aad07756d6f00abf8f08ffde6eb217">Entity::attack</a></div><div class="ttdeci">void attack(Entity &amp;target, int extraDmg=0)</div><div class="ttdef"><b>Definition</b> <a href="entities_8cpp_source.html#l00036">entities.cpp:36</a></div></div>
+<p class="definition">Definition at line <a class="el" href="items_8cpp_source.html#l00056">56</a> of file <a class="el" href="items_8cpp_source.html">items.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   57</span>{</div>
+<div class="line"><span class="lineno">   58</span>    player.<a class="code hl_function" href="class_entity.html#a44aad07756d6f00abf8f08ffde6eb217">attack</a>(enemy, <a class="code hl_variable" href="#af7f5d5ecbb3ac0e95350a6750be1fb28">dmg</a>);</div>
+<div class="line"><span class="lineno">   59</span>    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   60</span>}</div>
+<div class="ttc" id="aclass_entity_html_a44aad07756d6f00abf8f08ffde6eb217"><div class="ttname"><a href="class_entity.html#a44aad07756d6f00abf8f08ffde6eb217">Entity::attack</a></div><div class="ttdeci">void attack(Entity &amp;target, int extraDmg=0)</div><div class="ttdef"><b>Definition</b> <a href="entities_8cpp_source.html#l00037">entities.cpp:37</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="entities_8cpp_source.html#l00036">Entity::attack()</a>, and <a class="el" href="items_8h_source.html#l00057">dmg</a>.</p>
+<p class="reference">References <a class="el" href="entities_8cpp_source.html#l00037">Entity::attack()</a>, and <a class="el" href="items_8h_source.html#l00071">dmg</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -273,9 +273,9 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="items_8h_source.html#l00057">57</a> of file <a class="el" href="items_8h_source.html">items.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="items_8h_source.html#l00071">71</a> of file <a class="el" href="items_8h_source.html">items.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="items_8cpp_source.html#l00030">use()</a>, and <a class="el" href="items_8cpp_source.html#l00029">Weapon()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="items_8cpp_source.html#l00063">CoolStick::getDesc()</a>, <a class="el" href="items_8cpp_source.html#l00070">Yamato::getDesc()</a>, <a class="el" href="ui_8cpp_source.html#l00028">GambleMenu::render()</a>, <a class="el" href="items_8cpp_source.html#l00056">use()</a>, and <a class="el" href="items_8cpp_source.html#l00055">Weapon()</a>.</p>
 
 </div>
 </div>

@@ -9,6 +9,8 @@ var dir_68267d1309a1af8e8297ef4c3efbcdba =
     [ "items.cpp", "items_8cpp.html", null ],
     [ "items.h", "items_8h.html", "items_8h" ],
     [ "main.cpp", "main_8cpp.html", "main_8cpp" ],
+    [ "shop.cpp", "shop_8cpp.html", null ],
+    [ "shop.h", "shop_8h.html", "shop_8h" ],
     [ "ui.cpp", "ui_8cpp.html", null ],
     [ "ui.h", "ui_8h.html", "ui_8h" ]
 ];

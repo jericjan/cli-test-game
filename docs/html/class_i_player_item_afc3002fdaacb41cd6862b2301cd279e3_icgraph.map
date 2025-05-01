@@ -1,7 +1,9 @@
 <map id="IPlayerItem::IPlayerItem" name="IPlayerItem::IPlayerItem">
-<area shape="rect" id="Node000001" title=" " alt="" coords="392,5,555,32"/>
-<area shape="rect" id="Node000002" href="$class_i_potion.html#aa93950ffed81f33407bdce018c60de58" title=" " alt="" coords="233,5,344,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="377,21,344,21,344,16,377,16"/>
-<area shape="rect" id="Node000003" href="$class_health_potion.html#a6ff8807a7aae10c5ce186c793b7f359c" title=" " alt="" coords="5,5,185,32"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="217,21,185,21,185,16,217,16"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="414,31,577,57"/>
+<area shape="rect" id="Node000002" href="$class_i_potion.html#af960db386ba9efea5adcde6ec80fe943" title=" " alt="" coords="255,31,366,57"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="399,47,366,47,366,41,399,41"/>
+<area shape="rect" id="Node000003" href="$class_health_potion.html#a6ff8807a7aae10c5ce186c793b7f359c" title=" " alt="" coords="16,5,196,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="239,38,196,32,196,27,240,33"/>
+<area shape="rect" id="Node000004" href="$class_strength_potion.html#aa5d71087de02a8d775b0c07825e4ca2f" title=" " alt="" coords="5,56,207,83"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="240,55,207,59,207,54,239,50"/>
 </map>

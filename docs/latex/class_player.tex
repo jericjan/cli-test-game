@@ -81,16 +81,16 @@ Player\+::\+Player (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
 
 
-Definition at line \mbox{\hyperlink{entities_8cpp_source_l00007}{7}} of file \mbox{\hyperlink{entities_8cpp_source}{entities.\+cpp}}.
+Definition at line \mbox{\hyperlink{entities_8cpp_source_l00008}{8}} of file \mbox{\hyperlink{entities_8cpp_source}{entities.\+cpp}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00007\ :\ \mbox{\hyperlink{class_entity_ac55fe185f7ccba9e35abf13517c65f63}{Entity}}(0,\ \textcolor{stringliteral}{"{}"{}},\ 0,\ 0),\ \mbox{\hyperlink{class_player_a9545beef70350d5c3b3a5719a890dd2f}{money}}(0)\ \{\}}
+\DoxyCodeLine{00008\ :\ \mbox{\hyperlink{class_entity_ac55fe185f7ccba9e35abf13517c65f63}{Entity}}(0,\ \textcolor{stringliteral}{"{}"{}},\ 0,\ 0),\ \mbox{\hyperlink{class_player_a9545beef70350d5c3b3a5719a890dd2f}{money}}(0)\ \{\}}
 
 \end{DoxyCode}
 
 
-References \mbox{\hyperlink{entities_8cpp_source_l00033}{Entity\+::\+Entity()}}, and \mbox{\hyperlink{entities_8h_source_l00035}{money}}.
+References \mbox{\hyperlink{entities_8cpp_source_l00034}{Entity\+::\+Entity()}}, and \mbox{\hyperlink{entities_8h_source_l00035}{money}}.
 
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -107,19 +107,19 @@ Player\+::\+Player (\begin{DoxyParamCaption}\item[{int}]{health}{, }\item[{strin
 
 
 
-Definition at line \mbox{\hyperlink{entities_8cpp_source_l00008}{8}} of file \mbox{\hyperlink{entities_8cpp_source}{entities.\+cpp}}.
+Definition at line \mbox{\hyperlink{entities_8cpp_source_l00009}{9}} of file \mbox{\hyperlink{entities_8cpp_source}{entities.\+cpp}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00008\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{class_entity_ac55fe185f7ccba9e35abf13517c65f63}{Entity}}(health,\ \mbox{\hyperlink{class_entity_afb45718695f537c330a463168616c262}{name}},\ atk,\ def),\ \mbox{\hyperlink{class_player_a9545beef70350d5c3b3a5719a890dd2f}{money}}(\mbox{\hyperlink{class_player_a9545beef70350d5c3b3a5719a890dd2f}{money}}) }
-\DoxyCodeLine{00009\ \{}
-\DoxyCodeLine{00010\ \ \ \ \ \mbox{\hyperlink{class_player_ab8d436b5727749f7be05ffdf744d1041}{inventory}}\ =\ Inventory();}
-\DoxyCodeLine{00011\ \}}
+\DoxyCodeLine{00009\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{class_entity_ac55fe185f7ccba9e35abf13517c65f63}{Entity}}(health,\ \mbox{\hyperlink{class_entity_afb45718695f537c330a463168616c262}{name}},\ atk,\ def),\ \mbox{\hyperlink{class_player_a9545beef70350d5c3b3a5719a890dd2f}{money}}(\mbox{\hyperlink{class_player_a9545beef70350d5c3b3a5719a890dd2f}{money}}) }
+\DoxyCodeLine{00010\ \{}
+\DoxyCodeLine{00011\ \ \ \ \ \mbox{\hyperlink{class_player_ab8d436b5727749f7be05ffdf744d1041}{inventory}}\ =\ Inventory();}
+\DoxyCodeLine{00012\ \}}
 
 \end{DoxyCode}
 
 
-References \mbox{\hyperlink{entities_8cpp_source_l00033}{Entity\+::\+Entity()}}, \mbox{\hyperlink{entities_8h_source_l00034}{inventory}}, \mbox{\hyperlink{entities_8h_source_l00035}{money}}, and \mbox{\hyperlink{entities_8h_source_l00024}{Entity\+::name}}.
+References \mbox{\hyperlink{entities_8cpp_source_l00034}{Entity\+::\+Entity()}}, \mbox{\hyperlink{entities_8h_source_l00034}{inventory}}, \mbox{\hyperlink{entities_8h_source_l00035}{money}}, and \mbox{\hyperlink{entities_8h_source_l00024}{Entity\+::name}}.
 
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -139,36 +139,47 @@ void Player\+::add\+Money (\begin{DoxyParamCaption}\item[{int}]{amount}{}\end{Do
 
 
 
-Definition at line \mbox{\hyperlink{entities_8cpp_source_l00013}{13}} of file \mbox{\hyperlink{entities_8cpp_source}{entities.\+cpp}}.
+Definition at line \mbox{\hyperlink{entities_8cpp_source_l00014}{14}} of file \mbox{\hyperlink{entities_8cpp_source}{entities.\+cpp}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00014\ \{}
-\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keywordflow}{if}\ (amount\ <\ 0)}
-\DoxyCodeLine{00016\ \ \ \ \ \{}
-\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ cout\ <<\ \mbox{\hyperlink{extras_8cpp_a99d2755bf0660601280710515b3f512c}{colorizeText}}(\textcolor{stringliteral}{"{}You\ lost\ "{}}\ +\ to\_string(-\/amount)\ +\ \textcolor{stringliteral}{"{}\ money!"{}},\ \mbox{\hyperlink{extras_8h_ab87bacfdad76e61b9412d7124be44c1caf80f9a890089d211842d59625e561f88}{RED}})\ <<\ endl;}
-\DoxyCodeLine{00018\ \ \ \ \ \}}
-\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (amount\ ==\ 0)}
-\DoxyCodeLine{00020\ \ \ \ \ \{}
-\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}You\ didn't\ gain\ or\ lose\ any\ money."{}}\ <<\ endl;}
-\DoxyCodeLine{00022\ \ \ \ \ \}}
-\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (amount\ >\ 0)}
-\DoxyCodeLine{00024\ \ \ \ \ \{}
-\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ cout\ <<\ \mbox{\hyperlink{extras_8cpp_a99d2755bf0660601280710515b3f512c}{colorizeText}}(\textcolor{stringliteral}{"{}You\ gained\ "{}}\ +\ to\_string(amount)\ +\ \textcolor{stringliteral}{"{}\ money!"{}},\ \mbox{\hyperlink{extras_8h_ab87bacfdad76e61b9412d7124be44c1cae735a848bf82163a19236ead1c3ef2d2}{YELLOW}})\ <<\ endl;}
-\DoxyCodeLine{00026\ \ \ \ \ \}}
-\DoxyCodeLine{00027\ \ \ \ \ \mbox{\hyperlink{class_player_a9545beef70350d5c3b3a5719a890dd2f}{money}}\ +=\ amount;}
-\DoxyCodeLine{00028\ \}}
+\DoxyCodeLine{00015\ \{}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keywordflow}{if}\ (amount\ <\ 0)}
+\DoxyCodeLine{00017\ \ \ \ \ \{}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ cout\ <<\ \mbox{\hyperlink{extras_8cpp_a99d2755bf0660601280710515b3f512c}{colorizeText}}(\textcolor{stringliteral}{"{}You\ lost\ "{}}\ +\ to\_string(-\/amount)\ +\ \textcolor{stringliteral}{"{}\ money!"{}},\ \mbox{\hyperlink{extras_8h_ab87bacfdad76e61b9412d7124be44c1caf80f9a890089d211842d59625e561f88}{RED}})\ <<\ endl;}
+\DoxyCodeLine{00019\ \ \ \ \ \}}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (amount\ ==\ 0)}
+\DoxyCodeLine{00021\ \ \ \ \ \{}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}You\ didn't\ gain\ or\ lose\ any\ money."{}}\ <<\ endl;}
+\DoxyCodeLine{00023\ \ \ \ \ \}}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (amount\ >\ 0)}
+\DoxyCodeLine{00025\ \ \ \ \ \{}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ cout\ <<\ \mbox{\hyperlink{extras_8cpp_a99d2755bf0660601280710515b3f512c}{colorizeText}}(\textcolor{stringliteral}{"{}You\ gained\ "{}}\ +\ to\_string(amount)\ +\ \textcolor{stringliteral}{"{}\ money!"{}},\ \mbox{\hyperlink{extras_8h_ab87bacfdad76e61b9412d7124be44c1cae735a848bf82163a19236ead1c3ef2d2}{YELLOW}})\ <<\ endl;}
+\DoxyCodeLine{00027\ \ \ \ \ \}}
+\DoxyCodeLine{00028\ \ \ \ \ \mbox{\hyperlink{class_player_a9545beef70350d5c3b3a5719a890dd2f}{money}}\ +=\ amount;}
+\DoxyCodeLine{00029\ \}}
 
 \end{DoxyCode}
 
 
-References \mbox{\hyperlink{extras_8cpp_source_l00021}{colorize\+Text()}}, \mbox{\hyperlink{entities_8h_source_l00035}{money}}, \mbox{\hyperlink{extras_8h_source_l00017}{RED}}, and \mbox{\hyperlink{extras_8h_source_l00019}{YELLOW}}.
+References \mbox{\hyperlink{extras_8cpp_source_l00022}{colorize\+Text()}}, \mbox{\hyperlink{entities_8h_source_l00035}{money}}, \mbox{\hyperlink{extras_8h_source_l00017}{RED}}, and \mbox{\hyperlink{extras_8h_source_l00019}{YELLOW}}.
+
+
+
+Referenced by \mbox{\hyperlink{shop_8cpp_source_l00030}{Shop\+::buy\+Item()}}.
 
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=279pt]{class_player_a86ad66429e7bf8ef4640bac1d0f3476f_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_player_a86ad66429e7bf8ef4640bac1d0f3476f_icgraph}
 \end{center}
 \end{figure}
 
@@ -186,7 +197,7 @@ Definition at line \mbox{\hyperlink{entities_8h_source_l00034}{34}} of file \mbo
 
 
 
-Referenced by \mbox{\hyperlink{entities_8cpp_source_l00008}{Player()}}.
+Referenced by \mbox{\hyperlink{shop_8cpp_source_l00030}{Shop\+::buy\+Item()}}, and \mbox{\hyperlink{entities_8cpp_source_l00009}{Player()}}.
 
 \Hypertarget{class_player_a9545beef70350d5c3b3a5719a890dd2f}\index{Player@{Player}!money@{money}}
 \index{money@{money}!Player@{Player}}
@@ -200,7 +211,7 @@ Definition at line \mbox{\hyperlink{entities_8h_source_l00035}{35}} of file \mbo
 
 
 
-Referenced by \mbox{\hyperlink{entities_8cpp_source_l00013}{add\+Money()}}, \mbox{\hyperlink{entities_8cpp_source_l00007}{Player()}}, and \mbox{\hyperlink{entities_8cpp_source_l00008}{Player()}}.
+Referenced by \mbox{\hyperlink{entities_8cpp_source_l00014}{add\+Money()}}, \mbox{\hyperlink{shop_8cpp_source_l00030}{Shop\+::buy\+Item()}}, \mbox{\hyperlink{shop_8cpp_source_l00019}{Shop\+::list\+Items()}}, \mbox{\hyperlink{entities_8cpp_source_l00008}{Player()}}, and \mbox{\hyperlink{entities_8cpp_source_l00009}{Player()}}.
 
 
 

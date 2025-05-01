@@ -11,13 +11,21 @@ class IItem
 {
 private:
     string desc;
-public:
     string name;
     string type;    
     int count; ///< A count of -1 means the item can be used infinitely
+public:    
     IItem(string n, string t, string d, int c);
     virtual ~IItem();
     virtual string getDesc();
+    string getName();
+    string getType();
+    void increment(int amount);
+    void decrement(int amount);
+    int getCount();
+    bool isInfinite();
+    bool isDepleted();
+    bool matches(IItem *item);
 };
 
 /// Enemy items. The use function takes in a player and an enemy.
@@ -39,9 +47,10 @@ public:
 /// Potions set the type to "Potion"
 class IPotion : public IPlayerItem
 {
-public:
+public:    
     int strength;
     IPotion(string n, string d, int c, int strength);
+    int getStrength();
 };
 
 /// Health potions heal the player of course
@@ -68,9 +77,10 @@ public:
 class Weapon : public IEnemyItem
 {
 public:
-    int dmg;
+    int dmg;    
     Weapon(string name, string desc, int count, int dmg);
     bool use(Player &player, Entity &enemy) override;
+    int getDmg();
 };
 
 /// The Cool Stick is the first weapon the player gets

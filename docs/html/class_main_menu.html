@@ -168,14 +168,14 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ui_8cpp_source.html#l00070">70</a> of file <a class="el" href="ui_8cpp_source.html">ui.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   70</span>: <a class="code hl_function" href="class_u_i_with_player.html#a297e083951aeaf9e72d9746fab8eccd8">UIWithPlayer</a>(<a class="code hl_variable" href="class_u_i_with_player.html#a480502a8db864e1ec92eb19f87a35083">player</a>) {}</div>
-<div class="ttc" id="aclass_u_i_with_player_html_a297e083951aeaf9e72d9746fab8eccd8"><div class="ttname"><a href="class_u_i_with_player.html#a297e083951aeaf9e72d9746fab8eccd8">UIWithPlayer::UIWithPlayer</a></div><div class="ttdeci">UIWithPlayer()</div><div class="ttdef"><b>Definition</b> <a href="ui_8cpp_source.html#l00013">ui.cpp:13</a></div></div>
+<p class="definition">Definition at line <a class="el" href="ui_8cpp_source.html#l00078">78</a> of file <a class="el" href="ui_8cpp_source.html">ui.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   78</span>: <a class="code hl_function" href="class_u_i_with_player.html#a297e083951aeaf9e72d9746fab8eccd8">UIWithPlayer</a>(<a class="code hl_variable" href="class_u_i_with_player.html#a480502a8db864e1ec92eb19f87a35083">player</a>) {}</div>
+<div class="ttc" id="aclass_u_i_with_player_html_a297e083951aeaf9e72d9746fab8eccd8"><div class="ttname"><a href="class_u_i_with_player.html#a297e083951aeaf9e72d9746fab8eccd8">UIWithPlayer::UIWithPlayer</a></div><div class="ttdeci">UIWithPlayer()</div><div class="ttdef"><b>Definition</b> <a href="ui_8cpp_source.html#l00015">ui.cpp:15</a></div></div>
 <div class="ttc" id="aclass_u_i_with_player_html_a480502a8db864e1ec92eb19f87a35083"><div class="ttname"><a href="class_u_i_with_player.html#a480502a8db864e1ec92eb19f87a35083">UIWithPlayer::player</a></div><div class="ttdeci">Player player</div><div class="ttdef"><b>Definition</b> <a href="ui_8h_source.html#l00021">ui.h:21</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="ui_8h_source.html#l00021">UIWithPlayer::player</a>, and <a class="el" href="ui_8cpp_source.html#l00013">UIWithPlayer::UIWithPlayer()</a>.</p>
+<p class="reference">References <a class="el" href="ui_8h_source.html#l00021">UIWithPlayer::player</a>, and <a class="el" href="ui_8cpp_source.html#l00015">UIWithPlayer::UIWithPlayer()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ui_8cpp_source.html#l00072">render()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ui_8cpp_source.html#l00080">render()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -215,72 +215,82 @@ Here is the caller graph for this function:</div>
 
 <p>Implements <a class="el" href="class_user_interface.html#a6c4e70754407cdc9ed66986dcea60ece">UserInterface</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="ui_8cpp_source.html#l00072">72</a> of file <a class="el" href="ui_8cpp_source.html">ui.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   73</span>{</div>
-<div class="line"><span class="lineno">   74</span>    cout &lt;&lt; <span class="stringliteral">&quot;[Main Menu]&quot;</span> &lt;&lt; endl;</div>
-<div class="line"><span class="lineno">   75</span>    cout &lt;&lt; <span class="stringliteral">&quot;HP: &quot;</span> &lt;&lt; <a class="code hl_variable" href="class_u_i_with_player.html#a480502a8db864e1ec92eb19f87a35083">player</a>.currHealth &lt;&lt; <span class="stringliteral">&quot;/&quot;</span> &lt;&lt; <a class="code hl_variable" href="class_u_i_with_player.html#a480502a8db864e1ec92eb19f87a35083">player</a>.maxHealth &lt;&lt; <span class="stringliteral">&quot; ATK: &quot;</span> &lt;&lt; <a class="code hl_variable" href="class_u_i_with_player.html#a480502a8db864e1ec92eb19f87a35083">player</a>.stats.atk &lt;&lt; <span class="stringliteral">&quot; DEF: &quot;</span> &lt;&lt; <a class="code hl_variable" href="class_u_i_with_player.html#a480502a8db864e1ec92eb19f87a35083">player</a>.stats.def &lt;&lt; endl;</div>
-<div class="line"><span class="lineno">   76</span>    cout &lt;&lt; <span class="stringliteral">&quot;Money: &quot;</span> &lt;&lt; <a class="code hl_variable" href="class_u_i_with_player.html#a480502a8db864e1ec92eb19f87a35083">player</a>.money &lt;&lt; endl;</div>
-<div class="line"><span class="lineno">   77</span>    cout &lt;&lt; <span class="stringliteral">&quot;[1] Inventory&quot;</span> &lt;&lt; endl;</div>
-<div class="line"><span class="lineno">   78</span>    cout &lt;&lt; <span class="stringliteral">&quot;[2] Grind&quot;</span> &lt;&lt; endl;</div>
-<div class="line"><span class="lineno">   79</span>    cout &lt;&lt; <span class="stringliteral">&quot;[3] Gamble&quot;</span> &lt;&lt; endl;</div>
-<div class="line"><span class="lineno">   80</span>    cout &lt;&lt; <span class="stringliteral">&quot;[4] Hospital&quot;</span> &lt;&lt; endl;</div>
-<div class="line"><span class="lineno">   81</span>    cout &lt;&lt; <span class="stringliteral">&quot;[5] Quit&quot;</span> &lt;&lt; endl;</div>
-<div class="line"><span class="lineno">   82</span>    <span class="keywordtype">int</span> userInput = <a class="code hl_function" href="extras_8cpp.html#a3816c0b1714f3be0c6c8a394a4faee7d">inputNum</a>();</div>
-<div class="line"><span class="lineno">   83</span>    <span class="keywordflow">if</span> (userInput == 1)</div>
-<div class="line"><span class="lineno">   84</span>    {</div>
-<div class="line"><span class="lineno">   85</span>        <a class="code hl_variable" href="class_u_i_with_player.html#a480502a8db864e1ec92eb19f87a35083">player</a>.inventory.listItems();</div>
-<div class="line"><span class="lineno">   86</span>        <span class="keywordtype">int</span> bagInput;</div>
-<div class="line"><span class="lineno">   87</span>        <span class="keywordflow">while</span> (<span class="keyword">true</span>)</div>
-<div class="line"><span class="lineno">   88</span>        {</div>
-<div class="line"><span class="lineno">   89</span>            bagInput = <a class="code hl_function" href="extras_8cpp.html#a3816c0b1714f3be0c6c8a394a4faee7d">inputNum</a>();</div>
-<div class="line"><span class="lineno">   90</span>            <span class="keywordflow">if</span> (bagInput == 0)</div>
-<div class="line"><span class="lineno">   91</span>            {</div>
-<div class="line"><span class="lineno">   92</span>                <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">   93</span>            }</div>
-<div class="line"><span class="lineno">   94</span>            <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">   95</span>            {</div>
-<div class="line"><span class="lineno">   96</span>                <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_u_i_with_player.html#a480502a8db864e1ec92eb19f87a35083">player</a>.inventory.useItem(bagInput, <a class="code hl_variable" href="class_u_i_with_player.html#a480502a8db864e1ec92eb19f87a35083">player</a>, <span class="keyword">nullptr</span>))</div>
-<div class="line"><span class="lineno">   97</span>                {</div>
-<div class="line"><span class="lineno">   98</span>                    <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">   99</span>                }</div>
-<div class="line"><span class="lineno">  100</span>            }</div>
-<div class="line"><span class="lineno">  101</span>        }</div>
-<div class="line"><span class="lineno">  102</span>        <span class="keywordflow">return</span> <span class="keyword">this</span>;</div>
-<div class="line"><span class="lineno">  103</span>    }</div>
-<div class="line"><span class="lineno">  104</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (userInput == 2)</div>
-<div class="line"><span class="lineno">  105</span>    {</div>
-<div class="line"><span class="lineno">  106</span>        Entity enemy = Entity(500, <span class="stringliteral">&quot;Random Guy&quot;</span>, 50, 50);</div>
-<div class="line"><span class="lineno">  107</span>        <span class="keyword">auto</span> after = [=](Player <a class="code hl_variable" href="class_u_i_with_player.html#a480502a8db864e1ec92eb19f87a35083">player</a>) -&gt; UserInterface *</div>
-<div class="line"><span class="lineno">  108</span>        {</div>
-<div class="line"><span class="lineno">  109</span>            <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code hl_function" href="#a40f98ff78c92e3f79b781b7ed18507a7">MainMenu</a>(<a class="code hl_variable" href="class_u_i_with_player.html#a480502a8db864e1ec92eb19f87a35083">player</a>);</div>
-<div class="line"><span class="lineno">  110</span>        };</div>
-<div class="line"><span class="lineno">  111</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> Battle(<a class="code hl_variable" href="class_u_i_with_player.html#a480502a8db864e1ec92eb19f87a35083">player</a>, enemy, 50, after, after);</div>
+<p class="definition">Definition at line <a class="el" href="ui_8cpp_source.html#l00080">80</a> of file <a class="el" href="ui_8cpp_source.html">ui.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   81</span>{</div>
+<div class="line"><span class="lineno">   82</span>    cout &lt;&lt; <span class="stringliteral">&quot;[Main Menu]&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><span class="lineno">   83</span>    cout &lt;&lt; <span class="stringliteral">&quot;HP: &quot;</span> &lt;&lt; <a class="code hl_variable" href="class_u_i_with_player.html#a480502a8db864e1ec92eb19f87a35083">player</a>.currHealth &lt;&lt; <span class="stringliteral">&quot;/&quot;</span> &lt;&lt; <a class="code hl_variable" href="class_u_i_with_player.html#a480502a8db864e1ec92eb19f87a35083">player</a>.maxHealth &lt;&lt; <span class="stringliteral">&quot; ATK: &quot;</span> &lt;&lt; <a class="code hl_variable" href="class_u_i_with_player.html#a480502a8db864e1ec92eb19f87a35083">player</a>.stats.atk &lt;&lt; <span class="stringliteral">&quot; DEF: &quot;</span> &lt;&lt; <a class="code hl_variable" href="class_u_i_with_player.html#a480502a8db864e1ec92eb19f87a35083">player</a>.stats.def &lt;&lt; endl;</div>
+<div class="line"><span class="lineno">   84</span>    cout &lt;&lt; <span class="stringliteral">&quot;Money: &quot;</span> &lt;&lt; <a class="code hl_variable" href="class_u_i_with_player.html#a480502a8db864e1ec92eb19f87a35083">player</a>.money &lt;&lt; endl;</div>
+<div class="line"><span class="lineno">   85</span>    cout &lt;&lt; <span class="stringliteral">&quot;[1] Inventory&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><span class="lineno">   86</span>    cout &lt;&lt; <span class="stringliteral">&quot;[2] Grind&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><span class="lineno">   87</span>    cout &lt;&lt; <span class="stringliteral">&quot;[3] Shop&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><span class="lineno">   88</span>    cout &lt;&lt; <span class="stringliteral">&quot;[4] Gamble&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><span class="lineno">   89</span>    cout &lt;&lt; <span class="stringliteral">&quot;[5] Hospital&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><span class="lineno">   90</span>    cout &lt;&lt; <span class="stringliteral">&quot;[6] Quit&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><span class="lineno">   91</span>    <span class="keywordtype">int</span> userInput = <a class="code hl_function" href="extras_8cpp.html#a3816c0b1714f3be0c6c8a394a4faee7d">inputNum</a>();</div>
+<div class="line"><span class="lineno">   92</span>    <span class="keywordflow">if</span> (userInput == 1)</div>
+<div class="line"><span class="lineno">   93</span>    {</div>
+<div class="line"><span class="lineno">   94</span>        <a class="code hl_variable" href="class_u_i_with_player.html#a480502a8db864e1ec92eb19f87a35083">player</a>.inventory.listItems();</div>
+<div class="line"><span class="lineno">   95</span>        <span class="keywordtype">int</span> bagInput;</div>
+<div class="line"><span class="lineno">   96</span>        <span class="keywordflow">while</span> (<span class="keyword">true</span>)</div>
+<div class="line"><span class="lineno">   97</span>        {</div>
+<div class="line"><span class="lineno">   98</span>            bagInput = <a class="code hl_function" href="extras_8cpp.html#a3816c0b1714f3be0c6c8a394a4faee7d">inputNum</a>();</div>
+<div class="line"><span class="lineno">   99</span>            <span class="keywordflow">if</span> (bagInput == 0)</div>
+<div class="line"><span class="lineno">  100</span>            {</div>
+<div class="line"><span class="lineno">  101</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  102</span>            }</div>
+<div class="line"><span class="lineno">  103</span>            <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  104</span>            {</div>
+<div class="line"><span class="lineno">  105</span>                <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_u_i_with_player.html#a480502a8db864e1ec92eb19f87a35083">player</a>.inventory.useItem(bagInput, <a class="code hl_variable" href="class_u_i_with_player.html#a480502a8db864e1ec92eb19f87a35083">player</a>, <span class="keyword">nullptr</span>))</div>
+<div class="line"><span class="lineno">  106</span>                {</div>
+<div class="line"><span class="lineno">  107</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  108</span>                }</div>
+<div class="line"><span class="lineno">  109</span>            }</div>
+<div class="line"><span class="lineno">  110</span>        }</div>
+<div class="line"><span class="lineno">  111</span>        <span class="keywordflow">return</span> <span class="keyword">this</span>;</div>
 <div class="line"><span class="lineno">  112</span>    }</div>
-<div class="line"><span class="lineno">  113</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (userInput == 3)</div>
+<div class="line"><span class="lineno">  113</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (userInput == 2)</div>
 <div class="line"><span class="lineno">  114</span>    {</div>
-<div class="line"><span class="lineno">  115</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> GambleMenu(<a class="code hl_variable" href="class_u_i_with_player.html#a480502a8db864e1ec92eb19f87a35083">player</a>);</div>
-<div class="line"><span class="lineno">  116</span>    }</div>
-<div class="line"><span class="lineno">  117</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (userInput == 4)</div>
-<div class="line"><span class="lineno">  118</span>    {</div>
-<div class="line"><span class="lineno">  119</span>        <a class="code hl_function" href="extras_8cpp.html#aff1ce18cf1cd562e54189df70cee6299">printAnimate</a>(<span class="stringliteral">&quot;You were healed to full health!\n&quot;</span>);</div>
-<div class="line"><span class="lineno">  120</span>        <a class="code hl_variable" href="class_u_i_with_player.html#a480502a8db864e1ec92eb19f87a35083">player</a>.currHealth = <a class="code hl_variable" href="class_u_i_with_player.html#a480502a8db864e1ec92eb19f87a35083">player</a>.maxHealth;</div>
-<div class="line"><span class="lineno">  121</span>        <span class="keywordflow">return</span> <span class="keyword">this</span>;</div>
-<div class="line"><span class="lineno">  122</span>    }</div>
-<div class="line"><span class="lineno">  123</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (userInput == 5)</div>
-<div class="line"><span class="lineno">  124</span>    {</div>
-<div class="line"><span class="lineno">  125</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> StartMenu();</div>
-<div class="line"><span class="lineno">  126</span>    }</div>
-<div class="line"><span class="lineno">  127</span>    <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  128</span>    {</div>
-<div class="line"><span class="lineno">  129</span>        cout &lt;&lt; <span class="stringliteral">&quot;That&#39;s not one of the options!&quot;</span> &lt;&lt; endl;</div>
-<div class="line"><span class="lineno">  130</span>        <span class="keywordflow">return</span> <span class="keyword">this</span>;</div>
-<div class="line"><span class="lineno">  131</span>    }</div>
-<div class="line"><span class="lineno">  132</span>}</div>
-<div class="ttc" id="aclass_main_menu_html_a40f98ff78c92e3f79b781b7ed18507a7"><div class="ttname"><a href="#a40f98ff78c92e3f79b781b7ed18507a7">MainMenu::MainMenu</a></div><div class="ttdeci">MainMenu(Player player)</div><div class="ttdef"><b>Definition</b> <a href="ui_8cpp_source.html#l00070">ui.cpp:70</a></div></div>
-<div class="ttc" id="aextras_8cpp_html_a3816c0b1714f3be0c6c8a394a4faee7d"><div class="ttname"><a href="extras_8cpp.html#a3816c0b1714f3be0c6c8a394a4faee7d">inputNum</a></div><div class="ttdeci">int inputNum()</div><div class="ttdoc">Gets an integer from the user. Loops until a valid integer is entered.</div><div class="ttdef"><b>Definition</b> <a href="extras_8cpp_source.html#l00026">extras.cpp:26</a></div></div>
-<div class="ttc" id="aextras_8cpp_html_aff1ce18cf1cd562e54189df70cee6299"><div class="ttname"><a href="extras_8cpp.html#aff1ce18cf1cd562e54189df70cee6299">printAnimate</a></div><div class="ttdeci">void printAnimate(string msg, int delay)</div><div class="ttdoc">Outputs a text character by character with a given delay.</div><div class="ttdef"><b>Definition</b> <a href="extras_8cpp_source.html#l00041">extras.cpp:41</a></div></div>
+<div class="line"><span class="lineno">  115</span>        Entity enemy = Entity(500, <span class="stringliteral">&quot;Random Guy&quot;</span>, 50, 50);</div>
+<div class="line"><span class="lineno">  116</span>        <span class="keyword">auto</span> after = [=](Player <a class="code hl_variable" href="class_u_i_with_player.html#a480502a8db864e1ec92eb19f87a35083">player</a>) -&gt; UserInterface *</div>
+<div class="line"><span class="lineno">  117</span>        {</div>
+<div class="line"><span class="lineno">  118</span>            <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code hl_function" href="#a40f98ff78c92e3f79b781b7ed18507a7">MainMenu</a>(<a class="code hl_variable" href="class_u_i_with_player.html#a480502a8db864e1ec92eb19f87a35083">player</a>);</div>
+<div class="line"><span class="lineno">  119</span>        };</div>
+<div class="line"><span class="lineno">  120</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> Battle(<a class="code hl_variable" href="class_u_i_with_player.html#a480502a8db864e1ec92eb19f87a35083">player</a>, enemy, 50, after, after);</div>
+<div class="line"><span class="lineno">  121</span>    }</div>
+<div class="line"><span class="lineno">  122</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (userInput == 3)</div>
+<div class="line"><span class="lineno">  123</span>    {</div>
+<div class="line"><span class="lineno">  124</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> ShopMenu(<a class="code hl_variable" href="class_u_i_with_player.html#a480502a8db864e1ec92eb19f87a35083">player</a>);</div>
+<div class="line"><span class="lineno">  125</span>    }    </div>
+<div class="line"><span class="lineno">  126</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (userInput == 4)</div>
+<div class="line"><span class="lineno">  127</span>    {</div>
+<div class="line"><span class="lineno">  128</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> GambleMenu(<a class="code hl_variable" href="class_u_i_with_player.html#a480502a8db864e1ec92eb19f87a35083">player</a>);</div>
+<div class="line"><span class="lineno">  129</span>    }</div>
+<div class="line"><span class="lineno">  130</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (userInput == 5)</div>
+<div class="line"><span class="lineno">  131</span>    {</div>
+<div class="line"><span class="lineno">  132</span>        <a class="code hl_function" href="extras_8cpp.html#a251383c9dea6cb260fb6f9ebb010139f">printAnimate</a>(<span class="stringliteral">&quot;You were healed to full health!\n&quot;</span>);</div>
+<div class="line"><span class="lineno">  133</span>        <a class="code hl_variable" href="class_u_i_with_player.html#a480502a8db864e1ec92eb19f87a35083">player</a>.currHealth = <a class="code hl_variable" href="class_u_i_with_player.html#a480502a8db864e1ec92eb19f87a35083">player</a>.maxHealth;</div>
+<div class="line"><span class="lineno">  134</span>        <span class="keywordflow">return</span> <span class="keyword">this</span>;</div>
+<div class="line"><span class="lineno">  135</span>    }</div>
+<div class="line"><span class="lineno">  136</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (userInput == 6)</div>
+<div class="line"><span class="lineno">  137</span>    {</div>
+<div class="line"><span class="lineno">  138</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> StartMenu();</div>
+<div class="line"><span class="lineno">  139</span>    }</div>
+<div class="line"><span class="lineno">  140</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (userInput == 7)</div>
+<div class="line"><span class="lineno">  141</span>    {</div>
+<div class="line"><span class="lineno">  142</span>        <a class="code hl_variable" href="class_u_i_with_player.html#a480502a8db864e1ec92eb19f87a35083">player</a>.money = 999999;</div>
+<div class="line"><span class="lineno">  143</span>        <span class="keywordflow">return</span> <span class="keyword">this</span>;</div>
+<div class="line"><span class="lineno">  144</span>    }    </div>
+<div class="line"><span class="lineno">  145</span>    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  146</span>    {</div>
+<div class="line"><span class="lineno">  147</span>        cout &lt;&lt; <span class="stringliteral">&quot;That&#39;s not one of the options!&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><span class="lineno">  148</span>        <span class="keywordflow">return</span> <span class="keyword">this</span>;</div>
+<div class="line"><span class="lineno">  149</span>    }</div>
+<div class="line"><span class="lineno">  150</span>}</div>
+<div class="ttc" id="aclass_main_menu_html_a40f98ff78c92e3f79b781b7ed18507a7"><div class="ttname"><a href="#a40f98ff78c92e3f79b781b7ed18507a7">MainMenu::MainMenu</a></div><div class="ttdeci">MainMenu(Player player)</div><div class="ttdef"><b>Definition</b> <a href="ui_8cpp_source.html#l00078">ui.cpp:78</a></div></div>
+<div class="ttc" id="aextras_8cpp_html_a251383c9dea6cb260fb6f9ebb010139f"><div class="ttname"><a href="extras_8cpp.html#a251383c9dea6cb260fb6f9ebb010139f">printAnimate</a></div><div class="ttdeci">void printAnimate(string msg, int delay, bool animate)</div><div class="ttdoc">Outputs a text character by character with a given delay.</div><div class="ttdef"><b>Definition</b> <a href="extras_8cpp_source.html#l00042">extras.cpp:42</a></div></div>
+<div class="ttc" id="aextras_8cpp_html_a3816c0b1714f3be0c6c8a394a4faee7d"><div class="ttname"><a href="extras_8cpp.html#a3816c0b1714f3be0c6c8a394a4faee7d">inputNum</a></div><div class="ttdeci">int inputNum()</div><div class="ttdoc">Gets an integer from the user. Loops until a valid integer is entered.</div><div class="ttdef"><b>Definition</b> <a href="extras_8cpp_source.html#l00027">extras.cpp:27</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="extras_8cpp_source.html#l00026">inputNum()</a>, <a class="el" href="ui_8cpp_source.html#l00070">MainMenu()</a>, <a class="el" href="ui_8h_source.html#l00021">UIWithPlayer::player</a>, and <a class="el" href="extras_8cpp_source.html#l00041">printAnimate()</a>.</p>
+<p class="reference">References <a class="el" href="extras_8cpp_source.html#l00027">inputNum()</a>, <a class="el" href="ui_8cpp_source.html#l00078">MainMenu()</a>, <a class="el" href="ui_8h_source.html#l00021">UIWithPlayer::player</a>, and <a class="el" href="extras_8cpp_source.html#l00042">printAnimate()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">

@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['maxhealth_0',['maxHealth',['../class_entity.html#a6e20c965f14c04d09be06d07a471565d',1,'Entity']]],
-  ['money_1',['money',['../class_player.html#a9545beef70350d5c3b3a5719a890dd2f',1,'Player']]]
+  ['name_0',['name',['../class_entity.html#afb45718695f537c330a463168616c262',1,'Entity::name'],['../class_i_item.html#a7fdf57eb313baaea887b648bc13f247a',1,'IItem::name']]]
 ];

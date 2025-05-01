@@ -40,6 +40,8 @@ virtual bool \mbox{\hyperlink{class_i_enemy_item_a4f81ef24d49cb728a7a275db4b1b50
 \mbox{\hyperlink{class_i_item_ab1bb86846077713c5847ec035115f09c}{IItem}} (string n, string t, string d, int c)
 \item 
 virtual \mbox{\hyperlink{class_i_item_a09483bee7e3f4f382e8eeac54493620e}{\texorpdfstring{$\sim$}{\string~}\+IItem}} ()
+\item 
+virtual string \mbox{\hyperlink{class_i_item_aa7a7455949b90aed6b2f7fcd91fead8b}{get\+Desc}} ()
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Additional Inherited Members}
 \doxysubsection*{Public Attributes inherited from \mbox{\hyperlink{class_i_item}{IItem}}}
@@ -49,8 +51,6 @@ string \mbox{\hyperlink{class_i_item_a7fdf57eb313baaea887b648bc13f247a}{name}}
 \item 
 string \mbox{\hyperlink{class_i_item_a3b3b58b237d89653e493c95fe22074ff}{type}}
 \item 
-string \mbox{\hyperlink{class_i_item_a9acebb5d530d823314bb1a8f29ff974a}{desc}}
-\item 
 int \mbox{\hyperlink{class_i_item_a0b30dc1f8eee51c2b78ac71d6c7b93b7}{count}}
 \begin{DoxyCompactList}\small\item\em A count of -\/1 means the item can be used infinitely. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
@@ -58,7 +58,7 @@ int \mbox{\hyperlink{class_i_item_a0b30dc1f8eee51c2b78ac71d6c7b93b7}{count}}
 \doxysubsection{Detailed Description}
 Enemy items. The use function takes in a player and an enemy. 
 
-Definition at line \mbox{\hyperlink{items_8h_source_l00020}{20}} of file \mbox{\hyperlink{items_8h_source}{items.\+h}}.
+Definition at line \mbox{\hyperlink{items_8h_source_l00024}{24}} of file \mbox{\hyperlink{items_8h_source}{items.\+h}}.
 
 
 
@@ -71,20 +71,20 @@ IEnemy\+Item\+::\+IEnemy\+Item (\begin{DoxyParamCaption}\item[{string}]{n}{, }\i
 
 
 
-Definition at line \mbox{\hyperlink{items_8cpp_source_l00010}{10}} of file \mbox{\hyperlink{items_8cpp_source}{items.\+cpp}}.
+Definition at line \mbox{\hyperlink{items_8cpp_source_l00015}{15}} of file \mbox{\hyperlink{items_8cpp_source}{items.\+cpp}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00010\ :\ \mbox{\hyperlink{class_i_item_ab1bb86846077713c5847ec035115f09c}{IItem}}(n,\ t,\ d,\ c)\ \{\}}
+\DoxyCodeLine{00015\ :\ \mbox{\hyperlink{class_i_item_ab1bb86846077713c5847ec035115f09c}{IItem}}(n,\ t,\ d,\ c)\ \{\}}
 
 \end{DoxyCode}
 
 
-References \mbox{\hyperlink{items_8cpp_source_l00007}{IItem\+::\+IItem()}}.
+References \mbox{\hyperlink{items_8cpp_source_l00008}{IItem\+::\+IItem()}}.
 
 
 
-Referenced by \mbox{\hyperlink{items_8cpp_source_l00029}{Weapon\+::\+Weapon()}}.
+Referenced by \mbox{\hyperlink{items_8cpp_source_l00055}{Weapon\+::\+Weapon()}}.
 
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]

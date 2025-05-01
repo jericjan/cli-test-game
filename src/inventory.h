@@ -13,8 +13,9 @@ class Player;
 /// Inventory class that holds all items for the player.
 class Inventory
 {
-public:
+private:
     vector<IItem *> items;
+public:
 
     /// Adds an item to inventory
     /// @param item The item to add

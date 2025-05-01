@@ -20,7 +20,7 @@
 <!-- Node2 -->
 <g id="Node000002" class="node">
 <title>Node2</title>
-<g id="a_Node000002"><a xlink:href="extras_8cpp.html#aff1ce18cf1cd562e54189df70cee6299" target="_top" xlink:title="Outputs a text character by character with a given delay.">
+<g id="a_Node000002"><a xlink:href="extras_8cpp.html#a251383c9dea6cb260fb6f9ebb010139f" target="_top" xlink:title="Outputs a text character by character with a given delay.">
 <polygon fill="white" stroke="#666666" points="203,-20 132.25,-20 132.25,0 203,0 203,-20"/>
 <text text-anchor="middle" x="167.62" y="-6.5" font-family="Helvetica,sans-Serif" font-size="10.00">printAnimate</text>
 </a>

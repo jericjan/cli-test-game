@@ -12,11 +12,47 @@ string IItem::getDesc() {
     return desc;
 }
 
+string IItem::getName() {
+    return name;
+}
+
+string IItem::getType() {
+    return type;
+}
+
+void IItem::increment(int amount) {
+    count += amount;
+}
+
+void IItem::decrement(int amount) {
+    count -= amount;
+}
+
+int IItem::getCount() {
+    return count;
+}
+
+bool IItem::isInfinite() {
+    return count == -1;
+}
+
+bool IItem::isDepleted() {
+    return count == 0;
+}
+
+bool IItem::matches(IItem *item) {
+    return name == item->name; // Kinda bad implementation but it works for now
+}
+
 IEnemyItem::IEnemyItem(string n, string t, string d, int c) : IItem(n, t, d, c) {}
 
 IPlayerItem::IPlayerItem(string n, string t, string d, int c) : IItem(n, t, d, c) {}
 
 IPotion::IPotion(string n, string d, int c, int strength) : IPlayerItem(n, "Potion", d, c), strength(strength) {}
+
+int IPotion::getStrength() {
+    return strength;
+}
 
 HealthPotion::HealthPotion(int c) :
 IPotion("Health Potion", "", c, 100) {}
@@ -27,12 +63,12 @@ string HealthPotion::getDesc()
 
 bool HealthPotion::use(Player &player)
 {
-    if (player.currHealth == player.maxHealth)
+    if (player.isFullHealth())
     {
         cout << "You're already at full health!" << endl;
         return false;
     }
-    player.currHealth = min(player.maxHealth, player.currHealth + strength);
+    player.heal(strength);
     return true;
 }
 
@@ -44,15 +80,21 @@ string StrengthPotion::getDesc()
 
 bool StrengthPotion::use(Player &player)
 {
-    player.stats.atk += strength;    
+    player.boostAtk(strength);
     cout << "Your ATK increased by " + to_string(strength) + "!" << endl;
-    cout << "Your new ATK is " + to_string(player.stats.atk) + "!" << endl;
+    cout << "Your new ATK is " + to_string(player.getAtk()) + "!" << endl;
     return true;
 }
 
 
 
 Weapon::Weapon(string name, string desc, int count, int dmg) : IEnemyItem(name, "Weapon", desc, count), dmg(dmg) {}
+
+int Weapon::getDmg()
+{
+    return dmg;
+}
+
 bool Weapon::use(Player &player, Entity &enemy)
 {
     player.attack(enemy, dmg);

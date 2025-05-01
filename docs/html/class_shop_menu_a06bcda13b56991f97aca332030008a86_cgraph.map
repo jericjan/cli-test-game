@@ -1,0 +1,23 @@
+<map id="ShopMenu::render" name="ShopMenu::render">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,81,133,108"/>
+<area shape="rect" id="Node000002" href="$class_shop.html#a562501e5746bdef39699bc39203f8973" title=" " alt="" coords="181,5,287,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="99,78,188,36,191,41,101,83"/>
+<area shape="rect" id="Node000003" href="$class_shop.html#a6c1a27422ecdd1a5248f156f1355632b" title="Buy an item from the shop." alt="" coords="181,56,287,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="133,82,165,77,166,82,133,88"/>
+<area shape="rect" id="Node000009" href="$extras_8cpp.html#a3816c0b1714f3be0c6c8a394a4faee7d" title="Gets an integer from the user. Loops until a valid integer is entered." alt="" coords="195,107,272,133"/>
+<area shape="poly" id="edge9_Node000001_Node000009" title=" " alt="" coords="133,102,180,109,179,114,133,107"/>
+<area shape="rect" id="Node000010" href="$class_shop.html#ac213488671e8d976d97c3530e691fd44" title=" " alt="" coords="346,157,455,184"/>
+<area shape="poly" id="edge10_Node000001_Node000010" title=" " alt="" coords="96,106,135,126,181,143,258,158,331,166,330,171,257,163,180,148,133,130,93,111"/>
+<area shape="rect" id="Node000004" href="$class_inventory.html#a7a3d5b1157d8212186746eade80b5630" title="Adds an item to inventory." alt="" coords="335,5,465,32"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="280,53,339,35,340,40,281,58"/>
+<area shape="rect" id="Node000007" href="$class_player.html#a86ad66429e7bf8ef4640bac1d0f3476f" title=" " alt="" coords="337,56,463,83"/>
+<area shape="poly" id="edge6_Node000003_Node000007" title=" " alt="" coords="287,67,322,67,322,72,287,72"/>
+<area shape="rect" id="Node000008" href="$extras_8cpp.html#a99d2755bf0660601280710515b3f512c" title="Colors text." alt="" coords="515,107,606,133"/>
+<area shape="poly" id="edge8_Node000003_Node000008" title=" " alt="" coords="285,81,335,92,421,105,499,113,499,118,420,110,335,97,284,86"/>
+<area shape="rect" id="Node000005" href="$extras_8cpp.html#a251383c9dea6cb260fb6f9ebb010139f" title="Outputs a text character by character with a given delay." alt="" coords="513,5,608,32"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="466,16,498,16,498,21,466,21"/>
+<area shape="rect" id="Node000006" href="$extras_8cpp.html#aea0e34fe8a665ef6cb1fd6526ce1deb0" title=" " alt="" coords="656,5,728,32"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="608,16,640,16,640,21,608,21"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="446,81,502,99,501,104,444,86"/>
+<area shape="poly" id="edge11_Node000010_Node000008" title=" " alt="" coords="444,154,501,136,502,141,446,159"/>
+</map>
