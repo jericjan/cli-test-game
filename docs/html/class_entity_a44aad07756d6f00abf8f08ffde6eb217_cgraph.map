@@ -1,5 +1,7 @@
 <map id="Entity::attack" name="Entity::attack">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,105,32"/>
-<area shape="rect" id="Node000002" href="$class_entity.html#ac55fe185f7ccba9e35abf13517c65f63" title=" " alt="" coords="153,5,250,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="105,16,137,16,137,21,105,21"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,31,105,57"/>
+<area shape="rect" id="Node000002" href="$class_entity.html#ac55fe185f7ccba9e35abf13517c65f63" title=" " alt="" coords="162,5,260,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="105,33,146,26,147,32,106,39"/>
+<area shape="rect" id="Node000003" href="$class_entity.html#a4f777fc6bf2b1d5a655658ecc13c778e" title=" " alt="" coords="153,56,269,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="106,49,138,55,137,60,105,55"/>
 </map>

@@ -1,9 +1,13 @@
 <map id="IItem::IItem" name="IItem::IItem">
-<area shape="rect" id="Node000001" title=" " alt="" coords="645,81,735,108"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="645,132,735,159"/>
 <area shape="rect" id="Node000002" href="$class_i_enemy_item.html#ab04428e73487bd8279945087a6b307fa" title=" " alt="" coords="426,56,597,83"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="629,89,597,84,598,79,630,84"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="653,126,596,97,565,86,567,81,598,92,655,121"/>
 <area shape="rect" id="Node000006" href="$class_i_player_item.html#afc3002fdaacb41cd6862b2301cd279e3" title=" " alt="" coords="430,107,593,133"/>
-<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="630,106,594,111,594,106,629,101"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="629,139,594,134,594,129,630,134"/>
+<area shape="rect" id="Node000010" href="$class_i_item.html#a601366438586b3834e385b64e5d9b943" title=" " alt="" coords="457,157,566,184"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="630,156,567,166,567,160,629,151"/>
+<area shape="rect" id="Node000011" href="$class_i_item.html#a09483bee7e3f4f382e8eeac54493620e" title=" " alt="" coords="463,208,560,235"/>
+<area shape="poly" id="edge10_Node000001_Node000011" title=" " alt="" coords="655,169,598,198,562,211,560,206,596,194,653,165"/>
 <area shape="rect" id="Node000003" href="$class_weapon.html#a8d9631f8c67df4646e9b06516eff0cd0" title=" " alt="" coords="255,56,378,83"/>
 <area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="411,72,378,72,378,67,411,67"/>
 <area shape="rect" id="Node000004" href="$class_cool_stick.html#acfbae3a51f5ba2cddce652078b501f9d" title=" " alt="" coords="34,5,178,32"/>

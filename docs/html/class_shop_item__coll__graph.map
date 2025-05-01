@@ -1,5 +1,5 @@
 <map id="ShopItem" name="ShopItem">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,261,211,331"/>
-<area shape="rect" id="Node000002" href="$class_i_item.html" title="Base class for all items in the game." alt="" coords="30,5,186,197"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="111,197,111,244,106,244,106,197"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,432,211,501"/>
+<area shape="rect" id="Node000002" href="$class_i_item.html" title="Base class for all items in the game." alt="" coords="17,5,199,368"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="111,368,111,415,106,415,106,368"/>
 </map>

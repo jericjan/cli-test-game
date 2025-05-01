@@ -11,7 +11,8 @@
 
 
 
-Collaboration diagram for Inventory\+:\nopagebreak
+Collaboration diagram for Inventory\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -29,7 +30,7 @@ bool \mbox{\hyperlink{class_inventory_a51e9f40ed13d62a47358418925bb8347}{use\+It
 \begin{DoxyCompactList}\small\item\em Use an item. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_inventory_a2343fa8402b342a8617d6b619ec08673}{drop\+Item}} (int idx)
 \begin{DoxyCompactList}\small\item\em drop an item. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsubsection*{Public Attributes}
+\doxysubsubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
 vector$<$ \mbox{\hyperlink{class_i_item}{IItem}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{class_inventory_adfeb1d487d3180b4741506b9452e8c5c}{items}}
@@ -73,15 +74,15 @@ Definition at line \mbox{\hyperlink{inventory_8cpp_source_l00007}{7}} of file \m
 \DoxyCodeLine{00008\ \{}
 \DoxyCodeLine{00009\ \ \ \ \ \textcolor{keywordflow}{for}\ (IItem\ *existingItem\ :\ \mbox{\hyperlink{class_inventory_adfeb1d487d3180b4741506b9452e8c5c}{items}})}
 \DoxyCodeLine{00010\ \ \ \ \ \{}
-\DoxyCodeLine{00011\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (existingItem-\/>name\ ==\ item-\/>\mbox{\hyperlink{class_i_item_a7fdf57eb313baaea887b648bc13f247a}{name}})\ \textcolor{comment}{//\ Kinda\ bad\ implementation\ but\ it\ works\ for\ now}}
+\DoxyCodeLine{00011\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (existingItem-\/>matches(item))}
 \DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (existingItem-\/>count\ !=\ -\/1)}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!existingItem-\/>isInfinite())}
 \DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ existingItem-\/>count\ +=\ item-\/>\mbox{\hyperlink{class_i_item_a0b30dc1f8eee51c2b78ac71d6c7b93b7}{count}};}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ existingItem-\/>increment(item-\/>\mbox{\hyperlink{class_i_item_a5a1e25be1c8a94e21ec832a9b7b5492f}{getCount}}());}
 \DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{\ \ \textcolor{comment}{//\ Infinite\ item\ alr\ exists}}
 \DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ existingItem;}
 \DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ msg\ =\ \textcolor{stringliteral}{"{}You\ now\ have\ "{}}\ +\ to\_string(existingItem-\/>count)\ +\ \textcolor{stringliteral}{"{}x\ "{}}\ +\ existingItem-\/>name\ +\ \textcolor{stringliteral}{"{}!"{}};}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ msg\ =\ \textcolor{stringliteral}{"{}You\ now\ have\ "{}}\ +\ to\_string(existingItem-\/>getCount())\ +\ \textcolor{stringliteral}{"{}x\ "{}}\ +\ existingItem-\/>getName()\ +\ \textcolor{stringliteral}{"{}!"{}};}
 \DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ border\ =\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}}\ +\ string(msg.length(),\ \textcolor{charliteral}{'='})\ +\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
 \DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{extras_8cpp_a251383c9dea6cb260fb6f9ebb010139f}{printAnimate}}(border,\ 1,\ animate);}
 \DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{extras_8cpp_a251383c9dea6cb260fb6f9ebb010139f}{printAnimate}}(msg,\ 10,\ animate);}
@@ -90,7 +91,7 @@ Definition at line \mbox{\hyperlink{inventory_8cpp_source_l00007}{7}} of file \m
 \DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{00026\ \ \ \ \ \}}
 \DoxyCodeLine{00027\ }
-\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{string}\ msg\ =\ item-\/>\mbox{\hyperlink{class_i_item_a7fdf57eb313baaea887b648bc13f247a}{name}}\ +\ \textcolor{stringliteral}{"{}\ added\ to\ inventory!"{}};}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{string}\ msg\ =\ item-\/>\mbox{\hyperlink{class_i_item_a6b86cf44e8eebf94b7096ea5645a0527}{getName}}()\ +\ \textcolor{stringliteral}{"{}\ added\ to\ inventory!"{}};}
 \DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{string}\ border\ =\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}}\ +\ string(msg.length(),\ \textcolor{charliteral}{'='})\ +\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
 \DoxyCodeLine{00030\ \ \ \ \ \mbox{\hyperlink{extras_8cpp_a251383c9dea6cb260fb6f9ebb010139f}{printAnimate}}(border,\ 1,\ animate);}
 \DoxyCodeLine{00031\ \ \ \ \ \mbox{\hyperlink{extras_8cpp_a251383c9dea6cb260fb6f9ebb010139f}{printAnimate}}(msg,\ 10,\ animate);}
@@ -102,13 +103,14 @@ Definition at line \mbox{\hyperlink{inventory_8cpp_source_l00007}{7}} of file \m
 \end{DoxyCode}
 
 
-References \mbox{\hyperlink{items_8h_source_l00017}{IItem\+::count}}, \mbox{\hyperlink{inventory_8h_source_l00017}{items}}, \mbox{\hyperlink{items_8h_source_l00015}{IItem\+::name}}, and \mbox{\hyperlink{extras_8cpp_source_l00042}{print\+Animate()}}.
+References \mbox{\hyperlink{items_8cpp_source_l00031}{IItem\+::get\+Count()}}, \mbox{\hyperlink{items_8cpp_source_l00015}{IItem\+::get\+Name()}}, \mbox{\hyperlink{inventory_8h_source_l00017}{items}}, and \mbox{\hyperlink{extras_8cpp_source_l00042}{print\+Animate()}}.
 
 
 
 Referenced by \mbox{\hyperlink{shop_8cpp_source_l00030}{Shop\+::buy\+Item()}}.
 
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -169,9 +171,9 @@ Definition at line \mbox{\hyperlink{inventory_8cpp_source_l00037}{37}} of file \
 \DoxyCodeLine{00041\ \ \ \ \ cout\ <<\ \mbox{\hyperlink{extras_8cpp_a9f429ae2206e7d4a9b8b4071b64080b5}{padTo}}(\textcolor{stringliteral}{"{}[Name]"{}},\ 20)\ <<\ \textcolor{stringliteral}{"{}|"{}}\ <<\ \mbox{\hyperlink{extras_8cpp_a9f429ae2206e7d4a9b8b4071b64080b5}{padTo}}(\textcolor{stringliteral}{"{}[Type]"{}},\ 20)\ <<\ \textcolor{stringliteral}{"{}|"{}}\ <<\ \mbox{\hyperlink{extras_8cpp_a9f429ae2206e7d4a9b8b4071b64080b5}{padTo}}(\textcolor{stringliteral}{"{}[Description]"{}},\ 50)\ <<\ \textcolor{stringliteral}{"{}|"{}}\ <<\ \mbox{\hyperlink{extras_8cpp_a9f429ae2206e7d4a9b8b4071b64080b5}{padTo}}(\textcolor{stringliteral}{"{}[Count]"{}},\ 20)\ <<\ endl;}
 \DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordflow}{for}\ (IItem\ *item\ :\ \mbox{\hyperlink{class_inventory_adfeb1d487d3180b4741506b9452e8c5c}{items}})}
 \DoxyCodeLine{00043\ \ \ \ \ \{}
-\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ count\ =\ (item-\/>count\ ==\ -\/1)\ ?\ \textcolor{stringliteral}{"{}Infinite"{}}\ :\ to\_string(item-\/>count)\ +\ \textcolor{stringliteral}{"{}x"{}};}
-\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ numberedName\ =\ string(\textcolor{stringliteral}{"{}["{}})\ +\ to\_string(idx)\ +\ \textcolor{stringliteral}{"{}]\ "{}}\ +\ item-\/>name;}
-\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ cout\ <<\ \mbox{\hyperlink{extras_8cpp_a9f429ae2206e7d4a9b8b4071b64080b5}{padTo}}(numberedName,\ 20)\ <<\ \textcolor{stringliteral}{"{}|"{}}\ <<\ \mbox{\hyperlink{extras_8cpp_a9f429ae2206e7d4a9b8b4071b64080b5}{padTo}}(item-\/>type,\ 20)\ <<\ \textcolor{stringliteral}{"{}|"{}}\ <<\ \mbox{\hyperlink{extras_8cpp_a9f429ae2206e7d4a9b8b4071b64080b5}{padTo}}(item-\/>getDesc(),\ 50)\ <<\ \textcolor{stringliteral}{"{}|"{}}\ <<\ \mbox{\hyperlink{extras_8cpp_a9f429ae2206e7d4a9b8b4071b64080b5}{padTo}}(count,\ 20)\ <<\ endl;}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ count\ =\ item-\/>isInfinite()\ ?\ \textcolor{stringliteral}{"{}Infinite"{}}\ :\ to\_string(item-\/>getCount())\ +\ \textcolor{stringliteral}{"{}x"{}};}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ numberedName\ =\ string(\textcolor{stringliteral}{"{}["{}})\ +\ to\_string(idx)\ +\ \textcolor{stringliteral}{"{}]\ "{}}\ +\ item-\/>getName();}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ cout\ <<\ \mbox{\hyperlink{extras_8cpp_a9f429ae2206e7d4a9b8b4071b64080b5}{padTo}}(numberedName,\ 20)\ <<\ \textcolor{stringliteral}{"{}|"{}}\ <<\ \mbox{\hyperlink{extras_8cpp_a9f429ae2206e7d4a9b8b4071b64080b5}{padTo}}(item-\/>getType(),\ 20)\ <<\ \textcolor{stringliteral}{"{}|"{}}\ <<\ \mbox{\hyperlink{extras_8cpp_a9f429ae2206e7d4a9b8b4071b64080b5}{padTo}}(item-\/>getDesc(),\ 50)\ <<\ \textcolor{stringliteral}{"{}|"{}}\ <<\ \mbox{\hyperlink{extras_8cpp_a9f429ae2206e7d4a9b8b4071b64080b5}{padTo}}(count,\ 20)\ <<\ endl;}
 \DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ idx++;}
 \DoxyCodeLine{00048\ \ \ \ \ \}}
 \DoxyCodeLine{00049\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Type\ the\ \#\ of\ the\ item\ to\ use,\ 0\ to\ exit\ >\ "{}};}
@@ -246,10 +248,10 @@ Definition at line \mbox{\hyperlink{inventory_8cpp_source_l00053}{53}} of file \
 \DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
 \DoxyCodeLine{00084\ \ \ \ \ \}}
 \DoxyCodeLine{00085\ }
-\DoxyCodeLine{00086\ \ \ \ \ \textcolor{keywordflow}{if}\ (item-\/>\mbox{\hyperlink{class_i_item_a0b30dc1f8eee51c2b78ac71d6c7b93b7}{count}}\ !=\ -\/1)}
+\DoxyCodeLine{00086\ \ \ \ \ \textcolor{keywordflow}{if}\ (!item-\/>\mbox{\hyperlink{class_i_item_a3a36b5da24de2beb083bd954d72e1252}{isInfinite}}())}
 \DoxyCodeLine{00087\ \ \ \ \ \{}
-\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ item-\/>\mbox{\hyperlink{class_i_item_a0b30dc1f8eee51c2b78ac71d6c7b93b7}{count}}-\/-\/;}
-\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (item-\/>\mbox{\hyperlink{class_i_item_a0b30dc1f8eee51c2b78ac71d6c7b93b7}{count}}\ ==\ 0)}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ item-\/>\mbox{\hyperlink{class_i_item_aebf70cebb705732de76a0cfa1081055a}{decrement}}(1);}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (item-\/>\mbox{\hyperlink{class_i_item_ad10d9c87e8731804f994b9ca49a188df}{isDepleted}}())}
 \DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_inventory_adfeb1d487d3180b4741506b9452e8c5c}{items}}.erase(\mbox{\hyperlink{class_inventory_adfeb1d487d3180b4741506b9452e8c5c}{items}}.begin()\ +\ idx\ -\/\ 1);}
 \DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ item;}
@@ -261,8 +263,16 @@ Definition at line \mbox{\hyperlink{inventory_8cpp_source_l00053}{53}} of file \
 \end{DoxyCode}
 
 
-References \mbox{\hyperlink{items_8h_source_l00017}{IItem\+::count}}, and \mbox{\hyperlink{inventory_8h_source_l00017}{items}}.
+References \mbox{\hyperlink{items_8cpp_source_l00027}{IItem\+::decrement()}}, \mbox{\hyperlink{items_8cpp_source_l00039}{IItem\+::is\+Depleted()}}, \mbox{\hyperlink{items_8cpp_source_l00035}{IItem\+::is\+Infinite()}}, and \mbox{\hyperlink{inventory_8h_source_l00017}{items}}.
 
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=305pt]{class_inventory_a51e9f40ed13d62a47358418925bb8347_cgraph}
+\end{center}
+\end{figure}
 
 
 \doxysubsection{Member Data Documentation}
@@ -270,7 +280,7 @@ References \mbox{\hyperlink{items_8h_source_l00017}{IItem\+::count}}, and \mbox{
 \index{items@{items}!Inventory@{Inventory}}
 \doxysubsubsection{\texorpdfstring{items}{items}}
 {\footnotesize\ttfamily \label{class_inventory_adfeb1d487d3180b4741506b9452e8c5c} 
-vector$<$\mbox{\hyperlink{class_i_item}{IItem}} \texorpdfstring{$\ast$}{*}$>$ Inventory\+::items}
+vector$<$\mbox{\hyperlink{class_i_item}{IItem}} \texorpdfstring{$\ast$}{*}$>$ Inventory\+::items\hspace{0.3cm}{\ttfamily [private]}}
 
 
 

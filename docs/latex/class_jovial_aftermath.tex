@@ -11,7 +11,8 @@ The cutscene after the player wins the Jovial fight.
 
 
 
-Inheritance diagram for Jovial\+Aftermath\+:\nopagebreak
+Inheritance diagram for Jovial\+Aftermath\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -20,7 +21,8 @@ Inheritance diagram for Jovial\+Aftermath\+:\nopagebreak
 \end{figure}
 
 
-Collaboration diagram for Jovial\+Aftermath\+:\nopagebreak
+Collaboration diagram for Jovial\+Aftermath\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -51,22 +53,23 @@ virtual \mbox{\hyperlink{class_user_interface_ae588b2ff1711a016dd4c6fc5002c0841}
 \item 
 string \mbox{\hyperlink{class_jovial_aftermath_af59cb6805b34b4523868c6944e91fc1f}{battle\+Status}}
 \end{DoxyCompactItemize}
-\doxysubsection*{Public Attributes inherited from \mbox{\hyperlink{class_u_i_with_player}{UIWith\+Player}}}
-\begin{DoxyCompactItemize}
-\item 
-\mbox{\hyperlink{class_player}{Player}} \mbox{\hyperlink{class_u_i_with_player_a480502a8db864e1ec92eb19f87a35083}{player}}
-\end{DoxyCompactItemize}
 \doxysubsection*{Public Attributes inherited from \mbox{\hyperlink{class_user_interface}{User\+Interface}}}
 \begin{DoxyCompactItemize}
 \item 
 bool \mbox{\hyperlink{class_user_interface_aa95ee5089a1de7ad211fb3a1bb786e11}{quit\+Game}} = false
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_u_i_with_player}{UIWith\+Player}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_player}{Player}} \mbox{\hyperlink{class_u_i_with_player_a480502a8db864e1ec92eb19f87a35083}{player}}
 \end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
 The cutscene after the player wins the Jovial fight. 
 
-Definition at line \mbox{\hyperlink{ui_8h_source_l00080}{80}} of file \mbox{\hyperlink{ui_8h_source}{ui.\+h}}.
+Definition at line \mbox{\hyperlink{ui_8h_source_l00083}{83}} of file \mbox{\hyperlink{ui_8h_source}{ui.\+h}}.
 
 
 
@@ -88,7 +91,7 @@ Definition at line \mbox{\hyperlink{ui_8cpp_source_l00173}{173}} of file \mbox{\
 \end{DoxyCode}
 
 
-References \mbox{\hyperlink{ui_8h_source_l00083}{battle\+Status}}, \mbox{\hyperlink{ui_8h_source_l00021}{UIWith\+Player\+::player}}, and \mbox{\hyperlink{ui_8cpp_source_l00015}{UIWith\+Player\+::\+UIWith\+Player()}}.
+References \mbox{\hyperlink{ui_8h_source_l00086}{battle\+Status}}, \mbox{\hyperlink{ui_8h_source_l00021}{UIWith\+Player\+::player}}, and \mbox{\hyperlink{ui_8cpp_source_l00015}{UIWith\+Player\+::\+UIWith\+Player()}}.
 
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -120,7 +123,7 @@ Definition at line \mbox{\hyperlink{ui_8cpp_source_l00174}{174}} of file \mbox{\
 \DoxyCodeLine{00176\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_jovial_aftermath_af59cb6805b34b4523868c6944e91fc1f}{battleStatus}}\ ==\ \textcolor{stringliteral}{"{}win"{}})}
 \DoxyCodeLine{00177\ \ \ \ \ \{}
 \DoxyCodeLine{00178\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{extras_8cpp_a251383c9dea6cb260fb6f9ebb010139f}{printAnimate}}(\mbox{\hyperlink{extras_8cpp_a99d2755bf0660601280710515b3f512c}{colorizeText}}(\textcolor{stringliteral}{"{}Jovial:\ I-\/\ I\ lost?\ I\ can't\ believe\ it...\(\backslash\)n"{}},\ \mbox{\hyperlink{extras_8h_ab87bacfdad76e61b9412d7124be44c1cae735a848bf82163a19236ead1c3ef2d2}{YELLOW}})\ +}
-\DoxyCodeLine{00179\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_u_i_with_player_a480502a8db864e1ec92eb19f87a35083}{player}}.name\ +\ \textcolor{stringliteral}{"{}:\ Yeah,\ tough\ luck\ man.\ Now\ get\ outta\ here.\(\backslash\)n"{}}\ +}
+\DoxyCodeLine{00179\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_u_i_with_player_a480502a8db864e1ec92eb19f87a35083}{player}}.getName()\ +\ \textcolor{stringliteral}{"{}:\ Yeah,\ tough\ luck\ man.\ Now\ get\ outta\ here.\(\backslash\)n"{}}\ +}
 \DoxyCodeLine{00180\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{extras_8cpp_a99d2755bf0660601280710515b3f512c}{colorizeText}}(\textcolor{stringliteral}{"{}Jovial:\ Okay,\ geez.\(\backslash\)n"{}},\ \mbox{\hyperlink{extras_8h_ab87bacfdad76e61b9412d7124be44c1cae735a848bf82163a19236ead1c3ef2d2}{YELLOW}})\ +}
 \DoxyCodeLine{00181\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Villager\ 2:\ You\ saved\ us!\ Take\ these\ health\ potions\ and\ cash\ as\ a\ form\ of\ gratitude\ from\ us.\(\backslash\)n"{}});}
 \DoxyCodeLine{00182\ \ \ \ \ \ \ \ \ HealthPotion\ *hp\ =\ \textcolor{keyword}{new}\ HealthPotion(20);}
@@ -143,7 +146,7 @@ Definition at line \mbox{\hyperlink{ui_8cpp_source_l00174}{174}} of file \mbox{\
 \end{DoxyCode}
 
 
-References \mbox{\hyperlink{ui_8h_source_l00083}{battle\+Status}}, \mbox{\hyperlink{extras_8cpp_source_l00022}{colorize\+Text()}}, \mbox{\hyperlink{ui_8h_source_l00021}{UIWith\+Player\+::player}}, \mbox{\hyperlink{extras_8cpp_source_l00042}{print\+Animate()}}, and \mbox{\hyperlink{extras_8h_source_l00019}{YELLOW}}.
+References \mbox{\hyperlink{ui_8h_source_l00086}{battle\+Status}}, \mbox{\hyperlink{extras_8cpp_source_l00022}{colorize\+Text()}}, \mbox{\hyperlink{ui_8h_source_l00021}{UIWith\+Player\+::player}}, \mbox{\hyperlink{extras_8cpp_source_l00042}{print\+Animate()}}, and \mbox{\hyperlink{extras_8h_source_l00019}{YELLOW}}.
 
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -163,7 +166,7 @@ string Jovial\+Aftermath\+::battle\+Status}
 
 
 
-Definition at line \mbox{\hyperlink{ui_8h_source_l00083}{83}} of file \mbox{\hyperlink{ui_8h_source}{ui.\+h}}.
+Definition at line \mbox{\hyperlink{ui_8h_source_l00086}{86}} of file \mbox{\hyperlink{ui_8h_source}{ui.\+h}}.
 
 
 

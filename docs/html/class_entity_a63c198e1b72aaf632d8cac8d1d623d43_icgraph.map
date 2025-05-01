@@ -1,0 +1,5 @@
+<map id="Entity::boostAtk" name="Entity::boostAtk">
+<area shape="rect" id="Node000001" title=" " alt="" coords="190,5,305,32"/>
+<area shape="rect" id="Node000002" href="$class_strength_potion.html#ade578d9d7d7fa2152c3adaec3d302427" title=" " alt="" coords="5,5,142,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="174,21,142,21,142,16,174,16"/>
+</map>

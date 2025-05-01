@@ -1,19 +1,19 @@
 <map id="IItem" name="IItem">
-<area shape="rect" id="Node000001" title="Base class for all items in the game." alt="" coords="314,5,470,197"/>
-<area shape="rect" id="Node000002" href="$class_i_enemy_item.html" title="Enemy items. The use function takes in a player and an enemy." alt="" coords="172,245,377,368"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="332,211,311,247,307,244,327,209"/>
-<area shape="rect" id="Node000006" href="$class_i_player_item.html" title="Player items. The use function takes in a player only." alt="" coords="400,253,620,360"/>
-<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="457,209,482,252,477,255,452,211"/>
-<area shape="rect" id="Node000003" href="$class_weapon.html" title="Weapons set the type to &quot;Weapon&quot; and implement the use function cuz all weapons attack lmao." alt="" coords="172,416,376,539"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="277,383,277,416,272,416,272,383"/>
-<area shape="rect" id="Node000004" href="$class_cool_stick.html" title="The Cool Stick is the first weapon the player gets." alt="" coords="5,597,172,688"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="197,550,141,599,137,595,193,546"/>
-<area shape="rect" id="Node000005" href="$class_yamato.html" title="The OP weapon of the game, the Yamato!!!" alt="" coords="196,597,363,688"/>
-<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="279,553,281,597,275,598,274,553"/>
-<area shape="rect" id="Node000007" href="$class_i_potion.html" title="Potions set the type to &quot;Potion&quot;." alt="" coords="427,435,594,520"/>
-<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="513,375,513,435,508,435,508,375"/>
-<area shape="rect" id="Node000008" href="$class_health_potion.html" title="Health potions heal the player of course." alt="" coords="397,587,613,699"/>
-<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="511,535,509,587,504,587,506,535"/>
-<area shape="rect" id="Node000009" href="$class_strength_potion.html" title="Increases player ATK." alt="" coords="637,587,853,699"/>
-<area shape="poly" id="edge8_Node000007_Node000009" title=" " alt="" coords="583,526,668,585,665,589,580,530"/>
+<area shape="rect" id="Node000001" title="Base class for all items in the game." alt="" coords="300,5,482,368"/>
+<area shape="rect" id="Node000002" href="$class_i_enemy_item.html" title="Enemy items. The use function takes in a player and an enemy." alt="" coords="172,416,377,539"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="315,383,301,417,296,415,310,381"/>
+<area shape="rect" id="Node000006" href="$class_i_player_item.html" title="Player items. The use function takes in a player only." alt="" coords="400,424,620,531"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="474,381,491,423,486,425,469,383"/>
+<area shape="rect" id="Node000003" href="$class_weapon.html" title="Weapons set the type to &quot;Weapon&quot; and implement the use function cuz all weapons attack lmao." alt="" coords="172,587,376,731"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="277,554,277,587,272,587,272,554"/>
+<area shape="rect" id="Node000004" href="$class_cool_stick.html" title="The Cool Stick is the first weapon the player gets." alt="" coords="5,789,172,880"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="189,743,137,792,134,788,186,739"/>
+<area shape="rect" id="Node000005" href="$class_yamato.html" title="The OP weapon of the game, the Yamato!!!" alt="" coords="196,789,363,880"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="279,746,281,790,275,790,274,746"/>
+<area shape="rect" id="Node000007" href="$class_i_potion.html" title="Potions set the type to &quot;Potion&quot;." alt="" coords="427,605,594,712"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="513,545,513,606,508,606,508,545"/>
+<area shape="rect" id="Node000008" href="$class_health_potion.html" title="Health potions heal the player of course." alt="" coords="397,779,613,891"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="511,726,509,779,504,779,505,726"/>
+<area shape="rect" id="Node000009" href="$class_strength_potion.html" title="Increases player ATK." alt="" coords="637,779,853,891"/>
+<area shape="poly" id="edge8_Node000007_Node000009" title=" " alt="" coords="594,718,672,777,669,781,591,723"/>
 </map>

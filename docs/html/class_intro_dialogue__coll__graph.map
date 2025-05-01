@@ -1,15 +1,17 @@
 <map id="IntroDialogue" name="IntroDialogue">
-<area shape="rect" id="Node000001" title="The intro dialogue. The player can choose their name and get a cool stick." alt="" coords="29,764,239,833"/>
-<area shape="rect" id="Node000002" href="$class_u_i_with_player.html" title="Basically just the base class for all user interfaces that have a player." alt="" coords="41,624,227,715"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="136,730,136,764,131,764,131,730"/>
-<area shape="rect" id="Node000003" href="$class_user_interface.html" title="Base class for all user interfaces in the game." alt="" coords="5,451,219,541"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="122,556,131,624,126,625,117,557"/>
-<area shape="rect" id="Node000004" href="$class_player.html" title="The Player class is an Entity that has an inventory and money." alt="" coords="244,432,461,560"/>
-<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="274,562,205,616,202,612,271,558"/>
-<area shape="rect" id="Node000005" href="$class_entity.html" title="Base class for all entities in the game. This includes the player and enemies." alt="" coords="120,181,296,368"/>
-<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="279,378,313,431,309,434,274,381"/>
-<area shape="rect" id="Node000006" href="$class_stats.html" title="Stats for all entities." alt="" coords="148,5,269,117"/>
-<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="211,117,211,164,206,164,206,117"/>
-<area shape="rect" id="Node000007" href="$class_inventory.html" title="Inventory class that holds all items for the player." alt="" coords="321,192,507,357"/>
-<area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="394,358,377,417,372,415,388,356"/>
+<area shape="rect" id="Node000001" title="The intro dialogue. The player can choose their name and get a cool stick." alt="" coords="29,956,239,1025"/>
+<area shape="rect" id="Node000002" href="$class_u_i_with_player.html" title="Basically just the base class for all user interfaces that have a player." alt="" coords="41,816,227,907"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="136,922,136,956,131,956,131,922"/>
+<area shape="rect" id="Node000003" href="$class_user_interface.html" title="Base class for all user interfaces in the game." alt="" coords="5,600,219,691"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="121,705,132,816,127,816,116,706"/>
+<area shape="rect" id="Node000004" href="$class_player.html" title="The Player class is an Entity that has an inventory and money." alt="" coords="244,539,461,752"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="247,753,192,806,189,803,243,750"/>
+<area shape="rect" id="Node000005" href="$class_entity.html" title="Base class for all entities in the game. This includes the player and enemies." alt="" coords="120,160,296,475"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="286,487,308,538,303,540,281,490"/>
+<area shape="rect" id="Node000006" href="$struct_health.html" title=" " alt="" coords="27,5,206,96"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="134,95,151,144,146,145,129,96"/>
+<area shape="rect" id="Node000007" href="$struct_stats.html" title="Stats for all entities." alt="" coords="230,5,373,96"/>
+<area shape="poly" id="edge6_Node000005_Node000007" title=" " alt="" coords="289,96,271,145,266,144,284,95"/>
+<area shape="rect" id="Node000008" href="$class_inventory.html" title="Inventory class that holds all items for the player." alt="" coords="321,235,507,400"/>
+<area shape="poly" id="edge7_Node000004_Node000008" title=" " alt="" coords="401,400,378,523,373,522,396,399"/>
 </map>

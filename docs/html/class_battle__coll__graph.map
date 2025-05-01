@@ -1,16 +1,18 @@
 <map id="Battle" name="Battle">
-<area shape="rect" id="Node000001" title="The battle screen. The user can attack, use an item, or run away." alt="" coords="294,764,558,999"/>
-<area shape="rect" id="Node000002" href="$class_u_i_with_player.html" title="Basically just the base class for all user interfaces that have a player." alt="" coords="261,624,447,715"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="376,728,389,763,383,765,371,730"/>
-<area shape="rect" id="Node000003" href="$class_user_interface.html" title="Base class for all user interfaces in the game." alt="" coords="247,451,461,541"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="356,556,356,624,351,624,351,556"/>
-<area shape="rect" id="Node000004" href="$class_player.html" title="The Player class is an Entity that has an inventory and money." alt="" coords="5,432,222,560"/>
-<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="203,558,280,612,277,616,200,562"/>
-<area shape="rect" id="Node000005" href="$class_entity.html" title="Base class for all entities in the game. This includes the player and enemies." alt="" coords="327,181,503,368"/>
-<area shape="poly" id="edge7_Node000001_Node000005" title=" " alt="" coords="458,367,475,432,483,513,482,596,474,675,462,748,456,747,469,675,477,595,478,513,470,432,452,368"/>
-<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="317,351,201,434,198,430,314,346"/>
-<area shape="rect" id="Node000006" href="$class_stats.html" title="Stats for all entities." alt="" coords="355,5,476,117"/>
-<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="418,117,418,164,412,164,412,117"/>
-<area shape="rect" id="Node000007" href="$class_inventory.html" title="Inventory class that holds all items for the player." alt="" coords="21,192,207,357"/>
-<area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="116,357,116,415,111,415,111,357"/>
+<area shape="rect" id="Node000001" title="The battle screen. The user can attack, use an item, or run away." alt="" coords="294,956,558,1191"/>
+<area shape="rect" id="Node000002" href="$class_u_i_with_player.html" title="Basically just the base class for all user interfaces that have a player." alt="" coords="261,816,447,907"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="376,920,389,955,383,957,371,922"/>
+<area shape="rect" id="Node000003" href="$class_user_interface.html" title="Base class for all user interfaces in the game." alt="" coords="247,600,461,691"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="356,705,356,816,351,816,351,705"/>
+<area shape="rect" id="Node000004" href="$class_player.html" title="The Player class is an Entity that has an inventory and money." alt="" coords="5,539,222,752"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="224,741,294,803,290,807,220,745"/>
+<area shape="rect" id="Node000005" href="$class_entity.html" title="Base class for all entities in the game. This includes the player and enemies." alt="" coords="327,160,503,475"/>
+<area shape="poly" id="edge8_Node000001_Node000005" title=" " alt="" coords="464,474,475,538,485,642,485,723,477,804,462,907,457,940,451,939,457,906,471,803,480,723,480,642,470,539,458,475"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="319,427,213,541,209,537,315,423"/>
+<area shape="rect" id="Node000006" href="$struct_health.html" title=" " alt="" coords="232,5,411,96"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="340,95,357,144,352,145,335,96"/>
+<area shape="rect" id="Node000007" href="$struct_stats.html" title="Stats for all entities." alt="" coords="436,5,579,96"/>
+<area shape="poly" id="edge6_Node000005_Node000007" title=" " alt="" coords="494,96,477,145,472,144,489,95"/>
+<area shape="rect" id="Node000008" href="$class_inventory.html" title="Inventory class that holds all items for the player." alt="" coords="21,235,207,400"/>
+<area shape="poly" id="edge7_Node000004_Node000008" title=" " alt="" coords="116,400,116,522,111,522,111,400"/>
 </map>

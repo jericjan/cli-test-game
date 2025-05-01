@@ -112,12 +112,17 @@ UserInterface *MainMenu::render()
     }
     else if (userInput == 2)
     {
-        Entity enemy = Entity(500, "Random Guy", 50, 50);
-        auto after = [=](Player player) -> UserInterface *
+        Entity enemy = Entity(500, "Random Guy", 70, 50);
+        auto win = [=](Player player) -> UserInterface *
         {
             return new MainMenu(player);
         };
-        return new Battle(player, enemy, 50, after, after);
+        auto lose = [=](Player player) -> UserInterface *
+        {
+            printAnimate("You lost? In a random battle? How embarrassing.\n");
+            return new GameOver();
+        };        
+        return new Battle(player, enemy, 50, win, lose);
     }
     else if (userInput == 3)
     {

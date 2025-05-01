@@ -3,6 +3,7 @@ var hierarchy =
     [ "Entity", "class_entity.html", [
       [ "Player", "class_player.html", null ]
     ] ],
+    [ "Health", "struct_health.html", null ],
     [ "IItem", "class_i_item.html", [
       [ "IEnemyItem", "class_i_enemy_item.html", [
         [ "Weapon", "class_weapon.html", [
@@ -20,7 +21,7 @@ var hierarchy =
     [ "Inventory", "class_inventory.html", null ],
     [ "Shop", "class_shop.html", null ],
     [ "ShopItem", "class_shop_item.html", null ],
-    [ "Stats", "class_stats.html", null ],
+    [ "Stats", "struct_stats.html", null ],
     [ "UIHandler", "class_u_i_handler.html", null ],
     [ "UserInterface", "class_user_interface.html", [
       [ "GameOver", "class_game_over.html", null ],

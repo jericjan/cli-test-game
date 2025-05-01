@@ -109,7 +109,7 @@ $(function(){initNavTree('class_health_potion.html',''); initResizable(true); })
 </div><!--header-->
 <div class="contents">
 
-<p>Health potions heal the player of course.  
+<p><a class="el" href="struct_health.html">Health</a> potions heal the player of course.  
  <a href="#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="items_8h_source.html">items.h</a>&gt;</code></p>
@@ -135,6 +135,8 @@ Public Member Functions</h2></td></tr>
 <tr class="inherit_header pub_methods_class_i_potion"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_class_i_potion')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_i_potion.html">IPotion</a></td></tr>
 <tr class="memitem:af960db386ba9efea5adcde6ec80fe943 inherit pub_methods_class_i_potion" id="r_af960db386ba9efea5adcde6ec80fe943"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_potion.html#af960db386ba9efea5adcde6ec80fe943">IPotion</a> (string n, string d, int c, int <a class="el" href="class_i_potion.html#ac28213c6eade179ede27d122491ba2fd">strength</a>)</td></tr>
 <tr class="separator:af960db386ba9efea5adcde6ec80fe943 inherit pub_methods_class_i_potion"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad18886e5d31e2f0aac3ebfb67121d984 inherit pub_methods_class_i_potion" id="r_ad18886e5d31e2f0aac3ebfb67121d984"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_potion.html#ad18886e5d31e2f0aac3ebfb67121d984">getStrength</a> ()</td></tr>
+<tr class="separator:ad18886e5d31e2f0aac3ebfb67121d984 inherit pub_methods_class_i_potion"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_i_player_item"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_class_i_player_item')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_i_player_item.html">IPlayerItem</a></td></tr>
 <tr class="memitem:afc3002fdaacb41cd6862b2301cd279e3 inherit pub_methods_class_i_player_item" id="r_afc3002fdaacb41cd6862b2301cd279e3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_player_item.html#afc3002fdaacb41cd6862b2301cd279e3">IPlayerItem</a> (string n, string t, string d, int c)</td></tr>
 <tr class="separator:afc3002fdaacb41cd6862b2301cd279e3 inherit pub_methods_class_i_player_item"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -143,25 +145,33 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ab1bb86846077713c5847ec035115f09c inherit pub_methods_class_i_item"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a09483bee7e3f4f382e8eeac54493620e inherit pub_methods_class_i_item" id="r_a09483bee7e3f4f382e8eeac54493620e"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_item.html#a09483bee7e3f4f382e8eeac54493620e">~IItem</a> ()</td></tr>
 <tr class="separator:a09483bee7e3f4f382e8eeac54493620e inherit pub_methods_class_i_item"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b86cf44e8eebf94b7096ea5645a0527 inherit pub_methods_class_i_item" id="r_a6b86cf44e8eebf94b7096ea5645a0527"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_item.html#a6b86cf44e8eebf94b7096ea5645a0527">getName</a> ()</td></tr>
+<tr class="separator:a6b86cf44e8eebf94b7096ea5645a0527 inherit pub_methods_class_i_item"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac99b78daaef9550cad1c0da7fe440071 inherit pub_methods_class_i_item" id="r_ac99b78daaef9550cad1c0da7fe440071"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_item.html#ac99b78daaef9550cad1c0da7fe440071">getType</a> ()</td></tr>
+<tr class="separator:ac99b78daaef9550cad1c0da7fe440071 inherit pub_methods_class_i_item"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c441280828e2877522a2e5800e8e975 inherit pub_methods_class_i_item" id="r_a3c441280828e2877522a2e5800e8e975"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_item.html#a3c441280828e2877522a2e5800e8e975">increment</a> (int amount)</td></tr>
+<tr class="separator:a3c441280828e2877522a2e5800e8e975 inherit pub_methods_class_i_item"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aebf70cebb705732de76a0cfa1081055a inherit pub_methods_class_i_item" id="r_aebf70cebb705732de76a0cfa1081055a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_item.html#aebf70cebb705732de76a0cfa1081055a">decrement</a> (int amount)</td></tr>
+<tr class="separator:aebf70cebb705732de76a0cfa1081055a inherit pub_methods_class_i_item"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a1e25be1c8a94e21ec832a9b7b5492f inherit pub_methods_class_i_item" id="r_a5a1e25be1c8a94e21ec832a9b7b5492f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_item.html#a5a1e25be1c8a94e21ec832a9b7b5492f">getCount</a> ()</td></tr>
+<tr class="separator:a5a1e25be1c8a94e21ec832a9b7b5492f inherit pub_methods_class_i_item"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a36b5da24de2beb083bd954d72e1252 inherit pub_methods_class_i_item" id="r_a3a36b5da24de2beb083bd954d72e1252"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_item.html#a3a36b5da24de2beb083bd954d72e1252">isInfinite</a> ()</td></tr>
+<tr class="separator:a3a36b5da24de2beb083bd954d72e1252 inherit pub_methods_class_i_item"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad10d9c87e8731804f994b9ca49a188df inherit pub_methods_class_i_item" id="r_ad10d9c87e8731804f994b9ca49a188df"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_item.html#ad10d9c87e8731804f994b9ca49a188df">isDepleted</a> ()</td></tr>
+<tr class="separator:ad10d9c87e8731804f994b9ca49a188df inherit pub_methods_class_i_item"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a601366438586b3834e385b64e5d9b943 inherit pub_methods_class_i_item" id="r_a601366438586b3834e385b64e5d9b943"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_item.html#a601366438586b3834e385b64e5d9b943">matches</a> (<a class="el" href="class_i_item.html">IItem</a> *item)</td></tr>
+<tr class="separator:a601366438586b3834e385b64e5d9b943 inherit pub_methods_class_i_item"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pub_attribs_class_i_potion"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_attribs_class_i_potion')"><img src="closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="class_i_potion.html">IPotion</a></td></tr>
 <tr class="memitem:ac28213c6eade179ede27d122491ba2fd inherit pub_attribs_class_i_potion" id="r_ac28213c6eade179ede27d122491ba2fd"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_potion.html#ac28213c6eade179ede27d122491ba2fd">strength</a></td></tr>
 <tr class="separator:ac28213c6eade179ede27d122491ba2fd inherit pub_attribs_class_i_potion"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_attribs_class_i_item"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_attribs_class_i_item')"><img src="closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="class_i_item.html">IItem</a></td></tr>
-<tr class="memitem:a7fdf57eb313baaea887b648bc13f247a inherit pub_attribs_class_i_item" id="r_a7fdf57eb313baaea887b648bc13f247a"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_item.html#a7fdf57eb313baaea887b648bc13f247a">name</a></td></tr>
-<tr class="separator:a7fdf57eb313baaea887b648bc13f247a inherit pub_attribs_class_i_item"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3b3b58b237d89653e493c95fe22074ff inherit pub_attribs_class_i_item" id="r_a3b3b58b237d89653e493c95fe22074ff"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_item.html#a3b3b58b237d89653e493c95fe22074ff">type</a></td></tr>
-<tr class="separator:a3b3b58b237d89653e493c95fe22074ff inherit pub_attribs_class_i_item"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0b30dc1f8eee51c2b78ac71d6c7b93b7 inherit pub_attribs_class_i_item" id="r_a0b30dc1f8eee51c2b78ac71d6c7b93b7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_item.html#a0b30dc1f8eee51c2b78ac71d6c7b93b7">count</a></td></tr>
-<tr class="memdesc:a0b30dc1f8eee51c2b78ac71d6c7b93b7 inherit pub_attribs_class_i_item"><td class="mdescLeft">&#160;</td><td class="mdescRight">A count of -1 means the item can be used infinitely.  <br /></td></tr>
-<tr class="separator:a0b30dc1f8eee51c2b78ac71d6c7b93b7 inherit pub_attribs_class_i_item"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Health potions heal the player of course. </p>
+<div class="textblock"><p><a class="el" href="struct_health.html">Health</a> potions heal the player of course. </p>
 
-<p class="definition">Definition at line <a class="el" href="items_8h_source.html#l00048">48</a> of file <a class="el" href="items_8h_source.html">items.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="items_8h_source.html#l00057">57</a> of file <a class="el" href="items_8h_source.html">items.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a6ff8807a7aae10c5ce186c793b7f359c" name="a6ff8807a7aae10c5ce186c793b7f359c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6ff8807a7aae10c5ce186c793b7f359c">&#9670;&#160;</a></span>HealthPotion()</h2>
@@ -178,12 +188,12 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="items_8cpp_source.html#l00021">21</a> of file <a class="el" href="items_8cpp_source.html">items.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   21</span>                                :</div>
-<div class="line"><span class="lineno">   22</span><a class="code hl_function" href="class_i_potion.html#af960db386ba9efea5adcde6ec80fe943">IPotion</a>(<span class="stringliteral">&quot;Health Potion&quot;</span>, <span class="stringliteral">&quot;&quot;</span>, c, 100) {}</div>
-<div class="ttc" id="aclass_i_potion_html_af960db386ba9efea5adcde6ec80fe943"><div class="ttname"><a href="class_i_potion.html#af960db386ba9efea5adcde6ec80fe943">IPotion::IPotion</a></div><div class="ttdeci">IPotion(string n, string d, int c, int strength)</div><div class="ttdef"><b>Definition</b> <a href="items_8cpp_source.html#l00019">items.cpp:19</a></div></div>
+<p class="definition">Definition at line <a class="el" href="items_8cpp_source.html#l00057">57</a> of file <a class="el" href="items_8cpp_source.html">items.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   57</span>                                :</div>
+<div class="line"><span class="lineno">   58</span><a class="code hl_function" href="class_i_potion.html#af960db386ba9efea5adcde6ec80fe943">IPotion</a>(<span class="stringliteral">&quot;Health Potion&quot;</span>, <span class="stringliteral">&quot;&quot;</span>, c, 100) {}</div>
+<div class="ttc" id="aclass_i_potion_html_af960db386ba9efea5adcde6ec80fe943"><div class="ttname"><a href="class_i_potion.html#af960db386ba9efea5adcde6ec80fe943">IPotion::IPotion</a></div><div class="ttdeci">IPotion(string n, string d, int c, int strength)</div><div class="ttdef"><b>Definition</b> <a href="items_8cpp_source.html#l00051">items.cpp:51</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="items_8cpp_source.html#l00019">IPotion::IPotion()</a>.</p>
+<p class="reference">References <a class="el" href="items_8cpp_source.html#l00051">IPotion::IPotion()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -218,13 +228,13 @@ Here is the call graph for this function:</div>
 
 <p>Reimplemented from <a class="el" href="class_i_item.html#aa7a7455949b90aed6b2f7fcd91fead8b">IItem</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="items_8cpp_source.html#l00023">23</a> of file <a class="el" href="items_8cpp_source.html">items.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   24</span>{</div>
-<div class="line"><span class="lineno">   25</span>    <span class="keywordflow">return</span> <span class="stringliteral">&quot;Heals the user &quot;</span> + to_string(<a class="code hl_variable" href="class_i_potion.html#ac28213c6eade179ede27d122491ba2fd">strength</a>) + <span class="stringliteral">&quot;HP&quot;</span>;</div>
-<div class="line"><span class="lineno">   26</span>}</div>
-<div class="ttc" id="aclass_i_potion_html_ac28213c6eade179ede27d122491ba2fd"><div class="ttname"><a href="class_i_potion.html#ac28213c6eade179ede27d122491ba2fd">IPotion::strength</a></div><div class="ttdeci">int strength</div><div class="ttdef"><b>Definition</b> <a href="items_8h_source.html#l00043">items.h:43</a></div></div>
+<p class="definition">Definition at line <a class="el" href="items_8cpp_source.html#l00059">59</a> of file <a class="el" href="items_8cpp_source.html">items.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   60</span>{</div>
+<div class="line"><span class="lineno">   61</span>    <span class="keywordflow">return</span> <span class="stringliteral">&quot;Heals the user &quot;</span> + to_string(<a class="code hl_variable" href="class_i_potion.html#ac28213c6eade179ede27d122491ba2fd">strength</a>) + <span class="stringliteral">&quot;HP&quot;</span>;</div>
+<div class="line"><span class="lineno">   62</span>}</div>
+<div class="ttc" id="aclass_i_potion_html_ac28213c6eade179ede27d122491ba2fd"><div class="ttname"><a href="class_i_potion.html#ac28213c6eade179ede27d122491ba2fd">IPotion::strength</a></div><div class="ttdeci">int strength</div><div class="ttdef"><b>Definition</b> <a href="items_8h_source.html#l00051">items.h:51</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="items_8h_source.html#l00043">IPotion::strength</a>.</p>
+<p class="reference">References <a class="el" href="items_8h_source.html#l00051">IPotion::strength</a>.</p>
 
 </div>
 </div>
@@ -253,20 +263,25 @@ Here is the call graph for this function:</div>
 
 <p>Implements <a class="el" href="class_i_player_item.html#a22a1323dae95369aab54ef7ce3fe0a14">IPlayerItem</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="items_8cpp_source.html#l00028">28</a> of file <a class="el" href="items_8cpp_source.html">items.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   29</span>{</div>
-<div class="line"><span class="lineno">   30</span>    <span class="keywordflow">if</span> (player.<a class="code hl_variable" href="class_entity.html#a6995bd098a6e6afb4abf9f4c42f6b15c">currHealth</a> == player.<a class="code hl_variable" href="class_entity.html#a6e20c965f14c04d09be06d07a471565d">maxHealth</a>)</div>
-<div class="line"><span class="lineno">   31</span>    {</div>
-<div class="line"><span class="lineno">   32</span>        cout &lt;&lt; <span class="stringliteral">&quot;You&#39;re already at full health!&quot;</span> &lt;&lt; endl;</div>
-<div class="line"><span class="lineno">   33</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   34</span>    }</div>
-<div class="line"><span class="lineno">   35</span>    player.<a class="code hl_variable" href="class_entity.html#a6995bd098a6e6afb4abf9f4c42f6b15c">currHealth</a> = min(player.<a class="code hl_variable" href="class_entity.html#a6e20c965f14c04d09be06d07a471565d">maxHealth</a>, player.<a class="code hl_variable" href="class_entity.html#a6995bd098a6e6afb4abf9f4c42f6b15c">currHealth</a> + <a class="code hl_variable" href="class_i_potion.html#ac28213c6eade179ede27d122491ba2fd">strength</a>);</div>
-<div class="line"><span class="lineno">   36</span>    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   37</span>}</div>
-<div class="ttc" id="aclass_entity_html_a6995bd098a6e6afb4abf9f4c42f6b15c"><div class="ttname"><a href="class_entity.html#a6995bd098a6e6afb4abf9f4c42f6b15c">Entity::currHealth</a></div><div class="ttdeci">int currHealth</div><div class="ttdef"><b>Definition</b> <a href="entities_8h_source.html#l00022">entities.h:22</a></div></div>
-<div class="ttc" id="aclass_entity_html_a6e20c965f14c04d09be06d07a471565d"><div class="ttname"><a href="class_entity.html#a6e20c965f14c04d09be06d07a471565d">Entity::maxHealth</a></div><div class="ttdeci">int maxHealth</div><div class="ttdef"><b>Definition</b> <a href="entities_8h_source.html#l00021">entities.h:21</a></div></div>
+<p class="definition">Definition at line <a class="el" href="items_8cpp_source.html#l00064">64</a> of file <a class="el" href="items_8cpp_source.html">items.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   65</span>{</div>
+<div class="line"><span class="lineno">   66</span>    <span class="keywordflow">if</span> (player.<a class="code hl_function" href="class_entity.html#a63eb6db440a85d7fe34e109c29a1dac0">isFullHealth</a>())</div>
+<div class="line"><span class="lineno">   67</span>    {</div>
+<div class="line"><span class="lineno">   68</span>        cout &lt;&lt; <span class="stringliteral">&quot;You&#39;re already at full health!&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><span class="lineno">   69</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   70</span>    }</div>
+<div class="line"><span class="lineno">   71</span>    player.<a class="code hl_function" href="class_entity.html#a673bf3c04d5bae049fbc6c6ddc11a44a">heal</a>(<a class="code hl_variable" href="class_i_potion.html#ac28213c6eade179ede27d122491ba2fd">strength</a>);</div>
+<div class="line"><span class="lineno">   72</span>    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   73</span>}</div>
+<div class="ttc" id="aclass_entity_html_a63eb6db440a85d7fe34e109c29a1dac0"><div class="ttname"><a href="class_entity.html#a63eb6db440a85d7fe34e109c29a1dac0">Entity::isFullHealth</a></div><div class="ttdeci">bool isFullHealth()</div><div class="ttdef"><b>Definition</b> <a href="entities_8cpp_source.html#l00071">entities.cpp:71</a></div></div>
+<div class="ttc" id="aclass_entity_html_a673bf3c04d5bae049fbc6c6ddc11a44a"><div class="ttname"><a href="class_entity.html#a673bf3c04d5bae049fbc6c6ddc11a44a">Entity::heal</a></div><div class="ttdeci">void heal(int amount)</div><div class="ttdef"><b>Definition</b> <a href="entities_8cpp_source.html#l00082">entities.cpp:82</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="entities_8h_source.html#l00022">Entity::currHealth</a>, <a class="el" href="entities_8h_source.html#l00021">Entity::maxHealth</a>, and <a class="el" href="items_8h_source.html#l00043">IPotion::strength</a>.</p>
+<p class="reference">References <a class="el" href="entities_8cpp_source.html#l00082">Entity::heal()</a>, <a class="el" href="entities_8cpp_source.html#l00071">Entity::isFullHealth()</a>, and <a class="el" href="items_8h_source.html#l00051">IPotion::strength</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_health_potion_acd72ba2a1a6dc046c5d60920c4e297fc_cgraph.svg" width="316" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
 
 </div>
 </div>

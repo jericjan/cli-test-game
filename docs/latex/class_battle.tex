@@ -11,7 +11,8 @@ The battle screen. The user can attack, use an item, or run away.
 
 
 
-Inheritance diagram for Battle\+:\nopagebreak
+Inheritance diagram for Battle\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -20,7 +21,8 @@ Inheritance diagram for Battle\+:\nopagebreak
 \end{figure}
 
 
-Collaboration diagram for Battle\+:\nopagebreak
+Collaboration diagram for Battle\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -46,7 +48,7 @@ Collaboration diagram for Battle\+:\nopagebreak
 \item 
 virtual \mbox{\hyperlink{class_user_interface_ae588b2ff1711a016dd4c6fc5002c0841}{\texorpdfstring{$\sim$}{\string~}\+User\+Interface}} ()
 \end{DoxyCompactItemize}
-\doxysubsubsection*{Public Attributes}
+\doxysubsubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_entity}{Entity}} \mbox{\hyperlink{class_battle_a88f0558b5d74c9a3258c1491c639603a}{enemy}}
@@ -59,22 +61,23 @@ function$<$ \mbox{\hyperlink{class_user_interface}{User\+Interface}} \texorpdfst
 \item 
 function$<$ \mbox{\hyperlink{class_user_interface}{User\+Interface}} \texorpdfstring{$\ast$}{*}(\mbox{\hyperlink{class_player}{Player}})$>$ \mbox{\hyperlink{class_battle_a064158274f411279974695550d970923}{on\+Lose}}
 \end{DoxyCompactItemize}
-\doxysubsection*{Public Attributes inherited from \mbox{\hyperlink{class_u_i_with_player}{UIWith\+Player}}}
-\begin{DoxyCompactItemize}
-\item 
-\mbox{\hyperlink{class_player}{Player}} \mbox{\hyperlink{class_u_i_with_player_a480502a8db864e1ec92eb19f87a35083}{player}}
-\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
 \doxysubsection*{Public Attributes inherited from \mbox{\hyperlink{class_user_interface}{User\+Interface}}}
 \begin{DoxyCompactItemize}
 \item 
 bool \mbox{\hyperlink{class_user_interface_aa95ee5089a1de7ad211fb3a1bb786e11}{quit\+Game}} = false
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_u_i_with_player}{UIWith\+Player}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_player}{Player}} \mbox{\hyperlink{class_u_i_with_player_a480502a8db864e1ec92eb19f87a35083}{player}}
 \end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
 The battle screen. The user can attack, use an item, or run away. 
 
-Definition at line \mbox{\hyperlink{ui_8h_source_l00065}{65}} of file \mbox{\hyperlink{ui_8h_source}{ui.\+h}}.
+Definition at line \mbox{\hyperlink{ui_8h_source_l00066}{66}} of file \mbox{\hyperlink{ui_8h_source}{ui.\+h}}.
 
 
 
@@ -97,7 +100,7 @@ Definition at line \mbox{\hyperlink{ui_8cpp_source_l00199}{199}} of file \mbox{\
 \end{DoxyCode}
 
 
-References \mbox{\hyperlink{ui_8h_source_l00069}{did\+Intro}}, \mbox{\hyperlink{ui_8h_source_l00068}{enemy}}, \mbox{\hyperlink{ui_8h_source_l00072}{on\+Lose}}, \mbox{\hyperlink{ui_8h_source_l00071}{on\+Win}}, \mbox{\hyperlink{ui_8h_source_l00021}{UIWith\+Player\+::player}}, \mbox{\hyperlink{ui_8h_source_l00070}{reward\+Money}}, and \mbox{\hyperlink{ui_8cpp_source_l00015}{UIWith\+Player\+::\+UIWith\+Player()}}.
+References \mbox{\hyperlink{ui_8h_source_l00070}{did\+Intro}}, \mbox{\hyperlink{ui_8h_source_l00069}{enemy}}, \mbox{\hyperlink{ui_8h_source_l00073}{on\+Lose}}, \mbox{\hyperlink{ui_8h_source_l00072}{on\+Win}}, \mbox{\hyperlink{ui_8h_source_l00021}{UIWith\+Player\+::player}}, \mbox{\hyperlink{ui_8h_source_l00071}{reward\+Money}}, and \mbox{\hyperlink{ui_8cpp_source_l00015}{UIWith\+Player\+::\+UIWith\+Player()}}.
 
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -131,15 +134,15 @@ Definition at line \mbox{\hyperlink{ui_8cpp_source_l00204}{204}} of file \mbox{\
 \DoxyCodeLine{00208\ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n\(\backslash\)n===BATTLE\ START!!===\(\backslash\)n\(\backslash\)n"{}};}
 \DoxyCodeLine{00209\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_battle_a634217a0ca701f4574502ff8fdc0114f}{didIntro}}\ =\ \textcolor{keyword}{true};}
 \DoxyCodeLine{00210\ \ \ \ \ \}}
-\DoxyCodeLine{00211\ \ \ \ \ cout\ <<\ \mbox{\hyperlink{class_battle_a88f0558b5d74c9a3258c1491c639603a}{enemy}}.name\ <<\ \textcolor{stringliteral}{"{}:\ "{}}\ <<\ \mbox{\hyperlink{class_battle_a88f0558b5d74c9a3258c1491c639603a}{enemy}}.currHealth\ <<\ \textcolor{stringliteral}{"{}/"{}}\ <<\ \mbox{\hyperlink{class_battle_a88f0558b5d74c9a3258c1491c639603a}{enemy}}.maxHealth\ <<\ endl}
-\DoxyCodeLine{00212\ \ \ \ \ \ \ \ \ \ <<\ \mbox{\hyperlink{class_u_i_with_player_a480502a8db864e1ec92eb19f87a35083}{player}}.name\ <<\ \textcolor{stringliteral}{"{}:\ "{}}\ <<\ \mbox{\hyperlink{class_u_i_with_player_a480502a8db864e1ec92eb19f87a35083}{player}}.currHealth\ <<\ \textcolor{stringliteral}{"{}/"{}}\ <<\ \mbox{\hyperlink{class_u_i_with_player_a480502a8db864e1ec92eb19f87a35083}{player}}.maxHealth\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n\(\backslash\)n"{}}}
+\DoxyCodeLine{00211\ \ \ \ \ cout\ <<\ \mbox{\hyperlink{class_battle_a88f0558b5d74c9a3258c1491c639603a}{enemy}}.getName()\ <<\ \textcolor{stringliteral}{"{}:\ "{}}\ <<\ \mbox{\hyperlink{class_battle_a88f0558b5d74c9a3258c1491c639603a}{enemy}}.getHealth()\ <<\ \textcolor{stringliteral}{"{}/"{}}\ <<\ \mbox{\hyperlink{class_battle_a88f0558b5d74c9a3258c1491c639603a}{enemy}}.getMaxHealth()\ <<\ endl}
+\DoxyCodeLine{00212\ \ \ \ \ \ \ \ \ \ <<\ \mbox{\hyperlink{class_u_i_with_player_a480502a8db864e1ec92eb19f87a35083}{player}}.getName()\ <<\ \textcolor{stringliteral}{"{}:\ "{}}\ <<\ \mbox{\hyperlink{class_u_i_with_player_a480502a8db864e1ec92eb19f87a35083}{player}}.getHealth()\ <<\ \textcolor{stringliteral}{"{}/"{}}\ <<\ \mbox{\hyperlink{class_u_i_with_player_a480502a8db864e1ec92eb19f87a35083}{player}}.getMaxHealth()\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n\(\backslash\)n"{}}}
 \DoxyCodeLine{00213\ \ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}[1]\ Punch\(\backslash\)n[2]\ Bag\(\backslash\)n[3]\ Run\(\backslash\)n"{}};}
 \DoxyCodeLine{00214\ \ \ \ \ \textcolor{keywordtype}{int}\ userInput\ =\ \mbox{\hyperlink{extras_8cpp_a3816c0b1714f3be0c6c8a394a4faee7d}{inputNum}}();}
 \DoxyCodeLine{00215\ \ \ \ \ cout\ <<\ endl;}
 \DoxyCodeLine{00216\ \ \ \ \ \textcolor{keywordflow}{if}\ (userInput\ ==\ 1)}
 \DoxyCodeLine{00217\ \ \ \ \ \{}
 \DoxyCodeLine{00218\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_u_i_with_player_a480502a8db864e1ec92eb19f87a35083}{player}}.attack(\mbox{\hyperlink{class_battle_a88f0558b5d74c9a3258c1491c639603a}{enemy}});}
-\DoxyCodeLine{00219\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_battle_a88f0558b5d74c9a3258c1491c639603a}{enemy}}.currHealth\ >\ 0)}
+\DoxyCodeLine{00219\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_battle_a88f0558b5d74c9a3258c1491c639603a}{enemy}}.isAlive())}
 \DoxyCodeLine{00220\ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{00221\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_battle_a88f0558b5d74c9a3258c1491c639603a}{enemy}}.attack(\mbox{\hyperlink{class_u_i_with_player_a480502a8db864e1ec92eb19f87a35083}{player}});}
 \DoxyCodeLine{00222\ \ \ \ \ \ \ \ \ \}}
@@ -162,7 +165,7 @@ Definition at line \mbox{\hyperlink{ui_8cpp_source_l00204}{204}} of file \mbox{\
 \DoxyCodeLine{00239\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{00240\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
 \DoxyCodeLine{00241\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00242\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_battle_a88f0558b5d74c9a3258c1491c639603a}{enemy}}.currHealth\ >\ 0)}
+\DoxyCodeLine{00242\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_battle_a88f0558b5d74c9a3258c1491c639603a}{enemy}}.isAlive())}
 \DoxyCodeLine{00243\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{00244\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_battle_a88f0558b5d74c9a3258c1491c639603a}{enemy}}.attack(\mbox{\hyperlink{class_u_i_with_player_a480502a8db864e1ec92eb19f87a35083}{player}});}
 \DoxyCodeLine{00245\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
@@ -178,7 +181,7 @@ Definition at line \mbox{\hyperlink{ui_8cpp_source_l00204}{204}} of file \mbox{\
 \DoxyCodeLine{00255\ \ \ \ \ \}}
 \DoxyCodeLine{00256\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (userInput\ ==\ 4)}
 \DoxyCodeLine{00257\ \ \ \ \ \{\ \textcolor{comment}{//\ for\ testing\ purposes}}
-\DoxyCodeLine{00258\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_battle_a88f0558b5d74c9a3258c1491c639603a}{enemy}}.currHealth\ =\ 0;}
+\DoxyCodeLine{00258\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_battle_a88f0558b5d74c9a3258c1491c639603a}{enemy}}.kill();}
 \DoxyCodeLine{00259\ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}You\ punched\ the\ enemy\ so\ hard,\ they\ died\ instantly!"{}}\ <<\ endl;}
 \DoxyCodeLine{00260\ \ \ \ \ \}}
 \DoxyCodeLine{00261\ \ \ \ \ \textcolor{keywordflow}{else}}
@@ -187,14 +190,14 @@ Definition at line \mbox{\hyperlink{ui_8cpp_source_l00204}{204}} of file \mbox{\
 \DoxyCodeLine{00264\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{this};}
 \DoxyCodeLine{00265\ \ \ \ \ \}}
 \DoxyCodeLine{00266\ }
-\DoxyCodeLine{00267\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_u_i_with_player_a480502a8db864e1ec92eb19f87a35083}{player}}.currHealth\ ==\ 0)}
+\DoxyCodeLine{00267\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_u_i_with_player_a480502a8db864e1ec92eb19f87a35083}{player}}.isDead())}
 \DoxyCodeLine{00268\ \ \ \ \ \{}
-\DoxyCodeLine{00269\ \ \ \ \ \ \ \ \ cout\ <<\ \mbox{\hyperlink{class_u_i_with_player_a480502a8db864e1ec92eb19f87a35083}{player}}.name\ <<\ \textcolor{stringliteral}{"{}\ lost\ the\ battle!"{}}\ <<\ endl;}
+\DoxyCodeLine{00269\ \ \ \ \ \ \ \ \ cout\ <<\ \mbox{\hyperlink{class_u_i_with_player_a480502a8db864e1ec92eb19f87a35083}{player}}.getName()\ <<\ \textcolor{stringliteral}{"{}\ lost\ the\ battle!"{}}\ <<\ endl;}
 \DoxyCodeLine{00270\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_battle_a064158274f411279974695550d970923}{onLose}}(\mbox{\hyperlink{class_u_i_with_player_a480502a8db864e1ec92eb19f87a35083}{player}});}
 \DoxyCodeLine{00271\ \ \ \ \ \}}
-\DoxyCodeLine{00272\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_battle_a88f0558b5d74c9a3258c1491c639603a}{enemy}}.currHealth\ ==\ 0)}
+\DoxyCodeLine{00272\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_battle_a88f0558b5d74c9a3258c1491c639603a}{enemy}}.isDead())}
 \DoxyCodeLine{00273\ \ \ \ \ \{}
-\DoxyCodeLine{00274\ \ \ \ \ \ \ \ \ cout\ <<\ \mbox{\hyperlink{class_battle_a88f0558b5d74c9a3258c1491c639603a}{enemy}}.name\ <<\ \textcolor{stringliteral}{"{}\ lost\ the\ battle!"{}}\ <<\ endl;}
+\DoxyCodeLine{00274\ \ \ \ \ \ \ \ \ cout\ <<\ \mbox{\hyperlink{class_battle_a88f0558b5d74c9a3258c1491c639603a}{enemy}}.getName()\ <<\ \textcolor{stringliteral}{"{}\ lost\ the\ battle!"{}}\ <<\ endl;}
 \DoxyCodeLine{00275\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_battle_a0a1e8309e19d498ca17c640948d3588f}{rewardMoney}}\ >\ 0)}
 \DoxyCodeLine{00276\ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{00277\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_u_i_with_player_a480502a8db864e1ec92eb19f87a35083}{player}}.addMoney(\mbox{\hyperlink{class_battle_a0a1e8309e19d498ca17c640948d3588f}{rewardMoney}});}
@@ -207,7 +210,7 @@ Definition at line \mbox{\hyperlink{ui_8cpp_source_l00204}{204}} of file \mbox{\
 \end{DoxyCode}
 
 
-References \mbox{\hyperlink{ui_8h_source_l00069}{did\+Intro}}, \mbox{\hyperlink{ui_8h_source_l00068}{enemy}}, \mbox{\hyperlink{extras_8cpp_source_l00027}{input\+Num()}}, \mbox{\hyperlink{ui_8h_source_l00072}{on\+Lose}}, \mbox{\hyperlink{ui_8h_source_l00071}{on\+Win}}, \mbox{\hyperlink{ui_8h_source_l00021}{UIWith\+Player\+::player}}, and \mbox{\hyperlink{ui_8h_source_l00070}{reward\+Money}}.
+References \mbox{\hyperlink{ui_8h_source_l00070}{did\+Intro}}, \mbox{\hyperlink{ui_8h_source_l00069}{enemy}}, \mbox{\hyperlink{extras_8cpp_source_l00027}{input\+Num()}}, \mbox{\hyperlink{ui_8h_source_l00073}{on\+Lose}}, \mbox{\hyperlink{ui_8h_source_l00072}{on\+Win}}, \mbox{\hyperlink{ui_8h_source_l00021}{UIWith\+Player\+::player}}, and \mbox{\hyperlink{ui_8h_source_l00071}{reward\+Money}}.
 
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -223,11 +226,11 @@ Here is the call graph for this function\+:\nopagebreak
 \index{didIntro@{didIntro}!Battle@{Battle}}
 \doxysubsubsection{\texorpdfstring{didIntro}{didIntro}}
 {\footnotesize\ttfamily \label{class_battle_a634217a0ca701f4574502ff8fdc0114f} 
-bool Battle\+::did\+Intro}
+bool Battle\+::did\+Intro\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
-Definition at line \mbox{\hyperlink{ui_8h_source_l00069}{69}} of file \mbox{\hyperlink{ui_8h_source}{ui.\+h}}.
+Definition at line \mbox{\hyperlink{ui_8h_source_l00070}{70}} of file \mbox{\hyperlink{ui_8h_source}{ui.\+h}}.
 
 
 
@@ -237,11 +240,11 @@ Referenced by \mbox{\hyperlink{ui_8cpp_source_l00199}{Battle()}}, and \mbox{\hyp
 \index{enemy@{enemy}!Battle@{Battle}}
 \doxysubsubsection{\texorpdfstring{enemy}{enemy}}
 {\footnotesize\ttfamily \label{class_battle_a88f0558b5d74c9a3258c1491c639603a} 
-\mbox{\hyperlink{class_entity}{Entity}} Battle\+::enemy}
+\mbox{\hyperlink{class_entity}{Entity}} Battle\+::enemy\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
-Definition at line \mbox{\hyperlink{ui_8h_source_l00068}{68}} of file \mbox{\hyperlink{ui_8h_source}{ui.\+h}}.
+Definition at line \mbox{\hyperlink{ui_8h_source_l00069}{69}} of file \mbox{\hyperlink{ui_8h_source}{ui.\+h}}.
 
 
 
@@ -251,11 +254,11 @@ Referenced by \mbox{\hyperlink{ui_8cpp_source_l00199}{Battle()}}, and \mbox{\hyp
 \index{onLose@{onLose}!Battle@{Battle}}
 \doxysubsubsection{\texorpdfstring{onLose}{onLose}}
 {\footnotesize\ttfamily \label{class_battle_a064158274f411279974695550d970923} 
-function$<$\mbox{\hyperlink{class_user_interface}{User\+Interface}} \texorpdfstring{$\ast$}{*}(\mbox{\hyperlink{class_player}{Player}})$>$ Battle\+::on\+Lose}
+function$<$\mbox{\hyperlink{class_user_interface}{User\+Interface}} \texorpdfstring{$\ast$}{*}(\mbox{\hyperlink{class_player}{Player}})$>$ Battle\+::on\+Lose\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
-Definition at line \mbox{\hyperlink{ui_8h_source_l00072}{72}} of file \mbox{\hyperlink{ui_8h_source}{ui.\+h}}.
+Definition at line \mbox{\hyperlink{ui_8h_source_l00073}{73}} of file \mbox{\hyperlink{ui_8h_source}{ui.\+h}}.
 
 
 
@@ -265,11 +268,11 @@ Referenced by \mbox{\hyperlink{ui_8cpp_source_l00199}{Battle()}}, and \mbox{\hyp
 \index{onWin@{onWin}!Battle@{Battle}}
 \doxysubsubsection{\texorpdfstring{onWin}{onWin}}
 {\footnotesize\ttfamily \label{class_battle_a950aaddd9ca889342d18e6746637fe46} 
-function$<$\mbox{\hyperlink{class_user_interface}{User\+Interface}} \texorpdfstring{$\ast$}{*}(\mbox{\hyperlink{class_player}{Player}})$>$ Battle\+::on\+Win}
+function$<$\mbox{\hyperlink{class_user_interface}{User\+Interface}} \texorpdfstring{$\ast$}{*}(\mbox{\hyperlink{class_player}{Player}})$>$ Battle\+::on\+Win\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
-Definition at line \mbox{\hyperlink{ui_8h_source_l00071}{71}} of file \mbox{\hyperlink{ui_8h_source}{ui.\+h}}.
+Definition at line \mbox{\hyperlink{ui_8h_source_l00072}{72}} of file \mbox{\hyperlink{ui_8h_source}{ui.\+h}}.
 
 
 
@@ -279,11 +282,11 @@ Referenced by \mbox{\hyperlink{ui_8cpp_source_l00199}{Battle()}}, and \mbox{\hyp
 \index{rewardMoney@{rewardMoney}!Battle@{Battle}}
 \doxysubsubsection{\texorpdfstring{rewardMoney}{rewardMoney}}
 {\footnotesize\ttfamily \label{class_battle_a0a1e8309e19d498ca17c640948d3588f} 
-int Battle\+::reward\+Money}
+int Battle\+::reward\+Money\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
-Definition at line \mbox{\hyperlink{ui_8h_source_l00070}{70}} of file \mbox{\hyperlink{ui_8h_source}{ui.\+h}}.
+Definition at line \mbox{\hyperlink{ui_8h_source_l00071}{71}} of file \mbox{\hyperlink{ui_8h_source}{ui.\+h}}.
 
 
 

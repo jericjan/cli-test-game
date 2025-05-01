@@ -6,45 +6,114 @@
 \DoxyCodeLine{\Hypertarget{entities_8cpp_source_l00002}00002\ \textcolor{preprocessor}{\#include\ <string>}}
 \DoxyCodeLine{\Hypertarget{entities_8cpp_source_l00003}00003\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{entities_8h}{entities.h}}"{}}}
 \DoxyCodeLine{\Hypertarget{entities_8cpp_source_l00004}00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{extras_8h}{extras.h}}"{}}}
-\DoxyCodeLine{\Hypertarget{entities_8cpp_source_l00005}00005\ \textcolor{keyword}{using\ namespace\ }std;}
-\DoxyCodeLine{\Hypertarget{entities_8cpp_source_l00006}00006\ }
-\DoxyCodeLine{\Hypertarget{entities_8cpp_source_l00007}00007\ \mbox{\hyperlink{class_entity_adf6d3f7cb1b2ba029b6b048a395cc8ae}{Entity::\string~Entity}}()\ =\ \textcolor{keywordflow}{default};}
-\DoxyCodeLine{\Hypertarget{entities_8cpp_source_l00008}\mbox{\hyperlink{class_player_affe0cc3cb714f6deb4e62f0c0d3f1fd8}{00008}}\ \mbox{\hyperlink{class_player_affe0cc3cb714f6deb4e62f0c0d3f1fd8}{Player::Player}}()\ :\ \mbox{\hyperlink{class_entity_ac55fe185f7ccba9e35abf13517c65f63}{Entity}}(0,\ \textcolor{stringliteral}{"{}"{}},\ 0,\ 0),\ \mbox{\hyperlink{class_player_a9545beef70350d5c3b3a5719a890dd2f}{money}}(0)\ \{\}}
-\DoxyCodeLine{\Hypertarget{entities_8cpp_source_l00009}\mbox{\hyperlink{class_player_a32b77b22f5675099b03650bed28ae924}{00009}}\ \mbox{\hyperlink{class_player_affe0cc3cb714f6deb4e62f0c0d3f1fd8}{Player::Player}}(\textcolor{keywordtype}{int}\ health,\ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{class_entity_afb45718695f537c330a463168616c262}{name}},\ \textcolor{keywordtype}{int}\ atk,\ \textcolor{keywordtype}{int}\ def,\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_player_a9545beef70350d5c3b3a5719a890dd2f}{money}})\ :\ \mbox{\hyperlink{class_entity_ac55fe185f7ccba9e35abf13517c65f63}{Entity}}(health,\ \mbox{\hyperlink{class_entity_afb45718695f537c330a463168616c262}{name}},\ atk,\ def),\ \mbox{\hyperlink{class_player_a9545beef70350d5c3b3a5719a890dd2f}{money}}(\mbox{\hyperlink{class_player_a9545beef70350d5c3b3a5719a890dd2f}{money}})}
-\DoxyCodeLine{\Hypertarget{entities_8cpp_source_l00010}00010\ \{}
-\DoxyCodeLine{\Hypertarget{entities_8cpp_source_l00011}00011\ \ \ \ \ \mbox{\hyperlink{class_player_ab8d436b5727749f7be05ffdf744d1041}{inventory}}\ =\ \mbox{\hyperlink{class_inventory}{Inventory}}();}
-\DoxyCodeLine{\Hypertarget{entities_8cpp_source_l00012}00012\ \}}
-\DoxyCodeLine{\Hypertarget{entities_8cpp_source_l00013}00013\ }
-\DoxyCodeLine{\Hypertarget{entities_8cpp_source_l00014}\mbox{\hyperlink{class_player_a86ad66429e7bf8ef4640bac1d0f3476f}{00014}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_player_a86ad66429e7bf8ef4640bac1d0f3476f}{Player::addMoney}}(\textcolor{keywordtype}{int}\ amount)}
-\DoxyCodeLine{\Hypertarget{entities_8cpp_source_l00015}00015\ \{}
-\DoxyCodeLine{\Hypertarget{entities_8cpp_source_l00016}00016\ \ \ \ \ \textcolor{keywordflow}{if}\ (amount\ <\ 0)}
-\DoxyCodeLine{\Hypertarget{entities_8cpp_source_l00017}00017\ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{entities_8cpp_source_l00018}00018\ \ \ \ \ \ \ \ \ cout\ <<\ \mbox{\hyperlink{extras_8cpp_a99d2755bf0660601280710515b3f512c}{colorizeText}}(\textcolor{stringliteral}{"{}You\ lost\ "{}}\ +\ to\_string(-\/amount)\ +\ \textcolor{stringliteral}{"{}\ money!"{}},\ \mbox{\hyperlink{extras_8h_ab87bacfdad76e61b9412d7124be44c1caf80f9a890089d211842d59625e561f88}{RED}})\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{entities_8cpp_source_l00019}00019\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{entities_8cpp_source_l00020}00020\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (amount\ ==\ 0)}
-\DoxyCodeLine{\Hypertarget{entities_8cpp_source_l00021}00021\ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{entities_8cpp_source_l00022}00022\ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}You\ didn't\ gain\ or\ lose\ any\ money."{}}\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{entities_8cpp_source_l00023}00023\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{entities_8cpp_source_l00024}00024\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (amount\ >\ 0)}
-\DoxyCodeLine{\Hypertarget{entities_8cpp_source_l00025}00025\ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{entities_8cpp_source_l00026}00026\ \ \ \ \ \ \ \ \ cout\ <<\ \mbox{\hyperlink{extras_8cpp_a99d2755bf0660601280710515b3f512c}{colorizeText}}(\textcolor{stringliteral}{"{}You\ gained\ "{}}\ +\ to\_string(amount)\ +\ \textcolor{stringliteral}{"{}\ money!"{}},\ \mbox{\hyperlink{extras_8h_ab87bacfdad76e61b9412d7124be44c1cae735a848bf82163a19236ead1c3ef2d2}{YELLOW}})\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{entities_8cpp_source_l00027}00027\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{entities_8cpp_source_l00028}00028\ \ \ \ \ \mbox{\hyperlink{class_player_a9545beef70350d5c3b3a5719a890dd2f}{money}}\ +=\ amount;}
-\DoxyCodeLine{\Hypertarget{entities_8cpp_source_l00029}00029\ \}}
-\DoxyCodeLine{\Hypertarget{entities_8cpp_source_l00030}00030\ }
-\DoxyCodeLine{\Hypertarget{entities_8cpp_source_l00031}\mbox{\hyperlink{class_stats_aed79e2b7167040dada2cb2ba8b90ad9b}{00031}}\ \mbox{\hyperlink{class_stats_aed79e2b7167040dada2cb2ba8b90ad9b}{Stats::Stats}}()\ :\ \mbox{\hyperlink{class_stats_ab6b44458cb7c90f28d7edea284ad0358}{atk}}(0),\ \mbox{\hyperlink{class_stats_ac34395ac3019a82d1bff83ceab6f1889}{def}}(0)\ \{\}}
-\DoxyCodeLine{\Hypertarget{entities_8cpp_source_l00032}\mbox{\hyperlink{class_stats_ad73eccd3321161d5eb26a68d9a4d0321}{00032}}\ \mbox{\hyperlink{class_stats_aed79e2b7167040dada2cb2ba8b90ad9b}{Stats::Stats}}(\textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y)\ :\ \mbox{\hyperlink{class_stats_ab6b44458cb7c90f28d7edea284ad0358}{atk}}(x),\ \mbox{\hyperlink{class_stats_ac34395ac3019a82d1bff83ceab6f1889}{def}}(y)\ \{\}}
-\DoxyCodeLine{\Hypertarget{entities_8cpp_source_l00033}00033\ }
-\DoxyCodeLine{\Hypertarget{entities_8cpp_source_l00034}\mbox{\hyperlink{class_entity_ac55fe185f7ccba9e35abf13517c65f63}{00034}}\ \mbox{\hyperlink{class_entity_ac55fe185f7ccba9e35abf13517c65f63}{Entity::Entity}}(\textcolor{keywordtype}{int}\ health,\ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{class_entity_afb45718695f537c330a463168616c262}{name}},\ \textcolor{keywordtype}{int}\ atk,\ \textcolor{keywordtype}{int}\ def):}
-\DoxyCodeLine{\Hypertarget{entities_8cpp_source_l00035}00035\ \mbox{\hyperlink{class_entity_a6995bd098a6e6afb4abf9f4c42f6b15c}{currHealth}}(health),\ \mbox{\hyperlink{class_entity_a6e20c965f14c04d09be06d07a471565d}{maxHealth}}(health),\ \mbox{\hyperlink{class_entity_a679100a4f20bbf0fba4dfcbb40406d88}{stats}}(\mbox{\hyperlink{class_stats}{Stats}}(atk,\ def)),\ \mbox{\hyperlink{class_entity_afb45718695f537c330a463168616c262}{name}}(\mbox{\hyperlink{class_entity_afb45718695f537c330a463168616c262}{name}})\ \{\}}
+\DoxyCodeLine{\Hypertarget{entities_8cpp_source_l00005}00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{shop_8h}{shop.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{entities_8cpp_source_l00006}00006\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{\Hypertarget{entities_8cpp_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{entities_8cpp_source_l00008}00008\ \mbox{\hyperlink{class_entity_adf6d3f7cb1b2ba029b6b048a395cc8ae}{Entity::\string~Entity}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{\Hypertarget{entities_8cpp_source_l00009}\mbox{\hyperlink{class_player_affe0cc3cb714f6deb4e62f0c0d3f1fd8}{00009}}\ \mbox{\hyperlink{class_player_affe0cc3cb714f6deb4e62f0c0d3f1fd8}{Player::Player}}()\ :\ \mbox{\hyperlink{class_entity_ac55fe185f7ccba9e35abf13517c65f63}{Entity}}(0,\ \textcolor{stringliteral}{"{}"{}},\ 0,\ 0),\ \mbox{\hyperlink{class_player_a9545beef70350d5c3b3a5719a890dd2f}{money}}(0)\ \{\}}
+\DoxyCodeLine{\Hypertarget{entities_8cpp_source_l00010}\mbox{\hyperlink{class_player_a32b77b22f5675099b03650bed28ae924}{00010}}\ \mbox{\hyperlink{class_player_affe0cc3cb714f6deb4e62f0c0d3f1fd8}{Player::Player}}(\textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_entity_a399ce63cbbef5fa4e02e5cbd704d08d7}{health}},\ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{class_entity_afb45718695f537c330a463168616c262}{name}},\ \textcolor{keywordtype}{int}\ atk,\ \textcolor{keywordtype}{int}\ def,\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_player_a9545beef70350d5c3b3a5719a890dd2f}{money}})\ :\ \mbox{\hyperlink{class_entity_ac55fe185f7ccba9e35abf13517c65f63}{Entity}}(\mbox{\hyperlink{class_entity_a399ce63cbbef5fa4e02e5cbd704d08d7}{health}},\ \mbox{\hyperlink{class_entity_afb45718695f537c330a463168616c262}{name}},\ atk,\ def),\ \mbox{\hyperlink{class_player_a9545beef70350d5c3b3a5719a890dd2f}{money}}(\mbox{\hyperlink{class_player_a9545beef70350d5c3b3a5719a890dd2f}{money}})}
+\DoxyCodeLine{\Hypertarget{entities_8cpp_source_l00011}00011\ \{}
+\DoxyCodeLine{\Hypertarget{entities_8cpp_source_l00012}00012\ \ \ \ \ \mbox{\hyperlink{class_player_ab8d436b5727749f7be05ffdf744d1041}{inventory}}\ =\ \mbox{\hyperlink{class_inventory}{Inventory}}();}
+\DoxyCodeLine{\Hypertarget{entities_8cpp_source_l00013}00013\ \}}
+\DoxyCodeLine{\Hypertarget{entities_8cpp_source_l00014}00014\ }
+\DoxyCodeLine{\Hypertarget{entities_8cpp_source_l00015}\mbox{\hyperlink{class_player_a86ad66429e7bf8ef4640bac1d0f3476f}{00015}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_player_a86ad66429e7bf8ef4640bac1d0f3476f}{Player::addMoney}}(\textcolor{keywordtype}{int}\ amount)}
+\DoxyCodeLine{\Hypertarget{entities_8cpp_source_l00016}00016\ \{}
+\DoxyCodeLine{\Hypertarget{entities_8cpp_source_l00017}00017\ \ \ \ \ \textcolor{keywordflow}{if}\ (amount\ <\ 0)}
+\DoxyCodeLine{\Hypertarget{entities_8cpp_source_l00018}00018\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{entities_8cpp_source_l00019}00019\ \ \ \ \ \ \ \ \ cout\ <<\ \mbox{\hyperlink{extras_8cpp_a99d2755bf0660601280710515b3f512c}{colorizeText}}(\textcolor{stringliteral}{"{}You\ lost\ "{}}\ +\ to\_string(-\/amount)\ +\ \textcolor{stringliteral}{"{}\ money!"{}},\ \mbox{\hyperlink{extras_8h_ab87bacfdad76e61b9412d7124be44c1caf80f9a890089d211842d59625e561f88}{RED}})\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{entities_8cpp_source_l00020}00020\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{entities_8cpp_source_l00021}00021\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (amount\ ==\ 0)}
+\DoxyCodeLine{\Hypertarget{entities_8cpp_source_l00022}00022\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{entities_8cpp_source_l00023}00023\ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}You\ didn't\ gain\ or\ lose\ any\ money."{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{entities_8cpp_source_l00024}00024\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{entities_8cpp_source_l00025}00025\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (amount\ >\ 0)}
+\DoxyCodeLine{\Hypertarget{entities_8cpp_source_l00026}00026\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{entities_8cpp_source_l00027}00027\ \ \ \ \ \ \ \ \ cout\ <<\ \mbox{\hyperlink{extras_8cpp_a99d2755bf0660601280710515b3f512c}{colorizeText}}(\textcolor{stringliteral}{"{}You\ gained\ "{}}\ +\ to\_string(amount)\ +\ \textcolor{stringliteral}{"{}\ money!"{}},\ \mbox{\hyperlink{extras_8h_ab87bacfdad76e61b9412d7124be44c1cae735a848bf82163a19236ead1c3ef2d2}{YELLOW}})\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{entities_8cpp_source_l00028}00028\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{entities_8cpp_source_l00029}00029\ \ \ \ \ \mbox{\hyperlink{class_player_a9545beef70350d5c3b3a5719a890dd2f}{money}}\ +=\ amount;}
+\DoxyCodeLine{\Hypertarget{entities_8cpp_source_l00030}00030\ \}}
+\DoxyCodeLine{\Hypertarget{entities_8cpp_source_l00031}00031\ }
+\DoxyCodeLine{\Hypertarget{entities_8cpp_source_l00032}\mbox{\hyperlink{class_player_ac45154df7c4eb2d1d58255c3ff1c55dd}{00032}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_player_ac45154df7c4eb2d1d58255c3ff1c55dd}{Player::getMoney}}()}
+\DoxyCodeLine{\Hypertarget{entities_8cpp_source_l00033}00033\ \{}
+\DoxyCodeLine{\Hypertarget{entities_8cpp_source_l00034}00034\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_player_a9545beef70350d5c3b3a5719a890dd2f}{money}};}
+\DoxyCodeLine{\Hypertarget{entities_8cpp_source_l00035}00035\ \}}
 \DoxyCodeLine{\Hypertarget{entities_8cpp_source_l00036}00036\ }
-\DoxyCodeLine{\Hypertarget{entities_8cpp_source_l00037}\mbox{\hyperlink{class_entity_a44aad07756d6f00abf8f08ffde6eb217}{00037}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_entity_a44aad07756d6f00abf8f08ffde6eb217}{Entity::attack}}(\mbox{\hyperlink{class_entity_ac55fe185f7ccba9e35abf13517c65f63}{Entity}}\ \&target,\ \textcolor{keywordtype}{int}\ extraDmg)}
+\DoxyCodeLine{\Hypertarget{entities_8cpp_source_l00037}\mbox{\hyperlink{class_player_aaa988a6ac35acb7901de56baf9acf88b}{00037}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_player_aaa988a6ac35acb7901de56baf9acf88b}{Player::setMoney}}(\textcolor{keywordtype}{int}\ amount)}
 \DoxyCodeLine{\Hypertarget{entities_8cpp_source_l00038}00038\ \{}
-\DoxyCodeLine{\Hypertarget{entities_8cpp_source_l00039}00039\ \ \ \ \ \textcolor{keywordtype}{int}\ calcDmg\ =\ max(1,\ (\mbox{\hyperlink{class_entity_a679100a4f20bbf0fba4dfcbb40406d88}{stats}}.atk\ +\ extraDmg)\ -\/\ target.\mbox{\hyperlink{class_entity_a679100a4f20bbf0fba4dfcbb40406d88}{stats}}.\mbox{\hyperlink{class_stats_ac34395ac3019a82d1bff83ceab6f1889}{def}});}
-\DoxyCodeLine{\Hypertarget{entities_8cpp_source_l00040}00040\ \ \ \ \ target.\mbox{\hyperlink{class_entity_a6995bd098a6e6afb4abf9f4c42f6b15c}{currHealth}}\ =\ max(0,\ target.\mbox{\hyperlink{class_entity_a6995bd098a6e6afb4abf9f4c42f6b15c}{currHealth}}\ -\/\ calcDmg);}
-\DoxyCodeLine{\Hypertarget{entities_8cpp_source_l00041}00041\ \ \ \ \ cout\ <<\ target.\mbox{\hyperlink{class_entity_afb45718695f537c330a463168616c262}{name}}\ <<\ \textcolor{stringliteral}{"{}\ took\ "{}}\ <<\ calcDmg\ <<\ \textcolor{stringliteral}{"{}\ DMG!"{}}\ <<\ endl;}
-\DoxyCodeLine{\Hypertarget{entities_8cpp_source_l00042}00042\ \}}
-\DoxyCodeLine{\Hypertarget{entities_8cpp_source_l00043}00043\ }
-\DoxyCodeLine{\Hypertarget{entities_8cpp_source_l00044}00044\ }
+\DoxyCodeLine{\Hypertarget{entities_8cpp_source_l00039}00039\ \ \ \ \ \mbox{\hyperlink{class_player_a9545beef70350d5c3b3a5719a890dd2f}{money}}\ =\ amount;}
+\DoxyCodeLine{\Hypertarget{entities_8cpp_source_l00040}00040\ \}}
+\DoxyCodeLine{\Hypertarget{entities_8cpp_source_l00041}00041\ }
+\DoxyCodeLine{\Hypertarget{entities_8cpp_source_l00042}\mbox{\hyperlink{class_player_abda4c0f24a59155522361079dce5d427}{00042}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_player_abda4c0f24a59155522361079dce5d427}{Player::canAfford}}(\textcolor{keywordtype}{int}\ amount)}
+\DoxyCodeLine{\Hypertarget{entities_8cpp_source_l00043}00043\ \{}
+\DoxyCodeLine{\Hypertarget{entities_8cpp_source_l00044}00044\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_player_a9545beef70350d5c3b3a5719a890dd2f}{money}}\ >=\ amount;}
+\DoxyCodeLine{\Hypertarget{entities_8cpp_source_l00045}00045\ \}}
+\DoxyCodeLine{\Hypertarget{entities_8cpp_source_l00046}00046\ }
+\DoxyCodeLine{\Hypertarget{entities_8cpp_source_l00047}\mbox{\hyperlink{class_player_a5e281666c2e3cfc8bad64508a1524a5e}{00047}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_player_abda4c0f24a59155522361079dce5d427}{Player::canAfford}}(\mbox{\hyperlink{class_shop_item}{ShopItem}}\ \&item)\{}
+\DoxyCodeLine{\Hypertarget{entities_8cpp_source_l00048}00048\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_player_abda4c0f24a59155522361079dce5d427}{canAfford}}(item.\mbox{\hyperlink{class_shop_item_aa0112a46da1cf213541d4221e352a5e8}{price}});}
+\DoxyCodeLine{\Hypertarget{entities_8cpp_source_l00049}00049\ \}}
+\DoxyCodeLine{\Hypertarget{entities_8cpp_source_l00050}00050\ }
+\DoxyCodeLine{\Hypertarget{entities_8cpp_source_l00051}\mbox{\hyperlink{struct_stats_a2ab1a056d8b88abda0ce537a4ca4f846}{00051}}\ \mbox{\hyperlink{struct_stats_a2ab1a056d8b88abda0ce537a4ca4f846}{Stats::Stats}}(\textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_stats_ab6b44458cb7c90f28d7edea284ad0358}{atk}},\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_stats_ac34395ac3019a82d1bff83ceab6f1889}{def}})\ :\ \mbox{\hyperlink{struct_stats_ab6b44458cb7c90f28d7edea284ad0358}{atk}}(\mbox{\hyperlink{struct_stats_ab6b44458cb7c90f28d7edea284ad0358}{atk}}),\ \mbox{\hyperlink{struct_stats_ac34395ac3019a82d1bff83ceab6f1889}{def}}(\mbox{\hyperlink{struct_stats_ac34395ac3019a82d1bff83ceab6f1889}{def}})\ \{\}}
+\DoxyCodeLine{\Hypertarget{entities_8cpp_source_l00052}00052\ }
+\DoxyCodeLine{\Hypertarget{entities_8cpp_source_l00053}\mbox{\hyperlink{struct_health_a040b081507579ef14edebf392ede92f2}{00053}}\ \mbox{\hyperlink{struct_health_a040b081507579ef14edebf392ede92f2}{Health::Health}}(\textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_health_a6dad09bae8cc730f90fed6bffc6f2e95}{current}},\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_health_ac0986ff14e9baa23a9ad78fa3e6fbda5}{max}})\ :\ \mbox{\hyperlink{struct_health_a6dad09bae8cc730f90fed6bffc6f2e95}{current}}(\mbox{\hyperlink{struct_health_a6dad09bae8cc730f90fed6bffc6f2e95}{current}}),\ \mbox{\hyperlink{struct_health_ac0986ff14e9baa23a9ad78fa3e6fbda5}{max}}(\mbox{\hyperlink{struct_health_ac0986ff14e9baa23a9ad78fa3e6fbda5}{max}})\ \{\}}
+\DoxyCodeLine{\Hypertarget{entities_8cpp_source_l00054}00054\ }
+\DoxyCodeLine{\Hypertarget{entities_8cpp_source_l00055}\mbox{\hyperlink{class_entity_ac55fe185f7ccba9e35abf13517c65f63}{00055}}\ \mbox{\hyperlink{class_entity_ac55fe185f7ccba9e35abf13517c65f63}{Entity::Entity}}(\textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_entity_a399ce63cbbef5fa4e02e5cbd704d08d7}{health}},\ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{class_entity_afb45718695f537c330a463168616c262}{name}},\ \textcolor{keywordtype}{int}\ atk,\ \textcolor{keywordtype}{int}\ def):}
+\DoxyCodeLine{\Hypertarget{entities_8cpp_source_l00056}00056\ \mbox{\hyperlink{class_entity_a399ce63cbbef5fa4e02e5cbd704d08d7}{health}}(\mbox{\hyperlink{class_entity_a399ce63cbbef5fa4e02e5cbd704d08d7}{health}},\ \mbox{\hyperlink{class_entity_a399ce63cbbef5fa4e02e5cbd704d08d7}{health}}),\ \mbox{\hyperlink{class_entity_a679100a4f20bbf0fba4dfcbb40406d88}{stats}}(\mbox{\hyperlink{struct_stats}{Stats}}(atk,\ def)),\ \mbox{\hyperlink{class_entity_afb45718695f537c330a463168616c262}{name}}(\mbox{\hyperlink{class_entity_afb45718695f537c330a463168616c262}{name}})\ \{\}}
+\DoxyCodeLine{\Hypertarget{entities_8cpp_source_l00057}00057\ }
+\DoxyCodeLine{\Hypertarget{entities_8cpp_source_l00058}\mbox{\hyperlink{class_entity_a44aad07756d6f00abf8f08ffde6eb217}{00058}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_entity_a44aad07756d6f00abf8f08ffde6eb217}{Entity::attack}}(\mbox{\hyperlink{class_entity_ac55fe185f7ccba9e35abf13517c65f63}{Entity}}\ \&target,\ \textcolor{keywordtype}{int}\ extraDmg)}
+\DoxyCodeLine{\Hypertarget{entities_8cpp_source_l00059}00059\ \{}
+\DoxyCodeLine{\Hypertarget{entities_8cpp_source_l00060}00060\ \ \ \ \ \textcolor{keywordtype}{int}\ calcDmg\ =\ max(1,\ (\mbox{\hyperlink{class_entity_a679100a4f20bbf0fba4dfcbb40406d88}{stats}}.atk\ +\ extraDmg)\ -\/\ target.\mbox{\hyperlink{class_entity_a679100a4f20bbf0fba4dfcbb40406d88}{stats}}.\mbox{\hyperlink{struct_stats_ac34395ac3019a82d1bff83ceab6f1889}{def}});}
+\DoxyCodeLine{\Hypertarget{entities_8cpp_source_l00061}00061\ \ \ \ \ target.\mbox{\hyperlink{class_entity_a399ce63cbbef5fa4e02e5cbd704d08d7}{health}}.\mbox{\hyperlink{struct_health_a6dad09bae8cc730f90fed6bffc6f2e95}{current}}\ =\ max(0,\ target.\mbox{\hyperlink{class_entity_a399ce63cbbef5fa4e02e5cbd704d08d7}{health}}.\mbox{\hyperlink{struct_health_a6dad09bae8cc730f90fed6bffc6f2e95}{current}}\ -\/\ calcDmg);}
+\DoxyCodeLine{\Hypertarget{entities_8cpp_source_l00062}00062\ \ \ \ \ cout\ <<\ target.\mbox{\hyperlink{class_entity_a4f777fc6bf2b1d5a655658ecc13c778e}{getName}}()\ <<\ \textcolor{stringliteral}{"{}\ took\ "{}}\ <<\ calcDmg\ <<\ \textcolor{stringliteral}{"{}\ DMG!"{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{entities_8cpp_source_l00063}00063\ \}}
+\DoxyCodeLine{\Hypertarget{entities_8cpp_source_l00064}00064\ }
+\DoxyCodeLine{\Hypertarget{entities_8cpp_source_l00065}\mbox{\hyperlink{class_entity_a2b0140ae8c77c0e3654b070ee3c7fe57}{00065}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_entity_a2b0140ae8c77c0e3654b070ee3c7fe57}{Entity::getHealth}}()\ \{}
+\DoxyCodeLine{\Hypertarget{entities_8cpp_source_l00066}00066\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_entity_a399ce63cbbef5fa4e02e5cbd704d08d7}{health}}.current;}
+\DoxyCodeLine{\Hypertarget{entities_8cpp_source_l00067}00067\ \}}
+\DoxyCodeLine{\Hypertarget{entities_8cpp_source_l00068}\mbox{\hyperlink{class_entity_a2a0722da60ffe3841f81e83723294dbf}{00068}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_entity_a2a0722da60ffe3841f81e83723294dbf}{Entity::getMaxHealth}}()\{}
+\DoxyCodeLine{\Hypertarget{entities_8cpp_source_l00069}00069\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_entity_a399ce63cbbef5fa4e02e5cbd704d08d7}{health}}.max;}
+\DoxyCodeLine{\Hypertarget{entities_8cpp_source_l00070}00070\ \}}
+\DoxyCodeLine{\Hypertarget{entities_8cpp_source_l00071}\mbox{\hyperlink{class_entity_a63eb6db440a85d7fe34e109c29a1dac0}{00071}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_entity_a63eb6db440a85d7fe34e109c29a1dac0}{Entity::isFullHealth}}()\{}
+\DoxyCodeLine{\Hypertarget{entities_8cpp_source_l00072}00072\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_entity_a399ce63cbbef5fa4e02e5cbd704d08d7}{health}}.current\ ==\ \mbox{\hyperlink{class_entity_a399ce63cbbef5fa4e02e5cbd704d08d7}{health}}.max;}
+\DoxyCodeLine{\Hypertarget{entities_8cpp_source_l00073}00073\ \}}
+\DoxyCodeLine{\Hypertarget{entities_8cpp_source_l00074}\mbox{\hyperlink{class_entity_ac3b0ce2f491774836ca4894d6a058539}{00074}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_entity_ac3b0ce2f491774836ca4894d6a058539}{Entity::fullyHeal}}()\{}
+\DoxyCodeLine{\Hypertarget{entities_8cpp_source_l00075}00075\ \ \ \ \ \mbox{\hyperlink{class_entity_a399ce63cbbef5fa4e02e5cbd704d08d7}{health}}.current\ =\ \mbox{\hyperlink{class_entity_a399ce63cbbef5fa4e02e5cbd704d08d7}{health}}.max;}
+\DoxyCodeLine{\Hypertarget{entities_8cpp_source_l00076}00076\ \ \ \ \ \mbox{\hyperlink{extras_8cpp_a251383c9dea6cb260fb6f9ebb010139f}{printAnimate}}(\mbox{\hyperlink{class_entity_afb45718695f537c330a463168616c262}{name}}\ +\ \textcolor{stringliteral}{"{}\ was\ fully\ healed!\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{entities_8cpp_source_l00077}00077\ \}}
+\DoxyCodeLine{\Hypertarget{entities_8cpp_source_l00078}00078\ }
+\DoxyCodeLine{\Hypertarget{entities_8cpp_source_l00079}\mbox{\hyperlink{class_entity_ab0986ba7a1b24f022b5623781050c0f1}{00079}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_entity_ab0986ba7a1b24f022b5623781050c0f1}{Entity::isAlive}}()\{}
+\DoxyCodeLine{\Hypertarget{entities_8cpp_source_l00080}00080\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_entity_a399ce63cbbef5fa4e02e5cbd704d08d7}{health}}.current\ >\ 0;}
+\DoxyCodeLine{\Hypertarget{entities_8cpp_source_l00081}00081\ \}}
+\DoxyCodeLine{\Hypertarget{entities_8cpp_source_l00082}\mbox{\hyperlink{class_entity_a673bf3c04d5bae049fbc6c6ddc11a44a}{00082}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_entity_a673bf3c04d5bae049fbc6c6ddc11a44a}{Entity::heal}}(\textcolor{keywordtype}{int}\ amount)\{}
+\DoxyCodeLine{\Hypertarget{entities_8cpp_source_l00083}00083\ \ \ \ \ \mbox{\hyperlink{class_entity_a399ce63cbbef5fa4e02e5cbd704d08d7}{health}}.current\ =\ min(\mbox{\hyperlink{class_entity_a399ce63cbbef5fa4e02e5cbd704d08d7}{health}}.max,\ \mbox{\hyperlink{class_entity_a399ce63cbbef5fa4e02e5cbd704d08d7}{health}}.current\ +\ amount);}
+\DoxyCodeLine{\Hypertarget{entities_8cpp_source_l00084}00084\ \}}
+\DoxyCodeLine{\Hypertarget{entities_8cpp_source_l00085}00085\ }
+\DoxyCodeLine{\Hypertarget{entities_8cpp_source_l00086}\mbox{\hyperlink{class_entity_a522648b330daab91b49f78f0737a943f}{00086}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_entity_a522648b330daab91b49f78f0737a943f}{Entity::kill}}()\{}
+\DoxyCodeLine{\Hypertarget{entities_8cpp_source_l00087}00087\ \ \ \ \ \mbox{\hyperlink{class_entity_a399ce63cbbef5fa4e02e5cbd704d08d7}{health}}.current\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{entities_8cpp_source_l00088}00088\ \}}
+\DoxyCodeLine{\Hypertarget{entities_8cpp_source_l00089}00089\ }
+\DoxyCodeLine{\Hypertarget{entities_8cpp_source_l00090}\mbox{\hyperlink{class_entity_a4d78d5c5061893ed4464fc014adfd6b8}{00090}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_entity_a4d78d5c5061893ed4464fc014adfd6b8}{Entity::isDead}}()\ \{}
+\DoxyCodeLine{\Hypertarget{entities_8cpp_source_l00091}00091\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_entity_a399ce63cbbef5fa4e02e5cbd704d08d7}{health}}.current\ ==\ 0;}
+\DoxyCodeLine{\Hypertarget{entities_8cpp_source_l00092}00092\ \}}
+\DoxyCodeLine{\Hypertarget{entities_8cpp_source_l00093}00093\ }
+\DoxyCodeLine{\Hypertarget{entities_8cpp_source_l00094}\mbox{\hyperlink{class_entity_a4f777fc6bf2b1d5a655658ecc13c778e}{00094}}\ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{class_entity_a4f777fc6bf2b1d5a655658ecc13c778e}{Entity::getName}}()\ \{}
+\DoxyCodeLine{\Hypertarget{entities_8cpp_source_l00095}00095\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_entity_afb45718695f537c330a463168616c262}{name}};}
+\DoxyCodeLine{\Hypertarget{entities_8cpp_source_l00096}00096\ \}}
+\DoxyCodeLine{\Hypertarget{entities_8cpp_source_l00097}00097\ }
+\DoxyCodeLine{\Hypertarget{entities_8cpp_source_l00098}\mbox{\hyperlink{class_entity_acea14d73c24dfccc7772dd8e19f158cb}{00098}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_entity_acea14d73c24dfccc7772dd8e19f158cb}{Entity::getAtk}}()\ \{}
+\DoxyCodeLine{\Hypertarget{entities_8cpp_source_l00099}00099\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_entity_a679100a4f20bbf0fba4dfcbb40406d88}{stats}}.atk;}
+\DoxyCodeLine{\Hypertarget{entities_8cpp_source_l00100}00100\ \}}
+\DoxyCodeLine{\Hypertarget{entities_8cpp_source_l00101}00101\ }
+\DoxyCodeLine{\Hypertarget{entities_8cpp_source_l00102}\mbox{\hyperlink{class_entity_a6d8a87d5fd42b94f32c63f6d93825914}{00102}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_entity_a6d8a87d5fd42b94f32c63f6d93825914}{Entity::getDef}}()\ \{}
+\DoxyCodeLine{\Hypertarget{entities_8cpp_source_l00103}00103\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_entity_a679100a4f20bbf0fba4dfcbb40406d88}{stats}}.def;}
+\DoxyCodeLine{\Hypertarget{entities_8cpp_source_l00104}00104\ \}}
+\DoxyCodeLine{\Hypertarget{entities_8cpp_source_l00105}00105\ }
+\DoxyCodeLine{\Hypertarget{entities_8cpp_source_l00106}\mbox{\hyperlink{class_entity_a63c198e1b72aaf632d8cac8d1d623d43}{00106}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_entity_a63c198e1b72aaf632d8cac8d1d623d43}{Entity::boostAtk}}(\textcolor{keywordtype}{int}\ amount)\ \{}
+\DoxyCodeLine{\Hypertarget{entities_8cpp_source_l00107}00107\ \ \ \ \ \mbox{\hyperlink{class_entity_a679100a4f20bbf0fba4dfcbb40406d88}{stats}}.atk\ +=\ amount;\ \ \ \ }
+\DoxyCodeLine{\Hypertarget{entities_8cpp_source_l00108}00108\ \}}
+\DoxyCodeLine{\Hypertarget{entities_8cpp_source_l00109}00109\ }
+\DoxyCodeLine{\Hypertarget{entities_8cpp_source_l00110}\mbox{\hyperlink{class_entity_af1398a976ce42d0c1153efce5f5a9e5e}{00110}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_entity_af1398a976ce42d0c1153efce5f5a9e5e}{Entity::boostDef}}(\textcolor{keywordtype}{int}\ amount)\ \{}
+\DoxyCodeLine{\Hypertarget{entities_8cpp_source_l00111}00111\ \ \ \ \ \mbox{\hyperlink{class_entity_a679100a4f20bbf0fba4dfcbb40406d88}{stats}}.def\ +=\ amount;\ \ \ \ }
+\DoxyCodeLine{\Hypertarget{entities_8cpp_source_l00112}00112\ \}}
+\DoxyCodeLine{\Hypertarget{entities_8cpp_source_l00113}00113\ }
 
 \end{DoxyCode}

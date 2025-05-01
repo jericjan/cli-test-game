@@ -11,7 +11,8 @@ The menu for gambling. The user can win a legendary sword or nothing.
 
 
 
-Inheritance diagram for Gamble\+Menu\+:\nopagebreak
+Inheritance diagram for Gamble\+Menu\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -20,7 +21,8 @@ Inheritance diagram for Gamble\+Menu\+:\nopagebreak
 \end{figure}
 
 
-Collaboration diagram for Gamble\+Menu\+:\nopagebreak
+Collaboration diagram for Gamble\+Menu\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -47,22 +49,22 @@ Collaboration diagram for Gamble\+Menu\+:\nopagebreak
 virtual \mbox{\hyperlink{class_user_interface_ae588b2ff1711a016dd4c6fc5002c0841}{\texorpdfstring{$\sim$}{\string~}\+User\+Interface}} ()
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Additional Inherited Members}
-\doxysubsection*{Public Attributes inherited from \mbox{\hyperlink{class_u_i_with_player}{UIWith\+Player}}}
-\begin{DoxyCompactItemize}
-\item 
-\mbox{\hyperlink{class_player}{Player}} \mbox{\hyperlink{class_u_i_with_player_a480502a8db864e1ec92eb19f87a35083}{player}}
-\end{DoxyCompactItemize}
 \doxysubsection*{Public Attributes inherited from \mbox{\hyperlink{class_user_interface}{User\+Interface}}}
 \begin{DoxyCompactItemize}
 \item 
 bool \mbox{\hyperlink{class_user_interface_aa95ee5089a1de7ad211fb3a1bb786e11}{quit\+Game}} = false
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_u_i_with_player}{UIWith\+Player}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_player}{Player}} \mbox{\hyperlink{class_u_i_with_player_a480502a8db864e1ec92eb19f87a35083}{player}}
 \end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
 The menu for gambling. The user can win a legendary sword or nothing. 
 
-Definition at line \mbox{\hyperlink{ui_8h_source_l00057}{57}} of file \mbox{\hyperlink{ui_8h_source}{ui.\+h}}.
+Definition at line \mbox{\hyperlink{ui_8h_source_l00058}{58}} of file \mbox{\hyperlink{ui_8h_source}{ui.\+h}}.
 
 
 
@@ -118,7 +120,7 @@ Definition at line \mbox{\hyperlink{ui_8cpp_source_l00028}{28}} of file \mbox{\h
 \DoxyCodeLine{00032\ \ \ \ \ cin\ >>\ userInput;}
 \DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordflow}{if}\ (userInput\ ==\ \textcolor{stringliteral}{"{}y"{}})}
 \DoxyCodeLine{00034\ \ \ \ \ \{}
-\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_u_i_with_player_a480502a8db864e1ec92eb19f87a35083}{player}}.money\ <\ 100)}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{class_u_i_with_player_a480502a8db864e1ec92eb19f87a35083}{player}}.canAfford(100))}
 \DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \mbox{\hyperlink{extras_8cpp_a99d2755bf0660601280710515b3f512c}{colorizeText}}(\textcolor{stringliteral}{"{}You\ don't\ have\ enough\ money!"{}},\ \mbox{\hyperlink{extras_8h_ab87bacfdad76e61b9412d7124be44c1caf80f9a890089d211842d59625e561f88}{RED}})\ <<\ endl;}
 \DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{this};}
@@ -140,8 +142,8 @@ Definition at line \mbox{\hyperlink{ui_8cpp_source_l00028}{28}} of file \mbox{\h
 \DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Yamato\ *yamato\ =\ \textcolor{keyword}{new}\ Yamato();}
 \DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \mbox{\hyperlink{extras_8cpp_a99d2755bf0660601280710515b3f512c}{colorizeText}}(\textcolor{stringliteral}{"{}You\ got\ the\ Legendary\ Sword\ Yamato!\ It's\ a\ legendary\ sword\ that\ does\ "{}}\ +\ to\_string(yamato-\/>\mbox{\hyperlink{class_weapon_af7f5d5ecbb3ac0e95350a6750be1fb28}{dmg}})\ +\ \textcolor{stringliteral}{"{}\ damage!\(\backslash\)n"{}},\ \mbox{\hyperlink{extras_8h_ab87bacfdad76e61b9412d7124be44c1caa60bd322f93178d68184e30e162571ca}{GREEN}})\ <<\ endl;}
 \DoxyCodeLine{00056\ }
-\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ IItem*\ yamatoStatus\ =\ \mbox{\hyperlink{class_u_i_with_player_a480502a8db864e1ec92eb19f87a35083}{player}}.inventory.addItem(yamato);\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (Yamato*\ newYamato\ =\ \textcolor{keyword}{dynamic\_cast<}Yamato\ *\textcolor{keyword}{>}(yamatoStatus))}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ IItem*\ possibleYamato\ =\ \mbox{\hyperlink{class_u_i_with_player_a480502a8db864e1ec92eb19f87a35083}{player}}.inventory.addItem(yamato);\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (Yamato*\ newYamato\ =\ \textcolor{keyword}{dynamic\_cast<}Yamato\ *\textcolor{keyword}{>}(possibleYamato))}
 \DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Interesting...\ It\ seems\ you\ already\ have\ this\ item.\ Tell\ you\ what,\ I'll\ double\ its\ damage\ for\ you.\(\backslash\)n"{}};}
 \DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ newYamato-\/>dmg\ *=\ 2;}
@@ -164,7 +166,7 @@ Definition at line \mbox{\hyperlink{ui_8cpp_source_l00028}{28}} of file \mbox{\h
 \end{DoxyCode}
 
 
-References \mbox{\hyperlink{extras_8cpp_source_l00022}{colorize\+Text()}}, \mbox{\hyperlink{items_8h_source_l00071}{Weapon\+::dmg}}, \mbox{\hyperlink{extras_8h_source_l00018}{GREEN}}, \mbox{\hyperlink{ui_8h_source_l00021}{UIWith\+Player\+::player}}, and \mbox{\hyperlink{extras_8h_source_l00017}{RED}}.
+References \mbox{\hyperlink{extras_8cpp_source_l00022}{colorize\+Text()}}, \mbox{\hyperlink{items_8h_source_l00080}{Weapon\+::dmg}}, \mbox{\hyperlink{extras_8h_source_l00018}{GREEN}}, \mbox{\hyperlink{ui_8h_source_l00021}{UIWith\+Player\+::player}}, and \mbox{\hyperlink{extras_8h_source_l00017}{RED}}.
 
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]

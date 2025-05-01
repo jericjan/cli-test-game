@@ -11,7 +11,8 @@ Increases player ATK.
 
 
 
-Inheritance diagram for Strength\+Potion\+:\nopagebreak
+Inheritance diagram for Strength\+Potion\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -20,7 +21,8 @@ Inheritance diagram for Strength\+Potion\+:\nopagebreak
 \end{figure}
 
 
-Collaboration diagram for Strength\+Potion\+:\nopagebreak
+Collaboration diagram for Strength\+Potion\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -40,6 +42,8 @@ string \mbox{\hyperlink{class_strength_potion_a44d9d0a5601c9d14460b33217b9d319f}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_i_potion_af960db386ba9efea5adcde6ec80fe943}{IPotion}} (string n, string d, int c, int \mbox{\hyperlink{class_i_potion_ac28213c6eade179ede27d122491ba2fd}{strength}})
+\item 
+int \mbox{\hyperlink{class_i_potion_ad18886e5d31e2f0aac3ebfb67121d984}{get\+Strength}} ()
 \end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_i_player_item}{IPlayer\+Item}}}
 \begin{DoxyCompactItemize}
@@ -52,6 +56,22 @@ string \mbox{\hyperlink{class_strength_potion_a44d9d0a5601c9d14460b33217b9d319f}
 \mbox{\hyperlink{class_i_item_ab1bb86846077713c5847ec035115f09c}{IItem}} (string n, string t, string d, int c)
 \item 
 virtual \mbox{\hyperlink{class_i_item_a09483bee7e3f4f382e8eeac54493620e}{\texorpdfstring{$\sim$}{\string~}\+IItem}} ()
+\item 
+string \mbox{\hyperlink{class_i_item_a6b86cf44e8eebf94b7096ea5645a0527}{get\+Name}} ()
+\item 
+string \mbox{\hyperlink{class_i_item_ac99b78daaef9550cad1c0da7fe440071}{get\+Type}} ()
+\item 
+void \mbox{\hyperlink{class_i_item_a3c441280828e2877522a2e5800e8e975}{increment}} (int amount)
+\item 
+void \mbox{\hyperlink{class_i_item_aebf70cebb705732de76a0cfa1081055a}{decrement}} (int amount)
+\item 
+int \mbox{\hyperlink{class_i_item_a5a1e25be1c8a94e21ec832a9b7b5492f}{get\+Count}} ()
+\item 
+bool \mbox{\hyperlink{class_i_item_a3a36b5da24de2beb083bd954d72e1252}{is\+Infinite}} ()
+\item 
+bool \mbox{\hyperlink{class_i_item_ad10d9c87e8731804f994b9ca49a188df}{is\+Depleted}} ()
+\item 
+bool \mbox{\hyperlink{class_i_item_a601366438586b3834e385b64e5d9b943}{matches}} (\mbox{\hyperlink{class_i_item}{IItem}} \texorpdfstring{$\ast$}{*}item)
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Additional Inherited Members}
 \doxysubsection*{Public Attributes inherited from \mbox{\hyperlink{class_i_potion}{IPotion}}}
@@ -59,21 +79,12 @@ virtual \mbox{\hyperlink{class_i_item_a09483bee7e3f4f382e8eeac54493620e}{\texorp
 \item 
 int \mbox{\hyperlink{class_i_potion_ac28213c6eade179ede27d122491ba2fd}{strength}}
 \end{DoxyCompactItemize}
-\doxysubsection*{Public Attributes inherited from \mbox{\hyperlink{class_i_item}{IItem}}}
-\begin{DoxyCompactItemize}
-\item 
-string \mbox{\hyperlink{class_i_item_a7fdf57eb313baaea887b648bc13f247a}{name}}
-\item 
-string \mbox{\hyperlink{class_i_item_a3b3b58b237d89653e493c95fe22074ff}{type}}
-\item 
-int \mbox{\hyperlink{class_i_item_a0b30dc1f8eee51c2b78ac71d6c7b93b7}{count}}
-\begin{DoxyCompactList}\small\item\em A count of -\/1 means the item can be used infinitely. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
 Increases player ATK. 
 
-Definition at line \mbox{\hyperlink{items_8h_source_l00057}{57}} of file \mbox{\hyperlink{items_8h_source}{items.\+h}}.
+Definition at line \mbox{\hyperlink{items_8h_source_l00066}{66}} of file \mbox{\hyperlink{items_8h_source}{items.\+h}}.
 
 
 
@@ -86,16 +97,16 @@ Strength\+Potion\+::\+Strength\+Potion (\begin{DoxyParamCaption}\item[{int}]{c}{
 
 
 
-Definition at line \mbox{\hyperlink{items_8cpp_source_l00039}{39}} of file \mbox{\hyperlink{items_8cpp_source}{items.\+cpp}}.
+Definition at line \mbox{\hyperlink{items_8cpp_source_l00075}{75}} of file \mbox{\hyperlink{items_8cpp_source}{items.\+cpp}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00039\ :\ \mbox{\hyperlink{class_i_potion_af960db386ba9efea5adcde6ec80fe943}{IPotion}}(\textcolor{stringliteral}{"{}Strength\ Potion"{}},\ \textcolor{stringliteral}{"{}"{}},\ c,\ 100)\ \{\}}
+\DoxyCodeLine{00075\ :\ \mbox{\hyperlink{class_i_potion_af960db386ba9efea5adcde6ec80fe943}{IPotion}}(\textcolor{stringliteral}{"{}Strength\ Potion"{}},\ \textcolor{stringliteral}{"{}"{}},\ c,\ 100)\ \{\}}
 
 \end{DoxyCode}
 
 
-References \mbox{\hyperlink{items_8cpp_source_l00019}{IPotion\+::\+IPotion()}}.
+References \mbox{\hyperlink{items_8cpp_source_l00051}{IPotion\+::\+IPotion()}}.
 
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -119,18 +130,18 @@ Reimplemented from \mbox{\hyperlink{class_i_item_aa7a7455949b90aed6b2f7fcd91fead
 
 
 
-Definition at line \mbox{\hyperlink{items_8cpp_source_l00040}{40}} of file \mbox{\hyperlink{items_8cpp_source}{items.\+cpp}}.
+Definition at line \mbox{\hyperlink{items_8cpp_source_l00076}{76}} of file \mbox{\hyperlink{items_8cpp_source}{items.\+cpp}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00041\ \{}
-\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}Increases\ the\ user's\ ATK\ by\ "{}}\ +\ to\_string(\mbox{\hyperlink{class_i_potion_ac28213c6eade179ede27d122491ba2fd}{strength}})\ +\ \textcolor{stringliteral}{"{}!"{}};}
-\DoxyCodeLine{00043\ \}}
+\DoxyCodeLine{00077\ \{}
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}Increases\ the\ user's\ ATK\ by\ "{}}\ +\ to\_string(\mbox{\hyperlink{class_i_potion_ac28213c6eade179ede27d122491ba2fd}{strength}})\ +\ \textcolor{stringliteral}{"{}!"{}};}
+\DoxyCodeLine{00079\ \}}
 
 \end{DoxyCode}
 
 
-References \mbox{\hyperlink{items_8h_source_l00043}{IPotion\+::strength}}.
+References \mbox{\hyperlink{items_8h_source_l00051}{IPotion\+::strength}}.
 
 \Hypertarget{class_strength_potion_ade578d9d7d7fa2152c3adaec3d302427}\index{StrengthPotion@{StrengthPotion}!use@{use}}
 \index{use@{use}!StrengthPotion@{StrengthPotion}}
@@ -144,22 +155,30 @@ Implements \mbox{\hyperlink{class_i_player_item_a22a1323dae95369aab54ef7ce3fe0a1
 
 
 
-Definition at line \mbox{\hyperlink{items_8cpp_source_l00045}{45}} of file \mbox{\hyperlink{items_8cpp_source}{items.\+cpp}}.
+Definition at line \mbox{\hyperlink{items_8cpp_source_l00081}{81}} of file \mbox{\hyperlink{items_8cpp_source}{items.\+cpp}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00046\ \{}
-\DoxyCodeLine{00047\ \ \ \ \ player.\mbox{\hyperlink{class_entity_a679100a4f20bbf0fba4dfcbb40406d88}{stats}}.\mbox{\hyperlink{class_stats_ab6b44458cb7c90f28d7edea284ad0358}{atk}}\ +=\ \mbox{\hyperlink{class_i_potion_ac28213c6eade179ede27d122491ba2fd}{strength}};\ \ \ \ }
-\DoxyCodeLine{00048\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Your\ ATK\ increased\ by\ "{}}\ +\ to\_string(\mbox{\hyperlink{class_i_potion_ac28213c6eade179ede27d122491ba2fd}{strength}})\ +\ \textcolor{stringliteral}{"{}!"{}}\ <<\ endl;}
-\DoxyCodeLine{00049\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Your\ new\ ATK\ is\ "{}}\ +\ to\_string(player.\mbox{\hyperlink{class_entity_a679100a4f20bbf0fba4dfcbb40406d88}{stats}}.\mbox{\hyperlink{class_stats_ab6b44458cb7c90f28d7edea284ad0358}{atk}})\ +\ \textcolor{stringliteral}{"{}!"{}}\ <<\ endl;}
-\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
-\DoxyCodeLine{00051\ \}}
+\DoxyCodeLine{00082\ \{}
+\DoxyCodeLine{00083\ \ \ \ \ player.\mbox{\hyperlink{class_entity_a63c198e1b72aaf632d8cac8d1d623d43}{boostAtk}}(\mbox{\hyperlink{class_i_potion_ac28213c6eade179ede27d122491ba2fd}{strength}});}
+\DoxyCodeLine{00084\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Your\ ATK\ increased\ by\ "{}}\ +\ to\_string(\mbox{\hyperlink{class_i_potion_ac28213c6eade179ede27d122491ba2fd}{strength}})\ +\ \textcolor{stringliteral}{"{}!"{}}\ <<\ endl;}
+\DoxyCodeLine{00085\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Your\ new\ ATK\ is\ "{}}\ +\ to\_string(player.\mbox{\hyperlink{class_entity_acea14d73c24dfccc7772dd8e19f158cb}{getAtk}}())\ +\ \textcolor{stringliteral}{"{}!"{}}\ <<\ endl;}
+\DoxyCodeLine{00086\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00087\ \}}
 
 \end{DoxyCode}
 
 
-References \mbox{\hyperlink{entities_8h_source_l00011}{Stats\+::atk}}, \mbox{\hyperlink{entities_8h_source_l00023}{Entity\+::stats}}, and \mbox{\hyperlink{items_8h_source_l00043}{IPotion\+::strength}}.
+References \mbox{\hyperlink{entities_8cpp_source_l00106}{Entity\+::boost\+Atk()}}, \mbox{\hyperlink{entities_8cpp_source_l00098}{Entity\+::get\+Atk()}}, and \mbox{\hyperlink{items_8h_source_l00051}{IPotion\+::strength}}.
 
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=305pt]{class_strength_potion_ade578d9d7d7fa2152c3adaec3d302427_cgraph}
+\end{center}
+\end{figure}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

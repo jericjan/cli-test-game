@@ -11,7 +11,8 @@ The part after the player meets the mysterious stranger.
 
 
 
-Inheritance diagram for First\+Choice\+:\nopagebreak
+Inheritance diagram for First\+Choice\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -20,7 +21,8 @@ Inheritance diagram for First\+Choice\+:\nopagebreak
 \end{figure}
 
 
-Collaboration diagram for First\+Choice\+:\nopagebreak
+Collaboration diagram for First\+Choice\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -46,20 +48,21 @@ Collaboration diagram for First\+Choice\+:\nopagebreak
 \item 
 virtual \mbox{\hyperlink{class_user_interface_ae588b2ff1711a016dd4c6fc5002c0841}{\texorpdfstring{$\sim$}{\string~}\+User\+Interface}} ()
 \end{DoxyCompactItemize}
-\doxysubsubsection*{Public Attributes}
+\doxysubsubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
 list$<$ string $>$ \mbox{\hyperlink{class_first_choice_a782472949fb6b88b593c9dcc30294015}{stay\+Resps}}
 \end{DoxyCompactItemize}
-\doxysubsection*{Public Attributes inherited from \mbox{\hyperlink{class_u_i_with_player}{UIWith\+Player}}}
-\begin{DoxyCompactItemize}
-\item 
-\mbox{\hyperlink{class_player}{Player}} \mbox{\hyperlink{class_u_i_with_player_a480502a8db864e1ec92eb19f87a35083}{player}}
-\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
 \doxysubsection*{Public Attributes inherited from \mbox{\hyperlink{class_user_interface}{User\+Interface}}}
 \begin{DoxyCompactItemize}
 \item 
 bool \mbox{\hyperlink{class_user_interface_aa95ee5089a1de7ad211fb3a1bb786e11}{quit\+Game}} = false
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_u_i_with_player}{UIWith\+Player}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_player}{Player}} \mbox{\hyperlink{class_u_i_with_player_a480502a8db864e1ec92eb19f87a35083}{player}}
 \end{DoxyCompactItemize}
 
 
@@ -68,7 +71,7 @@ The part after the player meets the mysterious stranger.
 
 The player can stay for funny dialogue. 
 
-Definition at line \mbox{\hyperlink{ui_8h_source_l00098}{98}} of file \mbox{\hyperlink{ui_8h_source}{ui.\+h}}.
+Definition at line \mbox{\hyperlink{ui_8h_source_l00101}{101}} of file \mbox{\hyperlink{ui_8h_source}{ui.\+h}}.
 
 
 
@@ -146,7 +149,7 @@ Definition at line \mbox{\hyperlink{ui_8cpp_source_l00313}{313}} of file \mbox{\
 \end{DoxyCode}
 
 
-References \mbox{\hyperlink{extras_8cpp_source_l00027}{input\+Num()}}, \mbox{\hyperlink{ui_8h_source_l00021}{UIWith\+Player\+::player}}, \mbox{\hyperlink{extras_8cpp_source_l00042}{print\+Animate()}}, and \mbox{\hyperlink{ui_8h_source_l00101}{stay\+Resps}}.
+References \mbox{\hyperlink{extras_8cpp_source_l00027}{input\+Num()}}, \mbox{\hyperlink{ui_8h_source_l00021}{UIWith\+Player\+::player}}, \mbox{\hyperlink{extras_8cpp_source_l00042}{print\+Animate()}}, and \mbox{\hyperlink{ui_8h_source_l00104}{stay\+Resps}}.
 
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -162,7 +165,7 @@ Here is the call graph for this function\+:\nopagebreak
 \index{stayResps@{stayResps}!FirstChoice@{FirstChoice}}
 \doxysubsubsection{\texorpdfstring{stayResps}{stayResps}}
 {\footnotesize\ttfamily \label{class_first_choice_a782472949fb6b88b593c9dcc30294015} 
-list$<$string$>$ First\+Choice\+::stay\+Resps}
+list$<$string$>$ First\+Choice\+::stay\+Resps\hspace{0.3cm}{\ttfamily [private]}}
 
 {\bfseries Initial value\+:}
 \begin{DoxyCode}{0}
@@ -176,16 +179,16 @@ list$<$string$>$ First\+Choice\+::stay\+Resps}
 \end{DoxyCode}
 
 
-Definition at line \mbox{\hyperlink{ui_8h_source_l00101}{101}} of file \mbox{\hyperlink{ui_8h_source}{ui.\+h}}.
+Definition at line \mbox{\hyperlink{ui_8h_source_l00104}{104}} of file \mbox{\hyperlink{ui_8h_source}{ui.\+h}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Hello?\ I\ said\ get\ out."{}},}
-\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Come\ on\ man.\ I\ have\ stuff\ to\ do.\ Please\ leave."{}},}
-\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}I'm\ gonna\ run\ out\ of\ dialogue\ options\ here.\ The\ devs\ didn't\ give\ me\ that\ many\ lines."{}},}
-\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Alright,\ I'm\ giving\ you\ the\ silent\ treatment."{}},}
-\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}..."{}}\};}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Hello?\ I\ said\ get\ out."{}},}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Come\ on\ man.\ I\ have\ stuff\ to\ do.\ Please\ leave."{}},}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}I'm\ gonna\ run\ out\ of\ dialogue\ options\ here.\ The\ devs\ didn't\ give\ me\ that\ many\ lines."{}},}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Alright,\ I'm\ giving\ you\ the\ silent\ treatment."{}},}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}..."{}}\};\ \ \ \ }
 
 \end{DoxyCode}
 

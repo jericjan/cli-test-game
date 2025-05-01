@@ -1,7 +1,10 @@
 var searchData=
 [
-  ['uihandler_0',['UIHandler',['../class_u_i_handler.html#a31eeb9302f21d473bdd886a31484a325',1,'UIHandler']]],
-  ['uiwithplayer_1',['UIWithPlayer',['../class_u_i_with_player.html#a297e083951aeaf9e72d9746fab8eccd8',1,'UIWithPlayer::UIWithPlayer()'],['../class_u_i_with_player.html#a8d2dca800c79f3d60af802cc4c302286',1,'UIWithPlayer::UIWithPlayer(Player player)']]],
-  ['use_2',['use',['../class_i_enemy_item.html#a4f81ef24d49cb728a7a275db4b1b506c',1,'IEnemyItem::use()'],['../class_i_player_item.html#a22a1323dae95369aab54ef7ce3fe0a14',1,'IPlayerItem::use()'],['../class_health_potion.html#acd72ba2a1a6dc046c5d60920c4e297fc',1,'HealthPotion::use()'],['../class_strength_potion.html#ade578d9d7d7fa2152c3adaec3d302427',1,'StrengthPotion::use()'],['../class_weapon.html#a425b48c0e2c2422e244b7cb7227a0345',1,'Weapon::use()']]],
-  ['useitem_3',['useItem',['../class_inventory.html#a51e9f40ed13d62a47358418925bb8347',1,'Inventory']]]
+  ['setmoney_0',['setMoney',['../class_player.html#aaa988a6ac35acb7901de56baf9acf88b',1,'Player']]],
+  ['shopitem_1',['ShopItem',['../class_shop_item.html#a942932b5b420ab055d6f3ab95eb90c1f',1,'ShopItem']]],
+  ['shopmenu_2',['ShopMenu',['../class_shop_menu.html#a460c467f17851983cc11c799b0ba6104',1,'ShopMenu']]],
+  ['sleepms_3',['sleepMS',['../extras_8cpp.html#aea0e34fe8a665ef6cb1fd6526ce1deb0',1,'sleepMS(int ms):&#160;extras.cpp'],['../extras_8h.html#aea0e34fe8a665ef6cb1fd6526ce1deb0',1,'sleepMS(int ms):&#160;extras.cpp']]],
+  ['start_4',['start',['../class_u_i_handler.html#a365012908440880bc1e1f6501e28c17f',1,'UIHandler']]],
+  ['stats_5',['Stats',['../struct_stats.html#a2ab1a056d8b88abda0ce537a4ca4f846',1,'Stats']]],
+  ['strengthpotion_6',['StrengthPotion',['../class_strength_potion.html#aa5d71087de02a8d775b0c07825e4ca2f',1,'StrengthPotion']]]
 ];

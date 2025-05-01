@@ -102,13 +102,13 @@ Definition at line \mbox{\hyperlink{shop_8cpp_source_l00030}{30}} of file \mbox{
 \DoxyCodeLine{00035\ \ \ \ \ \}}
 \DoxyCodeLine{00036\ \ \ \ \ ShopItem\ \&shopItem\ =\ \mbox{\hyperlink{class_shop_a2e7691d6eaa6339b5416981538c656fc}{items}}[idx];}
 \DoxyCodeLine{00037\ \ \ \ \ }
-\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordflow}{if}\ (player.\mbox{\hyperlink{class_player_a9545beef70350d5c3b3a5719a890dd2f}{money}}\ <\ shopItem.\mbox{\hyperlink{class_shop_item_aa0112a46da1cf213541d4221e352a5e8}{price}})\ \{}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordflow}{if}\ (!player.\mbox{\hyperlink{class_player_abda4c0f24a59155522361079dce5d427}{canAfford}}(shopItem))\ \{}
 \DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ cout\ <<\ \mbox{\hyperlink{extras_8cpp_a99d2755bf0660601280710515b3f512c}{colorizeText}}(\textcolor{stringliteral}{"{}You\ don't\ have\ enough\ money!"{}},\ \mbox{\hyperlink{extras_8h_ab87bacfdad76e61b9412d7124be44c1caf80f9a890089d211842d59625e561f88}{RED}})\ <<\ endl;}
 \DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
 \DoxyCodeLine{00041\ \ \ \ \ \}}
 \DoxyCodeLine{00042\ }
 \DoxyCodeLine{00043\ \ \ \ \ player.\mbox{\hyperlink{class_player_a86ad66429e7bf8ef4640bac1d0f3476f}{addMoney}}(-\/shopItem.\mbox{\hyperlink{class_shop_item_aa0112a46da1cf213541d4221e352a5e8}{price}});\ \ \ \ }
-\DoxyCodeLine{00044\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}You\ bought\ a\ "{}}\ <<\ shopItem.\mbox{\hyperlink{class_shop_item_ab2822bb6662cae38cf4cfa4bc842a07d}{item}}-\/>\mbox{\hyperlink{class_i_item_a7fdf57eb313baaea887b648bc13f247a}{name}}\ <<\ \textcolor{stringliteral}{"{}!"{}}\ <<\ endl;}
+\DoxyCodeLine{00044\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}You\ bought\ a\ "{}}\ <<\ shopItem.\mbox{\hyperlink{class_shop_item_ab2822bb6662cae38cf4cfa4bc842a07d}{item}}-\/>\mbox{\hyperlink{class_i_item_a6b86cf44e8eebf94b7096ea5645a0527}{getName}}()\ <<\ \textcolor{stringliteral}{"{}!"{}}\ <<\ endl;}
 \DoxyCodeLine{00045\ \ \ \ \ player.\mbox{\hyperlink{class_player_ab8d436b5727749f7be05ffdf744d1041}{inventory}}.\mbox{\hyperlink{class_inventory_a7a3d5b1157d8212186746eade80b5630}{addItem}}(shopItem.\mbox{\hyperlink{class_shop_item_ab2822bb6662cae38cf4cfa4bc842a07d}{item}},\ \textcolor{keyword}{false});}
 \DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
 \DoxyCodeLine{00047\ \}}
@@ -116,13 +116,14 @@ Definition at line \mbox{\hyperlink{shop_8cpp_source_l00030}{30}} of file \mbox{
 \end{DoxyCode}
 
 
-References \mbox{\hyperlink{inventory_8cpp_source_l00007}{Inventory\+::add\+Item()}}, \mbox{\hyperlink{entities_8cpp_source_l00014}{Player\+::add\+Money()}}, \mbox{\hyperlink{extras_8cpp_source_l00022}{colorize\+Text()}}, \mbox{\hyperlink{entities_8h_source_l00034}{Player\+::inventory}}, \mbox{\hyperlink{shop_8h_source_l00010}{Shop\+Item\+::item}}, \mbox{\hyperlink{shop_8h_source_l00017}{items}}, \mbox{\hyperlink{entities_8h_source_l00035}{Player\+::money}}, \mbox{\hyperlink{items_8h_source_l00015}{IItem\+::name}}, \mbox{\hyperlink{shop_8h_source_l00011}{Shop\+Item\+::price}}, and \mbox{\hyperlink{extras_8h_source_l00017}{RED}}.
+References \mbox{\hyperlink{inventory_8cpp_source_l00007}{Inventory\+::add\+Item()}}, \mbox{\hyperlink{entities_8cpp_source_l00015}{Player\+::add\+Money()}}, \mbox{\hyperlink{entities_8cpp_source_l00042}{Player\+::can\+Afford()}}, \mbox{\hyperlink{extras_8cpp_source_l00022}{colorize\+Text()}}, \mbox{\hyperlink{items_8cpp_source_l00015}{IItem\+::get\+Name()}}, \mbox{\hyperlink{entities_8h_source_l00057}{Player\+::inventory}}, \mbox{\hyperlink{shop_8h_source_l00010}{Shop\+Item\+::item}}, \mbox{\hyperlink{shop_8h_source_l00017}{items}}, \mbox{\hyperlink{shop_8h_source_l00011}{Shop\+Item\+::price}}, and \mbox{\hyperlink{extras_8h_source_l00017}{RED}}.
 
 
 
 Referenced by \mbox{\hyperlink{ui_8cpp_source_l00154}{Shop\+Menu\+::render()}}.
 
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -150,11 +151,11 @@ Definition at line \mbox{\hyperlink{shop_8cpp_source_l00019}{19}} of file \mbox{
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{\ \ \ \ }
 \DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{int}\ idx\ =\ 1;}
-\DoxyCodeLine{00021\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Money:\ "{}}\ <<\ player.\mbox{\hyperlink{class_player_a9545beef70350d5c3b3a5719a890dd2f}{money}}\ <<\ endl;}
+\DoxyCodeLine{00021\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Money:\ "{}}\ <<\ player.\mbox{\hyperlink{class_player_ac45154df7c4eb2d1d58255c3ff1c55dd}{getMoney}}()\ <<\ endl;}
 \DoxyCodeLine{00022\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}[0]\ Leave"{}}\ <<\ endl;}
 \DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordflow}{for}\ (ShopItem\ \&shopItem\ :\ \mbox{\hyperlink{class_shop_a2e7691d6eaa6339b5416981538c656fc}{items}})\ \{}
-\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{extras_8h_ab87bacfdad76e61b9412d7124be44c1c}{Color}}\ textColor\ =\ (player.\mbox{\hyperlink{class_player_a9545beef70350d5c3b3a5719a890dd2f}{money}}\ <\ shopItem.price)\ ?\ \mbox{\hyperlink{extras_8h_ab87bacfdad76e61b9412d7124be44c1caf80f9a890089d211842d59625e561f88}{RED}}\ :\ \mbox{\hyperlink{extras_8h_ab87bacfdad76e61b9412d7124be44c1caa60bd322f93178d68184e30e162571ca}{GREEN}};}
-\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ cout\ <<\ \mbox{\hyperlink{extras_8cpp_a99d2755bf0660601280710515b3f512c}{colorizeText}}(\textcolor{stringliteral}{"{}["{}}\ +\ to\_string(idx)\ +\ \textcolor{stringliteral}{"{}]\ "{}}\ +\ shopItem.item-\/>name\ +\ \textcolor{stringliteral}{"{}\ [Cost:\ "{}}\ +\ to\_string(shopItem.price)\ +\ \textcolor{stringliteral}{"{}]"{}},\ textColor)\ <<\ endl;}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{extras_8h_ab87bacfdad76e61b9412d7124be44c1c}{Color}}\ textColor\ =\ (!player.\mbox{\hyperlink{class_player_abda4c0f24a59155522361079dce5d427}{canAfford}}(shopItem))\ ?\ \mbox{\hyperlink{extras_8h_ab87bacfdad76e61b9412d7124be44c1caf80f9a890089d211842d59625e561f88}{RED}}\ :\ \mbox{\hyperlink{extras_8h_ab87bacfdad76e61b9412d7124be44c1caa60bd322f93178d68184e30e162571ca}{GREEN}};}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ cout\ <<\ \mbox{\hyperlink{extras_8cpp_a99d2755bf0660601280710515b3f512c}{colorizeText}}(\textcolor{stringliteral}{"{}["{}}\ +\ to\_string(idx)\ +\ \textcolor{stringliteral}{"{}]\ "{}}\ +\ shopItem.item-\/>getName()\ +\ \textcolor{stringliteral}{"{}\ [Cost:\ "{}}\ +\ to\_string(shopItem.price)\ +\ \textcolor{stringliteral}{"{}]"{}},\ textColor)\ <<\ endl;}
 \DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ idx\ +=\ 1;}
 \DoxyCodeLine{00027\ \ \ \ \ \ \ \}\ \ \ \ }
 \DoxyCodeLine{00028\ \}}
@@ -162,17 +163,18 @@ Definition at line \mbox{\hyperlink{shop_8cpp_source_l00019}{19}} of file \mbox{
 \end{DoxyCode}
 
 
-References \mbox{\hyperlink{extras_8cpp_source_l00022}{colorize\+Text()}}, \mbox{\hyperlink{extras_8h_source_l00018}{GREEN}}, \mbox{\hyperlink{shop_8h_source_l00017}{items}}, \mbox{\hyperlink{entities_8h_source_l00035}{Player\+::money}}, and \mbox{\hyperlink{extras_8h_source_l00017}{RED}}.
+References \mbox{\hyperlink{entities_8cpp_source_l00042}{Player\+::can\+Afford()}}, \mbox{\hyperlink{extras_8cpp_source_l00022}{colorize\+Text()}}, \mbox{\hyperlink{entities_8cpp_source_l00032}{Player\+::get\+Money()}}, \mbox{\hyperlink{extras_8h_source_l00018}{GREEN}}, \mbox{\hyperlink{shop_8h_source_l00017}{items}}, and \mbox{\hyperlink{extras_8h_source_l00017}{RED}}.
 
 
 
 Referenced by \mbox{\hyperlink{ui_8cpp_source_l00154}{Shop\+Menu\+::render()}}.
 
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=267pt]{class_shop_ac213488671e8d976d97c3530e691fd44_cgraph}
+\includegraphics[width=291pt]{class_shop_ac213488671e8d976d97c3530e691fd44_cgraph}
 \end{center}
 \end{figure}
 Here is the caller graph for this function\+:\nopagebreak

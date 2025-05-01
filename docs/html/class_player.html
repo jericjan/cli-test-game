@@ -105,6 +105,7 @@ $(function(){initNavTree('class_player.html',''); initResizable(true); });
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_player-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">Player Class Reference</div></div>
 </div><!--header-->
@@ -117,50 +118,88 @@ $(function(){initNavTree('class_player.html',''); initResizable(true); });
 <div class="dynheader">
 Inheritance diagram for Player:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_player__inherit__graph.svg" width="228" height="416"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_player__inherit__graph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 <div class="dynheader">
 Collaboration diagram for Player:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_player__coll__graph.svg" width="398" height="566"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_player__coll__graph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:affe0cc3cb714f6deb4e62f0c0d3f1fd8" id="r_affe0cc3cb714f6deb4e62f0c0d3f1fd8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#affe0cc3cb714f6deb4e62f0c0d3f1fd8">Player</a> ()</td></tr>
 <tr class="separator:affe0cc3cb714f6deb4e62f0c0d3f1fd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a32b77b22f5675099b03650bed28ae924" id="r_a32b77b22f5675099b03650bed28ae924"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a32b77b22f5675099b03650bed28ae924">Player</a> (int health, string <a class="el" href="class_entity.html#afb45718695f537c330a463168616c262">name</a>, int atk, int def, int <a class="el" href="#a9545beef70350d5c3b3a5719a890dd2f">money</a>)</td></tr>
+<tr class="memitem:a32b77b22f5675099b03650bed28ae924" id="r_a32b77b22f5675099b03650bed28ae924"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a32b77b22f5675099b03650bed28ae924">Player</a> (int <a class="el" href="class_entity.html#a399ce63cbbef5fa4e02e5cbd704d08d7">health</a>, string <a class="el" href="class_entity.html#afb45718695f537c330a463168616c262">name</a>, int atk, int def, int <a class="el" href="#a9545beef70350d5c3b3a5719a890dd2f">money</a>)</td></tr>
 <tr class="separator:a32b77b22f5675099b03650bed28ae924"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a86ad66429e7bf8ef4640bac1d0f3476f" id="r_a86ad66429e7bf8ef4640bac1d0f3476f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a86ad66429e7bf8ef4640bac1d0f3476f">addMoney</a> (int amount)</td></tr>
 <tr class="separator:a86ad66429e7bf8ef4640bac1d0f3476f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac45154df7c4eb2d1d58255c3ff1c55dd" id="r_ac45154df7c4eb2d1d58255c3ff1c55dd"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac45154df7c4eb2d1d58255c3ff1c55dd">getMoney</a> ()</td></tr>
+<tr class="separator:ac45154df7c4eb2d1d58255c3ff1c55dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa988a6ac35acb7901de56baf9acf88b" id="r_aaa988a6ac35acb7901de56baf9acf88b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaa988a6ac35acb7901de56baf9acf88b">setMoney</a> (int amount)</td></tr>
+<tr class="separator:aaa988a6ac35acb7901de56baf9acf88b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abda4c0f24a59155522361079dce5d427" id="r_abda4c0f24a59155522361079dce5d427"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abda4c0f24a59155522361079dce5d427">canAfford</a> (int amount)</td></tr>
+<tr class="separator:abda4c0f24a59155522361079dce5d427"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e281666c2e3cfc8bad64508a1524a5e" id="r_a5e281666c2e3cfc8bad64508a1524a5e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5e281666c2e3cfc8bad64508a1524a5e">canAfford</a> (<a class="el" href="class_shop_item.html">ShopItem</a> &amp;item)</td></tr>
+<tr class="separator:a5e281666c2e3cfc8bad64508a1524a5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_entity"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_class_entity')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_entity.html">Entity</a></td></tr>
-<tr class="memitem:ac55fe185f7ccba9e35abf13517c65f63 inherit pub_methods_class_entity" id="r_ac55fe185f7ccba9e35abf13517c65f63"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#ac55fe185f7ccba9e35abf13517c65f63">Entity</a> (int health, string <a class="el" href="class_entity.html#afb45718695f537c330a463168616c262">name</a>, int atk, int def)</td></tr>
+<tr class="memitem:ac55fe185f7ccba9e35abf13517c65f63 inherit pub_methods_class_entity" id="r_ac55fe185f7ccba9e35abf13517c65f63"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#ac55fe185f7ccba9e35abf13517c65f63">Entity</a> (int <a class="el" href="class_entity.html#a399ce63cbbef5fa4e02e5cbd704d08d7">health</a>, string <a class="el" href="class_entity.html#afb45718695f537c330a463168616c262">name</a>, int atk, int def)</td></tr>
 <tr class="separator:ac55fe185f7ccba9e35abf13517c65f63 inherit pub_methods_class_entity"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adf6d3f7cb1b2ba029b6b048a395cc8ae inherit pub_methods_class_entity" id="r_adf6d3f7cb1b2ba029b6b048a395cc8ae"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#adf6d3f7cb1b2ba029b6b048a395cc8ae">~Entity</a> ()</td></tr>
 <tr class="separator:adf6d3f7cb1b2ba029b6b048a395cc8ae inherit pub_methods_class_entity"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a44aad07756d6f00abf8f08ffde6eb217 inherit pub_methods_class_entity" id="r_a44aad07756d6f00abf8f08ffde6eb217"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#a44aad07756d6f00abf8f08ffde6eb217">attack</a> (<a class="el" href="class_entity.html">Entity</a> &amp;target, int extraDmg=0)</td></tr>
 <tr class="separator:a44aad07756d6f00abf8f08ffde6eb217 inherit pub_methods_class_entity"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b0140ae8c77c0e3654b070ee3c7fe57 inherit pub_methods_class_entity" id="r_a2b0140ae8c77c0e3654b070ee3c7fe57"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#a2b0140ae8c77c0e3654b070ee3c7fe57">getHealth</a> ()</td></tr>
+<tr class="separator:a2b0140ae8c77c0e3654b070ee3c7fe57 inherit pub_methods_class_entity"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a0722da60ffe3841f81e83723294dbf inherit pub_methods_class_entity" id="r_a2a0722da60ffe3841f81e83723294dbf"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#a2a0722da60ffe3841f81e83723294dbf">getMaxHealth</a> ()</td></tr>
+<tr class="separator:a2a0722da60ffe3841f81e83723294dbf inherit pub_methods_class_entity"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a63eb6db440a85d7fe34e109c29a1dac0 inherit pub_methods_class_entity" id="r_a63eb6db440a85d7fe34e109c29a1dac0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#a63eb6db440a85d7fe34e109c29a1dac0">isFullHealth</a> ()</td></tr>
+<tr class="separator:a63eb6db440a85d7fe34e109c29a1dac0 inherit pub_methods_class_entity"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac3b0ce2f491774836ca4894d6a058539 inherit pub_methods_class_entity" id="r_ac3b0ce2f491774836ca4894d6a058539"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#ac3b0ce2f491774836ca4894d6a058539">fullyHeal</a> ()</td></tr>
+<tr class="separator:ac3b0ce2f491774836ca4894d6a058539 inherit pub_methods_class_entity"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab0986ba7a1b24f022b5623781050c0f1 inherit pub_methods_class_entity" id="r_ab0986ba7a1b24f022b5623781050c0f1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#ab0986ba7a1b24f022b5623781050c0f1">isAlive</a> ()</td></tr>
+<tr class="separator:ab0986ba7a1b24f022b5623781050c0f1 inherit pub_methods_class_entity"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a673bf3c04d5bae049fbc6c6ddc11a44a inherit pub_methods_class_entity" id="r_a673bf3c04d5bae049fbc6c6ddc11a44a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#a673bf3c04d5bae049fbc6c6ddc11a44a">heal</a> (int amount)</td></tr>
+<tr class="separator:a673bf3c04d5bae049fbc6c6ddc11a44a inherit pub_methods_class_entity"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a522648b330daab91b49f78f0737a943f inherit pub_methods_class_entity" id="r_a522648b330daab91b49f78f0737a943f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#a522648b330daab91b49f78f0737a943f">kill</a> ()</td></tr>
+<tr class="separator:a522648b330daab91b49f78f0737a943f inherit pub_methods_class_entity"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d78d5c5061893ed4464fc014adfd6b8 inherit pub_methods_class_entity" id="r_a4d78d5c5061893ed4464fc014adfd6b8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#a4d78d5c5061893ed4464fc014adfd6b8">isDead</a> ()</td></tr>
+<tr class="separator:a4d78d5c5061893ed4464fc014adfd6b8 inherit pub_methods_class_entity"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f777fc6bf2b1d5a655658ecc13c778e inherit pub_methods_class_entity" id="r_a4f777fc6bf2b1d5a655658ecc13c778e"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#a4f777fc6bf2b1d5a655658ecc13c778e">getName</a> ()</td></tr>
+<tr class="separator:a4f777fc6bf2b1d5a655658ecc13c778e inherit pub_methods_class_entity"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acea14d73c24dfccc7772dd8e19f158cb inherit pub_methods_class_entity" id="r_acea14d73c24dfccc7772dd8e19f158cb"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#acea14d73c24dfccc7772dd8e19f158cb">getAtk</a> ()</td></tr>
+<tr class="separator:acea14d73c24dfccc7772dd8e19f158cb inherit pub_methods_class_entity"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d8a87d5fd42b94f32c63f6d93825914 inherit pub_methods_class_entity" id="r_a6d8a87d5fd42b94f32c63f6d93825914"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#a6d8a87d5fd42b94f32c63f6d93825914">getDef</a> ()</td></tr>
+<tr class="separator:a6d8a87d5fd42b94f32c63f6d93825914 inherit pub_methods_class_entity"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a63c198e1b72aaf632d8cac8d1d623d43 inherit pub_methods_class_entity" id="r_a63c198e1b72aaf632d8cac8d1d623d43"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#a63c198e1b72aaf632d8cac8d1d623d43">boostAtk</a> (int amount)</td></tr>
+<tr class="separator:a63c198e1b72aaf632d8cac8d1d623d43 inherit pub_methods_class_entity"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af1398a976ce42d0c1153efce5f5a9e5e inherit pub_methods_class_entity" id="r_af1398a976ce42d0c1153efce5f5a9e5e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#af1398a976ce42d0c1153efce5f5a9e5e">boostDef</a> (int amount)</td></tr>
+<tr class="separator:af1398a976ce42d0c1153efce5f5a9e5e inherit pub_methods_class_entity"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:ab8d436b5727749f7be05ffdf744d1041" id="r_ab8d436b5727749f7be05ffdf744d1041"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_inventory.html">Inventory</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab8d436b5727749f7be05ffdf744d1041">inventory</a></td></tr>
 <tr class="separator:ab8d436b5727749f7be05ffdf744d1041"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
 <tr class="memitem:a9545beef70350d5c3b3a5719a890dd2f" id="r_a9545beef70350d5c3b3a5719a890dd2f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9545beef70350d5c3b3a5719a890dd2f">money</a></td></tr>
 <tr class="separator:a9545beef70350d5c3b3a5719a890dd2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_attribs_class_entity"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_attribs_class_entity')"><img src="closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="class_entity.html">Entity</a></td></tr>
-<tr class="memitem:a6e20c965f14c04d09be06d07a471565d inherit pub_attribs_class_entity" id="r_a6e20c965f14c04d09be06d07a471565d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#a6e20c965f14c04d09be06d07a471565d">maxHealth</a></td></tr>
-<tr class="separator:a6e20c965f14c04d09be06d07a471565d inherit pub_attribs_class_entity"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6995bd098a6e6afb4abf9f4c42f6b15c inherit pub_attribs_class_entity" id="r_a6995bd098a6e6afb4abf9f4c42f6b15c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#a6995bd098a6e6afb4abf9f4c42f6b15c">currHealth</a></td></tr>
-<tr class="separator:a6995bd098a6e6afb4abf9f4c42f6b15c inherit pub_attribs_class_entity"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a679100a4f20bbf0fba4dfcbb40406d88 inherit pub_attribs_class_entity" id="r_a679100a4f20bbf0fba4dfcbb40406d88"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_stats.html">Stats</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#a679100a4f20bbf0fba4dfcbb40406d88">stats</a></td></tr>
-<tr class="separator:a679100a4f20bbf0fba4dfcbb40406d88 inherit pub_attribs_class_entity"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afb45718695f537c330a463168616c262 inherit pub_attribs_class_entity" id="r_afb45718695f537c330a463168616c262"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#afb45718695f537c330a463168616c262">name</a></td></tr>
-<tr class="separator:afb45718695f537c330a463168616c262 inherit pub_attribs_class_entity"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pro_attribs_class_entity"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_attribs_class_entity')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="class_entity.html">Entity</a></td></tr>
+<tr class="memitem:a399ce63cbbef5fa4e02e5cbd704d08d7 inherit pro_attribs_class_entity" id="r_a399ce63cbbef5fa4e02e5cbd704d08d7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_health.html">Health</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#a399ce63cbbef5fa4e02e5cbd704d08d7">health</a></td></tr>
+<tr class="separator:a399ce63cbbef5fa4e02e5cbd704d08d7 inherit pro_attribs_class_entity"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb45718695f537c330a463168616c262 inherit pro_attribs_class_entity" id="r_afb45718695f537c330a463168616c262"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#afb45718695f537c330a463168616c262">name</a></td></tr>
+<tr class="separator:afb45718695f537c330a463168616c262 inherit pro_attribs_class_entity"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a679100a4f20bbf0fba4dfcbb40406d88 inherit pro_attribs_class_entity" id="r_a679100a4f20bbf0fba4dfcbb40406d88"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_stats.html">Stats</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#a679100a4f20bbf0fba4dfcbb40406d88">stats</a></td></tr>
+<tr class="separator:a679100a4f20bbf0fba4dfcbb40406d88 inherit pro_attribs_class_entity"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>The <a class="el" href="class_player.html" title="The Player class is an Entity that has an inventory and money.">Player</a> class is an <a class="el" href="class_entity.html" title="Base class for all entities in the game. This includes the player and enemies.">Entity</a> that has an inventory and money. </p>
 
-<p class="definition">Definition at line <a class="el" href="entities_8h_source.html#l00031">31</a> of file <a class="el" href="entities_8h_source.html">entities.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="entities_8h_source.html#l00052">52</a> of file <a class="el" href="entities_8h_source.html">entities.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="affe0cc3cb714f6deb4e62f0c0d3f1fd8" name="affe0cc3cb714f6deb4e62f0c0d3f1fd8"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#affe0cc3cb714f6deb4e62f0c0d3f1fd8">&#9670;&#160;</a></span>Player() <span class="overload">[1/2]</span></h2>
@@ -177,12 +216,12 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="entities_8cpp_source.html#l00008">8</a> of file <a class="el" href="entities_8cpp_source.html">entities.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">    8</span>: <a class="code hl_function" href="class_entity.html#ac55fe185f7ccba9e35abf13517c65f63">Entity</a>(0, <span class="stringliteral">&quot;&quot;</span>, 0, 0), <a class="code hl_variable" href="#a9545beef70350d5c3b3a5719a890dd2f">money</a>(0) {}</div>
-<div class="ttc" id="aclass_entity_html_ac55fe185f7ccba9e35abf13517c65f63"><div class="ttname"><a href="class_entity.html#ac55fe185f7ccba9e35abf13517c65f63">Entity::Entity</a></div><div class="ttdeci">Entity(int health, string name, int atk, int def)</div><div class="ttdef"><b>Definition</b> <a href="entities_8cpp_source.html#l00034">entities.cpp:34</a></div></div>
-<div class="ttc" id="aclass_player_html_a9545beef70350d5c3b3a5719a890dd2f"><div class="ttname"><a href="#a9545beef70350d5c3b3a5719a890dd2f">Player::money</a></div><div class="ttdeci">int money</div><div class="ttdef"><b>Definition</b> <a href="entities_8h_source.html#l00035">entities.h:35</a></div></div>
+<p class="definition">Definition at line <a class="el" href="entities_8cpp_source.html#l00009">9</a> of file <a class="el" href="entities_8cpp_source.html">entities.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">    9</span>: <a class="code hl_function" href="class_entity.html#ac55fe185f7ccba9e35abf13517c65f63">Entity</a>(0, <span class="stringliteral">&quot;&quot;</span>, 0, 0), <a class="code hl_variable" href="#a9545beef70350d5c3b3a5719a890dd2f">money</a>(0) {}</div>
+<div class="ttc" id="aclass_entity_html_ac55fe185f7ccba9e35abf13517c65f63"><div class="ttname"><a href="class_entity.html#ac55fe185f7ccba9e35abf13517c65f63">Entity::Entity</a></div><div class="ttdeci">Entity(int health, string name, int atk, int def)</div><div class="ttdef"><b>Definition</b> <a href="entities_8cpp_source.html#l00055">entities.cpp:55</a></div></div>
+<div class="ttc" id="aclass_player_html_a9545beef70350d5c3b3a5719a890dd2f"><div class="ttname"><a href="#a9545beef70350d5c3b3a5719a890dd2f">Player::money</a></div><div class="ttdeci">int money</div><div class="ttdef"><b>Definition</b> <a href="entities_8h_source.html#l00055">entities.h:55</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="entities_8cpp_source.html#l00034">Entity::Entity()</a>, and <a class="el" href="entities_8h_source.html#l00035">money</a>.</p>
+<p class="reference">References <a class="el" href="entities_8cpp_source.html#l00055">Entity::Entity()</a>, and <a class="el" href="entities_8h_source.html#l00055">money</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -225,15 +264,16 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="entities_8cpp_source.html#l00009">9</a> of file <a class="el" href="entities_8cpp_source.html">entities.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">    9</span>                                                                   : <a class="code hl_function" href="class_entity.html#ac55fe185f7ccba9e35abf13517c65f63">Entity</a>(health, <a class="code hl_variable" href="class_entity.html#afb45718695f537c330a463168616c262">name</a>, atk, def), <a class="code hl_variable" href="#a9545beef70350d5c3b3a5719a890dd2f">money</a>(<a class="code hl_variable" href="#a9545beef70350d5c3b3a5719a890dd2f">money</a>)</div>
-<div class="line"><span class="lineno">   10</span>{</div>
-<div class="line"><span class="lineno">   11</span>    <a class="code hl_variable" href="#ab8d436b5727749f7be05ffdf744d1041">inventory</a> = Inventory();</div>
-<div class="line"><span class="lineno">   12</span>}</div>
-<div class="ttc" id="aclass_entity_html_afb45718695f537c330a463168616c262"><div class="ttname"><a href="class_entity.html#afb45718695f537c330a463168616c262">Entity::name</a></div><div class="ttdeci">string name</div><div class="ttdef"><b>Definition</b> <a href="entities_8h_source.html#l00024">entities.h:24</a></div></div>
-<div class="ttc" id="aclass_player_html_ab8d436b5727749f7be05ffdf744d1041"><div class="ttname"><a href="#ab8d436b5727749f7be05ffdf744d1041">Player::inventory</a></div><div class="ttdeci">Inventory inventory</div><div class="ttdef"><b>Definition</b> <a href="entities_8h_source.html#l00034">entities.h:34</a></div></div>
+<p class="definition">Definition at line <a class="el" href="entities_8cpp_source.html#l00010">10</a> of file <a class="el" href="entities_8cpp_source.html">entities.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   10</span>                                                                   : <a class="code hl_function" href="class_entity.html#ac55fe185f7ccba9e35abf13517c65f63">Entity</a>(<a class="code hl_variable" href="class_entity.html#a399ce63cbbef5fa4e02e5cbd704d08d7">health</a>, <a class="code hl_variable" href="class_entity.html#afb45718695f537c330a463168616c262">name</a>, atk, def), <a class="code hl_variable" href="#a9545beef70350d5c3b3a5719a890dd2f">money</a>(<a class="code hl_variable" href="#a9545beef70350d5c3b3a5719a890dd2f">money</a>)</div>
+<div class="line"><span class="lineno">   11</span>{</div>
+<div class="line"><span class="lineno">   12</span>    <a class="code hl_variable" href="#ab8d436b5727749f7be05ffdf744d1041">inventory</a> = Inventory();</div>
+<div class="line"><span class="lineno">   13</span>}</div>
+<div class="ttc" id="aclass_entity_html_a399ce63cbbef5fa4e02e5cbd704d08d7"><div class="ttname"><a href="class_entity.html#a399ce63cbbef5fa4e02e5cbd704d08d7">Entity::health</a></div><div class="ttdeci">Health health</div><div class="ttdef"><b>Definition</b> <a href="entities_8h_source.html#l00028">entities.h:28</a></div></div>
+<div class="ttc" id="aclass_entity_html_afb45718695f537c330a463168616c262"><div class="ttname"><a href="class_entity.html#afb45718695f537c330a463168616c262">Entity::name</a></div><div class="ttdeci">string name</div><div class="ttdef"><b>Definition</b> <a href="entities_8h_source.html#l00029">entities.h:29</a></div></div>
+<div class="ttc" id="aclass_player_html_ab8d436b5727749f7be05ffdf744d1041"><div class="ttname"><a href="#ab8d436b5727749f7be05ffdf744d1041">Player::inventory</a></div><div class="ttdeci">Inventory inventory</div><div class="ttdef"><b>Definition</b> <a href="entities_8h_source.html#l00057">entities.h:57</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="entities_8cpp_source.html#l00034">Entity::Entity()</a>, <a class="el" href="entities_8h_source.html#l00034">inventory</a>, <a class="el" href="entities_8h_source.html#l00035">money</a>, and <a class="el" href="entities_8h_source.html#l00024">Entity::name</a>.</p>
+<p class="reference">References <a class="el" href="entities_8cpp_source.html#l00055">Entity::Entity()</a>, <a class="el" href="entities_8h_source.html#l00028">Entity::health</a>, <a class="el" href="entities_8h_source.html#l00057">inventory</a>, <a class="el" href="entities_8h_source.html#l00055">money</a>, and <a class="el" href="entities_8h_source.html#l00029">Entity::name</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -258,27 +298,27 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="entities_8cpp_source.html#l00014">14</a> of file <a class="el" href="entities_8cpp_source.html">entities.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   15</span>{</div>
-<div class="line"><span class="lineno">   16</span>    <span class="keywordflow">if</span> (amount &lt; 0)</div>
-<div class="line"><span class="lineno">   17</span>    {</div>
-<div class="line"><span class="lineno">   18</span>        cout &lt;&lt; <a class="code hl_function" href="extras_8cpp.html#a99d2755bf0660601280710515b3f512c">colorizeText</a>(<span class="stringliteral">&quot;You lost &quot;</span> + to_string(-amount) + <span class="stringliteral">&quot; money!&quot;</span>, <a class="code hl_enumvalue" href="extras_8h.html#ab87bacfdad76e61b9412d7124be44c1caf80f9a890089d211842d59625e561f88">RED</a>) &lt;&lt; endl;</div>
-<div class="line"><span class="lineno">   19</span>    }</div>
-<div class="line"><span class="lineno">   20</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (amount == 0)</div>
-<div class="line"><span class="lineno">   21</span>    {</div>
-<div class="line"><span class="lineno">   22</span>        cout &lt;&lt; <span class="stringliteral">&quot;You didn&#39;t gain or lose any money.&quot;</span> &lt;&lt; endl;</div>
-<div class="line"><span class="lineno">   23</span>    }</div>
-<div class="line"><span class="lineno">   24</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (amount &gt; 0)</div>
-<div class="line"><span class="lineno">   25</span>    {</div>
-<div class="line"><span class="lineno">   26</span>        cout &lt;&lt; <a class="code hl_function" href="extras_8cpp.html#a99d2755bf0660601280710515b3f512c">colorizeText</a>(<span class="stringliteral">&quot;You gained &quot;</span> + to_string(amount) + <span class="stringliteral">&quot; money!&quot;</span>, <a class="code hl_enumvalue" href="extras_8h.html#ab87bacfdad76e61b9412d7124be44c1cae735a848bf82163a19236ead1c3ef2d2">YELLOW</a>) &lt;&lt; endl;</div>
-<div class="line"><span class="lineno">   27</span>    }</div>
-<div class="line"><span class="lineno">   28</span>    <a class="code hl_variable" href="#a9545beef70350d5c3b3a5719a890dd2f">money</a> += amount;</div>
-<div class="line"><span class="lineno">   29</span>}</div>
+<p class="definition">Definition at line <a class="el" href="entities_8cpp_source.html#l00015">15</a> of file <a class="el" href="entities_8cpp_source.html">entities.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   16</span>{</div>
+<div class="line"><span class="lineno">   17</span>    <span class="keywordflow">if</span> (amount &lt; 0)</div>
+<div class="line"><span class="lineno">   18</span>    {</div>
+<div class="line"><span class="lineno">   19</span>        cout &lt;&lt; <a class="code hl_function" href="extras_8cpp.html#a99d2755bf0660601280710515b3f512c">colorizeText</a>(<span class="stringliteral">&quot;You lost &quot;</span> + to_string(-amount) + <span class="stringliteral">&quot; money!&quot;</span>, <a class="code hl_enumvalue" href="extras_8h.html#ab87bacfdad76e61b9412d7124be44c1caf80f9a890089d211842d59625e561f88">RED</a>) &lt;&lt; endl;</div>
+<div class="line"><span class="lineno">   20</span>    }</div>
+<div class="line"><span class="lineno">   21</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (amount == 0)</div>
+<div class="line"><span class="lineno">   22</span>    {</div>
+<div class="line"><span class="lineno">   23</span>        cout &lt;&lt; <span class="stringliteral">&quot;You didn&#39;t gain or lose any money.&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><span class="lineno">   24</span>    }</div>
+<div class="line"><span class="lineno">   25</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (amount &gt; 0)</div>
+<div class="line"><span class="lineno">   26</span>    {</div>
+<div class="line"><span class="lineno">   27</span>        cout &lt;&lt; <a class="code hl_function" href="extras_8cpp.html#a99d2755bf0660601280710515b3f512c">colorizeText</a>(<span class="stringliteral">&quot;You gained &quot;</span> + to_string(amount) + <span class="stringliteral">&quot; money!&quot;</span>, <a class="code hl_enumvalue" href="extras_8h.html#ab87bacfdad76e61b9412d7124be44c1cae735a848bf82163a19236ead1c3ef2d2">YELLOW</a>) &lt;&lt; endl;</div>
+<div class="line"><span class="lineno">   28</span>    }</div>
+<div class="line"><span class="lineno">   29</span>    <a class="code hl_variable" href="#a9545beef70350d5c3b3a5719a890dd2f">money</a> += amount;</div>
+<div class="line"><span class="lineno">   30</span>}</div>
 <div class="ttc" id="aextras_8cpp_html_a99d2755bf0660601280710515b3f512c"><div class="ttname"><a href="extras_8cpp.html#a99d2755bf0660601280710515b3f512c">colorizeText</a></div><div class="ttdeci">string colorizeText(string msg, Color color)</div><div class="ttdoc">Colors text.</div><div class="ttdef"><b>Definition</b> <a href="extras_8cpp_source.html#l00022">extras.cpp:22</a></div></div>
 <div class="ttc" id="aextras_8h_html_ab87bacfdad76e61b9412d7124be44c1cae735a848bf82163a19236ead1c3ef2d2"><div class="ttname"><a href="extras_8h.html#ab87bacfdad76e61b9412d7124be44c1cae735a848bf82163a19236ead1c3ef2d2">YELLOW</a></div><div class="ttdeci">@ YELLOW</div><div class="ttdef"><b>Definition</b> <a href="extras_8h_source.html#l00019">extras.h:19</a></div></div>
 <div class="ttc" id="aextras_8h_html_ab87bacfdad76e61b9412d7124be44c1caf80f9a890089d211842d59625e561f88"><div class="ttname"><a href="extras_8h.html#ab87bacfdad76e61b9412d7124be44c1caf80f9a890089d211842d59625e561f88">RED</a></div><div class="ttdeci">@ RED</div><div class="ttdef"><b>Definition</b> <a href="extras_8h_source.html#l00017">extras.h:17</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="extras_8cpp_source.html#l00022">colorizeText()</a>, <a class="el" href="entities_8h_source.html#l00035">money</a>, <a class="el" href="extras_8h_source.html#l00017">RED</a>, and <a class="el" href="extras_8h_source.html#l00019">YELLOW</a>.</p>
+<p class="reference">References <a class="el" href="extras_8cpp_source.html#l00022">colorizeText()</a>, <a class="el" href="entities_8h_source.html#l00055">money</a>, <a class="el" href="extras_8h_source.html#l00017">RED</a>, and <a class="el" href="extras_8h_source.html#l00019">YELLOW</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="shop_8cpp_source.html#l00030">Shop::buyItem()</a>.</p>
 <div class="dynheader">
@@ -291,6 +331,123 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><iframe scrolling="no" frameborder="0" src="class_player_a86ad66429e7bf8ef4640bac1d0f3476f_icgraph.svg" width="467" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
+
+</div>
+</div>
+<a id="abda4c0f24a59155522361079dce5d427" name="abda4c0f24a59155522361079dce5d427"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abda4c0f24a59155522361079dce5d427">&#9670;&#160;</a></span>canAfford() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Player::canAfford </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>amount</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="entities_8cpp_source.html#l00042">42</a> of file <a class="el" href="entities_8cpp_source.html">entities.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   43</span>{</div>
+<div class="line"><span class="lineno">   44</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="#a9545beef70350d5c3b3a5719a890dd2f">money</a> &gt;= amount;</div>
+<div class="line"><span class="lineno">   45</span>}</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="entities_8h_source.html#l00055">money</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="shop_8cpp_source.html#l00030">Shop::buyItem()</a>, <a class="el" href="entities_8cpp_source.html#l00047">canAfford()</a>, and <a class="el" href="shop_8cpp_source.html#l00019">Shop::listItems()</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_player_abda4c0f24a59155522361079dce5d427_icgraph.svg" width="478" height="139"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a5e281666c2e3cfc8bad64508a1524a5e" name="a5e281666c2e3cfc8bad64508a1524a5e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5e281666c2e3cfc8bad64508a1524a5e">&#9670;&#160;</a></span>canAfford() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Player::canAfford </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_shop_item.html">ShopItem</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>item</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="entities_8cpp_source.html#l00047">47</a> of file <a class="el" href="entities_8cpp_source.html">entities.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   47</span>                                    {</div>
+<div class="line"><span class="lineno">   48</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="#abda4c0f24a59155522361079dce5d427">canAfford</a>(item.<a class="code hl_variable" href="class_shop_item.html#aa0112a46da1cf213541d4221e352a5e8">price</a>);</div>
+<div class="line"><span class="lineno">   49</span>}</div>
+<div class="ttc" id="aclass_player_html_abda4c0f24a59155522361079dce5d427"><div class="ttname"><a href="#abda4c0f24a59155522361079dce5d427">Player::canAfford</a></div><div class="ttdeci">bool canAfford(int amount)</div><div class="ttdef"><b>Definition</b> <a href="entities_8cpp_source.html#l00042">entities.cpp:42</a></div></div>
+<div class="ttc" id="aclass_shop_item_html_aa0112a46da1cf213541d4221e352a5e8"><div class="ttname"><a href="class_shop_item.html#aa0112a46da1cf213541d4221e352a5e8">ShopItem::price</a></div><div class="ttdeci">int price</div><div class="ttdef"><b>Definition</b> <a href="shop_8h_source.html#l00011">shop.h:11</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="entities_8cpp_source.html#l00042">canAfford()</a>, and <a class="el" href="shop_8h_source.html#l00011">ShopItem::price</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_player_a5e281666c2e3cfc8bad64508a1524a5e_cgraph.svg" width="302" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="ac45154df7c4eb2d1d58255c3ff1c55dd" name="ac45154df7c4eb2d1d58255c3ff1c55dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac45154df7c4eb2d1d58255c3ff1c55dd">&#9670;&#160;</a></span>getMoney()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Player::getMoney </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="entities_8cpp_source.html#l00032">32</a> of file <a class="el" href="entities_8cpp_source.html">entities.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   33</span>{</div>
+<div class="line"><span class="lineno">   34</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="#a9545beef70350d5c3b3a5719a890dd2f">money</a>;</div>
+<div class="line"><span class="lineno">   35</span>}</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="entities_8h_source.html#l00055">money</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="shop_8cpp_source.html#l00019">Shop::listItems()</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_player_ac45154df7c4eb2d1d58255c3ff1c55dd_icgraph.svg" width="467" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="aaa988a6ac35acb7901de56baf9acf88b" name="aaa988a6ac35acb7901de56baf9acf88b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaa988a6ac35acb7901de56baf9acf88b">&#9670;&#160;</a></span>setMoney()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Player::setMoney </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>amount</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="entities_8cpp_source.html#l00037">37</a> of file <a class="el" href="entities_8cpp_source.html">entities.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   38</span>{</div>
+<div class="line"><span class="lineno">   39</span>    <a class="code hl_variable" href="#a9545beef70350d5c3b3a5719a890dd2f">money</a> = amount;</div>
+<div class="line"><span class="lineno">   40</span>}</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="entities_8h_source.html#l00055">money</a>.</p>
 
 </div>
 </div>
@@ -307,9 +464,9 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="entities_8h_source.html#l00034">34</a> of file <a class="el" href="entities_8h_source.html">entities.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="entities_8h_source.html#l00057">57</a> of file <a class="el" href="entities_8h_source.html">entities.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="shop_8cpp_source.html#l00030">Shop::buyItem()</a>, and <a class="el" href="entities_8cpp_source.html#l00009">Player()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="shop_8cpp_source.html#l00030">Shop::buyItem()</a>, and <a class="el" href="entities_8cpp_source.html#l00010">Player()</a>.</p>
 
 </div>
 </div>
@@ -318,16 +475,24 @@ Here is the caller graph for this function:</div>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">int Player::money</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="entities_8h_source.html#l00035">35</a> of file <a class="el" href="entities_8h_source.html">entities.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="entities_8h_source.html#l00055">55</a> of file <a class="el" href="entities_8h_source.html">entities.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="entities_8cpp_source.html#l00014">addMoney()</a>, <a class="el" href="shop_8cpp_source.html#l00030">Shop::buyItem()</a>, <a class="el" href="shop_8cpp_source.html#l00019">Shop::listItems()</a>, <a class="el" href="entities_8cpp_source.html#l00008">Player()</a>, and <a class="el" href="entities_8cpp_source.html#l00009">Player()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="entities_8cpp_source.html#l00015">addMoney()</a>, <a class="el" href="entities_8cpp_source.html#l00042">canAfford()</a>, <a class="el" href="entities_8cpp_source.html#l00032">getMoney()</a>, <a class="el" href="entities_8cpp_source.html#l00009">Player()</a>, <a class="el" href="entities_8cpp_source.html#l00010">Player()</a>, and <a class="el" href="entities_8cpp_source.html#l00037">setMoney()</a>.</p>
 
 </div>
 </div>

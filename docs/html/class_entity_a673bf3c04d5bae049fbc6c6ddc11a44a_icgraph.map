@@ -1,0 +1,5 @@
+<map id="Entity::heal" name="Entity::heal">
+<area shape="rect" id="Node000001" title=" " alt="" coords="179,5,266,32"/>
+<area shape="rect" id="Node000002" href="$class_health_potion.html#acd72ba2a1a6dc046c5d60920c4e297fc" title=" " alt="" coords="5,5,131,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="163,21,131,21,131,16,163,16"/>
+</map>

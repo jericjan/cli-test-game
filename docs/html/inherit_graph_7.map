@@ -1,25 +1,3 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="Node000000" href="$class_user_interface.html" title="Base class for all user interfaces in the game." alt="" coords="5,132,106,159"/>
-<area shape="rect" id="Node000001" href="$class_game_over.html" title="The game over screen. The user is sent back to the start menu after this." alt="" coords="161,81,246,108"/>
-<area shape="poly" id="edge10_Node000000_Node000001" title=" " alt="" coords="110,124,161,106,163,111,112,129"/>
-<area shape="rect" id="Node000002" href="$class_start_menu.html" title="The first menu the user sees when they start the game." alt="" coords="163,132,244,159"/>
-<area shape="poly" id="edge11_Node000000_Node000002" title=" " alt="" coords="121,143,162,143,162,148,121,148"/>
-<area shape="rect" id="Node000003" href="$class_u_i_with_player.html" title="Basically just the base class for all user interfaces that have a player." alt="" coords="154,183,253,209"/>
-<area shape="poly" id="edge12_Node000000_Node000003" title=" " alt="" coords="112,162,163,180,161,185,110,167"/>
-<area shape="rect" id="Node000004" href="$class_battle.html" title="The battle screen. The user can attack, use an item, or run away." alt="" coords="330,5,385,32"/>
-<area shape="poly" id="edge13_Node000003_Node000004" title=" " alt="" coords="249,171,251,169,263,153,269,137,274,107,279,75,286,59,299,42,313,31,328,24,330,29,316,36,303,46,291,62,284,77,279,107,274,139,267,155,255,172,253,175"/>
-<area shape="rect" id="Node000005" href="$class_first_choice.html" title="The part after the player meets the mysterious stranger." alt="" coords="313,56,401,83"/>
-<area shape="poly" id="edge14_Node000003_Node000005" title=" " alt="" coords="248,172,251,169,266,150,274,131,283,112,299,93,317,81,320,85,303,97,287,115,279,133,271,152,255,173,251,176"/>
-<area shape="rect" id="Node000006" href="$class_gamble_menu.html" title="The menu for gambling. The user can win a legendary sword or nothing." alt="" coords="308,107,406,133"/>
-<area shape="poly" id="edge15_Node000003_Node000006" title=" " alt="" coords="243,173,252,168,300,143,324,132,326,136,302,148,254,173,246,177"/>
-<area shape="rect" id="Node000007" href="$class_intro_dialogue.html" title="The intro dialogue. The player can choose their name and get a cool stick." alt="" coords="308,157,406,184"/>
-<area shape="poly" id="edge16_Node000003_Node000007" title=" " alt="" coords="268,183,307,176,308,181,269,188"/>
-<area shape="rect" id="Node000008" href="$class_jovial_aftermath.html" title="The cutscene after the player wins the Jovial fight." alt="" coords="301,208,413,235"/>
-<area shape="poly" id="edge17_Node000003_Node000008" title=" " alt="" coords="269,204,301,209,300,215,268,209"/>
-<area shape="rect" id="Node000009" href="$class_jovial_cutscene.html" title="The cutscene before the player fights Jovial." alt="" coords="302,259,413,285"/>
-<area shape="poly" id="edge18_Node000003_Node000009" title=" " alt="" coords="245,215,302,244,326,256,324,260,300,249,242,219"/>
-<area shape="rect" id="Node000010" href="$class_main_menu.html" title="The main menu after all the cutscenes and stuff." alt="" coords="316,309,398,336"/>
-<area shape="poly" id="edge19_Node000003_Node000010" title=" " alt="" coords="226,220,260,258,303,295,322,306,319,311,299,299,256,262,222,223"/>
-<area shape="rect" id="Node000011" href="$class_shop_menu.html" title="The main menu after all the cutscenes and stuff." alt="" coords="316,360,399,387"/>
-<area shape="poly" id="edge20_Node000003_Node000011" title=" " alt="" coords="219,222,251,284,275,317,303,346,320,357,317,362,299,350,271,320,247,286,214,225"/>
+<area shape="rect" id="Node000000" href="$class_u_i_handler.html" title="Handles UI in the game." alt="" coords="5,5,86,32"/>
 </map>

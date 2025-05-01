@@ -40,7 +40,7 @@
 <g id="a_Node000002"><a xlink:href="class_u_i_with_player.html" target="_top" xlink:title="Basically just the base class for all user interfaces that have a player.">
 <polygon fill="white" stroke="none" points="150,-156 10.5,-156 10.5,-88 150,-88 150,-156"/>
 <text text-anchor="start" x="51" y="-142.5" font-family="Helvetica,sans-Serif" font-size="10.00">UIWithPlayer</text>
-<text text-anchor="start" x="14.5" y="-126.5" font-family="Helvetica,sans-Serif" font-size="10.00">+</text>
+<text text-anchor="start" x="14.88" y="-126.5" font-family="Helvetica,sans-Serif" font-size="10.00">#</text>
 <text text-anchor="start" x="24.5" y="-126.5" font-family="Helvetica,sans-Serif" font-size="10.00">Player player</text>
 <text text-anchor="start" x="14.5" y="-110.5" font-family="Helvetica,sans-Serif" font-size="10.00">+</text>
 <text text-anchor="start" x="24.5" y="-110.5" font-family="Helvetica,sans-Serif" font-size="10.00">UIWithPlayer()</text>

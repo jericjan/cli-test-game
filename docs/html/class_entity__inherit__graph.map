@@ -1,5 +1,5 @@
 <map id="Entity" name="Entity">
-<area shape="rect" id="Node000001" title="Base class for all entities in the game. This includes the player and enemies." alt="" coords="26,5,202,213"/>
-<area shape="rect" id="Node000002" href="$class_player.html" title="The Player class is an Entity that has an inventory and money." alt="" coords="5,261,222,411"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="116,228,116,261,111,261,111,228"/>
+<area shape="rect" id="Node000001" title="Base class for all entities in the game. This includes the player and enemies." alt="" coords="26,5,202,363"/>
+<area shape="rect" id="Node000002" href="$class_player.html" title="The Player class is an Entity that has an inventory and money." alt="" coords="5,411,222,645"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="116,378,116,411,111,411,111,378"/>
 </map>

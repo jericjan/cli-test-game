@@ -2,7 +2,7 @@
 \hypertarget{class_health_potion}{}\label{class_health_potion}\index{HealthPotion@{HealthPotion}}
 
 
-Health potions heal the player of course.  
+\doxylink{struct_health}{Health} potions heal the player of course.  
 
 
 
@@ -11,7 +11,8 @@ Health potions heal the player of course.
 
 
 
-Inheritance diagram for Health\+Potion\+:\nopagebreak
+Inheritance diagram for Health\+Potion\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -20,7 +21,8 @@ Inheritance diagram for Health\+Potion\+:\nopagebreak
 \end{figure}
 
 
-Collaboration diagram for Health\+Potion\+:\nopagebreak
+Collaboration diagram for Health\+Potion\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -40,6 +42,8 @@ string \mbox{\hyperlink{class_health_potion_a81b5d416cd54c9aa7c4e9d06a300acda}{g
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_i_potion_af960db386ba9efea5adcde6ec80fe943}{IPotion}} (string n, string d, int c, int \mbox{\hyperlink{class_i_potion_ac28213c6eade179ede27d122491ba2fd}{strength}})
+\item 
+int \mbox{\hyperlink{class_i_potion_ad18886e5d31e2f0aac3ebfb67121d984}{get\+Strength}} ()
 \end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_i_player_item}{IPlayer\+Item}}}
 \begin{DoxyCompactItemize}
@@ -52,6 +56,22 @@ string \mbox{\hyperlink{class_health_potion_a81b5d416cd54c9aa7c4e9d06a300acda}{g
 \mbox{\hyperlink{class_i_item_ab1bb86846077713c5847ec035115f09c}{IItem}} (string n, string t, string d, int c)
 \item 
 virtual \mbox{\hyperlink{class_i_item_a09483bee7e3f4f382e8eeac54493620e}{\texorpdfstring{$\sim$}{\string~}\+IItem}} ()
+\item 
+string \mbox{\hyperlink{class_i_item_a6b86cf44e8eebf94b7096ea5645a0527}{get\+Name}} ()
+\item 
+string \mbox{\hyperlink{class_i_item_ac99b78daaef9550cad1c0da7fe440071}{get\+Type}} ()
+\item 
+void \mbox{\hyperlink{class_i_item_a3c441280828e2877522a2e5800e8e975}{increment}} (int amount)
+\item 
+void \mbox{\hyperlink{class_i_item_aebf70cebb705732de76a0cfa1081055a}{decrement}} (int amount)
+\item 
+int \mbox{\hyperlink{class_i_item_a5a1e25be1c8a94e21ec832a9b7b5492f}{get\+Count}} ()
+\item 
+bool \mbox{\hyperlink{class_i_item_a3a36b5da24de2beb083bd954d72e1252}{is\+Infinite}} ()
+\item 
+bool \mbox{\hyperlink{class_i_item_ad10d9c87e8731804f994b9ca49a188df}{is\+Depleted}} ()
+\item 
+bool \mbox{\hyperlink{class_i_item_a601366438586b3834e385b64e5d9b943}{matches}} (\mbox{\hyperlink{class_i_item}{IItem}} \texorpdfstring{$\ast$}{*}item)
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Additional Inherited Members}
 \doxysubsection*{Public Attributes inherited from \mbox{\hyperlink{class_i_potion}{IPotion}}}
@@ -59,21 +79,12 @@ virtual \mbox{\hyperlink{class_i_item_a09483bee7e3f4f382e8eeac54493620e}{\texorp
 \item 
 int \mbox{\hyperlink{class_i_potion_ac28213c6eade179ede27d122491ba2fd}{strength}}
 \end{DoxyCompactItemize}
-\doxysubsection*{Public Attributes inherited from \mbox{\hyperlink{class_i_item}{IItem}}}
-\begin{DoxyCompactItemize}
-\item 
-string \mbox{\hyperlink{class_i_item_a7fdf57eb313baaea887b648bc13f247a}{name}}
-\item 
-string \mbox{\hyperlink{class_i_item_a3b3b58b237d89653e493c95fe22074ff}{type}}
-\item 
-int \mbox{\hyperlink{class_i_item_a0b30dc1f8eee51c2b78ac71d6c7b93b7}{count}}
-\begin{DoxyCompactList}\small\item\em A count of -\/1 means the item can be used infinitely. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
-Health potions heal the player of course. 
+\doxylink{struct_health}{Health} potions heal the player of course. 
 
-Definition at line \mbox{\hyperlink{items_8h_source_l00048}{48}} of file \mbox{\hyperlink{items_8h_source}{items.\+h}}.
+Definition at line \mbox{\hyperlink{items_8h_source_l00057}{57}} of file \mbox{\hyperlink{items_8h_source}{items.\+h}}.
 
 
 
@@ -86,17 +97,17 @@ Health\+Potion\+::\+Health\+Potion (\begin{DoxyParamCaption}\item[{int}]{c}{}\en
 
 
 
-Definition at line \mbox{\hyperlink{items_8cpp_source_l00021}{21}} of file \mbox{\hyperlink{items_8cpp_source}{items.\+cpp}}.
+Definition at line \mbox{\hyperlink{items_8cpp_source_l00057}{57}} of file \mbox{\hyperlink{items_8cpp_source}{items.\+cpp}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :}
-\DoxyCodeLine{00022\ \mbox{\hyperlink{class_i_potion_af960db386ba9efea5adcde6ec80fe943}{IPotion}}(\textcolor{stringliteral}{"{}Health\ Potion"{}},\ \textcolor{stringliteral}{"{}"{}},\ c,\ 100)\ \{\}}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :}
+\DoxyCodeLine{00058\ \mbox{\hyperlink{class_i_potion_af960db386ba9efea5adcde6ec80fe943}{IPotion}}(\textcolor{stringliteral}{"{}Health\ Potion"{}},\ \textcolor{stringliteral}{"{}"{}},\ c,\ 100)\ \{\}}
 
 \end{DoxyCode}
 
 
-References \mbox{\hyperlink{items_8cpp_source_l00019}{IPotion\+::\+IPotion()}}.
+References \mbox{\hyperlink{items_8cpp_source_l00051}{IPotion\+::\+IPotion()}}.
 
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -120,18 +131,18 @@ Reimplemented from \mbox{\hyperlink{class_i_item_aa7a7455949b90aed6b2f7fcd91fead
 
 
 
-Definition at line \mbox{\hyperlink{items_8cpp_source_l00023}{23}} of file \mbox{\hyperlink{items_8cpp_source}{items.\+cpp}}.
+Definition at line \mbox{\hyperlink{items_8cpp_source_l00059}{59}} of file \mbox{\hyperlink{items_8cpp_source}{items.\+cpp}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00024\ \{}
-\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}Heals\ the\ user\ "{}}\ +\ to\_string(\mbox{\hyperlink{class_i_potion_ac28213c6eade179ede27d122491ba2fd}{strength}})\ +\ \textcolor{stringliteral}{"{}HP"{}};}
-\DoxyCodeLine{00026\ \}}
+\DoxyCodeLine{00060\ \{}
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}Heals\ the\ user\ "{}}\ +\ to\_string(\mbox{\hyperlink{class_i_potion_ac28213c6eade179ede27d122491ba2fd}{strength}})\ +\ \textcolor{stringliteral}{"{}HP"{}};}
+\DoxyCodeLine{00062\ \}}
 
 \end{DoxyCode}
 
 
-References \mbox{\hyperlink{items_8h_source_l00043}{IPotion\+::strength}}.
+References \mbox{\hyperlink{items_8h_source_l00051}{IPotion\+::strength}}.
 
 \Hypertarget{class_health_potion_acd72ba2a1a6dc046c5d60920c4e297fc}\index{HealthPotion@{HealthPotion}!use@{use}}
 \index{use@{use}!HealthPotion@{HealthPotion}}
@@ -145,25 +156,33 @@ Implements \mbox{\hyperlink{class_i_player_item_a22a1323dae95369aab54ef7ce3fe0a1
 
 
 
-Definition at line \mbox{\hyperlink{items_8cpp_source_l00028}{28}} of file \mbox{\hyperlink{items_8cpp_source}{items.\+cpp}}.
+Definition at line \mbox{\hyperlink{items_8cpp_source_l00064}{64}} of file \mbox{\hyperlink{items_8cpp_source}{items.\+cpp}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00029\ \{}
-\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordflow}{if}\ (player.\mbox{\hyperlink{class_entity_a6995bd098a6e6afb4abf9f4c42f6b15c}{currHealth}}\ ==\ player.\mbox{\hyperlink{class_entity_a6e20c965f14c04d09be06d07a471565d}{maxHealth}})}
-\DoxyCodeLine{00031\ \ \ \ \ \{}
-\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}You're\ already\ at\ full\ health!"{}}\ <<\ endl;}
-\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
-\DoxyCodeLine{00034\ \ \ \ \ \}}
-\DoxyCodeLine{00035\ \ \ \ \ player.\mbox{\hyperlink{class_entity_a6995bd098a6e6afb4abf9f4c42f6b15c}{currHealth}}\ =\ min(player.\mbox{\hyperlink{class_entity_a6e20c965f14c04d09be06d07a471565d}{maxHealth}},\ player.\mbox{\hyperlink{class_entity_a6995bd098a6e6afb4abf9f4c42f6b15c}{currHealth}}\ +\ \mbox{\hyperlink{class_i_potion_ac28213c6eade179ede27d122491ba2fd}{strength}});}
-\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
-\DoxyCodeLine{00037\ \}}
+\DoxyCodeLine{00065\ \{}
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keywordflow}{if}\ (player.\mbox{\hyperlink{class_entity_a63eb6db440a85d7fe34e109c29a1dac0}{isFullHealth}}())}
+\DoxyCodeLine{00067\ \ \ \ \ \{}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}You're\ already\ at\ full\ health!"{}}\ <<\ endl;}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00070\ \ \ \ \ \}}
+\DoxyCodeLine{00071\ \ \ \ \ player.\mbox{\hyperlink{class_entity_a673bf3c04d5bae049fbc6c6ddc11a44a}{heal}}(\mbox{\hyperlink{class_i_potion_ac28213c6eade179ede27d122491ba2fd}{strength}});}
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00073\ \}}
 
 \end{DoxyCode}
 
 
-References \mbox{\hyperlink{entities_8h_source_l00022}{Entity\+::curr\+Health}}, \mbox{\hyperlink{entities_8h_source_l00021}{Entity\+::max\+Health}}, and \mbox{\hyperlink{items_8h_source_l00043}{IPotion\+::strength}}.
+References \mbox{\hyperlink{entities_8cpp_source_l00082}{Entity\+::heal()}}, \mbox{\hyperlink{entities_8cpp_source_l00071}{Entity\+::is\+Full\+Health()}}, and \mbox{\hyperlink{items_8h_source_l00051}{IPotion\+::strength}}.
 
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=309pt]{class_health_potion_acd72ba2a1a6dc046c5d60920c4e297fc_cgraph}
+\end{center}
+\end{figure}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

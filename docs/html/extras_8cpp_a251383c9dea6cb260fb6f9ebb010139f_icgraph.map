@@ -1,19 +1,21 @@
 <map id="printAnimate" name="printAnimate">
-<area shape="rect" id="Node000001" title="Outputs a text character by character with a given delay." alt="" coords="539,157,634,184"/>
+<area shape="rect" id="Node000001" title="Outputs a text character by character with a given delay." alt="" coords="539,183,634,209"/>
 <area shape="rect" id="Node000002" href="$class_inventory.html#a7a3d5b1157d8212186746eade80b5630" title="Adds an item to inventory." alt="" coords="348,5,478,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="569,145,537,95,515,69,490,46,469,35,472,30,493,42,519,65,541,91,574,142"/>
-<area shape="rect" id="Node000005" href="$class_first_choice.html#a219f10196fb47d36af7fad003dc54a0c" title=" " alt="" coords="347,56,479,83"/>
-<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="559,149,527,122,490,97,465,86,467,81,493,92,530,118,562,145"/>
-<area shape="rect" id="Node000006" href="$class_game_over.html#a372e2cf047530b9726c9d805ed10970a" title=" " alt="" coords="349,107,477,133"/>
-<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="524,155,461,136,462,131,525,150"/>
-<area shape="rect" id="Node000007" href="$class_intro_dialogue.html#a6ee887834eaf65af351062e70561d261" title=" " alt="" coords="342,157,484,184"/>
-<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="524,173,484,173,484,168,524,168"/>
-<area shape="rect" id="Node000008" href="$class_jovial_aftermath.html#aaef00027bea6a3124e46ee2221733819" title=" " alt="" coords="335,208,491,235"/>
-<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="525,191,462,210,461,205,524,186"/>
-<area shape="rect" id="Node000009" href="$class_jovial_cutscene.html#a04bec76f83a74d9dd634c4cbf36038dd" title=" " alt="" coords="336,259,491,285"/>
-<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="562,197,530,224,493,249,467,260,465,256,490,244,527,220,559,193"/>
-<area shape="rect" id="Node000010" href="$class_main_menu.html#adeafd7b49d1f995dd25a7e952700d76c" title=" " alt="" coords="350,309,476,336"/>
-<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="574,199,541,250,519,277,493,300,472,311,469,306,490,295,515,273,537,247,569,196"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="573,169,541,107,518,74,490,46,470,35,473,30,493,42,522,71,546,104,577,167"/>
+<area shape="rect" id="Node000005" href="$class_entity.html#ac3b0ce2f491774836ca4894d6a058539" title=" " alt="" coords="356,56,470,83"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="565,172,533,133,490,97,467,86,470,81,493,92,536,129,569,168"/>
+<area shape="rect" id="Node000006" href="$class_first_choice.html#a219f10196fb47d36af7fad003dc54a0c" title=" " alt="" coords="347,107,479,133"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="548,177,490,148,460,136,462,131,492,143,551,172"/>
+<area shape="rect" id="Node000007" href="$class_game_over.html#a372e2cf047530b9726c9d805ed10970a" title=" " alt="" coords="349,157,477,184"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="524,190,477,183,478,177,525,184"/>
+<area shape="rect" id="Node000008" href="$class_intro_dialogue.html#a6ee887834eaf65af351062e70561d261" title=" " alt="" coords="342,208,484,235"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="524,208,485,214,484,208,523,202"/>
+<area shape="rect" id="Node000009" href="$class_jovial_aftermath.html#aaef00027bea6a3124e46ee2221733819" title=" " alt="" coords="335,259,491,285"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="551,220,492,249,462,261,460,256,490,244,548,215"/>
+<area shape="rect" id="Node000010" href="$class_jovial_cutscene.html#a04bec76f83a74d9dd634c4cbf36038dd" title=" " alt="" coords="336,309,491,336"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="569,224,536,263,493,300,470,311,467,306,490,295,533,259,565,220"/>
+<area shape="rect" id="Node000011" href="$class_main_menu.html#adeafd7b49d1f995dd25a7e952700d76c" title=" " alt="" coords="350,360,476,387"/>
+<area shape="poly" id="edge10_Node000001_Node000011" title=" " alt="" coords="577,225,546,288,522,321,493,350,473,362,470,357,490,346,518,318,541,285,573,223"/>
 <area shape="rect" id="Node000003" href="$class_shop.html#a6c1a27422ecdd1a5248f156f1355632b" title="Buy an item from the shop." alt="" coords="181,5,287,32"/>
 <area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="332,21,288,21,288,16,332,16"/>
 <area shape="rect" id="Node000004" href="$class_shop_menu.html#a06bcda13b56991f97aca332030008a86" title=" " alt="" coords="5,5,133,32"/>

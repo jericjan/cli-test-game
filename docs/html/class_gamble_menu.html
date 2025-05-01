@@ -141,17 +141,17 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
-<tr class="inherit_header pub_attribs_class_u_i_with_player"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_attribs_class_u_i_with_player')"><img src="closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="class_u_i_with_player.html">UIWithPlayer</a></td></tr>
-<tr class="memitem:a480502a8db864e1ec92eb19f87a35083 inherit pub_attribs_class_u_i_with_player" id="r_a480502a8db864e1ec92eb19f87a35083"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_player.html">Player</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_i_with_player.html#a480502a8db864e1ec92eb19f87a35083">player</a></td></tr>
-<tr class="separator:a480502a8db864e1ec92eb19f87a35083 inherit pub_attribs_class_u_i_with_player"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_attribs_class_user_interface"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_attribs_class_user_interface')"><img src="closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="class_user_interface.html">UserInterface</a></td></tr>
 <tr class="memitem:aa95ee5089a1de7ad211fb3a1bb786e11 inherit pub_attribs_class_user_interface" id="r_aa95ee5089a1de7ad211fb3a1bb786e11"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_user_interface.html#aa95ee5089a1de7ad211fb3a1bb786e11">quitGame</a> = false</td></tr>
 <tr class="separator:aa95ee5089a1de7ad211fb3a1bb786e11 inherit pub_attribs_class_user_interface"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_attribs_class_u_i_with_player"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_attribs_class_u_i_with_player')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="class_u_i_with_player.html">UIWithPlayer</a></td></tr>
+<tr class="memitem:a480502a8db864e1ec92eb19f87a35083 inherit pro_attribs_class_u_i_with_player" id="r_a480502a8db864e1ec92eb19f87a35083"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_player.html">Player</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_i_with_player.html#a480502a8db864e1ec92eb19f87a35083">player</a></td></tr>
+<tr class="separator:a480502a8db864e1ec92eb19f87a35083 inherit pro_attribs_class_u_i_with_player"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>The menu for gambling. The user can win a legendary sword or nothing. </p>
 
-<p class="definition">Definition at line <a class="el" href="ui_8h_source.html#l00057">57</a> of file <a class="el" href="ui_8h_source.html">ui.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ui_8h_source.html#l00058">58</a> of file <a class="el" href="ui_8h_source.html">ui.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="af209a7906361f1bc4af1785808cc3619" name="af209a7906361f1bc4af1785808cc3619"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af209a7906361f1bc4af1785808cc3619">&#9670;&#160;</a></span>GambleMenu()</h2>
@@ -215,7 +215,7 @@ Here is the call graph for this function:</div>
 <div class="line"><span class="lineno">   32</span>    cin &gt;&gt; userInput;</div>
 <div class="line"><span class="lineno">   33</span>    <span class="keywordflow">if</span> (userInput == <span class="stringliteral">&quot;y&quot;</span>)</div>
 <div class="line"><span class="lineno">   34</span>    {</div>
-<div class="line"><span class="lineno">   35</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_u_i_with_player.html#a480502a8db864e1ec92eb19f87a35083">player</a>.money &lt; 100)</div>
+<div class="line"><span class="lineno">   35</span>        <span class="keywordflow">if</span> (!<a class="code hl_variable" href="class_u_i_with_player.html#a480502a8db864e1ec92eb19f87a35083">player</a>.canAfford(100))</div>
 <div class="line"><span class="lineno">   36</span>        {</div>
 <div class="line"><span class="lineno">   37</span>            cout &lt;&lt; <a class="code hl_function" href="extras_8cpp.html#a99d2755bf0660601280710515b3f512c">colorizeText</a>(<span class="stringliteral">&quot;You don&#39;t have enough money!&quot;</span>, <a class="code hl_enumvalue" href="extras_8h.html#ab87bacfdad76e61b9412d7124be44c1caf80f9a890089d211842d59625e561f88">RED</a>) &lt;&lt; endl;</div>
 <div class="line"><span class="lineno">   38</span>            <span class="keywordflow">return</span> <span class="keyword">this</span>;</div>
@@ -237,8 +237,8 @@ Here is the call graph for this function:</div>
 <div class="line"><span class="lineno">   54</span>                Yamato *yamato = <span class="keyword">new</span> Yamato();</div>
 <div class="line"><span class="lineno">   55</span>                cout &lt;&lt; <a class="code hl_function" href="extras_8cpp.html#a99d2755bf0660601280710515b3f512c">colorizeText</a>(<span class="stringliteral">&quot;You got the Legendary Sword Yamato! It&#39;s a legendary sword that does &quot;</span> + to_string(yamato-&gt;<a class="code hl_variable" href="class_weapon.html#af7f5d5ecbb3ac0e95350a6750be1fb28">dmg</a>) + <span class="stringliteral">&quot; damage!\n&quot;</span>, <a class="code hl_enumvalue" href="extras_8h.html#ab87bacfdad76e61b9412d7124be44c1caa60bd322f93178d68184e30e162571ca">GREEN</a>) &lt;&lt; endl;</div>
 <div class="line"><span class="lineno">   56</span> </div>
-<div class="line"><span class="lineno">   57</span>                IItem* yamatoStatus = <a class="code hl_variable" href="class_u_i_with_player.html#a480502a8db864e1ec92eb19f87a35083">player</a>.inventory.addItem(yamato);                </div>
-<div class="line"><span class="lineno">   58</span>                <span class="keywordflow">if</span> (Yamato* newYamato = <span class="keyword">dynamic_cast&lt;</span>Yamato *<span class="keyword">&gt;</span>(yamatoStatus))</div>
+<div class="line"><span class="lineno">   57</span>                IItem* possibleYamato = <a class="code hl_variable" href="class_u_i_with_player.html#a480502a8db864e1ec92eb19f87a35083">player</a>.inventory.addItem(yamato);                </div>
+<div class="line"><span class="lineno">   58</span>                <span class="keywordflow">if</span> (Yamato* newYamato = <span class="keyword">dynamic_cast&lt;</span>Yamato *<span class="keyword">&gt;</span>(possibleYamato))</div>
 <div class="line"><span class="lineno">   59</span>                {</div>
 <div class="line"><span class="lineno">   60</span>                    cout &lt;&lt; <span class="stringliteral">&quot;Interesting... It seems you already have this item. Tell you what, I&#39;ll double its damage for you.\n&quot;</span>;</div>
 <div class="line"><span class="lineno">   61</span>                    newYamato-&gt;dmg *= 2;</div>
@@ -257,12 +257,12 @@ Here is the call graph for this function:</div>
 <div class="line"><span class="lineno">   74</span>    }</div>
 <div class="line"><span class="lineno">   75</span>    <span class="keywordflow">return</span> <span class="keyword">this</span>;</div>
 <div class="line"><span class="lineno">   76</span>}</div>
-<div class="ttc" id="aclass_weapon_html_af7f5d5ecbb3ac0e95350a6750be1fb28"><div class="ttname"><a href="class_weapon.html#af7f5d5ecbb3ac0e95350a6750be1fb28">Weapon::dmg</a></div><div class="ttdeci">int dmg</div><div class="ttdef"><b>Definition</b> <a href="items_8h_source.html#l00071">items.h:71</a></div></div>
+<div class="ttc" id="aclass_weapon_html_af7f5d5ecbb3ac0e95350a6750be1fb28"><div class="ttname"><a href="class_weapon.html#af7f5d5ecbb3ac0e95350a6750be1fb28">Weapon::dmg</a></div><div class="ttdeci">int dmg</div><div class="ttdef"><b>Definition</b> <a href="items_8h_source.html#l00080">items.h:80</a></div></div>
 <div class="ttc" id="aextras_8cpp_html_a99d2755bf0660601280710515b3f512c"><div class="ttname"><a href="extras_8cpp.html#a99d2755bf0660601280710515b3f512c">colorizeText</a></div><div class="ttdeci">string colorizeText(string msg, Color color)</div><div class="ttdoc">Colors text.</div><div class="ttdef"><b>Definition</b> <a href="extras_8cpp_source.html#l00022">extras.cpp:22</a></div></div>
 <div class="ttc" id="aextras_8h_html_ab87bacfdad76e61b9412d7124be44c1caa60bd322f93178d68184e30e162571ca"><div class="ttname"><a href="extras_8h.html#ab87bacfdad76e61b9412d7124be44c1caa60bd322f93178d68184e30e162571ca">GREEN</a></div><div class="ttdeci">@ GREEN</div><div class="ttdef"><b>Definition</b> <a href="extras_8h_source.html#l00018">extras.h:18</a></div></div>
 <div class="ttc" id="aextras_8h_html_ab87bacfdad76e61b9412d7124be44c1caf80f9a890089d211842d59625e561f88"><div class="ttname"><a href="extras_8h.html#ab87bacfdad76e61b9412d7124be44c1caf80f9a890089d211842d59625e561f88">RED</a></div><div class="ttdeci">@ RED</div><div class="ttdef"><b>Definition</b> <a href="extras_8h_source.html#l00017">extras.h:17</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="extras_8cpp_source.html#l00022">colorizeText()</a>, <a class="el" href="items_8h_source.html#l00071">Weapon::dmg</a>, <a class="el" href="extras_8h_source.html#l00018">GREEN</a>, <a class="el" href="ui_8h_source.html#l00021">UIWithPlayer::player</a>, and <a class="el" href="extras_8h_source.html#l00017">RED</a>.</p>
+<p class="reference">References <a class="el" href="extras_8cpp_source.html#l00022">colorizeText()</a>, <a class="el" href="items_8h_source.html#l00080">Weapon::dmg</a>, <a class="el" href="extras_8h_source.html#l00018">GREEN</a>, <a class="el" href="ui_8h_source.html#l00021">UIWithPlayer::player</a>, and <a class="el" href="extras_8h_source.html#l00017">RED</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">

@@ -1,11 +1,11 @@
 <map id="IPotion" name="IPotion">
-<area shape="rect" id="Node000001" title="Potions set the type to &quot;Potion&quot;." alt="" coords="150,400,317,485"/>
-<area shape="rect" id="Node000004" href="$class_health_potion.html" title="Health potions heal the player of course." alt="" coords="5,533,221,645"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="191,499,161,536,156,532,187,495"/>
-<area shape="rect" id="Node000005" href="$class_strength_potion.html" title="Increases player ATK." alt="" coords="245,533,461,645"/>
-<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="280,495,310,532,306,536,275,499"/>
-<area shape="rect" id="Node000002" href="$class_i_player_item.html" title="Player items. The use function takes in a player only." alt="" coords="123,245,343,352"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="236,367,236,400,231,400,231,367"/>
-<area shape="rect" id="Node000003" href="$class_i_item.html" title="Base class for all items in the game." alt="" coords="155,5,311,197"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="236,212,236,246,231,246,231,212"/>
+<area shape="rect" id="Node000001" title="Potions set the type to &quot;Potion&quot;." alt="" coords="150,571,317,677"/>
+<area shape="rect" id="Node000004" href="$class_health_potion.html" title="Health potions heal the player of course." alt="" coords="5,725,221,837"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="186,691,157,727,153,724,182,688"/>
+<area shape="rect" id="Node000005" href="$class_strength_potion.html" title="Increases player ATK." alt="" coords="245,725,461,837"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="285,688,313,724,309,727,281,691"/>
+<area shape="rect" id="Node000002" href="$class_i_player_item.html" title="Player items. The use function takes in a player only." alt="" coords="123,416,343,523"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="236,538,236,571,231,571,231,538"/>
+<area shape="rect" id="Node000003" href="$class_i_item.html" title="Base class for all items in the game." alt="" coords="142,5,324,368"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="236,383,236,416,231,416,231,383"/>
 </map>

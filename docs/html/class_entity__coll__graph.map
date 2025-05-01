@@ -1,5 +1,7 @@
 <map id="Entity" name="Entity">
-<area shape="rect" id="Node000001" title="Base class for all entities in the game. This includes the player and enemies." alt="" coords="5,181,181,368"/>
-<area shape="rect" id="Node000002" href="$class_stats.html" title="Stats for all entities." alt="" coords="33,5,154,117"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="96,117,96,164,91,164,91,117"/>
+<area shape="rect" id="Node000001" title="Base class for all entities in the game. This includes the player and enemies." alt="" coords="99,160,275,475"/>
+<area shape="rect" id="Node000002" href="$struct_health.html" title=" " alt="" coords="5,5,184,96"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="113,95,130,144,125,145,108,96"/>
+<area shape="rect" id="Node000003" href="$struct_stats.html" title="Stats for all entities." alt="" coords="209,5,352,96"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="267,96,250,145,245,144,262,95"/>
 </map>

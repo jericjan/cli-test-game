@@ -1,7 +1,11 @@
 <map id="Inventory::addItem" name="Inventory::addItem">
-<area shape="rect" id="Node000001" title="Adds an item to inventory." alt="" coords="5,5,136,32"/>
-<area shape="rect" id="Node000002" href="$extras_8cpp.html#a251383c9dea6cb260fb6f9ebb010139f" title="Outputs a text character by character with a given delay." alt="" coords="184,5,278,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="136,16,168,16,168,21,136,21"/>
-<area shape="rect" id="Node000003" href="$extras_8cpp.html#aea0e34fe8a665ef6cb1fd6526ce1deb0" title=" " alt="" coords="326,5,398,32"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="279,16,310,16,310,21,279,21"/>
+<area shape="rect" id="Node000001" title="Adds an item to inventory." alt="" coords="5,56,136,83"/>
+<area shape="rect" id="Node000002" href="$class_i_item.html#a5a1e25be1c8a94e21ec832a9b7b5492f" title=" " alt="" coords="184,5,296,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="117,53,178,34,179,39,119,58"/>
+<area shape="rect" id="Node000003" href="$class_i_item.html#a6b86cf44e8eebf94b7096ea5645a0527" title=" " alt="" coords="184,56,296,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="136,67,168,67,168,72,136,72"/>
+<area shape="rect" id="Node000004" href="$extras_8cpp.html#a251383c9dea6cb260fb6f9ebb010139f" title="Outputs a text character by character with a given delay." alt="" coords="193,107,287,133"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="119,81,179,99,178,104,117,86"/>
+<area shape="rect" id="Node000005" href="$extras_8cpp.html#aea0e34fe8a665ef6cb1fd6526ce1deb0" title=" " alt="" coords="344,107,416,133"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="287,117,328,117,328,123,287,123"/>
 </map>

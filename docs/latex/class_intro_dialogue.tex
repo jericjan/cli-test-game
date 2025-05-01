@@ -11,7 +11,8 @@ The intro dialogue. The player can choose their name and get a cool stick.
 
 
 
-Inheritance diagram for Intro\+Dialogue\+:\nopagebreak
+Inheritance diagram for Intro\+Dialogue\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -20,11 +21,12 @@ Inheritance diagram for Intro\+Dialogue\+:\nopagebreak
 \end{figure}
 
 
-Collaboration diagram for Intro\+Dialogue\+:\nopagebreak
+Collaboration diagram for Intro\+Dialogue\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{class_intro_dialogue__coll__graph}
+\includegraphics[height=550pt]{class_intro_dialogue__coll__graph}
 \end{center}
 \end{figure}
 \doxysubsubsection*{Public Member Functions}
@@ -45,22 +47,22 @@ Collaboration diagram for Intro\+Dialogue\+:\nopagebreak
 virtual \mbox{\hyperlink{class_user_interface_ae588b2ff1711a016dd4c6fc5002c0841}{\texorpdfstring{$\sim$}{\string~}\+User\+Interface}} ()
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Additional Inherited Members}
-\doxysubsection*{Public Attributes inherited from \mbox{\hyperlink{class_u_i_with_player}{UIWith\+Player}}}
-\begin{DoxyCompactItemize}
-\item 
-\mbox{\hyperlink{class_player}{Player}} \mbox{\hyperlink{class_u_i_with_player_a480502a8db864e1ec92eb19f87a35083}{player}}
-\end{DoxyCompactItemize}
 \doxysubsection*{Public Attributes inherited from \mbox{\hyperlink{class_user_interface}{User\+Interface}}}
 \begin{DoxyCompactItemize}
 \item 
 bool \mbox{\hyperlink{class_user_interface_aa95ee5089a1de7ad211fb3a1bb786e11}{quit\+Game}} = false
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_u_i_with_player}{UIWith\+Player}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_player}{Player}} \mbox{\hyperlink{class_u_i_with_player_a480502a8db864e1ec92eb19f87a35083}{player}}
 \end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
 The intro dialogue. The player can choose their name and get a cool stick. 
 
-Definition at line \mbox{\hyperlink{ui_8h_source_l00113}{113}} of file \mbox{\hyperlink{ui_8h_source}{ui.\+h}}.
+Definition at line \mbox{\hyperlink{ui_8h_source_l00116}{116}} of file \mbox{\hyperlink{ui_8h_source}{ui.\+h}}.
 
 
 
@@ -86,7 +88,7 @@ Definition at line \mbox{\hyperlink{ui_8cpp_source_l00339}{339}} of file \mbox{\
 \DoxyCodeLine{00342\ \ \ \ \ \textcolor{keywordtype}{string}\ userInput;}
 \DoxyCodeLine{00343\ \ \ \ \ getline(cin\ >>\ ws,\ userInput);}
 \DoxyCodeLine{00344\ \ \ \ \ \mbox{\hyperlink{class_u_i_with_player_a480502a8db864e1ec92eb19f87a35083}{player}}\ =\ Player(1000,\ userInput,\ 50,\ 50,\ 0);}
-\DoxyCodeLine{00345\ \ \ \ \ \mbox{\hyperlink{extras_8cpp_a251383c9dea6cb260fb6f9ebb010139f}{printAnimate}}(\textcolor{stringliteral}{"{}Hello\ there\ "{}}\ +\ \mbox{\hyperlink{class_u_i_with_player_a480502a8db864e1ec92eb19f87a35083}{player}}.name\ +\ \textcolor{stringliteral}{"{}!\(\backslash\)n"{}}\ +}
+\DoxyCodeLine{00345\ \ \ \ \ \mbox{\hyperlink{extras_8cpp_a251383c9dea6cb260fb6f9ebb010139f}{printAnimate}}(\textcolor{stringliteral}{"{}Hello\ there\ "{}}\ +\ \mbox{\hyperlink{class_u_i_with_player_a480502a8db864e1ec92eb19f87a35083}{player}}.getName()\ +\ \textcolor{stringliteral}{"{}!\(\backslash\)n"{}}\ +}
 \DoxyCodeLine{00346\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}You\ are\ about\ to\ embark\ on\ a\ heroic\ journey\ of...\ something.\ I\ don't\ know.\ Go\ out\ there\ man.\ Go\ nuts.\(\backslash\)n"{}}\ +\ \textcolor{stringliteral}{"{}Me?\ You\ don't\ need\ to\ know\ who\ I\ am.\ Ooh,\ I'll\ give\ you\ this\ cool\ stick\ I\ found!\(\backslash\)n"{}});}
 \DoxyCodeLine{00347\ }
 \DoxyCodeLine{00348\ \ \ \ \ CoolStick\ *stick\ =\ \textcolor{keyword}{new}\ CoolStick();}

@@ -1,5 +1,5 @@
 <map id="IEnemyItem" name="IEnemyItem">
-<area shape="rect" id="Node000001" title="Enemy items. The use function takes in a player and an enemy." alt="" coords="5,245,210,368"/>
-<area shape="rect" id="Node000002" href="$class_i_item.html" title="Base class for all items in the game." alt="" coords="30,5,186,197"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="110,212,110,245,105,245,105,212"/>
+<area shape="rect" id="Node000001" title="Enemy items. The use function takes in a player and an enemy." alt="" coords="5,416,210,539"/>
+<area shape="rect" id="Node000002" href="$class_i_item.html" title="Base class for all items in the game." alt="" coords="17,5,199,368"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="110,383,110,416,105,416,105,383"/>
 </map>

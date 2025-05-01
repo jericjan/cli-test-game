@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['yamato_0',['Yamato',['../class_yamato.html#af87539b26b8f9de81c54cb80ba556f9c',1,'Yamato']]]
+  ['weapon_0',['Weapon',['../class_weapon.html#a8d9631f8c67df4646e9b06516eff0cd0',1,'Weapon']]]
 ];

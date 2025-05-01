@@ -1,0 +1,7 @@
+<map id="Entity::fullyHeal" name="Entity::fullyHeal">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,120,32"/>
+<area shape="rect" id="Node000002" href="$extras_8cpp.html#a251383c9dea6cb260fb6f9ebb010139f" title="Outputs a text character by character with a given delay." alt="" coords="168,5,262,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="120,16,152,16,152,21,120,21"/>
+<area shape="rect" id="Node000003" href="$extras_8cpp.html#aea0e34fe8a665ef6cb1fd6526ce1deb0" title=" " alt="" coords="310,5,382,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="263,16,294,16,294,21,263,21"/>
+</map>

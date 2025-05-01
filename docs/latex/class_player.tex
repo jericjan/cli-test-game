@@ -11,16 +11,18 @@ The \doxylink{class_player}{Player} class is an \doxylink{class_entity}{Entity} 
 
 
 
-Inheritance diagram for Player\+:\nopagebreak
+Inheritance diagram for Player\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=243pt]{class_player__inherit__graph}
+\includegraphics[height=550pt]{class_player__inherit__graph}
 \end{center}
 \end{figure}
 
 
-Collaboration diagram for Player\+:\nopagebreak
+Collaboration diagram for Player\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -32,43 +34,79 @@ Collaboration diagram for Player\+:\nopagebreak
 \item 
 \mbox{\hyperlink{class_player_affe0cc3cb714f6deb4e62f0c0d3f1fd8}{Player}} ()
 \item 
-\mbox{\hyperlink{class_player_a32b77b22f5675099b03650bed28ae924}{Player}} (int health, string \mbox{\hyperlink{class_entity_afb45718695f537c330a463168616c262}{name}}, int atk, int def, int \mbox{\hyperlink{class_player_a9545beef70350d5c3b3a5719a890dd2f}{money}})
+\mbox{\hyperlink{class_player_a32b77b22f5675099b03650bed28ae924}{Player}} (int \mbox{\hyperlink{class_entity_a399ce63cbbef5fa4e02e5cbd704d08d7}{health}}, string \mbox{\hyperlink{class_entity_afb45718695f537c330a463168616c262}{name}}, int atk, int def, int \mbox{\hyperlink{class_player_a9545beef70350d5c3b3a5719a890dd2f}{money}})
 \item 
 void \mbox{\hyperlink{class_player_a86ad66429e7bf8ef4640bac1d0f3476f}{add\+Money}} (int amount)
+\item 
+int \mbox{\hyperlink{class_player_ac45154df7c4eb2d1d58255c3ff1c55dd}{get\+Money}} ()
+\item 
+void \mbox{\hyperlink{class_player_aaa988a6ac35acb7901de56baf9acf88b}{set\+Money}} (int amount)
+\item 
+bool \mbox{\hyperlink{class_player_abda4c0f24a59155522361079dce5d427}{can\+Afford}} (int amount)
+\item 
+bool \mbox{\hyperlink{class_player_a5e281666c2e3cfc8bad64508a1524a5e}{can\+Afford}} (\mbox{\hyperlink{class_shop_item}{Shop\+Item}} \&item)
 \end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_entity}{Entity}}}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{class_entity_ac55fe185f7ccba9e35abf13517c65f63}{Entity}} (int health, string \mbox{\hyperlink{class_entity_afb45718695f537c330a463168616c262}{name}}, int atk, int def)
+\mbox{\hyperlink{class_entity_ac55fe185f7ccba9e35abf13517c65f63}{Entity}} (int \mbox{\hyperlink{class_entity_a399ce63cbbef5fa4e02e5cbd704d08d7}{health}}, string \mbox{\hyperlink{class_entity_afb45718695f537c330a463168616c262}{name}}, int atk, int def)
 \item 
 virtual \mbox{\hyperlink{class_entity_adf6d3f7cb1b2ba029b6b048a395cc8ae}{\texorpdfstring{$\sim$}{\string~}\+Entity}} ()
 \item 
 void \mbox{\hyperlink{class_entity_a44aad07756d6f00abf8f08ffde6eb217}{attack}} (\mbox{\hyperlink{class_entity}{Entity}} \&target, int extra\+Dmg=0)
+\item 
+int \mbox{\hyperlink{class_entity_a2b0140ae8c77c0e3654b070ee3c7fe57}{get\+Health}} ()
+\item 
+int \mbox{\hyperlink{class_entity_a2a0722da60ffe3841f81e83723294dbf}{get\+Max\+Health}} ()
+\item 
+bool \mbox{\hyperlink{class_entity_a63eb6db440a85d7fe34e109c29a1dac0}{is\+Full\+Health}} ()
+\item 
+void \mbox{\hyperlink{class_entity_ac3b0ce2f491774836ca4894d6a058539}{fully\+Heal}} ()
+\item 
+bool \mbox{\hyperlink{class_entity_ab0986ba7a1b24f022b5623781050c0f1}{is\+Alive}} ()
+\item 
+void \mbox{\hyperlink{class_entity_a673bf3c04d5bae049fbc6c6ddc11a44a}{heal}} (int amount)
+\item 
+void \mbox{\hyperlink{class_entity_a522648b330daab91b49f78f0737a943f}{kill}} ()
+\item 
+bool \mbox{\hyperlink{class_entity_a4d78d5c5061893ed4464fc014adfd6b8}{is\+Dead}} ()
+\item 
+string \mbox{\hyperlink{class_entity_a4f777fc6bf2b1d5a655658ecc13c778e}{get\+Name}} ()
+\item 
+int \mbox{\hyperlink{class_entity_acea14d73c24dfccc7772dd8e19f158cb}{get\+Atk}} ()
+\item 
+int \mbox{\hyperlink{class_entity_a6d8a87d5fd42b94f32c63f6d93825914}{get\+Def}} ()
+\item 
+void \mbox{\hyperlink{class_entity_a63c198e1b72aaf632d8cac8d1d623d43}{boost\+Atk}} (int amount)
+\item 
+void \mbox{\hyperlink{class_entity_af1398a976ce42d0c1153efce5f5a9e5e}{boost\+Def}} (int amount)
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_inventory}{Inventory}} \mbox{\hyperlink{class_player_ab8d436b5727749f7be05ffdf744d1041}{inventory}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
 \item 
 int \mbox{\hyperlink{class_player_a9545beef70350d5c3b3a5719a890dd2f}{money}}
 \end{DoxyCompactItemize}
-\doxysubsection*{Public Attributes inherited from \mbox{\hyperlink{class_entity}{Entity}}}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_entity}{Entity}}}
 \begin{DoxyCompactItemize}
 \item 
-int \mbox{\hyperlink{class_entity_a6e20c965f14c04d09be06d07a471565d}{max\+Health}}
-\item 
-int \mbox{\hyperlink{class_entity_a6995bd098a6e6afb4abf9f4c42f6b15c}{curr\+Health}}
-\item 
-\mbox{\hyperlink{class_stats}{Stats}} \mbox{\hyperlink{class_entity_a679100a4f20bbf0fba4dfcbb40406d88}{stats}}
+\mbox{\hyperlink{struct_health}{Health}} \mbox{\hyperlink{class_entity_a399ce63cbbef5fa4e02e5cbd704d08d7}{health}}
 \item 
 string \mbox{\hyperlink{class_entity_afb45718695f537c330a463168616c262}{name}}
+\item 
+\mbox{\hyperlink{struct_stats}{Stats}} \mbox{\hyperlink{class_entity_a679100a4f20bbf0fba4dfcbb40406d88}{stats}}
 \end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
 The \doxylink{class_player}{Player} class is an \doxylink{class_entity}{Entity} that has an inventory and money. 
 
-Definition at line \mbox{\hyperlink{entities_8h_source_l00031}{31}} of file \mbox{\hyperlink{entities_8h_source}{entities.\+h}}.
+Definition at line \mbox{\hyperlink{entities_8h_source_l00052}{52}} of file \mbox{\hyperlink{entities_8h_source}{entities.\+h}}.
 
 
 
@@ -81,16 +119,16 @@ Player\+::\+Player (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
 
 
-Definition at line \mbox{\hyperlink{entities_8cpp_source_l00008}{8}} of file \mbox{\hyperlink{entities_8cpp_source}{entities.\+cpp}}.
+Definition at line \mbox{\hyperlink{entities_8cpp_source_l00009}{9}} of file \mbox{\hyperlink{entities_8cpp_source}{entities.\+cpp}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00008\ :\ \mbox{\hyperlink{class_entity_ac55fe185f7ccba9e35abf13517c65f63}{Entity}}(0,\ \textcolor{stringliteral}{"{}"{}},\ 0,\ 0),\ \mbox{\hyperlink{class_player_a9545beef70350d5c3b3a5719a890dd2f}{money}}(0)\ \{\}}
+\DoxyCodeLine{00009\ :\ \mbox{\hyperlink{class_entity_ac55fe185f7ccba9e35abf13517c65f63}{Entity}}(0,\ \textcolor{stringliteral}{"{}"{}},\ 0,\ 0),\ \mbox{\hyperlink{class_player_a9545beef70350d5c3b3a5719a890dd2f}{money}}(0)\ \{\}}
 
 \end{DoxyCode}
 
 
-References \mbox{\hyperlink{entities_8cpp_source_l00034}{Entity\+::\+Entity()}}, and \mbox{\hyperlink{entities_8h_source_l00035}{money}}.
+References \mbox{\hyperlink{entities_8cpp_source_l00055}{Entity\+::\+Entity()}}, and \mbox{\hyperlink{entities_8h_source_l00055}{money}}.
 
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -107,19 +145,19 @@ Player\+::\+Player (\begin{DoxyParamCaption}\item[{int}]{health}{, }\item[{strin
 
 
 
-Definition at line \mbox{\hyperlink{entities_8cpp_source_l00009}{9}} of file \mbox{\hyperlink{entities_8cpp_source}{entities.\+cpp}}.
+Definition at line \mbox{\hyperlink{entities_8cpp_source_l00010}{10}} of file \mbox{\hyperlink{entities_8cpp_source}{entities.\+cpp}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00009\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{class_entity_ac55fe185f7ccba9e35abf13517c65f63}{Entity}}(health,\ \mbox{\hyperlink{class_entity_afb45718695f537c330a463168616c262}{name}},\ atk,\ def),\ \mbox{\hyperlink{class_player_a9545beef70350d5c3b3a5719a890dd2f}{money}}(\mbox{\hyperlink{class_player_a9545beef70350d5c3b3a5719a890dd2f}{money}}) }
-\DoxyCodeLine{00010\ \{}
-\DoxyCodeLine{00011\ \ \ \ \ \mbox{\hyperlink{class_player_ab8d436b5727749f7be05ffdf744d1041}{inventory}}\ =\ Inventory();}
-\DoxyCodeLine{00012\ \}}
+\DoxyCodeLine{00010\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{class_entity_ac55fe185f7ccba9e35abf13517c65f63}{Entity}}(\mbox{\hyperlink{class_entity_a399ce63cbbef5fa4e02e5cbd704d08d7}{health}},\ \mbox{\hyperlink{class_entity_afb45718695f537c330a463168616c262}{name}},\ atk,\ def),\ \mbox{\hyperlink{class_player_a9545beef70350d5c3b3a5719a890dd2f}{money}}(\mbox{\hyperlink{class_player_a9545beef70350d5c3b3a5719a890dd2f}{money}}) }
+\DoxyCodeLine{00011\ \{}
+\DoxyCodeLine{00012\ \ \ \ \ \mbox{\hyperlink{class_player_ab8d436b5727749f7be05ffdf744d1041}{inventory}}\ =\ Inventory();}
+\DoxyCodeLine{00013\ \}}
 
 \end{DoxyCode}
 
 
-References \mbox{\hyperlink{entities_8cpp_source_l00034}{Entity\+::\+Entity()}}, \mbox{\hyperlink{entities_8h_source_l00034}{inventory}}, \mbox{\hyperlink{entities_8h_source_l00035}{money}}, and \mbox{\hyperlink{entities_8h_source_l00024}{Entity\+::name}}.
+References \mbox{\hyperlink{entities_8cpp_source_l00055}{Entity\+::\+Entity()}}, \mbox{\hyperlink{entities_8h_source_l00028}{Entity\+::health}}, \mbox{\hyperlink{entities_8h_source_l00057}{inventory}}, \mbox{\hyperlink{entities_8h_source_l00055}{money}}, and \mbox{\hyperlink{entities_8h_source_l00029}{Entity\+::name}}.
 
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -139,30 +177,30 @@ void Player\+::add\+Money (\begin{DoxyParamCaption}\item[{int}]{amount}{}\end{Do
 
 
 
-Definition at line \mbox{\hyperlink{entities_8cpp_source_l00014}{14}} of file \mbox{\hyperlink{entities_8cpp_source}{entities.\+cpp}}.
+Definition at line \mbox{\hyperlink{entities_8cpp_source_l00015}{15}} of file \mbox{\hyperlink{entities_8cpp_source}{entities.\+cpp}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00015\ \{}
-\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keywordflow}{if}\ (amount\ <\ 0)}
-\DoxyCodeLine{00017\ \ \ \ \ \{}
-\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ cout\ <<\ \mbox{\hyperlink{extras_8cpp_a99d2755bf0660601280710515b3f512c}{colorizeText}}(\textcolor{stringliteral}{"{}You\ lost\ "{}}\ +\ to\_string(-\/amount)\ +\ \textcolor{stringliteral}{"{}\ money!"{}},\ \mbox{\hyperlink{extras_8h_ab87bacfdad76e61b9412d7124be44c1caf80f9a890089d211842d59625e561f88}{RED}})\ <<\ endl;}
-\DoxyCodeLine{00019\ \ \ \ \ \}}
-\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (amount\ ==\ 0)}
-\DoxyCodeLine{00021\ \ \ \ \ \{}
-\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}You\ didn't\ gain\ or\ lose\ any\ money."{}}\ <<\ endl;}
-\DoxyCodeLine{00023\ \ \ \ \ \}}
-\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (amount\ >\ 0)}
-\DoxyCodeLine{00025\ \ \ \ \ \{}
-\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ cout\ <<\ \mbox{\hyperlink{extras_8cpp_a99d2755bf0660601280710515b3f512c}{colorizeText}}(\textcolor{stringliteral}{"{}You\ gained\ "{}}\ +\ to\_string(amount)\ +\ \textcolor{stringliteral}{"{}\ money!"{}},\ \mbox{\hyperlink{extras_8h_ab87bacfdad76e61b9412d7124be44c1cae735a848bf82163a19236ead1c3ef2d2}{YELLOW}})\ <<\ endl;}
-\DoxyCodeLine{00027\ \ \ \ \ \}}
-\DoxyCodeLine{00028\ \ \ \ \ \mbox{\hyperlink{class_player_a9545beef70350d5c3b3a5719a890dd2f}{money}}\ +=\ amount;}
-\DoxyCodeLine{00029\ \}}
+\DoxyCodeLine{00016\ \{}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordflow}{if}\ (amount\ <\ 0)}
+\DoxyCodeLine{00018\ \ \ \ \ \{}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ cout\ <<\ \mbox{\hyperlink{extras_8cpp_a99d2755bf0660601280710515b3f512c}{colorizeText}}(\textcolor{stringliteral}{"{}You\ lost\ "{}}\ +\ to\_string(-\/amount)\ +\ \textcolor{stringliteral}{"{}\ money!"{}},\ \mbox{\hyperlink{extras_8h_ab87bacfdad76e61b9412d7124be44c1caf80f9a890089d211842d59625e561f88}{RED}})\ <<\ endl;}
+\DoxyCodeLine{00020\ \ \ \ \ \}}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (amount\ ==\ 0)}
+\DoxyCodeLine{00022\ \ \ \ \ \{}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}You\ didn't\ gain\ or\ lose\ any\ money."{}}\ <<\ endl;}
+\DoxyCodeLine{00024\ \ \ \ \ \}}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (amount\ >\ 0)}
+\DoxyCodeLine{00026\ \ \ \ \ \{}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ cout\ <<\ \mbox{\hyperlink{extras_8cpp_a99d2755bf0660601280710515b3f512c}{colorizeText}}(\textcolor{stringliteral}{"{}You\ gained\ "{}}\ +\ to\_string(amount)\ +\ \textcolor{stringliteral}{"{}\ money!"{}},\ \mbox{\hyperlink{extras_8h_ab87bacfdad76e61b9412d7124be44c1cae735a848bf82163a19236ead1c3ef2d2}{YELLOW}})\ <<\ endl;}
+\DoxyCodeLine{00028\ \ \ \ \ \}}
+\DoxyCodeLine{00029\ \ \ \ \ \mbox{\hyperlink{class_player_a9545beef70350d5c3b3a5719a890dd2f}{money}}\ +=\ amount;}
+\DoxyCodeLine{00030\ \}}
 
 \end{DoxyCode}
 
 
-References \mbox{\hyperlink{extras_8cpp_source_l00022}{colorize\+Text()}}, \mbox{\hyperlink{entities_8h_source_l00035}{money}}, \mbox{\hyperlink{extras_8h_source_l00017}{RED}}, and \mbox{\hyperlink{extras_8h_source_l00019}{YELLOW}}.
+References \mbox{\hyperlink{extras_8cpp_source_l00022}{colorize\+Text()}}, \mbox{\hyperlink{entities_8h_source_l00055}{money}}, \mbox{\hyperlink{extras_8h_source_l00017}{RED}}, and \mbox{\hyperlink{extras_8h_source_l00019}{YELLOW}}.
 
 
 
@@ -182,6 +220,122 @@ Here is the caller graph for this function\+:\nopagebreak
 \includegraphics[width=350pt]{class_player_a86ad66429e7bf8ef4640bac1d0f3476f_icgraph}
 \end{center}
 \end{figure}
+\Hypertarget{class_player_abda4c0f24a59155522361079dce5d427}\index{Player@{Player}!canAfford@{canAfford}}
+\index{canAfford@{canAfford}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{canAfford()}{canAfford()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_player_abda4c0f24a59155522361079dce5d427} 
+bool Player\+::can\+Afford (\begin{DoxyParamCaption}\item[{int}]{amount}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{entities_8cpp_source_l00042}{42}} of file \mbox{\hyperlink{entities_8cpp_source}{entities.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00043\ \{}
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_player_a9545beef70350d5c3b3a5719a890dd2f}{money}}\ >=\ amount;}
+\DoxyCodeLine{00045\ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{entities_8h_source_l00055}{money}}.
+
+
+
+Referenced by \mbox{\hyperlink{shop_8cpp_source_l00030}{Shop\+::buy\+Item()}}, \mbox{\hyperlink{entities_8cpp_source_l00047}{can\+Afford()}}, and \mbox{\hyperlink{shop_8cpp_source_l00019}{Shop\+::list\+Items()}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_player_abda4c0f24a59155522361079dce5d427_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_player_a5e281666c2e3cfc8bad64508a1524a5e}\index{Player@{Player}!canAfford@{canAfford}}
+\index{canAfford@{canAfford}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{canAfford()}{canAfford()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_player_a5e281666c2e3cfc8bad64508a1524a5e} 
+bool Player\+::can\+Afford (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_shop_item}{Shop\+Item}} \&}]{item}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{entities_8cpp_source_l00047}{47}} of file \mbox{\hyperlink{entities_8cpp_source}{entities.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_player_abda4c0f24a59155522361079dce5d427}{canAfford}}(item.\mbox{\hyperlink{class_shop_item_aa0112a46da1cf213541d4221e352a5e8}{price}});}
+\DoxyCodeLine{00049\ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{entities_8cpp_source_l00042}{can\+Afford()}}, and \mbox{\hyperlink{shop_8h_source_l00011}{Shop\+Item\+::price}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=298pt]{class_player_a5e281666c2e3cfc8bad64508a1524a5e_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_player_ac45154df7c4eb2d1d58255c3ff1c55dd}\index{Player@{Player}!getMoney@{getMoney}}
+\index{getMoney@{getMoney}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{getMoney()}{getMoney()}}
+{\footnotesize\ttfamily \label{class_player_ac45154df7c4eb2d1d58255c3ff1c55dd} 
+int Player\+::get\+Money (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{entities_8cpp_source_l00032}{32}} of file \mbox{\hyperlink{entities_8cpp_source}{entities.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00033\ \{}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_player_a9545beef70350d5c3b3a5719a890dd2f}{money}};}
+\DoxyCodeLine{00035\ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{entities_8h_source_l00055}{money}}.
+
+
+
+Referenced by \mbox{\hyperlink{shop_8cpp_source_l00019}{Shop\+::list\+Items()}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_player_ac45154df7c4eb2d1d58255c3ff1c55dd_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_player_aaa988a6ac35acb7901de56baf9acf88b}\index{Player@{Player}!setMoney@{setMoney}}
+\index{setMoney@{setMoney}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{setMoney()}{setMoney()}}
+{\footnotesize\ttfamily \label{class_player_aaa988a6ac35acb7901de56baf9acf88b} 
+void Player\+::set\+Money (\begin{DoxyParamCaption}\item[{int}]{amount}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{entities_8cpp_source_l00037}{37}} of file \mbox{\hyperlink{entities_8cpp_source}{entities.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00038\ \{}
+\DoxyCodeLine{00039\ \ \ \ \ \mbox{\hyperlink{class_player_a9545beef70350d5c3b3a5719a890dd2f}{money}}\ =\ amount;}
+\DoxyCodeLine{00040\ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{entities_8h_source_l00055}{money}}.
+
 
 
 \doxysubsection{Member Data Documentation}
@@ -193,25 +347,25 @@ Here is the caller graph for this function\+:\nopagebreak
 
 
 
-Definition at line \mbox{\hyperlink{entities_8h_source_l00034}{34}} of file \mbox{\hyperlink{entities_8h_source}{entities.\+h}}.
+Definition at line \mbox{\hyperlink{entities_8h_source_l00057}{57}} of file \mbox{\hyperlink{entities_8h_source}{entities.\+h}}.
 
 
 
-Referenced by \mbox{\hyperlink{shop_8cpp_source_l00030}{Shop\+::buy\+Item()}}, and \mbox{\hyperlink{entities_8cpp_source_l00009}{Player()}}.
+Referenced by \mbox{\hyperlink{shop_8cpp_source_l00030}{Shop\+::buy\+Item()}}, and \mbox{\hyperlink{entities_8cpp_source_l00010}{Player()}}.
 
 \Hypertarget{class_player_a9545beef70350d5c3b3a5719a890dd2f}\index{Player@{Player}!money@{money}}
 \index{money@{money}!Player@{Player}}
 \doxysubsubsection{\texorpdfstring{money}{money}}
 {\footnotesize\ttfamily \label{class_player_a9545beef70350d5c3b3a5719a890dd2f} 
-int Player\+::money}
+int Player\+::money\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
-Definition at line \mbox{\hyperlink{entities_8h_source_l00035}{35}} of file \mbox{\hyperlink{entities_8h_source}{entities.\+h}}.
+Definition at line \mbox{\hyperlink{entities_8h_source_l00055}{55}} of file \mbox{\hyperlink{entities_8h_source}{entities.\+h}}.
 
 
 
-Referenced by \mbox{\hyperlink{entities_8cpp_source_l00014}{add\+Money()}}, \mbox{\hyperlink{shop_8cpp_source_l00030}{Shop\+::buy\+Item()}}, \mbox{\hyperlink{shop_8cpp_source_l00019}{Shop\+::list\+Items()}}, \mbox{\hyperlink{entities_8cpp_source_l00008}{Player()}}, and \mbox{\hyperlink{entities_8cpp_source_l00009}{Player()}}.
+Referenced by \mbox{\hyperlink{entities_8cpp_source_l00015}{add\+Money()}}, \mbox{\hyperlink{entities_8cpp_source_l00042}{can\+Afford()}}, \mbox{\hyperlink{entities_8cpp_source_l00032}{get\+Money()}}, \mbox{\hyperlink{entities_8cpp_source_l00009}{Player()}}, \mbox{\hyperlink{entities_8cpp_source_l00010}{Player()}}, and \mbox{\hyperlink{entities_8cpp_source_l00037}{set\+Money()}}.
 
 
 

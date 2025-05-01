@@ -1,5 +1,9 @@
 <map id="Shop::listItems" name="Shop::listItems">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,115,32"/>
-<area shape="rect" id="Node000002" href="$extras_8cpp.html#a99d2755bf0660601280710515b3f512c" title="Colors text." alt="" coords="163,5,254,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="115,16,147,16,147,21,115,21"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,56,115,83"/>
+<area shape="rect" id="Node000002" href="$class_player.html#abda4c0f24a59155522361079dce5d427" title=" " alt="" coords="164,5,285,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="105,53,163,35,165,40,107,58"/>
+<area shape="rect" id="Node000003" href="$extras_8cpp.html#a99d2755bf0660601280710515b3f512c" title="Colors text." alt="" coords="179,56,270,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="115,67,163,67,163,72,115,72"/>
+<area shape="rect" id="Node000004" href="$class_player.html#ac45154df7c4eb2d1d58255c3ff1c55dd" title=" " alt="" coords="163,107,286,133"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="107,81,165,99,163,104,105,86"/>
 </map>
