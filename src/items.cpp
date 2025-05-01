@@ -11,9 +11,10 @@ IEnemyItem::IEnemyItem(string n, string t, string d, int c) : IItem(n, t, d, c) 
 
 IPlayerItem::IPlayerItem(string n, string t, string d, int c) : IItem(n, t, d, c) {}
 
-IPotion::IPotion(string n, string d, int c) : IPlayerItem(n, "Potion", d, c) {}
+IPotion::IPotion(string n, string d, int c, int strength) : IPlayerItem(n, "Potion", d, c), strength(strength) {}
 
-HealthPotion::HealthPotion(int c) : IPotion("Health Potion", "Heals the user " + to_string(healAmount) + "HP", c) {}
+HealthPotion::HealthPotion(int c) :
+IPotion("Health Potion", "Heals the user " + to_string(strength) + "HP", c, strength) {}
 
 bool HealthPotion::use(Player &player)
 {
@@ -22,7 +23,7 @@ bool HealthPotion::use(Player &player)
         cout << "You're already at full health!" << endl;
         return false;
     }
-    player.currHealth = min(player.maxHealth, player.currHealth + healAmount);
+    player.currHealth = min(player.maxHealth, player.currHealth + strength);
     return true;
 }
 

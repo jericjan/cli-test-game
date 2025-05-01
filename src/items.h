@@ -36,14 +36,15 @@ public:
 class IPotion : public IPlayerItem
 {
 public:
-    IPotion(string n, string d, int c);
+    int strength;
+    IPotion(string n, string d, int c, int strength);
 };
 
 /// Health potions heal the player of course
 class HealthPotion : public IPotion
 {
 public:
-    static const int healAmount = 100; // declared static to constructor can use it
+    static const int strength = 100; // declared static to constructor can use it
     HealthPotion(int c);
     bool use(Player &player) override;
 };
